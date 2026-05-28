@@ -3,6 +3,5 @@ Python/
 .vscode/
 __pycache__/
 *.pyc
-syllables_export*/
 Thumbs.db
 .DS_Store
