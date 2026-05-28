@@ -1,0 +1,4339 @@
+{
+  "audioFile": "1local.wav",
+  "durationSec": 64.15,
+  "referenceText": "Добрый день! Меня зовут Баратов Хожиакбар . В своей работе я исследую современные методы распознавания речи с использованием мультимодальных данных, а именно — анализ движений губ на видео.Ключевые задачи:Сбор и обработка видеоданных (движения губ при произнесении слов).Обучение нейросетевой модели на основе последовательностей кадров.Создание системы, способной распознавать слова без звука, что может помочь людям с нарушениями слуха.В ходе обучения модели на собственном наборе данных (700 видеороликов, 13 слов) была достигнута точность:95,7% на обучающей выборке.98,5% на валидационной выборке.Проблемы и перспективы:Сейчас модель работает с ограниченным словарём, но в будущем планируется расширение набора данных и улучшение архитектуры для работы с непрерывной речью.Спасибо за внимание",
+  "recognizedText": "добрый день меня зовут борат хотя пар своём рабочий если это современный метод распознавания речи с использованием мультимедийных там а именно а именно анализ движений губ на видео ключевые задачи сбор и обработка видеоданных движению губ превра произношение слов обучения или нейросетевых моделей на основе последовательных кадров создание системы способна раствор для распознавания слов слово без звука чтоб может помочь людям с нарушениями слуха в ходе обучения мотеле на собственно набора данных а именно семьсот видеороликов тринадцать слов план достигнуть точности нос пять процентов на обучение выборке и девяносто восемь процентов и она болит за сцену выборки проблема и перспектива сейчас моделлера работаете ограниченными и словарём то в будущем планируется расширение набора данных и улучшение архитектуре для работы с непрерывной речью спасибо за внимание",
+  "metrics": {
+    "avgConfidence": 0.8929,
+    "speakingRateWps": 2.05,
+    "pauseCount": 0,
+    "energyMean": 0.3329,
+    "energyStd": 0.2387,
+    "textAccuracyPct": 60.0,
+    "finalScore": 69.15
+  },
+  "wordDetails": [
+    {
+      "word": "добрый",
+      "confidence": 1.0,
+      "start": 1.62,
+      "end": 1.98
+    },
+    {
+      "word": "день",
+      "confidence": 1.0,
+      "start": 1.98,
+      "end": 2.31
+    },
+    {
+      "word": "меня",
+      "confidence": 1.0,
+      "start": 2.31,
+      "end": 2.58
+    },
+    {
+      "word": "зовут",
+      "confidence": 1.0,
+      "start": 2.58,
+      "end": 2.85
+    },
+    {
+      "word": "борат",
+      "confidence": 0.9433,
+      "start": 2.85,
+      "end": 3.18
+    },
+    {
+      "word": "хотя",
+      "confidence": 0.4606,
+      "start": 3.18,
+      "end": 3.48
+    },
+    {
+      "word": "пар",
+      "confidence": 0.9063,
+      "start": 3.48,
+      "end": 3.81
+    },
+    {
+      "word": "своём",
+      "confidence": 0.9808,
+      "start": 4.01,
+      "end": 4.47
+    },
+    {
+      "word": "рабочий",
+      "confidence": 0.3678,
+      "start": 4.47,
+      "end": 4.934
+    },
+    {
+      "word": "если",
+      "confidence": 0.9808,
+      "start": 4.95,
+      "end": 5.16
+    },
+    {
+      "word": "это",
+      "confidence": 0.9808,
+      "start": 5.16,
+      "end": 5.31
+    },
+    {
+      "word": "современный",
+      "confidence": 1.0,
+      "start": 5.31,
+      "end": 5.82
+    },
+    {
+      "word": "метод",
+      "confidence": 1.0,
+      "start": 5.82,
+      "end": 6.06
+    },
+    {
+      "word": "распознавания",
+      "confidence": 1.0,
+      "start": 6.06,
+      "end": 6.63
+    },
+    {
+      "word": "речи",
+      "confidence": 1.0,
+      "start": 6.63,
+      "end": 7.08
+    },
+    {
+      "word": "с",
+      "confidence": 0.9492,
+      "start": 7.11,
+      "end": 7.29
+    },
+    {
+      "word": "использованием",
+      "confidence": 0.9492,
+      "start": 7.29,
+      "end": 7.86
+    },
+    {
+      "word": "мультимедийных",
+      "confidence": 0.7301,
+      "start": 7.86,
+      "end": 8.46
+    },
+    {
+      "word": "там",
+      "confidence": 1.0,
+      "start": 8.49,
+      "end": 8.82
+    },
+    {
+      "word": "а",
+      "confidence": 1.0,
+      "start": 9.09,
+      "end": 9.33
+    },
+    {
+      "word": "именно",
+      "confidence": 1.0,
+      "start": 9.33,
+      "end": 9.75
+    },
+    {
+      "word": "а",
+      "confidence": 1.0,
+      "start": 9.81,
+      "end": 10.11
+    },
+    {
+      "word": "именно",
+      "confidence": 1.0,
+      "start": 10.11,
+      "end": 10.53
+    },
+    {
+      "word": "анализ",
+      "confidence": 1.0,
+      "start": 10.56,
+      "end": 10.923
+    },
+    {
+      "word": "движений",
+      "confidence": 0.8328,
+      "start": 10.923,
+      "end": 11.308
+    },
+    {
+      "word": "губ",
+      "confidence": 0.838,
+      "start": 11.31,
+      "end": 11.55
+    },
+    {
+      "word": "на",
+      "confidence": 0.7122,
+      "start": 11.82,
+      "end": 11.97
+    },
+    {
+      "word": "видео",
+      "confidence": 1.0,
+      "start": 11.97,
+      "end": 12.39
+    },
+    {
+      "word": "ключевые",
+      "confidence": 1.0,
+      "start": 13.38,
+      "end": 13.86
+    },
+    {
+      "word": "задачи",
+      "confidence": 1.0,
+      "start": 13.86,
+      "end": 14.37
+    },
+    {
+      "word": "сбор",
+      "confidence": 1.0,
+      "start": 14.91,
+      "end": 15.24
+    },
+    {
+      "word": "и",
+      "confidence": 1.0,
+      "start": 15.24,
+      "end": 15.33
+    },
+    {
+      "word": "обработка",
+      "confidence": 1.0,
+      "start": 15.33,
+      "end": 15.81
+    },
+    {
+      "word": "видеоданных",
+      "confidence": 1.0,
+      "start": 15.81,
+      "end": 16.5
+    },
+    {
+      "word": "движению",
+      "confidence": 1.0,
+      "start": 16.53,
+      "end": 17.04
+    },
+    {
+      "word": "губ",
+      "confidence": 1.0,
+      "start": 17.04,
+      "end": 17.25
+    },
+    {
+      "word": "превра",
+      "confidence": 0.4166,
+      "start": 17.25,
+      "end": 17.67
+    },
+    {
+      "word": "произношение",
+      "confidence": 0.6992,
+      "start": 17.97,
+      "end": 18.75
+    },
+    {
+      "word": "слов",
+      "confidence": 1.0,
+      "start": 18.75,
+      "end": 19.17
+    },
+    {
+      "word": "обучения",
+      "confidence": 0.4869,
+      "start": 19.29,
+      "end": 19.819
+    },
+    {
+      "word": "или",
+      "confidence": 0.9407,
+      "start": 19.819,
+      "end": 19.98
+    },
+    {
+      "word": "нейросетевых",
+      "confidence": 1.0,
+      "start": 19.98,
+      "end": 20.73
+    },
+    {
+      "word": "моделей",
+      "confidence": 1.0,
+      "start": 20.73,
+      "end": 21.15
+    },
+    {
+      "word": "на",
+      "confidence": 1.0,
+      "start": 21.15,
+      "end": 21.27
+    },
+    {
+      "word": "основе",
+      "confidence": 1.0,
+      "start": 21.27,
+      "end": 21.66
+    },
+    {
+      "word": "последовательных",
+      "confidence": 0.9786,
+      "start": 21.9,
+      "end": 22.65
+    },
+    {
+      "word": "кадров",
+      "confidence": 1.0,
+      "start": 22.679,
+      "end": 23.13
+    },
+    {
+      "word": "создание",
+      "confidence": 0.4749,
+      "start": 23.52,
+      "end": 24.021
+    },
+    {
+      "word": "системы",
+      "confidence": 0.5985,
+      "start": 24.021,
+      "end": 24.39
+    },
+    {
+      "word": "способна",
+      "confidence": 0.6118,
+      "start": 24.39,
+      "end": 24.9
+    },
+    {
+      "word": "раствор",
+      "confidence": 0.6042,
+      "start": 24.9,
+      "end": 25.2
+    },
+    {
+      "word": "для",
+      "confidence": 0.7432,
+      "start": 25.2,
+      "end": 25.347
+    },
+    {
+      "word": "распознавания",
+      "confidence": 0.8781,
+      "start": 25.347,
+      "end": 26.01
+    },
+    {
+      "word": "слов",
+      "confidence": 1.0,
+      "start": 26.01,
+      "end": 26.37
+    },
+    {
+      "word": "слово",
+      "confidence": 0.5231,
+      "start": 27.0,
+      "end": 27.42
+    },
+    {
+      "word": "без",
+      "confidence": 1.0,
+      "start": 27.42,
+      "end": 28.02
+    },
+    {
+      "word": "звука",
+      "confidence": 1.0,
+      "start": 28.08,
+      "end": 28.71
+    },
+    {
+      "word": "чтоб",
+      "confidence": 0.7545,
+      "start": 29.34,
+      "end": 29.7
+    },
+    {
+      "word": "может",
+      "confidence": 1.0,
+      "start": 29.7,
+      "end": 30.03
+    },
+    {
+      "word": "помочь",
+      "confidence": 1.0,
+      "start": 30.03,
+      "end": 30.39
+    },
+    {
+      "word": "людям",
+      "confidence": 1.0,
+      "start": 30.39,
+      "end": 30.69
+    },
+    {
+      "word": "с",
+      "confidence": 1.0,
+      "start": 30.69,
+      "end": 30.81
+    },
+    {
+      "word": "нарушениями",
+      "confidence": 0.6402,
+      "start": 30.81,
+      "end": 31.35
+    },
+    {
+      "word": "слуха",
+      "confidence": 1.0,
+      "start": 31.35,
+      "end": 31.74
+    },
+    {
+      "word": "в",
+      "confidence": 1.0,
+      "start": 32.85,
+      "end": 32.91
+    },
+    {
+      "word": "ходе",
+      "confidence": 1.0,
+      "start": 32.91,
+      "end": 33.21
+    },
+    {
+      "word": "обучения",
+      "confidence": 0.9892,
+      "start": 33.21,
+      "end": 33.63
+    },
+    {
+      "word": "мотеле",
+      "confidence": 0.4653,
+      "start": 33.63,
+      "end": 34.049
+    },
+    {
+      "word": "на",
+      "confidence": 1.0,
+      "start": 34.049,
+      "end": 34.17
+    },
+    {
+      "word": "собственно",
+      "confidence": 0.5156,
+      "start": 34.17,
+      "end": 34.59
+    },
+    {
+      "word": "набора",
+      "confidence": 0.8161,
+      "start": 34.59,
+      "end": 34.95
+    },
+    {
+      "word": "данных",
+      "confidence": 1.0,
+      "start": 34.951,
+      "end": 35.49
+    },
+    {
+      "word": "а",
+      "confidence": 1.0,
+      "start": 35.52,
+      "end": 35.7
+    },
+    {
+      "word": "именно",
+      "confidence": 1.0,
+      "start": 35.7,
+      "end": 36.0
+    },
+    {
+      "word": "семьсот",
+      "confidence": 1.0,
+      "start": 36.0,
+      "end": 36.36
+    },
+    {
+      "word": "видеороликов",
+      "confidence": 1.0,
+      "start": 36.39,
+      "end": 37.32
+    },
+    {
+      "word": "тринадцать",
+      "confidence": 1.0,
+      "start": 37.38,
+      "end": 37.86
+    },
+    {
+      "word": "слов",
+      "confidence": 1.0,
+      "start": 37.86,
+      "end": 38.16
+    },
+    {
+      "word": "план",
+      "confidence": 1.0,
+      "start": 38.16,
+      "end": 38.43
+    },
+    {
+      "word": "достигнуть",
+      "confidence": 1.0,
+      "start": 38.43,
+      "end": 38.91
+    },
+    {
+      "word": "точности",
+      "confidence": 1.0,
+      "start": 38.94,
+      "end": 39.45
+    },
+    {
+      "word": "нос",
+      "confidence": 0.5231,
+      "start": 39.45,
+      "end": 39.63
+    },
+    {
+      "word": "пять",
+      "confidence": 1.0,
+      "start": 39.634,
+      "end": 39.93
+    },
+    {
+      "word": "процентов",
+      "confidence": 1.0,
+      "start": 40.2,
+      "end": 40.89
+    },
+    {
+      "word": "на",
+      "confidence": 1.0,
+      "start": 41.31,
+      "end": 41.49
+    },
+    {
+      "word": "обучение",
+      "confidence": 1.0,
+      "start": 41.49,
+      "end": 42.03
+    },
+    {
+      "word": "выборке",
+      "confidence": 0.7551,
+      "start": 42.039,
+      "end": 42.51
+    },
+    {
+      "word": "и",
+      "confidence": 0.7342,
+      "start": 42.75,
+      "end": 42.872
+    },
+    {
+      "word": "девяносто",
+      "confidence": 0.5304,
+      "start": 42.872,
+      "end": 43.35
+    },
+    {
+      "word": "восемь",
+      "confidence": 0.9803,
+      "start": 43.364,
+      "end": 43.65
+    },
+    {
+      "word": "процентов",
+      "confidence": 1.0,
+      "start": 43.65,
+      "end": 44.1
+    },
+    {
+      "word": "и",
+      "confidence": 0.5009,
+      "start": 44.1,
+      "end": 44.129
+    },
+    {
+      "word": "она",
+      "confidence": 1.0,
+      "start": 44.129,
+      "end": 44.34
+    },
+    {
+      "word": "болит",
+      "confidence": 0.9995,
+      "start": 44.34,
+      "end": 44.61
+    },
+    {
+      "word": "за",
+      "confidence": 0.369,
+      "start": 44.61,
+      "end": 44.666
+    },
+    {
+      "word": "сцену",
+      "confidence": 0.6544,
+      "start": 44.666,
+      "end": 44.97
+    },
+    {
+      "word": "выборки",
+      "confidence": 0.9031,
+      "start": 44.97,
+      "end": 45.36
+    },
+    {
+      "word": "проблема",
+      "confidence": 0.8782,
+      "start": 45.9,
+      "end": 46.47
+    },
+    {
+      "word": "и",
+      "confidence": 0.9491,
+      "start": 46.47,
+      "end": 46.65
+    },
+    {
+      "word": "перспектива",
+      "confidence": 0.7103,
+      "start": 46.65,
+      "end": 47.43
+    },
+    {
+      "word": "сейчас",
+      "confidence": 1.0,
+      "start": 47.43,
+      "end": 47.76
+    },
+    {
+      "word": "моделлера",
+      "confidence": 0.7422,
+      "start": 47.76,
+      "end": 48.51
+    },
+    {
+      "word": "работаете",
+      "confidence": 0.6462,
+      "start": 48.6,
+      "end": 49.319
+    },
+    {
+      "word": "ограниченными",
+      "confidence": 0.9838,
+      "start": 49.35,
+      "end": 50.25
+    },
+    {
+      "word": "и",
+      "confidence": 0.9627,
+      "start": 50.25,
+      "end": 50.31
+    },
+    {
+      "word": "словарём",
+      "confidence": 1.0,
+      "start": 50.31,
+      "end": 50.94
+    },
+    {
+      "word": "то",
+      "confidence": 0.7389,
+      "start": 51.21,
+      "end": 51.358
+    },
+    {
+      "word": "в",
+      "confidence": 1.0,
+      "start": 51.358,
+      "end": 51.42
+    },
+    {
+      "word": "будущем",
+      "confidence": 1.0,
+      "start": 51.42,
+      "end": 51.9
+    },
+    {
+      "word": "планируется",
+      "confidence": 1.0,
+      "start": 51.9,
+      "end": 52.53
+    },
+    {
+      "word": "расширение",
+      "confidence": 0.7517,
+      "start": 52.56,
+      "end": 53.126
+    },
+    {
+      "word": "набора",
+      "confidence": 1.0,
+      "start": 53.126,
+      "end": 53.52
+    },
+    {
+      "word": "данных",
+      "confidence": 1.0,
+      "start": 53.52,
+      "end": 54.0
+    },
+    {
+      "word": "и",
+      "confidence": 1.0,
+      "start": 54.27,
+      "end": 54.45
+    },
+    {
+      "word": "улучшение",
+      "confidence": 0.8628,
+      "start": 54.45,
+      "end": 54.96
+    },
+    {
+      "word": "архитектуре",
+      "confidence": 0.986,
+      "start": 54.96,
+      "end": 55.8
+    },
+    {
+      "word": "для",
+      "confidence": 1.0,
+      "start": 56.76,
+      "end": 57.18
+    },
+    {
+      "word": "работы",
+      "confidence": 1.0,
+      "start": 57.18,
+      "end": 57.78
+    },
+    {
+      "word": "с",
+      "confidence": 0.8668,
+      "start": 57.78,
+      "end": 57.87
+    },
+    {
+      "word": "непрерывной",
+      "confidence": 1.0,
+      "start": 57.904,
+      "end": 58.53
+    },
+    {
+      "word": "речью",
+      "confidence": 0.9164,
+      "start": 58.53,
+      "end": 58.95
+    },
+    {
+      "word": "спасибо",
+      "confidence": 1.0,
+      "start": 60.81,
+      "end": 61.38
+    },
+    {
+      "word": "за",
+      "confidence": 1.0,
+      "start": 61.41,
+      "end": 61.62
+    },
+    {
+      "word": "внимание",
+      "confidence": 1.0,
+      "start": 61.62,
+      "end": 62.13
+    }
+  ],
+  "referenceSyllableMap": [
+    {
+      "word": "добрый",
+      "lemma": "добрый",
+      "pos": "ADJF",
+      "posName": "прилагательное",
+      "syllables": [
+        "до",
+        "брый"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "до-брый"
+    },
+    {
+      "word": "день",
+      "lemma": "день",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "день"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "день"
+    },
+    {
+      "word": "меня",
+      "lemma": "я",
+      "pos": "NPRO",
+      "posName": "местоимение",
+      "syllables": [
+        "я"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "я"
+    },
+    {
+      "word": "зовут",
+      "lemma": "звать",
+      "pos": "VERB",
+      "posName": "глагол",
+      "syllables": [
+        "звать"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "звать"
+    },
+    {
+      "word": "баратов",
+      "lemma": "барат",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "ба",
+        "рат"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "ба-рат"
+    },
+    {
+      "word": "хожиакбар",
+      "lemma": "хожиакбар",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "хо",
+        "жиа",
+        "кбар"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "хо-жиа-кбар"
+    },
+    {
+      "word": "в",
+      "lemma": "в",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "в"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "в"
+    },
+    {
+      "word": "своей",
+      "lemma": "свой",
+      "pos": "ADJF",
+      "posName": "прилагательное",
+      "syllables": [
+        "свой"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "свой"
+    },
+    {
+      "word": "работе",
+      "lemma": "работа",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "ра",
+        "бо",
+        "та"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "ра-бо-та"
+    },
+    {
+      "word": "я",
+      "lemma": "я",
+      "pos": "NPRO",
+      "posName": "местоимение",
+      "syllables": [
+        "я"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "я"
+    },
+    {
+      "word": "исследую",
+      "lemma": "исследовать",
+      "pos": "VERB",
+      "posName": "глагол",
+      "syllables": [
+        "и",
+        "ссле",
+        "до",
+        "вать"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "и-ссле-до-вать"
+    },
+    {
+      "word": "современные",
+      "lemma": "современный",
+      "pos": "ADJF",
+      "posName": "прилагательное",
+      "syllables": [
+        "со",
+        "вре",
+        "ме",
+        "нный"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "со-вре-ме-нный"
+    },
+    {
+      "word": "методы",
+      "lemma": "метод",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "ме",
+        "тод"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "ме-тод"
+    },
+    {
+      "word": "распознавания",
+      "lemma": "распознавание",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "ра",
+        "спо",
+        "зна",
+        "ва",
+        "ние"
+      ],
+      "syllableCount": 5,
+      "syllableStr": "ра-спо-зна-ва-ние"
+    },
+    {
+      "word": "речи",
+      "lemma": "речь",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "речь"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "речь"
+    },
+    {
+      "word": "с",
+      "lemma": "с",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "с"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "с"
+    },
+    {
+      "word": "использованием",
+      "lemma": "использование",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "и",
+        "спо",
+        "льзо",
+        "ва",
+        "ние"
+      ],
+      "syllableCount": 5,
+      "syllableStr": "и-спо-льзо-ва-ние"
+    },
+    {
+      "word": "мультимодальных",
+      "lemma": "мультимодальный",
+      "pos": "ADJF",
+      "posName": "прилагательное",
+      "syllables": [
+        "му",
+        "льти",
+        "мо",
+        "да",
+        "льный"
+      ],
+      "syllableCount": 5,
+      "syllableStr": "му-льти-мо-да-льный"
+    },
+    {
+      "word": "данных",
+      "lemma": "данные",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "да",
+        "нные"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "да-нные"
+    },
+    {
+      "word": "а",
+      "lemma": "а",
+      "pos": "CONJ",
+      "posName": "союз",
+      "syllables": [
+        "а"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "а"
+    },
+    {
+      "word": "именно",
+      "lemma": "именно",
+      "pos": "PRCL",
+      "posName": "частица",
+      "syllables": [
+        "и",
+        "ме",
+        "нно"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "и-ме-нно"
+    },
+    {
+      "word": "анализ",
+      "lemma": "анализ",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "а",
+        "на",
+        "лиз"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "а-на-лиз"
+    },
+    {
+      "word": "движений",
+      "lemma": "движение",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "дви",
+        "же",
+        "ние"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "дви-же-ние"
+    },
+    {
+      "word": "губ",
+      "lemma": "губа",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "гу",
+        "ба"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "гу-ба"
+    },
+    {
+      "word": "на",
+      "lemma": "на",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "на"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "на"
+    },
+    {
+      "word": "видео",
+      "lemma": "видео",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "ви",
+        "део"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "ви-део"
+    },
+    {
+      "word": "ключевые",
+      "lemma": "ключевой",
+      "pos": "ADJF",
+      "posName": "прилагательное",
+      "syllables": [
+        "клю",
+        "че",
+        "вой"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "клю-че-вой"
+    },
+    {
+      "word": "задачи",
+      "lemma": "задача",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "за",
+        "да",
+        "ча"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "за-да-ча"
+    },
+    {
+      "word": "сбор",
+      "lemma": "сбор",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "сбор"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "сбор"
+    },
+    {
+      "word": "и",
+      "lemma": "и",
+      "pos": "CONJ",
+      "posName": "союз",
+      "syllables": [
+        "и"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "и"
+    },
+    {
+      "word": "обработка",
+      "lemma": "обработка",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "о",
+        "бра",
+        "бо",
+        "тка"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "о-бра-бо-тка"
+    },
+    {
+      "word": "видеоданных",
+      "lemma": "видеоданные",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "ви",
+        "део",
+        "да",
+        "нные"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "ви-део-да-нные"
+    },
+    {
+      "word": "движения",
+      "lemma": "движение",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "дви",
+        "же",
+        "ние"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "дви-же-ние"
+    },
+    {
+      "word": "губ",
+      "lemma": "губа",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "гу",
+        "ба"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "гу-ба"
+    },
+    {
+      "word": "при",
+      "lemma": "при",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "при"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "при"
+    },
+    {
+      "word": "произнесении",
+      "lemma": "произнесение",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "прои",
+        "зне",
+        "се",
+        "ние"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "прои-зне-се-ние"
+    },
+    {
+      "word": "слов",
+      "lemma": "слово",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "сло",
+        "во"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "сло-во"
+    },
+    {
+      "word": "обучение",
+      "lemma": "обучение",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "о",
+        "бу",
+        "че",
+        "ние"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "о-бу-че-ние"
+    },
+    {
+      "word": "нейросетевой",
+      "lemma": "нейросетевой",
+      "pos": "ADJF",
+      "posName": "прилагательное",
+      "syllables": [
+        "не",
+        "йро",
+        "се",
+        "те",
+        "вой"
+      ],
+      "syllableCount": 5,
+      "syllableStr": "не-йро-се-те-вой"
+    },
+    {
+      "word": "модели",
+      "lemma": "модель",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "мо",
+        "дель"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "мо-дель"
+    },
+    {
+      "word": "на",
+      "lemma": "на",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "на"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "на"
+    },
+    {
+      "word": "основе",
+      "lemma": "основа",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "о",
+        "сно",
+        "ва"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "о-сно-ва"
+    },
+    {
+      "word": "последовательностей",
+      "lemma": "последовательность",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "по",
+        "сле",
+        "до",
+        "ва",
+        "те",
+        "льность"
+      ],
+      "syllableCount": 6,
+      "syllableStr": "по-сле-до-ва-те-льность"
+    },
+    {
+      "word": "кадров",
+      "lemma": "кадр",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "кадр"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "кадр"
+    },
+    {
+      "word": "создание",
+      "lemma": "создание",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "со",
+        "зда",
+        "ние"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "со-зда-ние"
+    },
+    {
+      "word": "системы",
+      "lemma": "система",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "си",
+        "сте",
+        "ма"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "си-сте-ма"
+    },
+    {
+      "word": "способной",
+      "lemma": "способный",
+      "pos": "ADJF",
+      "posName": "прилагательное",
+      "syllables": [
+        "спо",
+        "со",
+        "бный"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "спо-со-бный"
+    },
+    {
+      "word": "распознавать",
+      "lemma": "распознавать",
+      "pos": "INFN",
+      "posName": "инфинитив",
+      "syllables": [
+        "ра",
+        "спо",
+        "зна",
+        "вать"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "ра-спо-зна-вать"
+    },
+    {
+      "word": "слова",
+      "lemma": "слово",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "сло",
+        "во"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "сло-во"
+    },
+    {
+      "word": "без",
+      "lemma": "без",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "без"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "без"
+    },
+    {
+      "word": "звука",
+      "lemma": "звук",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "звук"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "звук"
+    },
+    {
+      "word": "что",
+      "lemma": "что",
+      "pos": "CONJ",
+      "posName": "союз",
+      "syllables": [
+        "что"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "что"
+    },
+    {
+      "word": "может",
+      "lemma": "мочь",
+      "pos": "VERB",
+      "posName": "глагол",
+      "syllables": [
+        "мочь"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "мочь"
+    },
+    {
+      "word": "помочь",
+      "lemma": "помочь",
+      "pos": "INFN",
+      "posName": "инфинитив",
+      "syllables": [
+        "по",
+        "мочь"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "по-мочь"
+    },
+    {
+      "word": "людям",
+      "lemma": "человек",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "че",
+        "ло",
+        "век"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "че-ло-век"
+    },
+    {
+      "word": "с",
+      "lemma": "с",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "с"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "с"
+    },
+    {
+      "word": "нарушениями",
+      "lemma": "нарушение",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "на",
+        "ру",
+        "ше",
+        "ние"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "на-ру-ше-ние"
+    },
+    {
+      "word": "слуха",
+      "lemma": "слух",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "слух"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "слух"
+    },
+    {
+      "word": "в",
+      "lemma": "в",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "в"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "в"
+    },
+    {
+      "word": "ходе",
+      "lemma": "ход",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "ход"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "ход"
+    },
+    {
+      "word": "обучения",
+      "lemma": "обучение",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "о",
+        "бу",
+        "че",
+        "ние"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "о-бу-че-ние"
+    },
+    {
+      "word": "модели",
+      "lemma": "модель",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "мо",
+        "дель"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "мо-дель"
+    },
+    {
+      "word": "на",
+      "lemma": "на",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "на"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "на"
+    },
+    {
+      "word": "собственном",
+      "lemma": "собственный",
+      "pos": "ADJF",
+      "posName": "прилагательное",
+      "syllables": [
+        "со",
+        "бстве",
+        "нный"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "со-бстве-нный"
+    },
+    {
+      "word": "наборе",
+      "lemma": "набор",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "на",
+        "бор"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "на-бор"
+    },
+    {
+      "word": "данных",
+      "lemma": "данные",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "да",
+        "нные"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "да-нные"
+    },
+    {
+      "word": "семьсот",
+      "lemma": "семьсот",
+      "pos": "NUMR",
+      "posName": "числительное",
+      "syllables": [
+        "се",
+        "мьсот"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "се-мьсот"
+    },
+    {
+      "word": "видеороликов",
+      "lemma": "видеоролик",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "ви",
+        "део",
+        "ро",
+        "лик"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "ви-део-ро-лик"
+    },
+    {
+      "word": "тринадцать",
+      "lemma": "тринадцать",
+      "pos": "NUMR",
+      "posName": "числительное",
+      "syllables": [
+        "три",
+        "на",
+        "дцать"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "три-на-дцать"
+    },
+    {
+      "word": "слов",
+      "lemma": "слово",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "сло",
+        "во"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "сло-во"
+    },
+    {
+      "word": "была",
+      "lemma": "быть",
+      "pos": "VERB",
+      "posName": "глагол",
+      "syllables": [
+        "быть"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "быть"
+    },
+    {
+      "word": "достигнута",
+      "lemma": "достигнуть",
+      "pos": "PRTS",
+      "posName": "PRTS",
+      "syllables": [
+        "до",
+        "сти",
+        "гнуть"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "до-сти-гнуть"
+    },
+    {
+      "word": "точность",
+      "lemma": "точность",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "то",
+        "чность"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "то-чность"
+    },
+    {
+      "word": "95",
+      "lemma": "95",
+      "pos": "UNKN",
+      "posName": "неизвестно",
+      "syllables": [
+        "95"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "95"
+    },
+    {
+      "word": "7",
+      "lemma": "7",
+      "pos": "UNKN",
+      "posName": "неизвестно",
+      "syllables": [
+        "7"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "7"
+    },
+    {
+      "word": "на",
+      "lemma": "на",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "на"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "на"
+    },
+    {
+      "word": "обучающей",
+      "lemma": "обучать",
+      "pos": "PRTF",
+      "posName": "причастие",
+      "syllables": [
+        "о",
+        "бу",
+        "чать"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "о-бу-чать"
+    },
+    {
+      "word": "выборке",
+      "lemma": "выборка",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "вы",
+        "бо",
+        "рка"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "вы-бо-рка"
+    },
+    {
+      "word": "98",
+      "lemma": "98",
+      "pos": "UNKN",
+      "posName": "неизвестно",
+      "syllables": [
+        "98"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "98"
+    },
+    {
+      "word": "5",
+      "lemma": "5",
+      "pos": "UNKN",
+      "posName": "неизвестно",
+      "syllables": [
+        "5"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "5"
+    },
+    {
+      "word": "на",
+      "lemma": "на",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "на"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "на"
+    },
+    {
+      "word": "валидационной",
+      "lemma": "валидационный",
+      "pos": "ADJF",
+      "posName": "прилагательное",
+      "syllables": [
+        "ва",
+        "ли",
+        "да",
+        "цио",
+        "нный"
+      ],
+      "syllableCount": 5,
+      "syllableStr": "ва-ли-да-цио-нный"
+    },
+    {
+      "word": "выборке",
+      "lemma": "выборка",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "вы",
+        "бо",
+        "рка"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "вы-бо-рка"
+    },
+    {
+      "word": "проблемы",
+      "lemma": "проблема",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "про",
+        "бле",
+        "ма"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "про-бле-ма"
+    },
+    {
+      "word": "и",
+      "lemma": "и",
+      "pos": "CONJ",
+      "posName": "союз",
+      "syllables": [
+        "и"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "и"
+    },
+    {
+      "word": "перспективы",
+      "lemma": "перспектива",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "пе",
+        "рспе",
+        "кти",
+        "ва"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "пе-рспе-кти-ва"
+    },
+    {
+      "word": "сейчас",
+      "lemma": "сейчас",
+      "pos": "ADVB",
+      "posName": "наречие",
+      "syllables": [
+        "се",
+        "йчас"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "се-йчас"
+    },
+    {
+      "word": "модель",
+      "lemma": "модель",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "мо",
+        "дель"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "мо-дель"
+    },
+    {
+      "word": "работает",
+      "lemma": "работать",
+      "pos": "VERB",
+      "posName": "глагол",
+      "syllables": [
+        "ра",
+        "бо",
+        "тать"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "ра-бо-тать"
+    },
+    {
+      "word": "с",
+      "lemma": "с",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "с"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "с"
+    },
+    {
+      "word": "ограниченным",
+      "lemma": "ограниченный",
+      "pos": "ADJF",
+      "posName": "прилагательное",
+      "syllables": [
+        "о",
+        "гра",
+        "ни",
+        "че",
+        "нный"
+      ],
+      "syllableCount": 5,
+      "syllableStr": "о-гра-ни-че-нный"
+    },
+    {
+      "word": "словарём",
+      "lemma": "словарь",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "сло",
+        "варь"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "сло-варь"
+    },
+    {
+      "word": "но",
+      "lemma": "но",
+      "pos": "CONJ",
+      "posName": "союз",
+      "syllables": [
+        "но"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "но"
+    },
+    {
+      "word": "в",
+      "lemma": "в",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "в"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "в"
+    },
+    {
+      "word": "будущем",
+      "lemma": "будущее",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "бу",
+        "ду",
+        "щее"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "бу-ду-щее"
+    },
+    {
+      "word": "планируется",
+      "lemma": "планироваться",
+      "pos": "VERB",
+      "posName": "глагол",
+      "syllables": [
+        "пла",
+        "ни",
+        "ро",
+        "ва",
+        "ться"
+      ],
+      "syllableCount": 5,
+      "syllableStr": "пла-ни-ро-ва-ться"
+    },
+    {
+      "word": "расширение",
+      "lemma": "расширение",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "ра",
+        "сши",
+        "ре",
+        "ние"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "ра-сши-ре-ние"
+    },
+    {
+      "word": "набора",
+      "lemma": "набор",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "на",
+        "бор"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "на-бор"
+    },
+    {
+      "word": "данных",
+      "lemma": "данные",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "да",
+        "нные"
+      ],
+      "syllableCount": 2,
+      "syllableStr": "да-нные"
+    },
+    {
+      "word": "и",
+      "lemma": "и",
+      "pos": "CONJ",
+      "posName": "союз",
+      "syllables": [
+        "и"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "и"
+    },
+    {
+      "word": "улучшение",
+      "lemma": "улучшение",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "у",
+        "лу",
+        "чше",
+        "ние"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "у-лу-чше-ние"
+    },
+    {
+      "word": "архитектуры",
+      "lemma": "архитектура",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "а",
+        "рхи",
+        "те",
+        "кту",
+        "ра"
+      ],
+      "syllableCount": 5,
+      "syllableStr": "а-рхи-те-кту-ра"
+    },
+    {
+      "word": "для",
+      "lemma": "для",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "для"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "для"
+    },
+    {
+      "word": "работы",
+      "lemma": "работа",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "ра",
+        "бо",
+        "та"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "ра-бо-та"
+    },
+    {
+      "word": "с",
+      "lemma": "с",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "с"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "с"
+    },
+    {
+      "word": "непрерывной",
+      "lemma": "непрерывный",
+      "pos": "ADJF",
+      "posName": "прилагательное",
+      "syllables": [
+        "не",
+        "пре",
+        "ры",
+        "вный"
+      ],
+      "syllableCount": 4,
+      "syllableStr": "не-пре-ры-вный"
+    },
+    {
+      "word": "речью",
+      "lemma": "речь",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "речь"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "речь"
+    },
+    {
+      "word": "спасибо",
+      "lemma": "спасибо",
+      "pos": "INTJ",
+      "posName": "междометие",
+      "syllables": [
+        "спа",
+        "си",
+        "бо"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "спа-си-бо"
+    },
+    {
+      "word": "за",
+      "lemma": "за",
+      "pos": "PREP",
+      "posName": "предлог",
+      "syllables": [
+        "за"
+      ],
+      "syllableCount": 1,
+      "syllableStr": "за"
+    },
+    {
+      "word": "внимание",
+      "lemma": "внимание",
+      "pos": "NOUN",
+      "posName": "существительное",
+      "syllables": [
+        "вни",
+        "ма",
+        "ние"
+      ],
+      "syllableCount": 3,
+      "syllableStr": "вни-ма-ние"
+    }
+  ],
+  "syllableErrors": [
+    {
+      "referenceWord": "баратов",
+      "recognizedWord": "борат",
+      "refSyllables": [
+        "ба",
+        "ра",
+        "тов"
+      ],
+      "recSyllables": [
+        "бо",
+        "рат"
+      ],
+      "syllableStrRef": "ба-ра-тов",
+      "syllableStrRec": "бо-рат",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "ба",
+          "got": "бо",
+          "type": "replace",
+          "hint": "Ожидался слог «ба», произнесено «бо»"
+        },
+        {
+          "position": 2,
+          "expected": "ра",
+          "got": "рат",
+          "type": "replace",
+          "hint": "Ожидался слог «ра», произнесено «рат»"
+        },
+        {
+          "position": 3,
+          "expected": "тов",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «тов», произнесено «—»"
+        }
+      ],
+      "lemma": "барат",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "хожиакбар",
+      "recognizedWord": "хотя",
+      "refSyllables": [
+        "хо",
+        "жиа",
+        "кбар"
+      ],
+      "recSyllables": [
+        "хо",
+        "тя"
+      ],
+      "syllableStrRef": "хо-жиа-кбар",
+      "syllableStrRec": "хо-тя",
+      "matchRatio": 0.333,
+      "errors": [
+        {
+          "position": 2,
+          "expected": "жиа",
+          "got": "тя",
+          "type": "replace",
+          "hint": "Ожидался слог «жиа», произнесено «тя»"
+        },
+        {
+          "position": 3,
+          "expected": "кбар",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «кбар», произнесено «—»"
+        }
+      ],
+      "lemma": "хожиакбар",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "в",
+      "recognizedWord": "пар",
+      "refSyllables": [
+        "в"
+      ],
+      "recSyllables": [
+        "пар"
+      ],
+      "syllableStrRef": "в",
+      "syllableStrRec": "пар",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "в",
+          "got": "пар",
+          "type": "replace",
+          "hint": "Ожидался слог «в», произнесено «пар»"
+        }
+      ],
+      "lemma": "в",
+      "pos": "PREP"
+    },
+    {
+      "referenceWord": "своей",
+      "recognizedWord": "своём",
+      "refSyllables": [
+        "своей"
+      ],
+      "recSyllables": [
+        "своём"
+      ],
+      "syllableStrRef": "своей",
+      "syllableStrRec": "своём",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "своей",
+          "got": "своём",
+          "type": "replace",
+          "hint": "Ожидался слог «своей», произнесено «своём»"
+        }
+      ],
+      "lemma": "свой",
+      "pos": "ADJF"
+    },
+    {
+      "referenceWord": "работе",
+      "recognizedWord": "рабочий",
+      "refSyllables": [
+        "ра",
+        "бо",
+        "те"
+      ],
+      "recSyllables": [
+        "ра",
+        "бо",
+        "чий"
+      ],
+      "syllableStrRef": "ра-бо-те",
+      "syllableStrRec": "ра-бо-чий",
+      "matchRatio": 0.667,
+      "errors": [
+        {
+          "position": 3,
+          "expected": "те",
+          "got": "чий",
+          "type": "replace",
+          "hint": "Ожидался слог «те», произнесено «чий»"
+        }
+      ],
+      "lemma": "работа",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "я",
+      "recognizedWord": "если",
+      "refSyllables": [
+        "я"
+      ],
+      "recSyllables": [
+        "е",
+        "сли"
+      ],
+      "syllableStrRef": "я",
+      "syllableStrRec": "е-сли",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "я",
+          "got": "е",
+          "type": "replace",
+          "hint": "Ожидался слог «я», произнесено «е»"
+        },
+        {
+          "position": 2,
+          "expected": "—",
+          "got": "сли",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «сли»"
+        }
+      ],
+      "lemma": "я",
+      "pos": "NPRO"
+    },
+    {
+      "referenceWord": "исследую",
+      "recognizedWord": "это",
+      "refSyllables": [
+        "и",
+        "ссле",
+        "дую"
+      ],
+      "recSyllables": [
+        "э",
+        "то"
+      ],
+      "syllableStrRef": "и-ссле-дую",
+      "syllableStrRec": "э-то",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "и",
+          "got": "э",
+          "type": "replace",
+          "hint": "Ожидался слог «и», произнесено «э»"
+        },
+        {
+          "position": 2,
+          "expected": "ссле",
+          "got": "то",
+          "type": "replace",
+          "hint": "Ожидался слог «ссле», произнесено «то»"
+        },
+        {
+          "position": 3,
+          "expected": "дую",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «дую», произнесено «—»"
+        }
+      ],
+      "lemma": "исследовать",
+      "pos": "VERB"
+    },
+    {
+      "referenceWord": "современные",
+      "recognizedWord": "современный",
+      "refSyllables": [
+        "со",
+        "вре",
+        "ме",
+        "нные"
+      ],
+      "recSyllables": [
+        "со",
+        "вре",
+        "ме",
+        "нный"
+      ],
+      "syllableStrRef": "со-вре-ме-нные",
+      "syllableStrRec": "со-вре-ме-нный",
+      "matchRatio": 0.75,
+      "errors": [
+        {
+          "position": 4,
+          "expected": "нные",
+          "got": "нный",
+          "type": "replace",
+          "hint": "Ожидался слог «нные», произнесено «нный»"
+        }
+      ],
+      "lemma": "современный",
+      "pos": "ADJF"
+    },
+    {
+      "referenceWord": "методы",
+      "recognizedWord": "метод",
+      "refSyllables": [
+        "ме",
+        "то",
+        "ды"
+      ],
+      "recSyllables": [
+        "ме",
+        "тод"
+      ],
+      "syllableStrRef": "ме-то-ды",
+      "syllableStrRec": "ме-тод",
+      "matchRatio": 0.333,
+      "errors": [
+        {
+          "position": 2,
+          "expected": "то",
+          "got": "тод",
+          "type": "replace",
+          "hint": "Ожидался слог «то», произнесено «тод»"
+        },
+        {
+          "position": 3,
+          "expected": "ды",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «ды», произнесено «—»"
+        }
+      ],
+      "lemma": "метод",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "мультимодальных",
+      "recognizedWord": "мультимедийных",
+      "refSyllables": [
+        "му",
+        "льти",
+        "мо",
+        "да",
+        "льных"
+      ],
+      "recSyllables": [
+        "му",
+        "льти",
+        "ме",
+        "ди",
+        "йных"
+      ],
+      "syllableStrRef": "му-льти-мо-да-льных",
+      "syllableStrRec": "му-льти-ме-ди-йных",
+      "matchRatio": 0.4,
+      "errors": [
+        {
+          "position": 3,
+          "expected": "мо",
+          "got": "ме",
+          "type": "replace",
+          "hint": "Ожидался слог «мо», произнесено «ме»"
+        },
+        {
+          "position": 4,
+          "expected": "да",
+          "got": "ди",
+          "type": "replace",
+          "hint": "Ожидался слог «да», произнесено «ди»"
+        },
+        {
+          "position": 5,
+          "expected": "льных",
+          "got": "йных",
+          "type": "replace",
+          "hint": "Ожидался слог «льных», произнесено «йных»"
+        }
+      ],
+      "lemma": "мультимодальный",
+      "pos": "ADJF"
+    },
+    {
+      "referenceWord": "данных",
+      "recognizedWord": "там",
+      "refSyllables": [
+        "да",
+        "нных"
+      ],
+      "recSyllables": [
+        "там"
+      ],
+      "syllableStrRef": "да-нных",
+      "syllableStrRec": "там",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "да",
+          "got": "там",
+          "type": "replace",
+          "hint": "Ожидался слог «да», произнесено «там»"
+        },
+        {
+          "position": 2,
+          "expected": "нных",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «нных», произнесено «—»"
+        }
+      ],
+      "lemma": "данные",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "движения",
+      "recognizedWord": "движению",
+      "refSyllables": [
+        "дви",
+        "же",
+        "ния"
+      ],
+      "recSyllables": [
+        "дви",
+        "же",
+        "нию"
+      ],
+      "syllableStrRef": "дви-же-ния",
+      "syllableStrRec": "дви-же-нию",
+      "matchRatio": 0.667,
+      "errors": [
+        {
+          "position": 3,
+          "expected": "ния",
+          "got": "нию",
+          "type": "replace",
+          "hint": "Ожидался слог «ния», произнесено «нию»"
+        }
+      ],
+      "lemma": "движение",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "при",
+      "recognizedWord": "превра",
+      "refSyllables": [
+        "при"
+      ],
+      "recSyllables": [
+        "пре",
+        "вра"
+      ],
+      "syllableStrRef": "при",
+      "syllableStrRec": "пре-вра",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "при",
+          "got": "пре",
+          "type": "replace",
+          "hint": "Ожидался слог «при», произнесено «пре»"
+        },
+        {
+          "position": 2,
+          "expected": "—",
+          "got": "вра",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «вра»"
+        }
+      ],
+      "lemma": "при",
+      "pos": "PREP"
+    },
+    {
+      "referenceWord": "произнесении",
+      "recognizedWord": "произношение",
+      "refSyllables": [
+        "прои",
+        "зне",
+        "се",
+        "нии"
+      ],
+      "recSyllables": [
+        "прои",
+        "зно",
+        "ше",
+        "ние"
+      ],
+      "syllableStrRef": "прои-зне-се-нии",
+      "syllableStrRec": "прои-зно-ше-ние",
+      "matchRatio": 0.25,
+      "errors": [
+        {
+          "position": 2,
+          "expected": "зне",
+          "got": "зно",
+          "type": "replace",
+          "hint": "Ожидался слог «зне», произнесено «зно»"
+        },
+        {
+          "position": 3,
+          "expected": "се",
+          "got": "ше",
+          "type": "replace",
+          "hint": "Ожидался слог «се», произнесено «ше»"
+        },
+        {
+          "position": 4,
+          "expected": "нии",
+          "got": "ние",
+          "type": "replace",
+          "hint": "Ожидался слог «нии», произнесено «ние»"
+        }
+      ],
+      "lemma": "произнесение",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "обучение",
+      "recognizedWord": "обучения",
+      "refSyllables": [
+        "о",
+        "бу",
+        "че",
+        "ние"
+      ],
+      "recSyllables": [
+        "о",
+        "бу",
+        "че",
+        "ния"
+      ],
+      "syllableStrRef": "о-бу-че-ние",
+      "syllableStrRec": "о-бу-че-ния",
+      "matchRatio": 0.75,
+      "errors": [
+        {
+          "position": 4,
+          "expected": "ние",
+          "got": "ния",
+          "type": "replace",
+          "hint": "Ожидался слог «ние», произнесено «ния»"
+        }
+      ],
+      "lemma": "обучение",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "нейросетевой",
+      "recognizedWord": "или",
+      "refSyllables": [
+        "не",
+        "йро",
+        "се",
+        "те",
+        "вой"
+      ],
+      "recSyllables": [
+        "и",
+        "ли"
+      ],
+      "syllableStrRef": "не-йро-се-те-вой",
+      "syllableStrRec": "и-ли",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "не",
+          "got": "и",
+          "type": "replace",
+          "hint": "Ожидался слог «не», произнесено «и»"
+        },
+        {
+          "position": 2,
+          "expected": "йро",
+          "got": "ли",
+          "type": "replace",
+          "hint": "Ожидался слог «йро», произнесено «ли»"
+        },
+        {
+          "position": 3,
+          "expected": "се",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «се», произнесено «—»"
+        },
+        {
+          "position": 4,
+          "expected": "те",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «те», произнесено «—»"
+        },
+        {
+          "position": 5,
+          "expected": "вой",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «вой», произнесено «—»"
+        }
+      ],
+      "lemma": "нейросетевой",
+      "pos": "ADJF"
+    },
+    {
+      "referenceWord": "модели",
+      "recognizedWord": "нейросетевых",
+      "refSyllables": [
+        "мо",
+        "де",
+        "ли"
+      ],
+      "recSyllables": [
+        "не",
+        "йро",
+        "се",
+        "те",
+        "вых"
+      ],
+      "syllableStrRef": "мо-де-ли",
+      "syllableStrRec": "не-йро-се-те-вых",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "мо",
+          "got": "не",
+          "type": "replace",
+          "hint": "Ожидался слог «мо», произнесено «не»"
+        },
+        {
+          "position": 2,
+          "expected": "де",
+          "got": "йро",
+          "type": "replace",
+          "hint": "Ожидался слог «де», произнесено «йро»"
+        },
+        {
+          "position": 3,
+          "expected": "ли",
+          "got": "се",
+          "type": "replace",
+          "hint": "Ожидался слог «ли», произнесено «се»"
+        },
+        {
+          "position": 4,
+          "expected": "—",
+          "got": "те",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «те»"
+        },
+        {
+          "position": 5,
+          "expected": "—",
+          "got": "вых",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «вых»"
+        }
+      ],
+      "lemma": "модель",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "последовательностей",
+      "recognizedWord": "последовательных",
+      "refSyllables": [
+        "по",
+        "сле",
+        "до",
+        "ва",
+        "те",
+        "льно",
+        "стей"
+      ],
+      "recSyllables": [
+        "по",
+        "сле",
+        "до",
+        "ва",
+        "те",
+        "льных"
+      ],
+      "syllableStrRef": "по-сле-до-ва-те-льно-стей",
+      "syllableStrRec": "по-сле-до-ва-те-льных",
+      "matchRatio": 0.714,
+      "errors": [
+        {
+          "position": 6,
+          "expected": "льно",
+          "got": "льных",
+          "type": "replace",
+          "hint": "Ожидался слог «льно», произнесено «льных»"
+        },
+        {
+          "position": 7,
+          "expected": "стей",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «стей», произнесено «—»"
+        }
+      ],
+      "lemma": "последовательность",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "способной",
+      "recognizedWord": "способна",
+      "refSyllables": [
+        "спо",
+        "со",
+        "бной"
+      ],
+      "recSyllables": [
+        "спо",
+        "со",
+        "бна"
+      ],
+      "syllableStrRef": "спо-со-бной",
+      "syllableStrRec": "спо-со-бна",
+      "matchRatio": 0.667,
+      "errors": [
+        {
+          "position": 3,
+          "expected": "бной",
+          "got": "бна",
+          "type": "replace",
+          "hint": "Ожидался слог «бной», произнесено «бна»"
+        }
+      ],
+      "lemma": "способный",
+      "pos": "ADJF"
+    },
+    {
+      "referenceWord": "распознавать",
+      "recognizedWord": "раствор",
+      "refSyllables": [
+        "ра",
+        "спо",
+        "зна",
+        "вать"
+      ],
+      "recSyllables": [
+        "ра",
+        "створ"
+      ],
+      "syllableStrRef": "ра-спо-зна-вать",
+      "syllableStrRec": "ра-створ",
+      "matchRatio": 0.25,
+      "errors": [
+        {
+          "position": 2,
+          "expected": "спо",
+          "got": "створ",
+          "type": "replace",
+          "hint": "Ожидался слог «спо», произнесено «створ»"
+        },
+        {
+          "position": 3,
+          "expected": "зна",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «зна», произнесено «—»"
+        },
+        {
+          "position": 4,
+          "expected": "вать",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «вать», произнесено «—»"
+        }
+      ],
+      "lemma": "распознавать",
+      "pos": "INFN"
+    },
+    {
+      "referenceWord": "слова",
+      "recognizedWord": "для",
+      "refSyllables": [
+        "сло",
+        "ва"
+      ],
+      "recSyllables": [
+        "для"
+      ],
+      "syllableStrRef": "сло-ва",
+      "syllableStrRec": "для",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "сло",
+          "got": "для",
+          "type": "replace",
+          "hint": "Ожидался слог «сло», произнесено «для»"
+        },
+        {
+          "position": 2,
+          "expected": "ва",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «ва», произнесено «—»"
+        }
+      ],
+      "lemma": "слово",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "что",
+      "recognizedWord": "чтоб",
+      "refSyllables": [
+        "что"
+      ],
+      "recSyllables": [
+        "чтоб"
+      ],
+      "syllableStrRef": "что",
+      "syllableStrRec": "чтоб",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "что",
+          "got": "чтоб",
+          "type": "replace",
+          "hint": "Ожидался слог «что», произнесено «чтоб»"
+        }
+      ],
+      "lemma": "что",
+      "pos": "CONJ"
+    },
+    {
+      "referenceWord": "модели",
+      "recognizedWord": "мотеле",
+      "refSyllables": [
+        "мо",
+        "де",
+        "ли"
+      ],
+      "recSyllables": [
+        "мо",
+        "те",
+        "ле"
+      ],
+      "syllableStrRef": "мо-де-ли",
+      "syllableStrRec": "мо-те-ле",
+      "matchRatio": 0.333,
+      "errors": [
+        {
+          "position": 2,
+          "expected": "де",
+          "got": "те",
+          "type": "replace",
+          "hint": "Ожидался слог «де», произнесено «те»"
+        },
+        {
+          "position": 3,
+          "expected": "ли",
+          "got": "ле",
+          "type": "replace",
+          "hint": "Ожидался слог «ли», произнесено «ле»"
+        }
+      ],
+      "lemma": "модель",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "собственном",
+      "recognizedWord": "собственно",
+      "refSyllables": [
+        "со",
+        "бстве",
+        "нном"
+      ],
+      "recSyllables": [
+        "со",
+        "бстве",
+        "нно"
+      ],
+      "syllableStrRef": "со-бстве-нном",
+      "syllableStrRec": "со-бстве-нно",
+      "matchRatio": 0.667,
+      "errors": [
+        {
+          "position": 3,
+          "expected": "нном",
+          "got": "нно",
+          "type": "replace",
+          "hint": "Ожидался слог «нном», произнесено «нно»"
+        }
+      ],
+      "lemma": "собственный",
+      "pos": "ADJF"
+    },
+    {
+      "referenceWord": "наборе",
+      "recognizedWord": "набора",
+      "refSyllables": [
+        "на",
+        "бо",
+        "ре"
+      ],
+      "recSyllables": [
+        "на",
+        "бо",
+        "ра"
+      ],
+      "syllableStrRef": "на-бо-ре",
+      "syllableStrRec": "на-бо-ра",
+      "matchRatio": 0.667,
+      "errors": [
+        {
+          "position": 3,
+          "expected": "ре",
+          "got": "ра",
+          "type": "replace",
+          "hint": "Ожидался слог «ре», произнесено «ра»"
+        }
+      ],
+      "lemma": "набор",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "была",
+      "recognizedWord": "план",
+      "refSyllables": [
+        "бы",
+        "ла"
+      ],
+      "recSyllables": [
+        "план"
+      ],
+      "syllableStrRef": "бы-ла",
+      "syllableStrRec": "план",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "бы",
+          "got": "план",
+          "type": "replace",
+          "hint": "Ожидался слог «бы», произнесено «план»"
+        },
+        {
+          "position": 2,
+          "expected": "ла",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «ла», произнесено «—»"
+        }
+      ],
+      "lemma": "быть",
+      "pos": "VERB"
+    },
+    {
+      "referenceWord": "достигнута",
+      "recognizedWord": "достигнуть",
+      "refSyllables": [
+        "до",
+        "сти",
+        "гну",
+        "та"
+      ],
+      "recSyllables": [
+        "до",
+        "сти",
+        "гнуть"
+      ],
+      "syllableStrRef": "до-сти-гну-та",
+      "syllableStrRec": "до-сти-гнуть",
+      "matchRatio": 0.5,
+      "errors": [
+        {
+          "position": 3,
+          "expected": "гну",
+          "got": "гнуть",
+          "type": "replace",
+          "hint": "Ожидался слог «гну», произнесено «гнуть»"
+        },
+        {
+          "position": 4,
+          "expected": "та",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «та», произнесено «—»"
+        }
+      ],
+      "lemma": "достигнуть",
+      "pos": "PRTS"
+    },
+    {
+      "referenceWord": "точность",
+      "recognizedWord": "точности",
+      "refSyllables": [
+        "то",
+        "чность"
+      ],
+      "recSyllables": [
+        "то",
+        "чно",
+        "сти"
+      ],
+      "syllableStrRef": "то-чность",
+      "syllableStrRec": "то-чно-сти",
+      "matchRatio": 0.333,
+      "errors": [
+        {
+          "position": 2,
+          "expected": "чность",
+          "got": "чно",
+          "type": "replace",
+          "hint": "Ожидался слог «чность», произнесено «чно»"
+        },
+        {
+          "position": 3,
+          "expected": "—",
+          "got": "сти",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «сти»"
+        }
+      ],
+      "lemma": "точность",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "95",
+      "recognizedWord": "нос",
+      "refSyllables": [
+        "95"
+      ],
+      "recSyllables": [
+        "нос"
+      ],
+      "syllableStrRef": "95",
+      "syllableStrRec": "нос",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "95",
+          "got": "нос",
+          "type": "replace",
+          "hint": "Ожидался слог «95», произнесено «нос»"
+        }
+      ],
+      "lemma": "95",
+      "pos": "UNKN"
+    },
+    {
+      "referenceWord": "7",
+      "recognizedWord": "пять",
+      "refSyllables": [
+        "7"
+      ],
+      "recSyllables": [
+        "пять"
+      ],
+      "syllableStrRef": "7",
+      "syllableStrRec": "пять",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "7",
+          "got": "пять",
+          "type": "replace",
+          "hint": "Ожидался слог «7», произнесено «пять»"
+        }
+      ],
+      "lemma": "7",
+      "pos": "UNKN"
+    },
+    {
+      "referenceWord": "обучающей",
+      "recognizedWord": "обучение",
+      "refSyllables": [
+        "о",
+        "бу",
+        "чаю",
+        "щей"
+      ],
+      "recSyllables": [
+        "о",
+        "бу",
+        "че",
+        "ние"
+      ],
+      "syllableStrRef": "о-бу-чаю-щей",
+      "syllableStrRec": "о-бу-че-ние",
+      "matchRatio": 0.5,
+      "errors": [
+        {
+          "position": 3,
+          "expected": "чаю",
+          "got": "че",
+          "type": "replace",
+          "hint": "Ожидался слог «чаю», произнесено «че»"
+        },
+        {
+          "position": 4,
+          "expected": "щей",
+          "got": "ние",
+          "type": "replace",
+          "hint": "Ожидался слог «щей», произнесено «ние»"
+        }
+      ],
+      "lemma": "обучать",
+      "pos": "PRTF"
+    },
+    {
+      "referenceWord": "перспективы",
+      "recognizedWord": "девяносто",
+      "refSyllables": [
+        "пе",
+        "рспе",
+        "кти",
+        "вы"
+      ],
+      "recSyllables": [
+        "де",
+        "вя",
+        "но",
+        "сто"
+      ],
+      "syllableStrRef": "пе-рспе-кти-вы",
+      "syllableStrRec": "де-вя-но-сто",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "пе",
+          "got": "де",
+          "type": "replace",
+          "hint": "Ожидался слог «пе», произнесено «де»"
+        },
+        {
+          "position": 2,
+          "expected": "рспе",
+          "got": "вя",
+          "type": "replace",
+          "hint": "Ожидался слог «рспе», произнесено «вя»"
+        },
+        {
+          "position": 3,
+          "expected": "кти",
+          "got": "но",
+          "type": "replace",
+          "hint": "Ожидался слог «кти», произнесено «но»"
+        },
+        {
+          "position": 4,
+          "expected": "вы",
+          "got": "сто",
+          "type": "replace",
+          "hint": "Ожидался слог «вы», произнесено «сто»"
+        }
+      ],
+      "lemma": "перспектива",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "модель",
+      "recognizedWord": "моделлера",
+      "refSyllables": [
+        "мо",
+        "дель"
+      ],
+      "recSyllables": [
+        "мо",
+        "де",
+        "лле",
+        "ра"
+      ],
+      "syllableStrRef": "мо-дель",
+      "syllableStrRec": "мо-де-лле-ра",
+      "matchRatio": 0.25,
+      "errors": [
+        {
+          "position": 2,
+          "expected": "дель",
+          "got": "де",
+          "type": "replace",
+          "hint": "Ожидался слог «дель», произнесено «де»"
+        },
+        {
+          "position": 3,
+          "expected": "—",
+          "got": "лле",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «лле»"
+        },
+        {
+          "position": 4,
+          "expected": "—",
+          "got": "ра",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «ра»"
+        }
+      ],
+      "lemma": "модель",
+      "pos": "NOUN"
+    },
+    {
+      "referenceWord": "работает",
+      "recognizedWord": "работаете",
+      "refSyllables": [
+        "ра",
+        "бо",
+        "тает"
+      ],
+      "recSyllables": [
+        "ра",
+        "бо",
+        "тае",
+        "те"
+      ],
+      "syllableStrRef": "ра-бо-тает",
+      "syllableStrRec": "ра-бо-тае-те",
+      "matchRatio": 0.5,
+      "errors": [
+        {
+          "position": 3,
+          "expected": "тает",
+          "got": "тае",
+          "type": "replace",
+          "hint": "Ожидался слог «тает», произнесено «тае»"
+        },
+        {
+          "position": 4,
+          "expected": "—",
+          "got": "те",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «те»"
+        }
+      ],
+      "lemma": "работать",
+      "pos": "VERB"
+    },
+    {
+      "referenceWord": "с",
+      "recognizedWord": "ограниченными",
+      "refSyllables": [
+        "с"
+      ],
+      "recSyllables": [
+        "о",
+        "гра",
+        "ни",
+        "че",
+        "нны",
+        "ми"
+      ],
+      "syllableStrRef": "с",
+      "syllableStrRec": "о-гра-ни-че-нны-ми",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "с",
+          "got": "о",
+          "type": "replace",
+          "hint": "Ожидался слог «с», произнесено «о»"
+        },
+        {
+          "position": 2,
+          "expected": "—",
+          "got": "гра",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «гра»"
+        },
+        {
+          "position": 3,
+          "expected": "—",
+          "got": "ни",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «ни»"
+        },
+        {
+          "position": 4,
+          "expected": "—",
+          "got": "че",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «че»"
+        },
+        {
+          "position": 5,
+          "expected": "—",
+          "got": "нны",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «нны»"
+        },
+        {
+          "position": 6,
+          "expected": "—",
+          "got": "ми",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «ми»"
+        }
+      ],
+      "lemma": "с",
+      "pos": "PREP"
+    },
+    {
+      "referenceWord": "ограниченным",
+      "recognizedWord": "и",
+      "refSyllables": [
+        "о",
+        "гра",
+        "ни",
+        "че",
+        "нным"
+      ],
+      "recSyllables": [
+        "и"
+      ],
+      "syllableStrRef": "о-гра-ни-че-нным",
+      "syllableStrRec": "и",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "о",
+          "got": "и",
+          "type": "replace",
+          "hint": "Ожидался слог «о», произнесено «и»"
+        },
+        {
+          "position": 2,
+          "expected": "гра",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «гра», произнесено «—»"
+        },
+        {
+          "position": 3,
+          "expected": "ни",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «ни», произнесено «—»"
+        },
+        {
+          "position": 4,
+          "expected": "че",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «че», произнесено «—»"
+        },
+        {
+          "position": 5,
+          "expected": "нным",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «нным», произнесено «—»"
+        }
+      ],
+      "lemma": "ограниченный",
+      "pos": "ADJF"
+    },
+    {
+      "referenceWord": "но",
+      "recognizedWord": "то",
+      "refSyllables": [
+        "но"
+      ],
+      "recSyllables": [
+        "то"
+      ],
+      "syllableStrRef": "но",
+      "syllableStrRec": "то",
+      "matchRatio": 0.0,
+      "errors": [
+        {
+          "position": 1,
+          "expected": "но",
+          "got": "то",
+          "type": "replace",
+          "hint": "Ожидался слог «но», произнесено «то»"
+        }
+      ],
+      "lemma": "но",
+      "pos": "CONJ"
+    },
+    {
+      "referenceWord": "архитектуры",
+      "recognizedWord": "архитектуре",
+      "refSyllables": [
+        "а",
+        "рхи",
+        "те",
+        "кту",
+        "ры"
+      ],
+      "recSyllables": [
+        "а",
+        "рхи",
+        "те",
+        "кту",
+        "ре"
+      ],
+      "syllableStrRef": "а-рхи-те-кту-ры",
+      "syllableStrRec": "а-рхи-те-кту-ре",
+      "matchRatio": 0.8,
+      "errors": [
+        {
+          "position": 5,
+          "expected": "ры",
+          "got": "ре",
+          "type": "replace",
+          "hint": "Ожидался слог «ры», произнесено «ре»"
+        }
+      ],
+      "lemma": "архитектура",
+      "pos": "NOUN"
+    }
+  ],
+  "syllableFrequency": [
+    {
+      "syllable": "ние",
+      "count": 12
+    },
+    {
+      "syllable": "на",
+      "count": 10
+    },
+    {
+      "syllable": "ра",
+      "count": 7
+    },
+    {
+      "syllable": "бо",
+      "count": 7
+    },
+    {
+      "syllable": "ва",
+      "count": 7
+    },
+    {
+      "syllable": "да",
+      "count": 7
+    },
+    {
+      "syllable": "и",
+      "count": 6
+    },
+    {
+      "syllable": "о",
+      "count": 6
+    },
+    {
+      "syllable": "че",
+      "count": 5
+    },
+    {
+      "syllable": "до",
+      "count": 4
+    },
+    {
+      "syllable": "со",
+      "count": 4
+    },
+    {
+      "syllable": "нный",
+      "count": 4
+    },
+    {
+      "syllable": "спо",
+      "count": 4
+    },
+    {
+      "syllable": "с",
+      "count": 4
+    },
+    {
+      "syllable": "мо",
+      "count": 4
+    },
+    {
+      "syllable": "нные",
+      "count": 4
+    },
+    {
+      "syllable": "се",
+      "count": 4
+    },
+    {
+      "syllable": "сло",
+      "count": 4
+    },
+    {
+      "syllable": "бу",
+      "count": 4
+    },
+    {
+      "syllable": "ба",
+      "count": 3
+    },
+    {
+      "syllable": "в",
+      "count": 3
+    },
+    {
+      "syllable": "ме",
+      "count": 3
+    },
+    {
+      "syllable": "а",
+      "count": 3
+    },
+    {
+      "syllable": "ви",
+      "count": 3
+    },
+    {
+      "syllable": "део",
+      "count": 3
+    },
+    {
+      "syllable": "во",
+      "count": 3
+    },
+    {
+      "syllable": "те",
+      "count": 3
+    },
+    {
+      "syllable": "дель",
+      "count": 3
+    },
+    {
+      "syllable": "ма",
+      "count": 3
+    },
+    {
+      "syllable": "я",
+      "count": 2
+    },
+    {
+      "syllable": "та",
+      "count": 2
+    },
+    {
+      "syllable": "вать",
+      "count": 2
+    },
+    {
+      "syllable": "зна",
+      "count": 2
+    },
+    {
+      "syllable": "речь",
+      "count": 2
+    },
+    {
+      "syllable": "дви",
+      "count": 2
+    },
+    {
+      "syllable": "же",
+      "count": 2
+    },
+    {
+      "syllable": "гу",
+      "count": 2
+    },
+    {
+      "syllable": "вой",
+      "count": 2
+    },
+    {
+      "syllable": "за",
+      "count": 2
+    },
+    {
+      "syllable": "не",
+      "count": 2
+    },
+    {
+      "syllable": "по",
+      "count": 2
+    },
+    {
+      "syllable": "си",
+      "count": 2
+    },
+    {
+      "syllable": "мочь",
+      "count": 2
+    },
+    {
+      "syllable": "бор",
+      "count": 2
+    },
+    {
+      "syllable": "ро",
+      "count": 2
+    },
+    {
+      "syllable": "вы",
+      "count": 2
+    },
+    {
+      "syllable": "рка",
+      "count": 2
+    },
+    {
+      "syllable": "ни",
+      "count": 2
+    },
+    {
+      "syllable": "брый",
+      "count": 1
+    },
+    {
+      "syllable": "день",
+      "count": 1
+    },
+    {
+      "syllable": "звать",
+      "count": 1
+    },
+    {
+      "syllable": "рат",
+      "count": 1
+    },
+    {
+      "syllable": "хо",
+      "count": 1
+    },
+    {
+      "syllable": "жиа",
+      "count": 1
+    },
+    {
+      "syllable": "кбар",
+      "count": 1
+    },
+    {
+      "syllable": "свой",
+      "count": 1
+    },
+    {
+      "syllable": "ссле",
+      "count": 1
+    },
+    {
+      "syllable": "вре",
+      "count": 1
+    },
+    {
+      "syllable": "тод",
+      "count": 1
+    },
+    {
+      "syllable": "льзо",
+      "count": 1
+    },
+    {
+      "syllable": "му",
+      "count": 1
+    },
+    {
+      "syllable": "льти",
+      "count": 1
+    },
+    {
+      "syllable": "льный",
+      "count": 1
+    },
+    {
+      "syllable": "нно",
+      "count": 1
+    },
+    {
+      "syllable": "лиз",
+      "count": 1
+    },
+    {
+      "syllable": "клю",
+      "count": 1
+    },
+    {
+      "syllable": "ча",
+      "count": 1
+    },
+    {
+      "syllable": "сбор",
+      "count": 1
+    },
+    {
+      "syllable": "бра",
+      "count": 1
+    },
+    {
+      "syllable": "тка",
+      "count": 1
+    },
+    {
+      "syllable": "при",
+      "count": 1
+    },
+    {
+      "syllable": "прои",
+      "count": 1
+    },
+    {
+      "syllable": "зне",
+      "count": 1
+    },
+    {
+      "syllable": "йро",
+      "count": 1
+    },
+    {
+      "syllable": "сно",
+      "count": 1
+    },
+    {
+      "syllable": "сле",
+      "count": 1
+    },
+    {
+      "syllable": "льность",
+      "count": 1
+    },
+    {
+      "syllable": "кадр",
+      "count": 1
+    },
+    {
+      "syllable": "зда",
+      "count": 1
+    },
+    {
+      "syllable": "сте",
+      "count": 1
+    },
+    {
+      "syllable": "бный",
+      "count": 1
+    },
+    {
+      "syllable": "без",
+      "count": 1
+    },
+    {
+      "syllable": "звук",
+      "count": 1
+    },
+    {
+      "syllable": "что",
+      "count": 1
+    },
+    {
+      "syllable": "ло",
+      "count": 1
+    },
+    {
+      "syllable": "век",
+      "count": 1
+    },
+    {
+      "syllable": "ру",
+      "count": 1
+    },
+    {
+      "syllable": "ше",
+      "count": 1
+    },
+    {
+      "syllable": "слух",
+      "count": 1
+    },
+    {
+      "syllable": "ход",
+      "count": 1
+    },
+    {
+      "syllable": "бстве",
+      "count": 1
+    },
+    {
+      "syllable": "мьсот",
+      "count": 1
+    },
+    {
+      "syllable": "лик",
+      "count": 1
+    },
+    {
+      "syllable": "три",
+      "count": 1
+    },
+    {
+      "syllable": "дцать",
+      "count": 1
+    },
+    {
+      "syllable": "быть",
+      "count": 1
+    },
+    {
+      "syllable": "сти",
+      "count": 1
+    },
+    {
+      "syllable": "гнуть",
+      "count": 1
+    },
+    {
+      "syllable": "то",
+      "count": 1
+    },
+    {
+      "syllable": "чность",
+      "count": 1
+    },
+    {
+      "syllable": "95",
+      "count": 1
+    },
+    {
+      "syllable": "7",
+      "count": 1
+    },
+    {
+      "syllable": "чать",
+      "count": 1
+    },
+    {
+      "syllable": "98",
+      "count": 1
+    },
+    {
+      "syllable": "5",
+      "count": 1
+    },
+    {
+      "syllable": "ли",
+      "count": 1
+    },
+    {
+      "syllable": "цио",
+      "count": 1
+    },
+    {
+      "syllable": "про",
+      "count": 1
+    },
+    {
+      "syllable": "бле",
+      "count": 1
+    },
+    {
+      "syllable": "пе",
+      "count": 1
+    },
+    {
+      "syllable": "рспе",
+      "count": 1
+    },
+    {
+      "syllable": "кти",
+      "count": 1
+    },
+    {
+      "syllable": "йчас",
+      "count": 1
+    },
+    {
+      "syllable": "тать",
+      "count": 1
+    },
+    {
+      "syllable": "гра",
+      "count": 1
+    },
+    {
+      "syllable": "варь",
+      "count": 1
+    },
+    {
+      "syllable": "но",
+      "count": 1
+    },
+    {
+      "syllable": "ду",
+      "count": 1
+    },
+    {
+      "syllable": "щее",
+      "count": 1
+    },
+    {
+      "syllable": "пла",
+      "count": 1
+    },
+    {
+      "syllable": "ться",
+      "count": 1
+    },
+    {
+      "syllable": "сши",
+      "count": 1
+    },
+    {
+      "syllable": "ре",
+      "count": 1
+    },
+    {
+      "syllable": "у",
+      "count": 1
+    },
+    {
+      "syllable": "лу",
+      "count": 1
+    },
+    {
+      "syllable": "чше",
+      "count": 1
+    },
+    {
+      "syllable": "рхи",
+      "count": 1
+    },
+    {
+      "syllable": "кту",
+      "count": 1
+    },
+    {
+      "syllable": "для",
+      "count": 1
+    },
+    {
+      "syllable": "пре",
+      "count": 1
+    },
+    {
+      "syllable": "ры",
+      "count": 1
+    },
+    {
+      "syllable": "вный",
+      "count": 1
+    },
+    {
+      "syllable": "спа",
+      "count": 1
+    },
+    {
+      "syllable": "вни",
+      "count": 1
+    }
+  ],
+  "pauses": [],
+  "wordComparison": {
+    "correct": [
+      "добрый",
+      "день",
+      "меня",
+      "зовут",
+      "распознавания",
+      "речи",
+      "с",
+      "использованием",
+      "а",
+      "именно",
+      "анализ",
+      "движений",
+      "губ",
+      "на",
+      "видео",
+      "ключевые",
+      "задачи",
+      "сбор",
+      "и",
+      "обработка",
+      "видеоданных",
+      "губ",
+      "слов",
+      "на",
+      "основе",
+      "кадров",
+      "создание",
+      "системы",
+      "без",
+      "звука",
+      "может",
+      "помочь",
+      "людям",
+      "с",
+      "нарушениями",
+      "слуха",
+      "в",
+      "ходе",
+      "обучения",
+      "на",
+      "данных",
+      "семьсот",
+      "видеороликов",
+      "тринадцать",
+      "слов",
+      "на",
+      "выборке",
+      "и",
+      "сейчас",
+      "словарём",
+      "в",
+      "будущем",
+      "планируется",
+      "расширение",
+      "набора",
+      "данных",
+      "и",
+      "улучшение",
+      "для",
+      "работы",
+      "с",
+      "непрерывной",
+      "речью",
+      "спасибо",
+      "за",
+      "внимание"
+    ],
+    "substituted": [
+      {
+        "expected": "баратов",
+        "got": "борат"
+      },
+      {
+        "expected": "хожиакбар",
+        "got": "хотя"
+      },
+      {
+        "expected": "в",
+        "got": "пар"
+      },
+      {
+        "expected": "своей",
+        "got": "своём"
+      },
+      {
+        "expected": "работе",
+        "got": "рабочий"
+      },
+      {
+        "expected": "я",
+        "got": "если"
+      },
+      {
+        "expected": "исследую",
+        "got": "это"
+      },
+      {
+        "expected": "современные",
+        "got": "современный"
+      },
+      {
+        "expected": "методы",
+        "got": "метод"
+      },
+      {
+        "expected": "мультимодальных",
+        "got": "мультимедийных"
+      },
+      {
+        "expected": "данных",
+        "got": "там"
+      },
+      {
+        "expected": "—",
+        "got": "а"
+      },
+      {
+        "expected": "—",
+        "got": "именно"
+      },
+      {
+        "expected": "движения",
+        "got": "движению"
+      },
+      {
+        "expected": "при",
+        "got": "превра"
+      },
+      {
+        "expected": "произнесении",
+        "got": "произношение"
+      },
+      {
+        "expected": "обучение",
+        "got": "обучения"
+      },
+      {
+        "expected": "нейросетевой",
+        "got": "или"
+      },
+      {
+        "expected": "модели",
+        "got": "нейросетевых"
+      },
+      {
+        "expected": "—",
+        "got": "моделей"
+      },
+      {
+        "expected": "последовательностей",
+        "got": "последовательных"
+      },
+      {
+        "expected": "способной",
+        "got": "способна"
+      },
+      {
+        "expected": "распознавать",
+        "got": "раствор"
+      },
+      {
+        "expected": "слова",
+        "got": "для"
+      },
+      {
+        "expected": "—",
+        "got": "распознавания"
+      },
+      {
+        "expected": "—",
+        "got": "слов"
+      },
+      {
+        "expected": "—",
+        "got": "слово"
+      },
+      {
+        "expected": "что",
+        "got": "чтоб"
+      },
+      {
+        "expected": "модели",
+        "got": "мотеле"
+      },
+      {
+        "expected": "собственном",
+        "got": "собственно"
+      },
+      {
+        "expected": "наборе",
+        "got": "набора"
+      },
+      {
+        "expected": "была",
+        "got": "план"
+      },
+      {
+        "expected": "достигнута",
+        "got": "достигнуть"
+      },
+      {
+        "expected": "точность",
+        "got": "точности"
+      },
+      {
+        "expected": "95",
+        "got": "нос"
+      },
+      {
+        "expected": "7",
+        "got": "пять"
+      },
+      {
+        "expected": "—",
+        "got": "процентов"
+      },
+      {
+        "expected": "обучающей",
+        "got": "обучение"
+      },
+      {
+        "expected": "перспективы",
+        "got": "девяносто"
+      },
+      {
+        "expected": "—",
+        "got": "восемь"
+      },
+      {
+        "expected": "—",
+        "got": "процентов"
+      },
+      {
+        "expected": "—",
+        "got": "и"
+      },
+      {
+        "expected": "—",
+        "got": "она"
+      },
+      {
+        "expected": "—",
+        "got": "болит"
+      },
+      {
+        "expected": "—",
+        "got": "за"
+      },
+      {
+        "expected": "—",
+        "got": "сцену"
+      },
+      {
+        "expected": "—",
+        "got": "выборки"
+      },
+      {
+        "expected": "—",
+        "got": "проблема"
+      },
+      {
+        "expected": "—",
+        "got": "и"
+      },
+      {
+        "expected": "—",
+        "got": "перспектива"
+      },
+      {
+        "expected": "модель",
+        "got": "моделлера"
+      },
+      {
+        "expected": "работает",
+        "got": "работаете"
+      },
+      {
+        "expected": "с",
+        "got": "ограниченными"
+      },
+      {
+        "expected": "ограниченным",
+        "got": "и"
+      },
+      {
+        "expected": "но",
+        "got": "то"
+      },
+      {
+        "expected": "архитектуры",
+        "got": "архитектуре"
+      }
+    ],
+    "missed": [
+      "98",
+      "5",
+      "на",
+      "валидационной",
+      "выборке",
+      "проблемы"
+    ],
+    "inserted": [
+      "а",
+      "именно"
+    ]
+  }
+}

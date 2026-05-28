@@ -1,0 +1,1058 @@
+{
+  "total_unique_syllables": 263,
+  "total_syllable_occurrences": 551,
+  "syllables_by_frequency": [
+    {
+      "syllable": "на",
+      "count": 14
+    },
+    {
+      "syllable": "ка",
+      "count": 13
+    },
+    {
+      "syllable": "по",
+      "count": 13
+    },
+    {
+      "syllable": "а",
+      "count": 12
+    },
+    {
+      "syllable": "се",
+      "count": 11
+    },
+    {
+      "syllable": "о",
+      "count": 10
+    },
+    {
+      "syllable": "но",
+      "count": 8
+    },
+    {
+      "syllable": "ме",
+      "count": 7
+    },
+    {
+      "syllable": "и",
+      "count": 7
+    },
+    {
+      "syllable": "фильм",
+      "count": 7
+    },
+    {
+      "syllable": "ре",
+      "count": 6
+    },
+    {
+      "syllable": "три",
+      "count": 6
+    },
+    {
+      "syllable": "дцать",
+      "count": 6
+    },
+    {
+      "syllable": "ло",
+      "count": 6
+    },
+    {
+      "syllable": "ста",
+      "count": 6
+    },
+    {
+      "syllable": "в",
+      "count": 6
+    },
+    {
+      "syllable": "та",
+      "count": 6
+    },
+    {
+      "syllable": "ко",
+      "count": 6
+    },
+    {
+      "syllable": "фи",
+      "count": 5
+    },
+    {
+      "syllable": "во",
+      "count": 5
+    },
+    {
+      "syllable": "сти",
+      "count": 5
+    },
+    {
+      "syllable": "зать",
+      "count": 5
+    },
+    {
+      "syllable": "ки",
+      "count": 5
+    },
+    {
+      "syllable": "че",
+      "count": 5
+    },
+    {
+      "syllable": "у",
+      "count": 5
+    },
+    {
+      "syllable": "я",
+      "count": 5
+    },
+    {
+      "syllable": "э",
+      "count": 4
+    },
+    {
+      "syllable": "ма",
+      "count": 4
+    },
+    {
+      "syllable": "то",
+      "count": 4
+    },
+    {
+      "syllable": "шка",
+      "count": 4
+    },
+    {
+      "syllable": "ли",
+      "count": 4
+    },
+    {
+      "syllable": "до",
+      "count": 4
+    },
+    {
+      "syllable": "ра",
+      "count": 4
+    },
+    {
+      "syllable": "ше",
+      "count": 4
+    },
+    {
+      "syllable": "сят",
+      "count": 4
+    },
+    {
+      "syllable": "мо",
+      "count": 4
+    },
+    {
+      "syllable": "за",
+      "count": 4
+    },
+    {
+      "syllable": "га",
+      "count": 4
+    },
+    {
+      "syllable": "вич",
+      "count": 3
+    },
+    {
+      "syllable": "ро",
+      "count": 3
+    },
+    {
+      "syllable": "ться",
+      "count": 3
+    },
+    {
+      "syllable": "рубль",
+      "count": 3
+    },
+    {
+      "syllable": "ри",
+      "count": 3
+    },
+    {
+      "syllable": "с",
+      "count": 3
+    },
+    {
+      "syllable": "пе",
+      "count": 3
+    },
+    {
+      "syllable": "пи",
+      "count": 3
+    },
+    {
+      "syllable": "ноль",
+      "count": 3
+    },
+    {
+      "syllable": "ты",
+      "count": 3
+    },
+    {
+      "syllable": "стьде",
+      "count": 3
+    },
+    {
+      "syllable": "де",
+      "count": 3
+    },
+    {
+      "syllable": "про",
+      "count": 3
+    },
+    {
+      "syllable": "вклю",
+      "count": 3
+    },
+    {
+      "syllable": "чать",
+      "count": 3
+    },
+    {
+      "syllable": "би",
+      "count": 3
+    },
+    {
+      "syllable": "ви",
+      "count": 3
+    },
+    {
+      "syllable": "ру",
+      "count": 3
+    },
+    {
+      "syllable": "ле",
+      "count": 3
+    },
+    {
+      "syllable": "са",
+      "count": 3
+    },
+    {
+      "syllable": "хо",
+      "count": 3
+    },
+    {
+      "syllable": "те",
+      "count": 3
+    },
+    {
+      "syllable": "смо",
+      "count": 3
+    },
+    {
+      "syllable": "му",
+      "count": 2
+    },
+    {
+      "syllable": "йти",
+      "count": 2
+    },
+    {
+      "syllable": "риал",
+      "count": 2
+    },
+    {
+      "syllable": "пря",
+      "count": 2
+    },
+    {
+      "syllable": "мой",
+      "count": 2
+    },
+    {
+      "syllable": "фир",
+      "count": 2
+    },
+    {
+      "syllable": "апл",
+      "count": 2
+    },
+    {
+      "syllable": "ю",
+      "count": 2
+    },
+    {
+      "syllable": "ва",
+      "count": 2
+    },
+    {
+      "syllable": "мочь",
+      "count": 2
+    },
+    {
+      "syllable": "ни",
+      "count": 2
+    },
+    {
+      "syllable": "нский",
+      "count": 2
+    },
+    {
+      "syllable": "день",
+      "count": 2
+    },
+    {
+      "syllable": "па",
+      "count": 2
+    },
+    {
+      "syllable": "рвый",
+      "count": 2
+    },
+    {
+      "syllable": "дин",
+      "count": 2
+    },
+    {
+      "syllable": "зон",
+      "count": 2
+    },
+    {
+      "syllable": "век",
+      "count": 2
+    },
+    {
+      "syllable": "мна",
+      "count": 2
+    },
+    {
+      "syllable": "вять",
+      "count": 2
+    },
+    {
+      "syllable": "шоу",
+      "count": 2
+    },
+    {
+      "syllable": "нго",
+      "count": 2
+    },
+    {
+      "syllable": "бо",
+      "count": 2
+    },
+    {
+      "syllable": "тель",
+      "count": 2
+    },
+    {
+      "syllable": "быть",
+      "count": 2
+    },
+    {
+      "syllable": "мер",
+      "count": 2
+    },
+    {
+      "syllable": "лнить",
+      "count": 2
+    },
+    {
+      "syllable": "ба",
+      "count": 2
+    },
+    {
+      "syllable": "джа",
+      "count": 2
+    },
+    {
+      "syllable": "вить",
+      "count": 2
+    },
+    {
+      "syllable": "вы",
+      "count": 2
+    },
+    {
+      "syllable": "льный",
+      "count": 2
+    },
+    {
+      "syllable": "ве",
+      "count": 2
+    },
+    {
+      "syllable": "жа",
+      "count": 2
+    },
+    {
+      "syllable": "лу",
+      "count": 2
+    },
+    {
+      "syllable": "йста",
+      "count": 2
+    },
+    {
+      "syllable": "теть",
+      "count": 2
+    },
+    {
+      "syllable": "пу",
+      "count": 2
+    },
+    {
+      "syllable": "трё",
+      "count": 2
+    },
+    {
+      "syllable": "вка",
+      "count": 2
+    },
+    {
+      "syllable": "кция",
+      "count": 2
+    },
+    {
+      "syllable": "шесть",
+      "count": 2
+    },
+    {
+      "syllable": "спрои",
+      "count": 1
+    },
+    {
+      "syllable": "зве",
+      "count": 1
+    },
+    {
+      "syllable": "зы",
+      "count": 1
+    },
+    {
+      "syllable": "впе",
+      "count": 1
+    },
+    {
+      "syllable": "шку",
+      "count": 1
+    },
+    {
+      "syllable": "гри",
+      "count": 1
+    },
+    {
+      "syllable": "го",
+      "count": 1
+    },
+    {
+      "syllable": "рий",
+      "count": 1
+    },
+    {
+      "syllable": "р",
+      "count": 1
+    },
+    {
+      "syllable": "нче",
+      "count": 1
+    },
+    {
+      "syllable": "стер",
+      "count": 1
+    },
+    {
+      "syllable": "йтед",
+      "count": 1
+    },
+    {
+      "syllable": "тте",
+      "count": 1
+    },
+    {
+      "syllable": "нхэ",
+      "count": 1
+    },
+    {
+      "syllable": "львир",
+      "count": 1
+    },
+    {
+      "syllable": "нчи",
+      "count": 1
+    },
+    {
+      "syllable": "хин",
+      "count": 1
+    },
+    {
+      "syllable": "схо",
+      "count": 1
+    },
+    {
+      "syllable": "дный",
+      "count": 1
+    },
+    {
+      "syllable": "код",
+      "count": 1
+    },
+    {
+      "syllable": "зме",
+      "count": 1
+    },
+    {
+      "syllable": "курс",
+      "count": 1
+    },
+    {
+      "syllable": "к",
+      "count": 1
+    },
+    {
+      "syllable": "ллар",
+      "count": 1
+    },
+    {
+      "syllable": "вче",
+      "count": 1
+    },
+    {
+      "syllable": "шний",
+      "count": 1
+    },
+    {
+      "syllable": "пло",
+      "count": 1
+    },
+    {
+      "syllable": "хой",
+      "count": 1
+    },
+    {
+      "syllable": "рень",
+      "count": 1
+    },
+    {
+      "syllable": "часть",
+      "count": 1
+    },
+    {
+      "syllable": "зод",
+      "count": 1
+    },
+    {
+      "syllable": "ку",
+      "count": 1
+    },
+    {
+      "syllable": "пить",
+      "count": 1
+    },
+    {
+      "syllable": "мою",
+      "count": 1
+    },
+    {
+      "syllable": "щий",
+      "count": 1
+    },
+    {
+      "syllable": "сре",
+      "count": 1
+    },
+    {
+      "syllable": "дство",
+      "count": 1
+    },
+    {
+      "syllable": "семь",
+      "count": 1
+    },
+    {
+      "syllable": "матч",
+      "count": 1
+    },
+    {
+      "syllable": "рвич",
+      "count": 1
+    },
+    {
+      "syllable": "тив",
+      "count": 1
+    },
+    {
+      "syllable": "сау",
+      "count": 1
+    },
+    {
+      "syllable": "тге",
+      "count": 1
+    },
+    {
+      "syllable": "мптон",
+      "count": 1
+    },
+    {
+      "syllable": "лма",
+      "count": 1
+    },
+    {
+      "syllable": "что",
+      "count": 1
+    },
+    {
+      "syllable": "пре",
+      "count": 1
+    },
+    {
+      "syllable": "дло",
+      "count": 1
+    },
+    {
+      "syllable": "жить",
+      "count": 1
+    },
+    {
+      "syllable": "жён",
+      "count": 1
+    },
+    {
+      "syllable": "тв",
+      "count": 1
+    },
+    {
+      "syllable": "нал",
+      "count": 1
+    },
+    {
+      "syllable": "тнт",
+      "count": 1
+    },
+    {
+      "syllable": "брат",
+      "count": 1
+    },
+    {
+      "syllable": "ссо",
+      "count": 1
+    },
+    {
+      "syllable": "где",
+      "count": 1
+    },
+    {
+      "syllable": "реть",
+      "count": 1
+    },
+    {
+      "syllable": "же",
+      "count": 1
+    },
+    {
+      "syllable": "зный",
+      "count": 1
+    },
+    {
+      "syllable": "брый",
+      "count": 1
+    },
+    {
+      "syllable": "дска",
+      "count": 1
+    },
+    {
+      "syllable": "жно",
+      "count": 1
+    },
+    {
+      "syllable": "цве",
+      "count": 1
+    },
+    {
+      "syllable": "ток",
+      "count": 1
+    },
+    {
+      "syllable": "сбер",
+      "count": 1
+    },
+    {
+      "syllable": "джо",
+      "count": 1
+    },
+    {
+      "syllable": "нни",
+      "count": 1
+    },
+    {
+      "syllable": "депп",
+      "count": 1
+    },
+    {
+      "syllable": "ланс",
+      "count": 1
+    },
+    {
+      "syllable": "две",
+      "count": 1
+    },
+    {
+      "syllable": "твой",
+      "count": 1
+    },
+    {
+      "syllable": "лог",
+      "count": 1
+    },
+    {
+      "syllable": "есть",
+      "count": 1
+    },
+    {
+      "syllable": "стиль",
+      "count": 1
+    },
+    {
+      "syllable": "ти",
+      "count": 1
+    },
+    {
+      "syllable": "ский",
+      "count": 1
+    },
+    {
+      "syllable": "дия",
+      "count": 1
+    },
+    {
+      "syllable": "дго",
+      "count": 1
+    },
+    {
+      "syllable": "ска",
+      "count": 1
+    },
+    {
+      "syllable": "счёт",
+      "count": 1
+    },
+    {
+      "syllable": "пла",
+      "count": 1
+    },
+    {
+      "syllable": "связь",
+      "count": 1
+    },
+    {
+      "syllable": "сто",
+      "count": 1
+    },
+    {
+      "syllable": "деть",
+      "count": 1
+    },
+    {
+      "syllable": "жас",
+      "count": 1
+    },
+    {
+      "syllable": "ксандр",
+      "count": 1
+    },
+    {
+      "syllable": "ргее",
+      "count": 1
+    },
+    {
+      "syllable": "ший",
+      "count": 1
+    },
+    {
+      "syllable": "ствие",
+      "count": 1
+    },
+    {
+      "syllable": "со",
+      "count": 1
+    },
+    {
+      "syllable": "вать",
+      "count": 1
+    },
+    {
+      "syllable": "део",
+      "count": 1
+    },
+    {
+      "syllable": "шант",
+      "count": 1
+    },
+    {
+      "syllable": "два",
+      "count": 1
+    },
+    {
+      "syllable": "ркость",
+      "count": 1
+    },
+    {
+      "syllable": "мьде",
+      "count": 1
+    },
+    {
+      "syllable": "цент",
+      "count": 1
+    },
+    {
+      "syllable": "рко",
+      "count": 1
+    },
+    {
+      "syllable": "ду",
+      "count": 1
+    },
+    {
+      "syllable": "тер",
+      "count": 1
+    },
+    {
+      "syllable": "дже",
+      "count": 1
+    },
+    {
+      "syllable": "ксон",
+      "count": 1
+    },
+    {
+      "syllable": "бра",
+      "count": 1
+    },
+    {
+      "syllable": "зо",
+      "count": 1
+    },
+    {
+      "syllable": "нте",
+      "count": 1
+    },
+    {
+      "syllable": "мир",
+      "count": 1
+    },
+    {
+      "syllable": "лаг",
+      "count": 1
+    },
+    {
+      "syllable": "сно",
+      "count": 1
+    },
+    {
+      "syllable": "сный",
+      "count": 1
+    },
+    {
+      "syllable": "мьсот",
+      "count": 1
+    },
+    {
+      "syllable": "пя",
+      "count": 1
+    },
+    {
+      "syllable": "тна",
+      "count": 1
+    },
+    {
+      "syllable": "ха",
+      "count": 1
+    },
+    {
+      "syllable": "бог",
+      "count": 1
+    },
+    {
+      "syllable": "стре",
+      "count": 1
+    },
+    {
+      "syllable": "рия",
+      "count": 1
+    },
+    {
+      "syllable": "пять",
+      "count": 1
+    },
+    {
+      "syllable": "нный",
+      "count": 1
+    },
+    {
+      "syllable": "хро",
+      "count": 1
+    },
+    {
+      "syllable": "рлов",
+      "count": 1
+    },
+    {
+      "syllable": "тот",
+      "count": 1
+    },
+    {
+      "syllable": "скать",
+      "count": 1
+    },
+    {
+      "syllable": "жанр",
+      "count": 1
+    },
+    {
+      "syllable": "нау",
+      "count": 1
+    },
+    {
+      "syllable": "чный",
+      "count": 1
+    },
+    {
+      "syllable": "гда",
+      "count": 1
+    },
+    {
+      "syllable": "ди",
+      "count": 1
+    },
+    {
+      "syllable": "лин",
+      "count": 1
+    },
+    {
+      "syllable": "нсон",
+      "count": 1
+    },
+    {
+      "syllable": "тьюб",
+      "count": 1
+    },
+    {
+      "syllable": "зэ",
+      "count": 1
+    },
+    {
+      "syllable": "керс",
+      "count": 1
+    },
+    {
+      "syllable": "мэ",
+      "count": 1
+    },
+    {
+      "syllable": "зин",
+      "count": 1
+    },
+    {
+      "syllable": "си",
+      "count": 1
+    },
+    {
+      "syllable": "бак",
+      "count": 1
+    },
+    {
+      "syllable": "чай",
+      "count": 1
+    },
+    {
+      "syllable": "фе",
+      "count": 1
+    },
+    {
+      "syllable": "ня",
+      "count": 1
+    },
+    {
+      "syllable": "кий",
+      "count": 1
+    },
+    {
+      "syllable": "ргей",
+      "count": 1
+    },
+    {
+      "syllable": "йзу",
+      "count": 1
+    },
+    {
+      "syllable": "лло",
+      "count": 1
+    },
+    {
+      "syllable": "сте",
+      "count": 1
+    },
+    {
+      "syllable": "нов",
+      "count": 1
+    },
+    {
+      "syllable": "чить",
+      "count": 1
+    },
+    {
+      "syllable": "льбом",
+      "count": 1
+    },
+    {
+      "syllable": "лю",
+      "count": 1
+    },
+    {
+      "syllable": "бовь",
+      "count": 1
+    },
+    {
+      "syllable": "звё",
+      "count": 1
+    },
+    {
+      "syllable": "здный",
+      "count": 1
+    },
+    {
+      "syllable": "сант",
+      "count": 1
+    },
+    {
+      "syllable": "грамм",
+      "count": 1
+    },
+    {
+      "syllable": "бло",
+      "count": 1
+    },
+    {
+      "syllable": "дом",
+      "count": 1
+    },
+    {
+      "syllable": "гро",
+      "count": 1
+    },
+    {
+      "syllable": "мкий",
+      "count": 1
+    },
+    {
+      "syllable": "кой",
+      "count": 1
+    },
+    {
+      "syllable": "слу",
+      "count": 1
+    },
+    {
+      "syllable": "ча",
+      "count": 1
+    }
+  ]
+}

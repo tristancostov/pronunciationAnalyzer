@@ -1,0 +1,3660 @@
+{
+  "pipeline_version": "1.0",
+  "source_file": "./trainD/manifest.jsonl",
+  "statistics": {
+    "total_texts": 50,
+    "total_words": 253,
+    "avg_syllables_per_word": 2.18,
+    "pos_distribution": {
+      "NOUN": 126,
+      "VERB": 24,
+      "ADVB": 3,
+      "INFN": 9,
+      "ADJF": 25,
+      "UNKN": 4,
+      "CONJ": 7,
+      "PREP": 23,
+      "NUMR": 24,
+      "PRED": 1,
+      "PRCL": 2,
+      "NPRO": 3,
+      "ADJS": 1,
+      "COMP": 1
+    }
+  },
+  "results": [
+    {
+      "original_text": "афина воспроизведи музыку вперемешку",
+      "word_count": 4,
+      "words": [
+        {
+          "original": "афина",
+          "lemma": "афина",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "а",
+            "фи",
+            "на"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "а-фи-на"
+        },
+        {
+          "original": "воспроизведи",
+          "lemma": "воспроизвести",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "во",
+            "спрои",
+            "зве",
+            "сти"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "во-спрои-зве-сти"
+        },
+        {
+          "original": "музыку",
+          "lemma": "музыка",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "му",
+            "зы",
+            "ка"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "му-зы-ка"
+        },
+        {
+          "original": "вперемешку",
+          "lemma": "вперемешку",
+          "pos": "ADVB",
+          "pos_ru": "наречие 副词",
+          "score": 1.0,
+          "syllables": [
+            "впе",
+            "ре",
+            "ме",
+            "шку"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "впе-ре-ме-шку"
+        }
+      ]
+    },
+    {
+      "original_text": "найти сериал григорий р",
+      "word_count": 4,
+      "words": [
+        {
+          "original": "найти",
+          "lemma": "найти",
+          "pos": "INFN",
+          "pos_ru": "инфинитив 不定式",
+          "score": 1.0,
+          "syllables": [
+            "на",
+            "йти"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "на-йти"
+        },
+        {
+          "original": "сериал",
+          "lemma": "сериал",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.7143,
+          "syllables": [
+            "се",
+            "риал"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "се-риал"
+        },
+        {
+          "original": "григорий",
+          "lemma": "григорий",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.9231,
+          "syllables": [
+            "гри",
+            "го",
+            "рий"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "гри-го-рий"
+        },
+        {
+          "original": "р",
+          "lemma": "р",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.0417,
+          "syllables": [
+            "р"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "р"
+        }
+      ]
+    },
+    {
+      "original_text": "прямой эфир апл манчестер юнайтед тоттенхэм",
+      "word_count": 6,
+      "words": [
+        {
+          "original": "прямой",
+          "lemma": "прямой",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.2857,
+          "syllables": [
+            "пря",
+            "мой"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "пря-мой"
+        },
+        {
+          "original": "эфир",
+          "lemma": "эфир",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5556,
+          "syllables": [
+            "э",
+            "фир"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "э-фир"
+        },
+        {
+          "original": "апл",
+          "lemma": "апл",
+          "pos": "UNKN",
+          "pos_ru": "неизвестно 未知",
+          "score": 1.0,
+          "syllables": [
+            "апл"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "апл"
+        },
+        {
+          "original": "манчестер",
+          "lemma": "манчестер",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.8857,
+          "syllables": [
+            "ма",
+            "нче",
+            "стер"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ма-нче-стер"
+        },
+        {
+          "original": "юнайтед",
+          "lemma": "юнайтед",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "ю",
+            "на",
+            "йтед"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ю-на-йтед"
+        },
+        {
+          "original": "тоттенхэм",
+          "lemma": "тоттенхэма",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5,
+          "syllables": [
+            "то",
+            "тте",
+            "нхэ",
+            "ма"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "то-тте-нхэ-ма"
+        }
+      ]
+    },
+    {
+      "original_text": "ильвиром ивановичем ворончихиным",
+      "word_count": 3,
+      "words": [
+        {
+          "original": "ильвиром",
+          "lemma": "ильвир",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.1458,
+          "syllables": [
+            "и",
+            "львир"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "и-львир"
+        },
+        {
+          "original": "ивановичем",
+          "lemma": "иванович",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "и",
+            "ва",
+            "но",
+            "вич"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "и-ва-но-вич"
+        },
+        {
+          "original": "ворончихиным",
+          "lemma": "ворончихин",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5,
+          "syllables": [
+            "во",
+            "ро",
+            "нчи",
+            "хин"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "во-ро-нчи-хин"
+        }
+      ]
+    },
+    {
+      "original_text": "можешь показать киношку исходный код",
+      "word_count": 5,
+      "words": [
+        {
+          "original": "можешь",
+          "lemma": "мочь",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "мочь"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "мочь"
+        },
+        {
+          "original": "показать",
+          "lemma": "показать",
+          "pos": "INFN",
+          "pos_ru": "инфинитив 不定式",
+          "score": 1.0,
+          "syllables": [
+            "по",
+            "ка",
+            "зать"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "по-ка-зать"
+        },
+        {
+          "original": "киношку",
+          "lemma": "киношка",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "ки",
+            "но",
+            "шка"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ки-но-шка"
+        },
+        {
+          "original": "исходный",
+          "lemma": "исходный",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.5,
+          "syllables": [
+            "и",
+            "схо",
+            "дный"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "и-схо-дный"
+        },
+        {
+          "original": "код",
+          "lemma": "код",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5862,
+          "syllables": [
+            "код"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "код"
+        }
+      ]
+    },
+    {
+      "original_text": "изменился ли курс рубля к американскому доллару со вчерашнего дня",
+      "word_count": 10,
+      "words": [
+        {
+          "original": "изменился",
+          "lemma": "измениться",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "и",
+            "зме",
+            "ни",
+            "ться"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "и-зме-ни-ться"
+        },
+        {
+          "original": "ли",
+          "lemma": "ли",
+          "pos": "CONJ",
+          "pos_ru": "союз 连词",
+          "score": 0.1923,
+          "syllables": [
+            "ли"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "ли"
+        },
+        {
+          "original": "курс",
+          "lemma": "курс",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6429,
+          "syllables": [
+            "курс"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "курс"
+        },
+        {
+          "original": "рубля",
+          "lemma": "рубль",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "рубль"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "рубль"
+        },
+        {
+          "original": "к",
+          "lemma": "к",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9914,
+          "syllables": [
+            "к"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "к"
+        },
+        {
+          "original": "американскому",
+          "lemma": "американский",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.75,
+          "syllables": [
+            "а",
+            "ме",
+            "ри",
+            "ка",
+            "нский"
+          ],
+          "syllable_count": 5,
+          "syllable_str": "а-ме-ри-ка-нский"
+        },
+        {
+          "original": "доллару",
+          "lemma": "доллар",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "до",
+            "ллар"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "до-ллар"
+        },
+        {
+          "original": "со",
+          "lemma": "с",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9926,
+          "syllables": [
+            "с"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "с"
+        },
+        {
+          "original": "вчерашнего",
+          "lemma": "вчерашний",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.4444,
+          "syllables": [
+            "вче",
+            "ра",
+            "шний"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "вче-ра-шний"
+        },
+        {
+          "original": "дня",
+          "lemma": "день",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "день"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "день"
+        }
+      ]
+    },
+    {
+      "original_text": "найти фильм плохие парни первую часть",
+      "word_count": 6,
+      "words": [
+        {
+          "original": "найти",
+          "lemma": "найти",
+          "pos": "INFN",
+          "pos_ru": "инфинитив 不定式",
+          "score": 1.0,
+          "syllables": [
+            "на",
+            "йти"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "на-йти"
+        },
+        {
+          "original": "фильм",
+          "lemma": "фильм",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6231,
+          "syllables": [
+            "фильм"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "фильм"
+        },
+        {
+          "original": "плохие",
+          "lemma": "плохой",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.75,
+          "syllables": [
+            "пло",
+            "хой"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "пло-хой"
+        },
+        {
+          "original": "парни",
+          "lemma": "парень",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "па",
+            "рень"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "па-рень"
+        },
+        {
+          "original": "первую",
+          "lemma": "первый",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 1.0,
+          "syllables": [
+            "пе",
+            "рвый"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "пе-рвый"
+        },
+        {
+          "original": "часть",
+          "lemma": "часть",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6103,
+          "syllables": [
+            "часть"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "часть"
+        }
+      ]
+    },
+    {
+      "original_text": "эпизод тридцать один сезона тринадцать фильма люди",
+      "word_count": 7,
+      "words": [
+        {
+          "original": "эпизод",
+          "lemma": "эпизод",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.7059,
+          "syllables": [
+            "э",
+            "пи",
+            "зод"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "э-пи-зод"
+        },
+        {
+          "original": "тридцать",
+          "lemma": "тридцать",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.6667,
+          "syllables": [
+            "три",
+            "дцать"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "три-дцать"
+        },
+        {
+          "original": "один",
+          "lemma": "один",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.6071,
+          "syllables": [
+            "о",
+            "дин"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "о-дин"
+        },
+        {
+          "original": "сезона",
+          "lemma": "сезон",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "се",
+            "зон"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "се-зон"
+        },
+        {
+          "original": "тринадцать",
+          "lemma": "тринадцать",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "три",
+            "на",
+            "дцать"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "три-на-дцать"
+        },
+        {
+          "original": "фильма",
+          "lemma": "фильм",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "фильм"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "фильм"
+        },
+        {
+          "original": "люди",
+          "lemma": "человек",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "че",
+            "ло",
+            "век"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "че-ло-век"
+        }
+      ]
+    },
+    {
+      "original_text": "купить моющее средство",
+      "word_count": 3,
+      "words": [
+        {
+          "original": "купить",
+          "lemma": "купить",
+          "pos": "INFN",
+          "pos_ru": "инфинитив 不定式",
+          "score": 1.0,
+          "syllables": [
+            "ку",
+            "пить"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ку-пить"
+        },
+        {
+          "original": "моющее",
+          "lemma": "моющий",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.2,
+          "syllables": [
+            "мою",
+            "щий"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "мою-щий"
+        },
+        {
+          "original": "средство",
+          "lemma": "средство",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.8095,
+          "syllables": [
+            "сре",
+            "дство"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "сре-дство"
+        }
+      ]
+    },
+    {
+      "original_text": "ноль триста восемь триста восемнадцать триста четыре шестьдесят девять",
+      "word_count": 9,
+      "words": [
+        {
+          "original": "ноль",
+          "lemma": "ноль",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.625,
+          "syllables": [
+            "ноль"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "ноль"
+        },
+        {
+          "original": "триста",
+          "lemma": "триста",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "три",
+            "ста"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "три-ста"
+        },
+        {
+          "original": "восемь",
+          "lemma": "восемь",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.6667,
+          "syllables": [
+            "во",
+            "семь"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "во-семь"
+        },
+        {
+          "original": "триста",
+          "lemma": "триста",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "три",
+            "ста"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "три-ста"
+        },
+        {
+          "original": "восемнадцать",
+          "lemma": "восемнадцать",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "во",
+            "се",
+            "мна",
+            "дцать"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "во-се-мна-дцать"
+        },
+        {
+          "original": "триста",
+          "lemma": "триста",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "три",
+            "ста"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "три-ста"
+        },
+        {
+          "original": "четыре",
+          "lemma": "четыре",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.8333,
+          "syllables": [
+            "че",
+            "ты",
+            "ре"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "че-ты-ре"
+        },
+        {
+          "original": "шестьдесят",
+          "lemma": "шестьдесят",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "ше",
+            "стьде",
+            "сят"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ше-стьде-сят"
+        },
+        {
+          "original": "девять",
+          "lemma": "девять",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "де",
+            "вять"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "де-вять"
+        }
+      ]
+    },
+    {
+      "original_text": "прямой эфир матча апл норвич против саутгемптона",
+      "word_count": 7,
+      "words": [
+        {
+          "original": "прямой",
+          "lemma": "прямой",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.2857,
+          "syllables": [
+            "пря",
+            "мой"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "пря-мой"
+        },
+        {
+          "original": "эфир",
+          "lemma": "эфир",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5556,
+          "syllables": [
+            "э",
+            "фир"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "э-фир"
+        },
+        {
+          "original": "матча",
+          "lemma": "матч",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "матч"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "матч"
+        },
+        {
+          "original": "апл",
+          "lemma": "апл",
+          "pos": "UNKN",
+          "pos_ru": "неизвестно 未知",
+          "score": 1.0,
+          "syllables": [
+            "апл"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "апл"
+        },
+        {
+          "original": "норвич",
+          "lemma": "норвич",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.1455,
+          "syllables": [
+            "но",
+            "рвич"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "но-рвич"
+        },
+        {
+          "original": "против",
+          "lemma": "против",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9806,
+          "syllables": [
+            "про",
+            "тив"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "про-тив"
+        },
+        {
+          "original": "саутгемптона",
+          "lemma": "саутгемптон",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "сау",
+            "тге",
+            "мптон"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "сау-тге-мптон"
+        }
+      ]
+    },
+    {
+      "original_text": "включай шоу бинго бонго муви филм",
+      "word_count": 6,
+      "words": [
+        {
+          "original": "включай",
+          "lemma": "включать",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "вклю",
+            "чать"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "вклю-чать"
+        },
+        {
+          "original": "шоу",
+          "lemma": "шоу",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.2381,
+          "syllables": [
+            "шоу"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "шоу"
+        },
+        {
+          "original": "бинго",
+          "lemma": "бинго",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.1667,
+          "syllables": [
+            "би",
+            "нго"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "би-нго"
+        },
+        {
+          "original": "бонго",
+          "lemma": "бонго",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.0833,
+          "syllables": [
+            "бо",
+            "нго"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "бо-нго"
+        },
+        {
+          "original": "муви",
+          "lemma": "муви",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.0833,
+          "syllables": [
+            "му",
+            "ви"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "му-ви"
+        },
+        {
+          "original": "филм",
+          "lemma": "филма",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5,
+          "syllables": [
+            "фи",
+            "лма"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "фи-лма"
+        }
+      ]
+    },
+    {
+      "original_text": "что отель может предложить молодоженам",
+      "word_count": 5,
+      "words": [
+        {
+          "original": "что",
+          "lemma": "что",
+          "pos": "CONJ",
+          "pos_ru": "союз 连词",
+          "score": 0.922,
+          "syllables": [
+            "что"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "что"
+        },
+        {
+          "original": "отель",
+          "lemma": "отель",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5,
+          "syllables": [
+            "о",
+            "тель"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "о-тель"
+        },
+        {
+          "original": "может",
+          "lemma": "мочь",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 0.9454,
+          "syllables": [
+            "мочь"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "мочь"
+        },
+        {
+          "original": "предложить",
+          "lemma": "предложить",
+          "pos": "INFN",
+          "pos_ru": "инфинитив 不定式",
+          "score": 1.0,
+          "syllables": [
+            "пре",
+            "дло",
+            "жить"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "пре-дло-жить"
+        },
+        {
+          "original": "молодоженам",
+          "lemma": "молодожён",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "мо",
+            "ло",
+            "до",
+            "жён"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "мо-ло-до-жён"
+        }
+      ]
+    },
+    {
+      "original_text": "покажи на тв канал тнт четыре",
+      "word_count": 6,
+      "words": [
+        {
+          "original": "покажи",
+          "lemma": "показать",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "по",
+            "ка",
+            "зать"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "по-ка-зать"
+        },
+        {
+          "original": "на",
+          "lemma": "на",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.999,
+          "syllables": [
+            "на"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "на"
+        },
+        {
+          "original": "тв",
+          "lemma": "тв",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.3012,
+          "syllables": [
+            "тв"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "тв"
+        },
+        {
+          "original": "канал",
+          "lemma": "канал",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6977,
+          "syllables": [
+            "ка",
+            "нал"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ка-нал"
+        },
+        {
+          "original": "тнт",
+          "lemma": "тнт",
+          "pos": "UNKN",
+          "pos_ru": "неизвестно 未知",
+          "score": 1.0,
+          "syllables": [
+            "тнт"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "тнт"
+        },
+        {
+          "original": "четыре",
+          "lemma": "четыре",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.8333,
+          "syllables": [
+            "че",
+            "ты",
+            "ре"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "че-ты-ре"
+        }
+      ]
+    },
+    {
+      "original_text": "фильм братьев руссо где умер железный человек",
+      "word_count": 7,
+      "words": [
+        {
+          "original": "фильм",
+          "lemma": "фильм",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6231,
+          "syllables": [
+            "фильм"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "фильм"
+        },
+        {
+          "original": "братьев",
+          "lemma": "брат",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.8378,
+          "syllables": [
+            "брат"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "брат"
+        },
+        {
+          "original": "руссо",
+          "lemma": "руссо",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.0833,
+          "syllables": [
+            "ру",
+            "ссо"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ру-ссо"
+        },
+        {
+          "original": "где",
+          "lemma": "где",
+          "pos": "ADVB",
+          "pos_ru": "наречие 副词",
+          "score": 0.6364,
+          "syllables": [
+            "где"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "где"
+        },
+        {
+          "original": "умер",
+          "lemma": "умереть",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "у",
+            "ме",
+            "реть"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "у-ме-реть"
+        },
+        {
+          "original": "железный",
+          "lemma": "железный",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.6667,
+          "syllables": [
+            "же",
+            "ле",
+            "зный"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "же-ле-зный"
+        },
+        {
+          "original": "человек",
+          "lemma": "человек",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5695,
+          "syllables": [
+            "че",
+            "ло",
+            "век"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "че-ло-век"
+        }
+      ]
+    },
+    {
+      "original_text": "добрый день подскажите а можно будет заказать цветы в номер",
+      "word_count": 10,
+      "words": [
+        {
+          "original": "добрый",
+          "lemma": "добрый",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.6667,
+          "syllables": [
+            "до",
+            "брый"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "до-брый"
+        },
+        {
+          "original": "день",
+          "lemma": "день",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.7455,
+          "syllables": [
+            "день"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "день"
+        },
+        {
+          "original": "подскажите",
+          "lemma": "подсказать",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "по",
+            "дска",
+            "зать"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "по-дска-зать"
+        },
+        {
+          "original": "а",
+          "lemma": "а",
+          "pos": "CONJ",
+          "pos_ru": "союз 连词",
+          "score": 0.9972,
+          "syllables": [
+            "а"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "а"
+        },
+        {
+          "original": "можно",
+          "lemma": "можно",
+          "pos": "PRED",
+          "pos_ru": "предикатив 谓词",
+          "score": 1.0,
+          "syllables": [
+            "мо",
+            "жно"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "мо-жно"
+        },
+        {
+          "original": "будет",
+          "lemma": "быть",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "быть"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "быть"
+        },
+        {
+          "original": "заказать",
+          "lemma": "заказать",
+          "pos": "INFN",
+          "pos_ru": "инфинитив 不定式",
+          "score": 1.0,
+          "syllables": [
+            "за",
+            "ка",
+            "зать"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "за-ка-зать"
+        },
+        {
+          "original": "цветы",
+          "lemma": "цветок",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.65,
+          "syllables": [
+            "цве",
+            "ток"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "цве-ток"
+        },
+        {
+          "original": "в",
+          "lemma": "в",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9993,
+          "syllables": [
+            "в"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "в"
+        },
+        {
+          "original": "номер",
+          "lemma": "номер",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5778,
+          "syllables": [
+            "но",
+            "мер"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "но-мер"
+        }
+      ]
+    },
+    {
+      "original_text": "сбер фильмы с джонни деппом",
+      "word_count": 5,
+      "words": [
+        {
+          "original": "сбер",
+          "lemma": "сбер",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5102,
+          "syllables": [
+            "сбер"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "сбер"
+        },
+        {
+          "original": "фильмы",
+          "lemma": "фильм",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5077,
+          "syllables": [
+            "фильм"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "фильм"
+        },
+        {
+          "original": "с",
+          "lemma": "с",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9976,
+          "syllables": [
+            "с"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "с"
+        },
+        {
+          "original": "джонни",
+          "lemma": "джонни",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6098,
+          "syllables": [
+            "джо",
+            "нни"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "джо-нни"
+        },
+        {
+          "original": "деппом",
+          "lemma": "депп",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "депп"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "депп"
+        }
+      ]
+    },
+    {
+      "original_text": "пополнить баланс маме двести рублей",
+      "word_count": 5,
+      "words": [
+        {
+          "original": "пополнить",
+          "lemma": "пополнить",
+          "pos": "INFN",
+          "pos_ru": "инфинитив 不定式",
+          "score": 1.0,
+          "syllables": [
+            "по",
+            "по",
+            "лнить"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "по-по-лнить"
+        },
+        {
+          "original": "баланс",
+          "lemma": "баланс",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6,
+          "syllables": [
+            "ба",
+            "ланс"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ба-ланс"
+        },
+        {
+          "original": "маме",
+          "lemma": "мама",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.9333,
+          "syllables": [
+            "ма",
+            "ма"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ма-ма"
+        },
+        {
+          "original": "двести",
+          "lemma": "двести",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "две",
+            "сти"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "две-сти"
+        },
+        {
+          "original": "рублей",
+          "lemma": "рубль",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "рубль"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "рубль"
+        }
+      ]
+    },
+    {
+      "original_text": "в твоем каталоге есть фильм в стиле сатирической комедии",
+      "word_count": 9,
+      "words": [
+        {
+          "original": "в",
+          "lemma": "в",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9993,
+          "syllables": [
+            "в"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "в"
+        },
+        {
+          "original": "твоем",
+          "lemma": "твой",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.6667,
+          "syllables": [
+            "твой"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "твой"
+        },
+        {
+          "original": "каталоге",
+          "lemma": "каталог",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "ка",
+            "та",
+            "лог"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ка-та-лог"
+        },
+        {
+          "original": "есть",
+          "lemma": "есть",
+          "pos": "INFN",
+          "pos_ru": "инфинитив 不定式",
+          "score": 0.8929,
+          "syllables": [
+            "есть"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "есть"
+        },
+        {
+          "original": "фильм",
+          "lemma": "фильм",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6231,
+          "syllables": [
+            "фильм"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "фильм"
+        },
+        {
+          "original": "в",
+          "lemma": "в",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9993,
+          "syllables": [
+            "в"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "в"
+        },
+        {
+          "original": "стиле",
+          "lemma": "стиль",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "стиль"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "стиль"
+        },
+        {
+          "original": "сатирической",
+          "lemma": "сатирический",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.25,
+          "syllables": [
+            "са",
+            "ти",
+            "ри",
+            "че",
+            "ский"
+          ],
+          "syllable_count": 5,
+          "syllable_str": "са-ти-ри-че-ский"
+        },
+        {
+          "original": "комедии",
+          "lemma": "комедия",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.375,
+          "syllables": [
+            "ко",
+            "ме",
+            "дия"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ко-ме-дия"
+        }
+      ]
+    },
+    {
+      "original_text": "джой подготовьте выписку по счету",
+      "word_count": 5,
+      "words": [
+        {
+          "original": "джой",
+          "lemma": "джа",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.3333,
+          "syllables": [
+            "джа"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "джа"
+        },
+        {
+          "original": "подготовьте",
+          "lemma": "подготовить",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "по",
+            "дго",
+            "то",
+            "вить"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "по-дго-то-вить"
+        },
+        {
+          "original": "выписку",
+          "lemma": "выписка",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "вы",
+            "пи",
+            "ска"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "вы-пи-ска"
+        },
+        {
+          "original": "по",
+          "lemma": "по",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9984,
+          "syllables": [
+            "по"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "по"
+        },
+        {
+          "original": "счету",
+          "lemma": "счёт",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5,
+          "syllables": [
+            "счёт"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "счёт"
+        }
+      ]
+    },
+    {
+      "original_text": "джой оплата мобильной связи сто рублей переведи пожалуйста",
+      "word_count": 8,
+      "words": [
+        {
+          "original": "джой",
+          "lemma": "джа",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.3333,
+          "syllables": [
+            "джа"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "джа"
+        },
+        {
+          "original": "оплата",
+          "lemma": "оплата",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "о",
+            "пла",
+            "та"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "о-пла-та"
+        },
+        {
+          "original": "мобильной",
+          "lemma": "мобильный",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.7083,
+          "syllables": [
+            "мо",
+            "би",
+            "льный"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "мо-би-льный"
+        },
+        {
+          "original": "связи",
+          "lemma": "связь",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.7596,
+          "syllables": [
+            "связь"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "связь"
+        },
+        {
+          "original": "сто",
+          "lemma": "сто",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.0714,
+          "syllables": [
+            "сто"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "сто"
+        },
+        {
+          "original": "рублей",
+          "lemma": "рубль",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "рубль"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "рубль"
+        },
+        {
+          "original": "переведи",
+          "lemma": "перевести",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "пе",
+            "ре",
+            "ве",
+            "сти"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "пе-ре-ве-сти"
+        },
+        {
+          "original": "пожалуйста",
+          "lemma": "пожалуйста",
+          "pos": "PRCL",
+          "pos_ru": "частица 助词",
+          "score": 0.6667,
+          "syllables": [
+            "по",
+            "жа",
+            "лу",
+            "йста"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "по-жа-лу-йста"
+        }
+      ]
+    },
+    {
+      "original_text": "хочу увидеть киношку в стилистике ужасов",
+      "word_count": 6,
+      "words": [
+        {
+          "original": "хочу",
+          "lemma": "хотеть",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "хо",
+            "теть"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "хо-теть"
+        },
+        {
+          "original": "увидеть",
+          "lemma": "увидеть",
+          "pos": "INFN",
+          "pos_ru": "инфинитив 不定式",
+          "score": 1.0,
+          "syllables": [
+            "у",
+            "ви",
+            "деть"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "у-ви-деть"
+        },
+        {
+          "original": "киношку",
+          "lemma": "киношка",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "ки",
+            "но",
+            "шка"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ки-но-шка"
+        },
+        {
+          "original": "в",
+          "lemma": "в",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9993,
+          "syllables": [
+            "в"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "в"
+        },
+        {
+          "original": "стилистике",
+          "lemma": "стилистика",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5,
+          "syllables": [
+            "сти",
+            "ли",
+            "сти",
+            "ка"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "сти-ли-сти-ка"
+        },
+        {
+          "original": "ужасов",
+          "lemma": "ужас",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "у",
+            "жас"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "у-жас"
+        }
+      ]
+    },
+    {
+      "original_text": "алиса пополни номер александра сергеевича",
+      "word_count": 5,
+      "words": [
+        {
+          "original": "алиса",
+          "lemma": "алиса",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "а",
+            "ли",
+            "са"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "а-ли-са"
+        },
+        {
+          "original": "пополни",
+          "lemma": "пополнить",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "по",
+            "по",
+            "лнить"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "по-по-лнить"
+        },
+        {
+          "original": "номер",
+          "lemma": "номер",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5778,
+          "syllables": [
+            "но",
+            "мер"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "но-мер"
+        },
+        {
+          "original": "александра",
+          "lemma": "александр",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.7639,
+          "syllables": [
+            "а",
+            "ле",
+            "ксандр"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "а-ле-ксандр"
+        },
+        {
+          "original": "сергеевича",
+          "lemma": "сергеевич",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.8,
+          "syllables": [
+            "се",
+            "ргее",
+            "вич"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "се-ргее-вич"
+        }
+      ]
+    },
+    {
+      "original_text": "лучшие фильмы путешествия",
+      "word_count": 3,
+      "words": [
+        {
+          "original": "лучшие",
+          "lemma": "хороший",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.6,
+          "syllables": [
+            "хо",
+            "ро",
+            "ший"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "хо-ро-ший"
+        },
+        {
+          "original": "фильмы",
+          "lemma": "фильм",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5077,
+          "syllables": [
+            "фильм"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "фильм"
+        },
+        {
+          "original": "путешествия",
+          "lemma": "путешествие",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.7308,
+          "syllables": [
+            "пу",
+            "те",
+            "ше",
+            "ствие"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "пу-те-ше-ствие"
+        }
+      ]
+    },
+    {
+      "original_text": "посоветуй мне видео шоу",
+      "word_count": 4,
+      "words": [
+        {
+          "original": "посоветуй",
+          "lemma": "посоветовать",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "по",
+            "со",
+            "ве",
+            "то",
+            "вать"
+          ],
+          "syllable_count": 5,
+          "syllable_str": "по-со-ве-то-вать"
+        },
+        {
+          "original": "мне",
+          "lemma": "я",
+          "pos": "NPRO",
+          "pos_ru": "местоимение 代词",
+          "score": 0.9754,
+          "syllables": [
+            "я"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "я"
+        },
+        {
+          "original": "видео",
+          "lemma": "видео",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.274,
+          "syllables": [
+            "ви",
+            "део"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ви-део"
+        },
+        {
+          "original": "шоу",
+          "lemma": "шоу",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.2381,
+          "syllables": [
+            "шоу"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "шоу"
+        }
+      ]
+    },
+    {
+      "original_text": "шант на смотрешке",
+      "word_count": 3,
+      "words": [
+        {
+          "original": "шант",
+          "lemma": "шант",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "шант"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "шант"
+        },
+        {
+          "original": "на",
+          "lemma": "на",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.999,
+          "syllables": [
+            "на"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "на"
+        },
+        {
+          "original": "смотрешке",
+          "lemma": "смотрёшка",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.2326,
+          "syllables": [
+            "смо",
+            "трё",
+            "шка"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "смо-трё-шка"
+        }
+      ]
+    },
+    {
+      "original_text": "в двадцать один ноль ноль выставь яркость на семьдесят процентов",
+      "word_count": 10,
+      "words": [
+        {
+          "original": "в",
+          "lemma": "в",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9993,
+          "syllables": [
+            "в"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "в"
+        },
+        {
+          "original": "двадцать",
+          "lemma": "двадцать",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.6667,
+          "syllables": [
+            "два",
+            "дцать"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "два-дцать"
+        },
+        {
+          "original": "один",
+          "lemma": "один",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.6071,
+          "syllables": [
+            "о",
+            "дин"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "о-дин"
+        },
+        {
+          "original": "ноль",
+          "lemma": "ноль",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.625,
+          "syllables": [
+            "ноль"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "ноль"
+        },
+        {
+          "original": "ноль",
+          "lemma": "ноль",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.625,
+          "syllables": [
+            "ноль"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "ноль"
+        },
+        {
+          "original": "выставь",
+          "lemma": "выставить",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "вы",
+            "ста",
+            "вить"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "вы-ста-вить"
+        },
+        {
+          "original": "яркость",
+          "lemma": "яркость",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.7143,
+          "syllables": [
+            "я",
+            "ркость"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "я-ркость"
+        },
+        {
+          "original": "на",
+          "lemma": "на",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.999,
+          "syllables": [
+            "на"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "на"
+        },
+        {
+          "original": "семьдесят",
+          "lemma": "семьдесят",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "се",
+            "мьде",
+            "сят"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "се-мьде-сят"
+        },
+        {
+          "original": "процентов",
+          "lemma": "процент",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "про",
+            "цент"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "про-цент"
+        }
+      ]
+    },
+    {
+      "original_text": "морковка",
+      "word_count": 1,
+      "words": [
+        {
+          "original": "морковка",
+          "lemma": "морковка",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "мо",
+            "рко",
+            "вка"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "мо-рко-вка"
+        }
+      ]
+    },
+    {
+      "original_text": "ок ок",
+      "word_count": 2,
+      "words": [
+        {
+          "original": "ок",
+          "lemma": "около",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.7368,
+          "syllables": [
+            "о",
+            "ко",
+            "ло"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "о-ко-ло"
+        },
+        {
+          "original": "ок",
+          "lemma": "около",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.7368,
+          "syllables": [
+            "о",
+            "ко",
+            "ло"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "о-ко-ло"
+        }
+      ]
+    },
+    {
+      "original_text": "у тебя будет репродукция питера джексона",
+      "word_count": 6,
+      "words": [
+        {
+          "original": "у",
+          "lemma": "у",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9959,
+          "syllables": [
+            "у"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "у"
+        },
+        {
+          "original": "тебя",
+          "lemma": "ты",
+          "pos": "NPRO",
+          "pos_ru": "местоимение 代词",
+          "score": 0.617,
+          "syllables": [
+            "ты"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "ты"
+        },
+        {
+          "original": "будет",
+          "lemma": "быть",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "быть"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "быть"
+        },
+        {
+          "original": "репродукция",
+          "lemma": "репродукция",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "ре",
+            "про",
+            "ду",
+            "кция"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "ре-про-ду-кция"
+        },
+        {
+          "original": "питера",
+          "lemma": "питер",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5333,
+          "syllables": [
+            "пи",
+            "тер"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "пи-тер"
+        },
+        {
+          "original": "джексона",
+          "lemma": "джексон",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.8182,
+          "syllables": [
+            "дже",
+            "ксон"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "дже-ксон"
+        }
+      ]
+    },
+    {
+      "original_text": "первый образовательный на смотрешке",
+      "word_count": 4,
+      "words": [
+        {
+          "original": "первый",
+          "lemma": "первый",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.5476,
+          "syllables": [
+            "пе",
+            "рвый"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "пе-рвый"
+        },
+        {
+          "original": "образовательный",
+          "lemma": "образовательный",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.5,
+          "syllables": [
+            "о",
+            "бра",
+            "зо",
+            "ва",
+            "те",
+            "льный"
+          ],
+          "syllable_count": 6,
+          "syllable_str": "о-бра-зо-ва-те-льный"
+        },
+        {
+          "original": "на",
+          "lemma": "на",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.999,
+          "syllables": [
+            "на"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "на"
+        },
+        {
+          "original": "смотрешке",
+          "lemma": "смотрёшка",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.2326,
+          "syllables": [
+            "смо",
+            "трё",
+            "шка"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "смо-трё-шка"
+        }
+      ]
+    },
+    {
+      "original_text": "кантемир балагов фильм теснота",
+      "word_count": 4,
+      "words": [
+        {
+          "original": "кантемир",
+          "lemma": "кантемир",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "ка",
+            "нте",
+            "мир"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ка-нте-мир"
+        },
+        {
+          "original": "балагов",
+          "lemma": "балаг",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "ба",
+            "лаг"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ба-лаг"
+        },
+        {
+          "original": "фильм",
+          "lemma": "фильм",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6231,
+          "syllables": [
+            "фильм"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "фильм"
+        },
+        {
+          "original": "теснота",
+          "lemma": "теснота",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "те",
+            "сно",
+            "та"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "те-сно-та"
+        }
+      ]
+    },
+    {
+      "original_text": "ясном",
+      "word_count": 1,
+      "words": [
+        {
+          "original": "ясном",
+          "lemma": "ясный",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.5,
+          "syllables": [
+            "я",
+            "сный"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "я-сный"
+        }
+      ]
+    },
+    {
+      "original_text": "восемьсот шестьдесят шесть шестьдесят шесть триста пятнадцать семнадцать",
+      "word_count": 8,
+      "words": [
+        {
+          "original": "восемьсот",
+          "lemma": "восемьсот",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "во",
+            "се",
+            "мьсот"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "во-се-мьсот"
+        },
+        {
+          "original": "шестьдесят",
+          "lemma": "шестьдесят",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "ше",
+            "стьде",
+            "сят"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ше-стьде-сят"
+        },
+        {
+          "original": "шесть",
+          "lemma": "шесть",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.6667,
+          "syllables": [
+            "шесть"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "шесть"
+        },
+        {
+          "original": "шестьдесят",
+          "lemma": "шестьдесят",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "ше",
+            "стьде",
+            "сят"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ше-стьде-сят"
+        },
+        {
+          "original": "шесть",
+          "lemma": "шесть",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.6667,
+          "syllables": [
+            "шесть"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "шесть"
+        },
+        {
+          "original": "триста",
+          "lemma": "триста",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "три",
+            "ста"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "три-ста"
+        },
+        {
+          "original": "пятнадцать",
+          "lemma": "пятнадцать",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "пя",
+            "тна",
+            "дцать"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "пя-тна-дцать"
+        },
+        {
+          "original": "семнадцать",
+          "lemma": "семнадцать",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "се",
+            "мна",
+            "дцать"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "се-мна-дцать"
+        }
+      ]
+    },
+    {
+      "original_text": "киноха американские боги",
+      "word_count": 3,
+      "words": [
+        {
+          "original": "киноха",
+          "lemma": "киноха",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5714,
+          "syllables": [
+            "ки",
+            "но",
+            "ха"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ки-но-ха"
+        },
+        {
+          "original": "американские",
+          "lemma": "американский",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.8387,
+          "syllables": [
+            "а",
+            "ме",
+            "ри",
+            "ка",
+            "нский"
+          ],
+          "syllable_count": 5,
+          "syllable_str": "а-ме-ри-ка-нский"
+        },
+        {
+          "original": "боги",
+          "lemma": "бог",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "бог"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "бог"
+        }
+      ]
+    },
+    {
+      "original_text": "истребители",
+      "word_count": 1,
+      "words": [
+        {
+          "original": "истребители",
+          "lemma": "истребитель",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6,
+          "syllables": [
+            "и",
+            "стре",
+            "би",
+            "тель"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "и-стре-би-тель"
+        }
+      ]
+    },
+    {
+      "original_text": "серия девять сезон пять сериал наруто ураганные хроники",
+      "word_count": 8,
+      "words": [
+        {
+          "original": "серия",
+          "lemma": "серия",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "се",
+            "рия"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "се-рия"
+        },
+        {
+          "original": "девять",
+          "lemma": "девять",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.5,
+          "syllables": [
+            "де",
+            "вять"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "де-вять"
+        },
+        {
+          "original": "сезон",
+          "lemma": "сезон",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6316,
+          "syllables": [
+            "се",
+            "зон"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "се-зон"
+        },
+        {
+          "original": "пять",
+          "lemma": "пять",
+          "pos": "NUMR",
+          "pos_ru": "числительное 数词",
+          "score": 0.8333,
+          "syllables": [
+            "пять"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "пять"
+        },
+        {
+          "original": "сериал",
+          "lemma": "сериал",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.7143,
+          "syllables": [
+            "се",
+            "риал"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "се-риал"
+        },
+        {
+          "original": "наруто",
+          "lemma": "наруто",
+          "pos": "ADVB",
+          "pos_ru": "наречие 副词",
+          "score": 0.5,
+          "syllables": [
+            "на",
+            "ру",
+            "то"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "на-ру-то"
+        },
+        {
+          "original": "ураганные",
+          "lemma": "ураганный",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.5,
+          "syllables": [
+            "у",
+            "ра",
+            "га",
+            "нный"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "у-ра-га-нный"
+        },
+        {
+          "original": "хроники",
+          "lemma": "хроника",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.6842,
+          "syllables": [
+            "хро",
+            "ни",
+            "ка"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "хро-ни-ка"
+        }
+      ]
+    },
+    {
+      "original_text": "орлов",
+      "word_count": 1,
+      "words": [
+        {
+          "original": "орлов",
+          "lemma": "орлов",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.7273,
+          "syllables": [
+            "о",
+            "рлов"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "о-рлов"
+        }
+      ]
+    },
+    {
+      "original_text": "афина а этот",
+      "word_count": 3,
+      "words": [
+        {
+          "original": "афина",
+          "lemma": "афина",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "а",
+            "фи",
+            "на"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "а-фи-на"
+        },
+        {
+          "original": "а",
+          "lemma": "а",
+          "pos": "CONJ",
+          "pos_ru": "союз 连词",
+          "score": 0.9972,
+          "syllables": [
+            "а"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "а"
+        },
+        {
+          "original": "этот",
+          "lemma": "этот",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.5583,
+          "syllables": [
+            "э",
+            "тот"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "э-тот"
+        }
+      ]
+    },
+    {
+      "original_text": " ",
+      "word_count": 0,
+      "words": []
+    },
+    {
+      "original_text": "запускай киноработу жанра научная лекция",
+      "word_count": 5,
+      "words": [
+        {
+          "original": "запускай",
+          "lemma": "запускать",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "за",
+            "пу",
+            "скать"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "за-пу-скать"
+        },
+        {
+          "original": "киноработу",
+          "lemma": "киноработа",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "ки",
+            "но",
+            "ра",
+            "бо",
+            "та"
+          ],
+          "syllable_count": 5,
+          "syllable_str": "ки-но-ра-бо-та"
+        },
+        {
+          "original": "жанра",
+          "lemma": "жанр",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "жанр"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "жанр"
+        },
+        {
+          "original": "научная",
+          "lemma": "научный",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 1.0,
+          "syllables": [
+            "нау",
+            "чный"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "нау-чный"
+        },
+        {
+          "original": "лекция",
+          "lemma": "лекция",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "ле",
+            "кция"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ле-кция"
+        }
+      ]
+    },
+    {
+      "original_text": "афина когда родился мерелин менсон",
+      "word_count": 5,
+      "words": [
+        {
+          "original": "афина",
+          "lemma": "афина",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "а",
+            "фи",
+            "на"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "а-фи-на"
+        },
+        {
+          "original": "когда",
+          "lemma": "когда",
+          "pos": "CONJ",
+          "pos_ru": "союз 连词",
+          "score": 0.8876,
+          "syllables": [
+            "ко",
+            "гда"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ко-гда"
+        },
+        {
+          "original": "родился",
+          "lemma": "родиться",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 0.5,
+          "syllables": [
+            "ро",
+            "ди",
+            "ться"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ро-ди-ться"
+        },
+        {
+          "original": "мерелин",
+          "lemma": "мерелин",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.2143,
+          "syllables": [
+            "ме",
+            "ре",
+            "лин"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ме-ре-лин"
+        },
+        {
+          "original": "менсон",
+          "lemma": "менсон",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.3409,
+          "syllables": [
+            "ме",
+            "нсон"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ме-нсон"
+        }
+      ]
+    },
+    {
+      "original_text": "в ютьюбе включай зэ смокерс мэгазин о сигарах и табаке о чае и кофе",
+      "word_count": 14,
+      "words": [
+        {
+          "original": "в",
+          "lemma": "в",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9993,
+          "syllables": [
+            "в"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "в"
+        },
+        {
+          "original": "ютьюбе",
+          "lemma": "ютьюб",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.9231,
+          "syllables": [
+            "ю",
+            "тьюб"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ю-тьюб"
+        },
+        {
+          "original": "включай",
+          "lemma": "включать",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "вклю",
+            "чать"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "вклю-чать"
+        },
+        {
+          "original": "зэ",
+          "lemma": "зэ",
+          "pos": "UNKN",
+          "pos_ru": "неизвестно 未知",
+          "score": 1.0,
+          "syllables": [
+            "зэ"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "зэ"
+        },
+        {
+          "original": "смокерс",
+          "lemma": "смокерс",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.1429,
+          "syllables": [
+            "смо",
+            "керс"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "смо-керс"
+        },
+        {
+          "original": "мэгазин",
+          "lemma": "мэгазин",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.1429,
+          "syllables": [
+            "мэ",
+            "га",
+            "зин"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "мэ-га-зин"
+        },
+        {
+          "original": "о",
+          "lemma": "о",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9878,
+          "syllables": [
+            "о"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "о"
+        },
+        {
+          "original": "сигарах",
+          "lemma": "сигара",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "си",
+            "га",
+            "ра"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "си-га-ра"
+        },
+        {
+          "original": "и",
+          "lemma": "и",
+          "pos": "CONJ",
+          "pos_ru": "союз 连词",
+          "score": 0.9983,
+          "syllables": [
+            "и"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "и"
+        },
+        {
+          "original": "табаке",
+          "lemma": "табак",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "та",
+            "бак"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "та-бак"
+        },
+        {
+          "original": "о",
+          "lemma": "о",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9878,
+          "syllables": [
+            "о"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "о"
+        },
+        {
+          "original": "чае",
+          "lemma": "чай",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "чай"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "чай"
+        },
+        {
+          "original": "и",
+          "lemma": "и",
+          "pos": "CONJ",
+          "pos_ru": "союз 连词",
+          "score": 0.9983,
+          "syllables": [
+            "и"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "и"
+        },
+        {
+          "original": "кофе",
+          "lemma": "кофе",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.2143,
+          "syllables": [
+            "ко",
+            "фе"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "ко-фе"
+        }
+      ]
+    },
+    {
+      "original_text": "няруко",
+      "word_count": 1,
+      "words": [
+        {
+          "original": "няруко",
+          "lemma": "нярукий",
+          "pos": "ADJS",
+          "pos_ru": "прилагательное (кратк.) 短尾形容词",
+          "score": 0.7857,
+          "syllables": [
+            "ня",
+            "ру",
+            "кий"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ня-ру-кий"
+        }
+      ]
+    },
+    {
+      "original_text": "сергей гайзуллович степанов",
+      "word_count": 3,
+      "words": [
+        {
+          "original": "сергей",
+          "lemma": "сергей",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "се",
+            "ргей"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "се-ргей"
+        },
+        {
+          "original": "гайзуллович",
+          "lemma": "гайзуллович",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "га",
+            "йзу",
+            "лло",
+            "вич"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "га-йзу-лло-вич"
+        },
+        {
+          "original": "степанов",
+          "lemma": "степанов",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.75,
+          "syllables": [
+            "сте",
+            "па",
+            "нов"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "сте-па-нов"
+        }
+      ]
+    },
+    {
+      "original_text": "включи альбом хочу по любви",
+      "word_count": 5,
+      "words": [
+        {
+          "original": "включи",
+          "lemma": "включить",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "вклю",
+            "чить"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "вклю-чить"
+        },
+        {
+          "original": "альбом",
+          "lemma": "альбом",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5962,
+          "syllables": [
+            "а",
+            "льбом"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "а-льбом"
+        },
+        {
+          "original": "хочу",
+          "lemma": "хотеть",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "хо",
+            "теть"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "хо-теть"
+        },
+        {
+          "original": "по",
+          "lemma": "по",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9984,
+          "syllables": [
+            "по"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "по"
+        },
+        {
+          "original": "любви",
+          "lemma": "любовь",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5542,
+          "syllables": [
+            "лю",
+            "бовь"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "лю-бовь"
+        }
+      ]
+    },
+    {
+      "original_text": "звездный десант закачай",
+      "word_count": 3,
+      "words": [
+        {
+          "original": "звездный",
+          "lemma": "звёздный",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.5,
+          "syllables": [
+            "звё",
+            "здный"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "звё-здный"
+        },
+        {
+          "original": "десант",
+          "lemma": "десант",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5,
+          "syllables": [
+            "де",
+            "сант"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "де-сант"
+        },
+        {
+          "original": "закачай",
+          "lemma": "закачать",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "за",
+            "ка",
+            "чать"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "за-ка-чать"
+        }
+      ]
+    },
+    {
+      "original_text": "алиса закажи мне пожалуйста килограмм яблок с доставкой на дом",
+      "word_count": 10,
+      "words": [
+        {
+          "original": "алиса",
+          "lemma": "алиса",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "а",
+            "ли",
+            "са"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "а-ли-са"
+        },
+        {
+          "original": "закажи",
+          "lemma": "заказать",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 1.0,
+          "syllables": [
+            "за",
+            "ка",
+            "зать"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "за-ка-зать"
+        },
+        {
+          "original": "мне",
+          "lemma": "я",
+          "pos": "NPRO",
+          "pos_ru": "местоимение 代词",
+          "score": 0.9754,
+          "syllables": [
+            "я"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "я"
+        },
+        {
+          "original": "пожалуйста",
+          "lemma": "пожалуйста",
+          "pos": "PRCL",
+          "pos_ru": "частица 助词",
+          "score": 0.6667,
+          "syllables": [
+            "по",
+            "жа",
+            "лу",
+            "йста"
+          ],
+          "syllable_count": 4,
+          "syllable_str": "по-жа-лу-йста"
+        },
+        {
+          "original": "килограмм",
+          "lemma": "килограмм",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5714,
+          "syllables": [
+            "ки",
+            "ло",
+            "грамм"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "ки-ло-грамм"
+        },
+        {
+          "original": "яблок",
+          "lemma": "яблоко",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "я",
+            "бло",
+            "ко"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "я-бло-ко"
+        },
+        {
+          "original": "с",
+          "lemma": "с",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.9976,
+          "syllables": [
+            "с"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "с"
+        },
+        {
+          "original": "доставкой",
+          "lemma": "доставка",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "до",
+            "ста",
+            "вка"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "до-ста-вка"
+        },
+        {
+          "original": "на",
+          "lemma": "на",
+          "pos": "PREP",
+          "pos_ru": "предлог 前置词",
+          "score": 0.999,
+          "syllables": [
+            "на"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "на"
+        },
+        {
+          "original": "дом",
+          "lemma": "дом",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 0.5702,
+          "syllables": [
+            "дом"
+          ],
+          "syllable_count": 1,
+          "syllable_str": "дом"
+        }
+      ]
+    },
+    {
+      "original_text": "громче",
+      "word_count": 1,
+      "words": [
+        {
+          "original": "громче",
+          "lemma": "громкий",
+          "pos": "COMP",
+          "pos_ru": "сравнительная степень 比较级",
+          "score": 1.0,
+          "syllables": [
+            "гро",
+            "мкий"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "гро-мкий"
+        }
+      ]
+    },
+    {
+      "original_text": "афина такое случается",
+      "word_count": 3,
+      "words": [
+        {
+          "original": "афина",
+          "lemma": "афина",
+          "pos": "NOUN",
+          "pos_ru": "существительное 名词",
+          "score": 1.0,
+          "syllables": [
+            "а",
+            "фи",
+            "на"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "а-фи-на"
+        },
+        {
+          "original": "такое",
+          "lemma": "такой",
+          "pos": "ADJF",
+          "pos_ru": "прилагательное (полн.) 形容词",
+          "score": 0.6341,
+          "syllables": [
+            "та",
+            "кой"
+          ],
+          "syllable_count": 2,
+          "syllable_str": "та-кой"
+        },
+        {
+          "original": "случается",
+          "lemma": "случаться",
+          "pos": "VERB",
+          "pos_ru": "глагол 动词",
+          "score": 0.9474,
+          "syllables": [
+            "слу",
+            "ча",
+            "ться"
+          ],
+          "syllable_count": 3,
+          "syllable_str": "слу-ча-ться"
+        }
+      ]
+    }
+  ]
+}
