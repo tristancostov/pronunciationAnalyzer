@@ -142,3 +142,4 @@ pip install vosk pymorphy2 pymorphy2-dicts-ru librosa scipy ruaccent numpy
 
 Плюс модель `vosk-model-ru-0.42` (распакованная) и `ffmpeg` для
 конвертации аудио.
+ffmpeg -i "d:\Mycode\audio\audio_2026-05-28_16-20-15.ogg" -ar 16000 -ac 1 -c:a pcm_s16le "4fori.wav"

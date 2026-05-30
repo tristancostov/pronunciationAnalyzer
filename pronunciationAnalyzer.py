@@ -15,15 +15,14 @@ from scipy.signal import find_peaks, butter, sosfiltfilt
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-audioFile  = os.path.join(SCRIPT_DIR, "audio", "4local.wav")
-textFile   = os.path.join(SCRIPT_DIR, "text",  "4local.txt")
+audioFile  = os.path.join(SCRIPT_DIR, "audio", "7fori.wav")
+textFile   = os.path.join(SCRIPT_DIR, "text",  "6fori.txt")
 modelPath  = os.path.join(SCRIPT_DIR, "vosk-model-ru-0.42")
 
 SR                  = 16000
 N_MFCC              = 13
 pauseThreshold      = 2.0
 normalSpeakingRate  = (2.0, 3.5)
-
 
 LOWPASS_HZ          = 1000.0   
 NUCLEUS_FRAME_S     = 0.030    

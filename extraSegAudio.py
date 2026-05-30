@@ -4,11 +4,11 @@ import os
 import struct
 
 
-with open("./analysis/4local_syllable_analysis.json", "r", encoding="utf-8") as f:
+with open("./analysis/6fori_syllable_analysis.json", "r", encoding="utf-8") as f:
     report = json.load(f)
 
 
-wf       = wave.open("./audio/4local.wav", "rb")
+wf       = wave.open("./audio/6fori.wav", "rb")
 sr       = wf.getframerate()
 nch      = wf.getnchannels()
 sampW    = wf.getsampwidth()
@@ -16,7 +16,7 @@ allBytes = wf.readframes(wf.getnframes())
 wf.close()
 
 
-os.makedirs("syllables_export8", exist_ok=True)
+os.makedirs("syllables_export12", exist_ok=True)
 
 count = 0
 allWords  = report["wordAnalysis"]
@@ -46,7 +46,7 @@ for wordItem in allWords[startIdx:]:
         if len(chunk) < 100:
             continue
 
-        fname = f"syllables_export8/{count+1:02d}_{word}_{syl}.wav"
+        fname = f"syllables_export12/{count+1:02d}_{word}_{syl}.wav"
         out   = wave.open(fname, "wb")
         out.setnchannels(nch)
         out.setsampwidth(sampW)
@@ -60,4 +60,4 @@ for wordItem in allWords[startIdx:]:
     if count >= 25:
         break
 
-print(f"\n完成！共切出 {count} 个音节，保存在 syllables_export8/ 文件夹里")
+print(f"\n完成！共切出 {count} 个音节，保存在 syllables_export10/ 文件夹里")
