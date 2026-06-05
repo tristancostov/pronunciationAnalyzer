@@ -1,5 +1,42 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+evaluate_annotations.py
+=======================
+Сравнивает ручную разметку (Praat .TextGrid) с автоматическим выходом
+системы (*_syllable_analysis.json) и считает «реальные» метрики:
+
+  1. Точность числа слогов (Syllable Count Accuracy);
+  2. Ошибка границ слогов (Boundary Error, мс) — среднее, медиана, P90;
+  3. Точность определения ударения (Stress Hit Rate).
+
+ИСПОЛЬЗОВАНИЕ
+-------------
+
+Вариант 1 — указать конкретные записи (имена без расширения):
+    python evaluate_annotations.py 6fori 7fori
+
+Вариант 2 — автоматически найти все записи, у которых есть и .TextGrid,
+            и _syllable_analysis.json в текущей папке:
+    python evaluate_annotations.py
+
+Вариант 3 — задать свои каталоги:
+    python evaluate_annotations.py --textgrid-dir ./annotations \\
+                                   --json-dir ./analysis_results \\
+                                   --ground ./my_ground_truth.json \\
+                                   6fori 7fori
+
+КОНФИГ
+------
+Эталонный список слов для каждой записи лежит в `ground_truth_words.json`
+(можно переопределить через --ground). Чтобы добавить новую размеченную
+запись, отредактируйте этот JSON — Python-код менять не надо.
+
+ВЫВОД
+-----
+Консольный отчёт + `evaluation_results.md` + `evaluation_results.csv`.
+
+"""
 
 import csv
 import glob
@@ -183,6 +220,7 @@ def evaluate_recording(name: str, tg_path: str, js_path: str,
     boundary_errs = []
     stress_total = 0
     stress_hits = 0
+    stress_actual_hits = 0    # новый: для акустического детектора
     per_word_rows = []
 
     for g, s, op in pairs:
@@ -215,13 +253,21 @@ def evaluate_recording(name: str, tg_path: str, js_path: str,
             mean_err = None
 
         stress_ok = None
+        stress_actual_ok = None
         if count_ok and m_count > 1:
             stress_total += 1
             durs = [(b - a) for a, b, _ in g["sylls"]]
             m_stress = int(max(range(len(durs)), key=lambda i: durs[i]))
-            s_stress = s["stressedIdx"]
-            stress_ok = (m_stress == s_stress)
+            # Метрика 1 (как раньше): СЛОВАРНОЕ ударение vs ручная разметка
+            #   — измеряет, правильно ли говорящий произнёс по нормам языка.
+            s_stress_expected = s.get("expectedStressedIdx", s["stressedIdx"])
+            stress_ok = (m_stress == s_stress_expected)
             if stress_ok: stress_hits += 1
+            # Метрика 2 (новая): АКУСТИЧЕСКОЕ ударение vs ручная разметка
+            #   — измеряет, правильно ли алгоритм находит реальное ударение.
+            s_stress_actual = s.get("actualStressedIdx", s["stressedIdx"])
+            stress_actual_ok = (m_stress == s_stress_actual)
+            if stress_actual_ok: stress_actual_hits += 1
 
         per_word_rows.append({
             "word": g["name"], "op": op,
@@ -245,6 +291,10 @@ def evaluate_recording(name: str, tg_path: str, js_path: str,
         "stress_total": stress_total,
         "stress_hits": stress_hits,
         "stress_accuracy": stress_hits / stress_total * 100 if stress_total else 0,
+        # Новая метрика: акустический детектор (то, насколько алгоритм
+        # правильно ловит фактически выделенный слог)
+        "stress_actual_hits": stress_actual_hits,
+        "stress_actual_accuracy": stress_actual_hits / stress_total * 100 if stress_total else 0,
         "per_word": per_word_rows,
     }
 
@@ -262,14 +312,17 @@ def print_report(results, output_md="evaluation_results.md", output_csv="evaluat
         print(f"  Ошибка границ слогов:     среднее {r['boundary_mean_ms']:.1f} мс, "
               f"медиана {r['boundary_median_ms']:.1f} мс, P90 {r['boundary_p90_ms']:.1f} мс  "
               f"(n={r['boundary_n']})")
-        print(f"  Точность ударения:        {r['stress_hits']}/{r['stress_total']} = {r['stress_accuracy']:.1f}%  "
-              f"(сравнено только при совпавшем числе слогов)")
+        print(f"  Ударение (словарь vs разметка): {r['stress_hits']}/{r['stress_total']} = {r['stress_accuracy']:.1f}%  "
+              f"← правильность произношения говорящим")
+        print(f"  Ударение (акустика vs разметка): {r['stress_actual_hits']}/{r['stress_total']} = {r['stress_actual_accuracy']:.1f}%  "
+              f"← точность акустического детектора")
 
     # Сводно
     total_p = sum(r["paired"] for r in results)
     total_cm = sum(r["count_match"] for r in results)
     total_st = sum(r["stress_total"] for r in results)
     total_sh = sum(r["stress_hits"] for r in results)
+    total_sah = sum(r["stress_actual_hits"] for r in results)
     total_bn = sum(r["boundary_n"] for r in results)
     bmean = sum(r["boundary_mean_ms"] * r["boundary_n"] for r in results) / max(1, total_bn)
 
@@ -279,7 +332,9 @@ def print_report(results, output_md="evaluation_results.md", output_csv="evaluat
     print(f"  Сопоставлено слов:        {total_p}")
     print(f"  Точность числа слогов:    {total_cm}/{total_p} = {total_cm/total_p*100:.1f}%" if total_p else "  —")
     print(f"  Средняя ошибка границ:    {bmean:.1f} мс")
-    print(f"  Точность ударения:        {total_sh}/{total_st} = {total_sh/total_st*100:.1f}%" if total_st else "  —")
+    if total_st:
+        print(f"  Ударение, словарь:        {total_sh}/{total_st} = {total_sh/total_st*100:.1f}%  ← правильность произношения говорящим")
+        print(f"  Ударение, акустика:       {total_sah}/{total_st} = {total_sah/total_st*100:.1f}%  ← точность акустического детектора")
 
     # Markdown
     with open(output_md, "w", encoding="utf-8") as f:
@@ -292,19 +347,29 @@ def print_report(results, output_md="evaluation_results.md", output_csv="evaluat
         f.write(f"| **Точность числа слогов** | **{total_cm/total_p*100:.1f}%** ({total_cm}/{total_p}) |\n")
         f.write(f"| **Средняя ошибка границ слогов** | **{bmean:.1f} мс** |\n")
         if total_st:
-            f.write(f"| **Точность определения ударения** | **{total_sh/total_st*100:.1f}%** ({total_sh}/{total_st}) |\n")
+            f.write(f"| **Ударение: акустический детектор vs ручная разметка** | **{total_sah/total_st*100:.1f}%** ({total_sah}/{total_st}) — точность алгоритма |\n")
+            f.write(f"| **Ударение: словарь ruaccent vs ручная разметка** | **{total_sh/total_st*100:.1f}%** ({total_sh}/{total_st}) — правильность произношения говорящим |\n")
         f.write("\n## По отдельным записям\n\n")
-        f.write("| Запись | Слов | SylCountAcc | Bound.err mean (мс) | Bound.err median | Bound.err P90 | StressAcc |\n")
-        f.write("|---|---|---|---|---|---|---|\n")
+        f.write("| Запись | Слов | SylCountAcc | Bound.err mean (мс) | Bound.err median | Bound.err P90 | StressAcc (акустика) | StressAcc (словарь) |\n")
+        f.write("|---|---|---|---|---|---|---|---|\n")
         for r in results:
-            sa = f"{r['stress_accuracy']:.1f}% ({r['stress_hits']}/{r['stress_total']})" if r["stress_total"] else "—"
+            sa_act = f"{r['stress_actual_accuracy']:.1f}%" if r["stress_total"] else "—"
+            sa_exp = f"{r['stress_accuracy']:.1f}%" if r["stress_total"] else "—"
             f.write(f"| {r['name']} | {r['paired']} | {r['count_accuracy']:.1f}% | "
                     f"{r['boundary_mean_ms']:.1f} | {r['boundary_median_ms']:.1f} | "
-                    f"{r['boundary_p90_ms']:.1f} | {sa} |\n")
+                    f"{r['boundary_p90_ms']:.1f} | {sa_act} | {sa_exp} |\n")
         f.write("\n## Метрики — определения\n\n")
         f.write("- **SylCountAcc** — доля слов с правильным числом слогов.\n")
         f.write("- **Bound.err** — абсолютная разница (мс) границ слогов в разметке и в системе. "
                 "Считается только по совпавшим по числу слогов словам.\n")
+        f.write("- **StressAcc (акустика)** — доля многосложных слов, где наш АКУСТИЧЕСКИЙ детектор "
+                "ударного слога (по длительности, энергии, F1 и MFCC) совпал с самым длинным "
+                "слогом в ручной разметке. **Это точность нашего алгоритма.**\n")
+        f.write("- **StressAcc (словарь)** — доля многосложных слов, где СЛОВАРНОЕ (ruaccent) "
+                "ожидаемое ударение совпало с фактическим (по разметке). **Это правильность "
+                "произношения говорящим — у неносителей закономерно ниже из-за акцента.**\n")
+        f.write("- Разница между двумя метриками = сигнал об ошибках произношения, которые "
+                "система может указать ученику.\n")
         f.write("- **StressAcc** — доля многосложных слов, в которых ударный слог системы совпал "
                 "с самым длинным слогом в ручной разметке (приближение).\n")
 
@@ -313,12 +378,15 @@ def print_report(results, output_md="evaluation_results.md", output_csv="evaluat
         w = csv.writer(f)
         w.writerow(["recording", "paired_words", "count_accuracy_pct",
                     "boundary_mean_ms", "boundary_median_ms", "boundary_p90_ms",
-                    "stress_accuracy_pct", "stress_hits", "stress_total"])
+                    "stress_actual_accuracy_pct", "stress_dict_accuracy_pct",
+                    "stress_total"])
         for r in results:
             w.writerow([r["name"], r["paired"], round(r["count_accuracy"],1),
                         round(r["boundary_mean_ms"],1), round(r["boundary_median_ms"],1),
                         round(r["boundary_p90_ms"],1),
-                        round(r["stress_accuracy"],1), r["stress_hits"], r["stress_total"]])
+                        round(r["stress_actual_accuracy"],1),
+                        round(r["stress_accuracy"],1),
+                        r["stress_total"]])
 
     print(f"\n💾 Сохранено: {output_md}, {output_csv}")
 
@@ -331,15 +399,15 @@ def print_report(results, output_md="evaluation_results.md", output_csv="evaluat
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Папки, где лежат файлы. По умолчанию — рядом со скриптом.
-TEXTGRID_DIR = os.path.join(SCRIPT_DIR, "analysis")          # где лежат *.TextGrid
-JSON_DIR     = os.path.join(SCRIPT_DIR, "analysis")          # где лежат *_syllable_analysis.json
+TEXTGRID_DIR = os.path.join(SCRIPT_DIR, "analysis")
+JSON_DIR     = os.path.join(SCRIPT_DIR, "audio")
 GROUND_FILE  = os.path.join(SCRIPT_DIR, "ground_truth_words.json")
-OUTPUT_MD    = os.path.join(SCRIPT_DIR, "evaluation_results.md")
-OUTPUT_CSV   = os.path.join(SCRIPT_DIR, "evaluation_results.csv")
+OUTPUT_MD    = os.path.join(SCRIPT_DIR, "evaluation_results4.md")
+OUTPUT_CSV   = os.path.join(SCRIPT_DIR, "evaluation_results4.csv")
 
 # Какие записи сравнивать. Поставьте имена (без расширения) — или
 # оставьте пустой список, и скрипт сам найдёт все доступные.
-RECORDINGS = ["6fori", "7fori"]    # ← правьте этот список, чтобы переоценить другие записи
+RECORDINGS = ["3local"]
 
 
 # ------------------------- main ------------------------------------------

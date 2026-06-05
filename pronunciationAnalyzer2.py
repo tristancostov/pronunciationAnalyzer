@@ -58,8 +58,8 @@ warnings.filterwarnings("ignore", message="Empty filters detected in mel frequen
 # из какой папки его запускают (терминал, кнопка «Run», debug).
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-audioFile  = os.path.join(SCRIPT_DIR, "audio", "7fori.wav")
-textFile   = os.path.join(SCRIPT_DIR, "text",  "7fori.txt")
+audioFile  = os.path.join(SCRIPT_DIR, "audio", "2local.wav")
+textFile   = os.path.join(SCRIPT_DIR, "text",  "2local.txt")
 modelPath  = os.path.join(SCRIPT_DIR, "vosk-model-ru-0.42")
 
 SR                  = 16000
@@ -609,11 +609,9 @@ def detectAcousticStress(syllableResults: list[dict],
 
     if f0_by_syllable is not None and len(f0_by_syllable) == n:
         f0N = _norm01([(v if v and v > 0 else 0.0) for v in f0_by_syllable])
-        # ── ИЗМЕНЕНО: Повышен вес F0 (с 0.30 до 0.45) и снижен вес длительности (с 0.25 до 0.15).
-        # Это делает алгоритм более устойчивым к паузам и затяжкам (характерно для неносителей),
-        # так как F0 (высота тона) — более надежный акустический коррелят русского ударения.
-        scores = (0.45 * f0N + 0.15 * durN + 0.20 * enerN
-                  + 0.10 * f1N + 0.10 * mfccN_inv).tolist()
+        # F0 доступна — она главный сигнал ударения
+        scores = (0.30 * f0N + 0.25 * durN + 0.20 * enerN
+                  + 0.15 * f1N + 0.10 * mfccN_inv).tolist()
     else:
         # F0 нет — прежняя схема без неё
         scores = (0.35 * durN + 0.30 * enerN + 0.20 * f1N + 0.15 * mfccN_inv).tolist()
