@@ -352,53 +352,26 @@ def selectNuclei(energyDb: np.ndarray, voiced: np.ndarray,
 
 def nucleiToBoundaries(peaks: np.ndarray, energyDb: np.ndarray, hopLen: int,
                        totalSamples: int, sr: int, expectedCount: int,
-                       mfcc: np.ndarray) -> list[tuple[int, int]]:
+                       vowelScore: np.ndarray | None = None) -> list[tuple[int, int]]:
     """
-    Границы слогов — по комбинации минимума ЭНЕРГИИ и максимума 
-    спектральных изменений (Delta MFCC) между соседними ядрами.
+    Границы слогов — в минимуме ЭНЕРГИИ между соседними ядрами.
+
+    (Пробовали добавлять «гласность» (vowelScore) в поиск провала, но это
+    ухудшило медианную ошибку границ на всех записях: между двумя гласными
+    и так стоит согласный с низкой гласностью, поэтому добавление vowelScore
+    смещало границу к середине согласного, а не к реальному стыку слогов.
+    Поэтому здесь оставлена чистая энергия. vowelScore используется только
+    при ОТБОРЕ ядер, где он полезен.)
+
     Гарантирует РОВНО expectedCount непустых сегментов.
     """
     if len(peaks) == 0:
         peaks = np.array([len(energyDb) // 2 if len(energyDb) else 0])
 
-    # 1. Считаем спектральные изменения (скорость изменения тембра)
-    n_frames = len(energyDb)
-    mfcc_trim = mfcc[:, :n_frames]
-    
-    # Динамическая ширина окна для очень коротких слов (например, предлогов "в", "с")
-    actual_frames = mfcc_trim.shape[1]
-    if actual_frames < 3:
-        # Если кадров меньше 3, дельту посчитать невозможно — ставим нули
-        delta_mfcc = np.zeros_like(mfcc_trim)
-    else:
-        # Подбираем нечетное число <= 9 и <= actual_frames
-        w = min(9, actual_frames if actual_frames % 2 != 0 else actual_frames - 1)
-        w = max(3, int(w)) # предохранитель, минимум 3
-        delta_mfcc = librosa.feature.delta(mfcc_trim, width=w)
-
-    # Величина спектрального перехода (евклидова норма)
-    spectral_change = np.linalg.norm(delta_mfcc, axis=0)
-
-    def _norm01(x: np.ndarray) -> np.ndarray:
-        rng = x.max() - x.min()
-        return (x - x.min()) / rng if rng > 1e-9 else np.zeros_like(x)
-
-    e_norm = _norm01(energyDb)
-    s_norm = _norm01(spectral_change)
-
-    # 2. Целевая функция для границы: 
-    # Мы ищем минимум ЭНЕРГИИ, но при этом максимум ИЗМЕНЕНИЯ СПЕКТРА.
-    # Вычитая спектральное изменение, мы делаем так, что его пики становятся впадинами,
-    # и они "притягивают" к себе точку разреза.
-    objective = e_norm - 0.6 * s_norm 
-
     cuts = [0]
     for k in range(len(peaks) - 1):
-        a, b = int(peaks[k]), int(peaks[k + 1])
-        if a < b:
-            valley = a + int(np.argmin(objective[a:b + 1]))
-        else:
-            valley = a
+        a, b   = int(peaks[k]), int(peaks[k + 1])
+        valley = a + int(np.argmin(energyDb[a:b + 1]))
         cuts.append(int(valley * hopLen))
     cuts.append(totalSamples)
     segs = list(zip(cuts[:-1], cuts[1:]))
@@ -533,7 +506,7 @@ def analyzeSyllablesInWord(wordSegment: np.ndarray, sr: int,
     peaks, rawDetected = selectNuclei(energyDb, voiced, vowelScore, expected, hopLen, sr)
     
     # ── ИЗМЕНЕНО: передаем mfcc вместо vowelScore для более точного реза ──
-    bounds = nucleiToBoundaries(peaks, energyDb, hopLen, len(core), sr, expected, mfcc)
+    bounds = nucleiToBoundaries(peaks, energyDb, hopLen, len(core), sr, expected)
     
     # 2) Переводим границы обратно в координаты исходного wordSegment
     bounds = [(s + trimStart, e + trimStart) for s, e in bounds]
@@ -609,11 +582,9 @@ def detectAcousticStress(syllableResults: list[dict],
 
     if f0_by_syllable is not None and len(f0_by_syllable) == n:
         f0N = _norm01([(v if v and v > 0 else 0.0) for v in f0_by_syllable])
-        # ── ИЗМЕНЕНО: Повышен вес F0 (с 0.30 до 0.45) и снижен вес длительности (с 0.25 до 0.15).
-        # Это делает алгоритм более устойчивым к паузам и затяжкам (характерно для неносителей),
-        # так как F0 (высота тона) — более надежный акустический коррелят русского ударения.
-        scores = (0.45 * f0N + 0.15 * durN + 0.20 * enerN
-                  + 0.10 * f1N + 0.10 * mfccN_inv).tolist()
+        # F0 доступна — она главный сигнал ударения
+        scores = (0.30 * f0N + 0.25 * durN + 0.20 * enerN
+                  + 0.15 * f1N + 0.10 * mfccN_inv).tolist()
     else:
         # F0 нет — прежняя схема без неё
         scores = (0.35 * durN + 0.30 * enerN + 0.20 * f1N + 0.15 * mfccN_inv).tolist()

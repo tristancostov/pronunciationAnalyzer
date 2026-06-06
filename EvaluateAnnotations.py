@@ -400,14 +400,14 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Папки, где лежат файлы. По умолчанию — рядом со скриптом.
 TEXTGRID_DIR = os.path.join(SCRIPT_DIR, "analysis")
-JSON_DIR     = os.path.join(SCRIPT_DIR, "audio")
+JSON_DIR     = os.path.join(SCRIPT_DIR, "analysis")
 GROUND_FILE  = os.path.join(SCRIPT_DIR, "ground_truth_words.json")
-OUTPUT_MD    = os.path.join(SCRIPT_DIR, "evaluation_results4.md")
-OUTPUT_CSV   = os.path.join(SCRIPT_DIR, "evaluation_results4.csv")
+OUTPUT_MD    = os.path.join(SCRIPT_DIR, "fori_evaluation_results.md")
+OUTPUT_CSV   = os.path.join(SCRIPT_DIR, "fori_evaluation_results.csv")
 
 # Какие записи сравнивать. Поставьте имена (без расширения) — или
 # оставьте пустой список, и скрипт сам найдёт все доступные.
-RECORDINGS = ["3local"]
+RECORDINGS = ["6fori","7fori"]
 
 
 # ------------------------- main ------------------------------------------
