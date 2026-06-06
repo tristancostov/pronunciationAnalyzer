@@ -44,6 +44,9 @@ def main():
         print("❌ Нет пар WAV+TXT для обработки.")
         return
 
+    # Загружаем модели ОДИН раз
+    print("Загрузка моделей (VOSK + pymorphy2 + ruaccent)…")
+    models = pa.loadModels()
     print(f"🔍 Найдено {len(pairs)} записей для анализа.\n")
 
     for idx, (wav, txt, name) in enumerate(pairs, 1):
@@ -53,12 +56,9 @@ def main():
 
         pa.audioFile = wav
         pa.textFile  = txt
-
-        # main() печатает отчёт и сохраняет JSON рядом с WAV
-        pa.main()
+        pa.main(models=models)
 
     print(f"\n✅ Готово. Обработано {len(pairs)} записей.")
-    print(f"   JSON-файлы лежат в: {AUDIO_DIR}")
 
 
 if __name__ == "__main__":

@@ -205,14 +205,8 @@ def _lowpass(signal: np.ndarray, sr: int, cutoff: float) -> np.ndarray:
 
 def computeContours(wordSegment: np.ndarray, sr: int):
     """
-    Возвращает по-кадрово (один и тот же hop для всех кривых):
-      energyDb    — энергия низкочастотной полосы в дБ (салиентность гласных)
-      voiced      — булев массив: кадр озвончён (гласный/сонорный), а не шум
-      vowelScore  — оценка «насколько кадр похож на гласный» по MFCC и
-                    спектру; в диапазоне ~0..1. Помогает отличать настоящие
-                    гласные от звонких согласных (р/м/н/л/й), которые
-                    давали ложные пики раньше.
-      hopLen      — шаг в сэмплах
+    Возвращает dict с покадровыми признаками слова.
+    Ключи: energyDb, voiced, vowelScore, hopLen, frameLen, melDb, mfcc, zcr.
     """
     frameLen = max(int(sr * NUCLEUS_FRAME_S), 64)
     hopLen   = max(int(sr * NUCLEUS_HOP_S), 16)
@@ -224,18 +218,15 @@ def computeContours(wordSegment: np.ndarray, sr: int):
     zcr     = librosa.feature.zero_crossing_rate(wordSegment,
                                                  frame_length=frameLen, hop_length=hopLen)[0]
 
-    # --- MFCC и MEL-спектр на тех же кадрах ---
-    # Используем n_fft = frameLen, чтобы выровнять с rmsLow/rmsFull/zcr.
-    # n_mfcc=13 — стандарт для речевой обработки.
     nFft = max(frameLen, 256)
     mfcc = librosa.feature.mfcc(y=wordSegment, sr=sr,
                                 n_mfcc=13, n_fft=nFft,
                                 hop_length=hopLen,
-                                n_mels=40, fmax=sr/2)        # форма: (13, кадры)
+                                n_mels=40, fmax=sr/2)
     melS = librosa.feature.melspectrogram(y=wordSegment, sr=sr,
                                           n_fft=nFft, hop_length=hopLen,
                                           n_mels=40, fmax=sr/2)
-    melDb = librosa.power_to_db(melS + 1e-10, ref=np.max)    # (40, кадры)
+    melDb = librosa.power_to_db(melS + 1e-10, ref=np.max)
 
     n = min(len(rmsLow), len(rmsFull), len(zcr), mfcc.shape[1], melDb.shape[1])
     rmsLow, rmsFull, zcr = rmsLow[:n], rmsFull[:n], zcr[:n]
@@ -246,34 +237,18 @@ def computeContours(wordSegment: np.ndarray, sr: int):
     lowbandRatio = rmsLow / (rmsFull + 1e-9)
     voiced = (lowbandRatio >= VOICE_LOWBAND_RATIO) & (zcr <= VOICE_ZCR_MAX)
 
-    # ── НОВОЕ: оценка «гласности» каждого кадра ──────────────────────────
-    # Идея: гласный имеет (а) сильную низкочастотную мел-энергию в области
-    # F1 (~ 300–900 Гц), (б) высокий контраст «низ vs верх» в мел-спектре
-    # (гласный «открытее» в области F1/F2, чем сонорный согласный),
-    # (в) определённый профиль MFCC: MFCC[1] часто отрицателен у гласного
-    # (низкая по сравнению с серединой энергия), а MFCC[2] > 0.
-    # Это не классификатор — это эвристика, на которой потом отбирать пики.
     melFreqs = librosa.mel_frequencies(n_mels=40, fmax=sr/2)
-    # маски для трёх диапазонов
-    maskF1 = (melFreqs >= 250) & (melFreqs <= 900)      # область F1 гласных
-    maskMid = (melFreqs > 900) & (melFreqs <= 2500)     # область F2
-    maskHi = (melFreqs > 2500)                          # шум согласных
-    # средняя дБ-энергия в этих полосах по каждому кадру
+    maskF1 = (melFreqs >= 250) & (melFreqs <= 900)
+    maskMid = (melFreqs > 900) & (melFreqs <= 2500)
+    maskHi = (melFreqs > 2500)
     eF1 = melDb[maskF1, :].mean(axis=0)
     eMid = melDb[maskMid, :].mean(axis=0)
     eHi = melDb[maskHi, :].mean(axis=0)
 
-    # «гласность»: F1 силён, и низ доминирует над верхом (не как у с/ш)
-    lowHiContrast = eF1 - eHi                            # большой у гласных, малый у фрикативов
-    midContribution = eMid - eHi                         # тоже больше у гласных
+    lowHiContrast = eF1 - eHi
+    midContribution = eMid - eHi
+    mfcc_norm = np.abs(mfcc[1, :]) + np.abs(mfcc[2, :])
 
-    # MFCC-компонента: используем MFCC[1] и MFCC[2] — они хорошо разделяют
-    # гласные и сонорные. У гласных |MFCC[1]| меньше относительно
-    # средних |MFCC[5+]|; формула эвристическая.
-    mfcc_norm = np.abs(mfcc[1, :]) + np.abs(mfcc[2, :])  # энергия в низких кепстральных
-    # Чем выше — тем «гласнее»
-
-    # Сводим в один score, нормализуем по этому слову
     def _normFrame(v):
         v = v - v.min()
         m = v.max()
@@ -282,9 +257,12 @@ def computeContours(wordSegment: np.ndarray, sr: int):
     vowelScore = (_normFrame(lowHiContrast)
                   + _normFrame(midContribution)
                   + _normFrame(mfcc_norm)) / 3.0
-    # длина согласуется с energyDb / voiced
 
-    return energyDb, voiced, vowelScore, hopLen
+    return {
+        "energyDb": energyDb, "voiced": voiced, "vowelScore": vowelScore,
+        "hopLen": hopLen, "frameLen": frameLen,
+        "melDb": melDb, "mfcc": mfcc, "zcr": zcr, "rmsLow": rmsLow,
+    }
 
 
 def _norm(x: np.ndarray) -> np.ndarray:
@@ -587,6 +565,87 @@ def extractFeatures(signal: np.ndarray, sr: int) -> dict:
     return out
 
 
+# ─── Быстрые версии: используют предвычисленные контуры слова ───
+
+def findVowelNucleusFast(signal: np.ndarray, sr: int,
+                         wc: dict, f0: int, f1: int) -> tuple:
+    """
+    То же что findVowelNucleus, но не вычисляет mel-спектрограмму заново —
+    берёт её из предвычисленных контуров слова wc.
+    f0, f1 — кадровые индексы слога внутри контуров.
+    Возвращает (start_sample, end_sample) относительно signal.
+    """
+    n = len(signal)
+    if n < int(sr * 0.040) or f1 <= f0:
+        return 0, n
+
+    hopLen = wc["hopLen"]
+    nFrames = f1 - f0
+    if nFrames < 3:
+        return 0, n
+
+    mel_slice = wc["melDb"][:, f0:f1]
+    zcr_slice = wc["zcr"][f0:f1]
+    rms_slice = wc["rmsLow"][f0:f1]
+
+    e_db = librosa.amplitude_to_db(rms_slice + 1e-8, ref=np.max)
+    e_score = np.clip((e_db + 35.0) / 35.0, 0.0, 1.0)
+    z_score = 1.0 - np.clip(zcr_slice / 0.22, 0.0, 1.0)
+
+    melFreqs = librosa.mel_frequencies(n_mels=40, fmax=sr/2)
+    maskF1 = (melFreqs >= 250) & (melFreqs <= 900)
+    maskHi = (melFreqs > 2500)
+    eF1 = mel_slice[maskF1, :].mean(axis=0) if maskF1.any() else np.zeros(nFrames)
+    eHi = mel_slice[maskHi, :].mean(axis=0) if maskHi.any() else np.zeros(nFrames)
+    m_score = np.clip((eF1 - eHi + 10.0) / 30.0, 0.0, 1.0)
+
+    score = 0.35 * m_score + 0.35 * e_score + 0.30 * z_score
+    threshold = max(0.30, 0.55 * score.max())
+    above = score >= threshold
+    if not above.any():
+        return 0, n
+
+    best_s, best_e, cur_s = 0, 0, None
+    for i, a in enumerate(above):
+        if a and cur_s is None: cur_s = i
+        elif not a and cur_s is not None:
+            if i - cur_s > best_e - best_s: best_s, best_e = cur_s, i
+            cur_s = None
+    if cur_s is not None and len(above) - cur_s > best_e - best_s:
+        best_s, best_e = cur_s, len(above)
+
+    s_sample = best_s * hopLen
+    e_sample = min(n, best_e * hopLen + wc["frameLen"])
+    if (e_sample - s_sample) < int(sr * 0.030):
+        return 0, n
+    return s_sample, e_sample
+
+
+def extractFeaturesFast(signal: np.ndarray, sr: int,
+                        wc: dict, f0: int, f1: int) -> dict:
+    """
+    То же что extractFeatures, но MFCC и RMS/ZCR берутся из контуров слова.
+    Форманты (LPC) по-прежнему считаются по raw signal (быстро).
+    """
+    if len(signal) < 16 or f1 <= f0:
+        return {}
+    nFrames = f1 - f0
+    if nFrames < 1:
+        return {}
+    mfccMean = wc["mfcc"][:, f0:f1].mean(axis=1).tolist()
+    rmsVal = float(wc["rmsLow"][f0:f1].mean())
+    zcrVal = float(wc["zcr"][f0:f1].mean())
+    formants = estimateFormants(signal, sr)
+    return {
+        "mfcc":       [round(v, 4) for v in mfccMean],
+        "energyMean": round(rmsVal, 6),
+        "zcrMean":    round(zcrVal, 6),
+        "formants":   formants,
+        "central":    centralization(formants),
+        "duration":   round(len(signal) / sr, 3),
+    }
+
+
 def trimSilenceBounds(signal: np.ndarray, sr: int,
                       floorDb: float = 40.0) -> tuple[int, int]:
     """
@@ -627,23 +686,50 @@ def analyzeSyllablesInWord(wordSegment: np.ndarray, sr: int,
     сегмент молчание (а сам гласный остался слева от среза).
     """
     expected = len(syllables)
-    # 1) Срезаем тишину по краям, анализируем «ядро» слова
     trimStart, trimEnd = trimSilenceBounds(wordSegment, sr, floorDb=40.0)
     core = wordSegment[trimStart:trimEnd]
 
-    energyDb, voiced, vowelScore, hopLen = computeContours(core, sr)
+    # Контуры слова — melDb, mfcc и пр. считаются ОДИН РАЗ
+    wc = computeContours(core, sr)
+    energyDb, voiced, vowelScore, hopLen = (
+        wc["energyDb"], wc["voiced"], wc["vowelScore"], wc["hopLen"])
+
     peaks, rawDetected = selectNuclei(energyDb, voiced, vowelScore, expected, hopLen, sr)
     bounds = nucleiToBoundaries(peaks, energyDb, hopLen, len(core), sr, expected, vowelScore)
-    # 2) Переводим границы обратно в координаты исходного wordSegment
     bounds = [(s + trimStart, e + trimStart) for s, e in bounds]
+
+    # Переводим границы в кадры (относительно core = wordSegment[trimStart:trimEnd])
+    frame_from_sample = lambda s: int((s - trimStart) / hopLen)
 
     results = []
     for i, sylText in enumerate(syllables):
         segStart, segEnd = bounds[i] if i < len(bounds) else bounds[-1]
-        feats = extractFeatures(wordSegment[segStart:segEnd], sr)
+        seg = wordSegment[segStart:segEnd]
+
+        # Кадровые индексы этого слога внутри контуров слова
+        f0 = max(0, frame_from_sample(segStart))
+        f1 = min(wc["melDb"].shape[1], max(f0 + 1, frame_from_sample(segEnd)))
+
+        feats = extractFeaturesFast(seg, sr, wc, f0, f1)
+        # Вокалическое ядро — используем предвычисленный melDb
+        ns, ne = findVowelNucleusFast(seg, sr, wc, f0, f1)
+        if ns is not None and (ne - ns) >= int(sr * 0.030) and (ne - ns) < len(seg):
+            core_sig = seg[ns:ne]
+            core_rms  = float(librosa.feature.rms(y=core_sig).mean())
+            core_form = estimateFormants(core_sig, sr)
+            feats["core"] = {
+                "duration":   round((ne - ns) / sr, 3),
+                "energyMean": round(core_rms, 6),
+                "formants":   core_form,
+                "central":    centralization(core_form),
+                "startInSyl": round(ns / sr, 3),
+                "endInSyl":   round(ne / sr, 3),
+            }
+        else:
+            feats["core"] = None
 
         remarks = []
-        if feats and feats.get("energyMean", 0) < 0.004:
+        if feats.get("energyMean", 0) < 0.004:
             remarks.append(f"Слог «{sylText}» произнесён очень тихо")
 
         results.append({
@@ -753,9 +839,9 @@ def detectAcousticStress(syllableResults: list[dict],
 def computeSyllableF0(wordSegment: np.ndarray, sr: int,
                       syllableResults: list[dict], wordStart: float) -> list[float]:
     """
-    Считает медианную частоту основного тона (F0) для каждого слога слова.
-    Использует librosa.pyin (вероятностный YIN). Возвращает список длины
-    len(syllableResults); если F0 не определена (глухой участок) — 0.0.
+    Считает медианную F0 для каждого слога слова через librosa.pyin.
+    ВАЖНО: этот вариант больше НЕ вызывается в основном цикле.
+    Используйте sliceSyllableF0() с предварительно вычисленным fullF0.
     """
     n = len(syllableResults)
     if n == 0 or len(wordSegment) < int(sr * 0.05):
@@ -763,21 +849,61 @@ def computeSyllableF0(wordSegment: np.ndarray, sr: int,
     try:
         f0, voiced_flag, _ = librosa.pyin(
             wordSegment, sr=sr,
-            fmin=70, fmax=400,                 # типичный диапазон голоса
+            fmin=70, fmax=400,
             frame_length=max(int(sr * 0.04), 256))
     except Exception:
         return [0.0] * n
     hop = int(sr * 0.04) // 4 if int(sr*0.04) >= 256 else 512
-    # время каждого кадра F0
     times = librosa.times_like(f0, sr=sr, hop_length=hop)
 
     out = []
     for r in syllableResults:
-        # startSec/endSec — относительно начала слова
         s = r.get("startSec", 0.0)
         e = r.get("endSec", 0.0)
         mask = (times >= s) & (times < e)
         vals = f0[mask]
+        vals = vals[~np.isnan(vals)] if vals.size else vals
+        out.append(float(np.median(vals)) if vals.size else 0.0)
+    return out
+
+
+def computeFullF0(fullSignal: np.ndarray, sr: int) -> tuple:
+    """
+    ОДИН РАЗ вычисляет F0 для всего аудиосигнала.
+    Возвращает (f0_array, times_array, hop_length).
+    Это главная оптимизация: pyin дёшев на длинных сигналах,
+    но крайне дорог при вызове на 100+ коротких сегментах.
+    """
+    try:
+        f0, voiced_flag, _ = librosa.pyin(
+            fullSignal, sr=sr,
+            fmin=70, fmax=400,
+            frame_length=max(int(sr * 0.04), 256))
+        hop = int(sr * 0.04) // 4 if int(sr*0.04) >= 256 else 512
+        times = librosa.times_like(f0, sr=sr, hop_length=hop)
+        return f0, times, hop
+    except Exception:
+        return None, None, None
+
+
+def sliceSyllableF0(fullF0: np.ndarray, f0Times: np.ndarray,
+                    wordStartSec: float,
+                    syllableResults: list[dict]) -> list[float]:
+    """
+    Из предвычисленного F0 всего аудио вырезает медианные F0 для
+    каждого слога слова. wordStartSec — абсолютное время начала слова
+    в аудио. syllableResults[i]["startSec"/"endSec"] — относительно
+    начала слова.
+    """
+    n = len(syllableResults)
+    if n == 0 or fullF0 is None:
+        return [0.0] * n
+    out = []
+    for r in syllableResults:
+        abs_s = wordStartSec + r.get("startSec", 0.0)
+        abs_e = wordStartSec + r.get("endSec", 0.0)
+        mask = (f0Times >= abs_s) & (f0Times < abs_e)
+        vals = fullF0[mask]
         vals = vals[~np.isnan(vals)] if vals.size else vals
         out.append(float(np.median(vals)) if vals.size else 0.0)
     return out
@@ -952,48 +1078,44 @@ def cleanTextToWords(text: str) -> list[str]:
     return text.split()
 
 
-def main():
-    # --- проверка наличия файлов перед загрузкой тяжёлых модулей ---
-    missing = [(label, p) for label, p in
-               [("Аудио", audioFile), ("Текст", textFile), ("Модель VOSK", modelPath)]
-               if not os.path.exists(p)]
-    if missing:
-        print("❌ Не найдены следующие пути:")
-        for label, p in missing:
-            print(f"   {label}: {p}")
-        print(f"\n   Папка скрипта: {SCRIPT_DIR}")
-        print(f"   Текущая CWD:   {os.getcwd()}")
-        print("\n   Проверьте, что файлы лежат рядом со скриптом по этим путям.")
+# Кеш моделей (загружаются один раз при первом вызове)
+_cached_models = None
+
+
+def loadModels(verbose=True):
+    """Загружает VOSK, pymorphy2, ruaccent ОДИН РАЗ и кеширует."""
+    global _cached_models
+    if _cached_models is not None:
+        return _cached_models
+    if not os.path.exists(modelPath):
+        print(f"❌ Модель VOSK не найдена: {modelPath}")
         sys.exit(1)
-
-    # --- ленивая загрузка тяжёлых зависимостей ---
-    try:
-        from vosk import Model, KaldiRecognizer
-    except ImportError:
-        print("Ошибка: pip install vosk"); sys.exit(1)
-    try:
-        import pymorphy2
-        morphAnalyzer = pymorphy2.MorphAnalyzer()
-    except ImportError:
-        print("Ошибка: pip install pymorphy2 pymorphy2-dicts-ru"); sys.exit(1)
-
+    from vosk import Model, KaldiRecognizer
+    import pymorphy2
+    morphAnalyzer = pymorphy2.MorphAnalyzer()
     accentizer = None
     try:
         from ruaccent import RUAccent
         accentizer = RUAccent()
         accentizer.load(omograph_model_size="turbo", use_dictionary=True)
-        print("ruaccent готов.")
+        if verbose: print("ruaccent готов.")
     except Exception as e:
-        print(f"ruaccent недоступен ({e}); ударение — по энергии (резерв).")
+        if verbose: print(f"ruaccent недоступен ({e}); ударение — по энергии (резерв).")
+    voskModel = Model(modelPath)
+    if verbose: print("VOSK модель загружена.")
+    _cached_models = (voskModel, KaldiRecognizer, morphAnalyzer, accentizer)
+    return _cached_models
 
-    # --- VOSK: только временны́е метки слов + распознанный текст ---
-    try:
-        voskModel = Model(modelPath)
-    except Exception as e:
-        print(f"Ошибка VOSK при загрузке модели ({modelPath}): {e}")
-        print("Если модель есть на диске, возможно, её держит другой процесс Python")
-        print("или антивирус. Закройте лишние процессы python.exe и попробуйте снова.")
-        sys.exit(1)
+
+def main(models=None):
+    """Основной конвейер. models=(voskModel, KaldiRecognizer, morphAnalyzer, accentizer)."""
+    if not os.path.exists(audioFile):
+        print(f"❌ Аудио не найдено: {audioFile}"); sys.exit(1)
+
+    if models is not None:
+        voskModel, KaldiRecognizer, morphAnalyzer, accentizer = models
+    else:
+        voskModel, KaldiRecognizer, morphAnalyzer, accentizer = loadModels()
 
     wf            = wave.open(audioFile, "rb")
     fileSr        = wf.getframerate()
@@ -1021,6 +1143,11 @@ def main():
 
     # --- аудио в librosa (16 кГц моно) ---
     fullSignal, librosaSR = librosa.load(audioFile, sr=SR, mono=True, res_type="kaiser_fast")
+
+    # --- ОПТИМИЗАЦИЯ: F0 один раз для всего аудио ---
+    print("Вычисление F0 (pyin) для всего аудио…")
+    fullF0, f0Times, _f0Hop = computeFullF0(fullSignal, librosaSR)
+    print("F0 готово.")
 
     # --- главный цикл ---
     fullWordAnalysis = []
@@ -1062,7 +1189,7 @@ def main():
         # Детектор на основе F0 + длительности + энергии + F1 + MFCC.
         # F0 (частота основного тона) — сильнейший коррелят ударения
         # в русском; считаем её по слогам отдельно через pyin.
-        f0_syl = computeSyllableF0(wordSegment, librosaSR, syllableResults, startTime)
+        f0_syl = sliceSyllableF0(fullF0, f0Times, startTime, syllableResults)
         actualStressedIdx, _stressScores = detectAcousticStress(syllableResults, f0_syl)
 
         # Для редукции используем ожидаемое ударение (словарное)
