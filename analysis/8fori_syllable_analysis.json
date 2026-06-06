@@ -1,0 +1,5193 @@
+{
+  "audioFile": "D:\\Mycode\\audio\\8fori.wav",
+  "durationSec": 32.45,
+  "sampleRate": 16000,
+  "referenceText": "Сегодня хорошая погода. Молоко стоит на столе. Маша читает книгу дома. Студенты учатся в университете. Цена этого цветка высокая. Щука плавает в озере. Я люблю русский язык. Вчера было очень холодно. Они работают каждый день.Здоровье — это самое главное. Спасибо большое за помощь.",
+  "recognizedText": "сегодня хорошая погода молоко стоит на столе маша читает книгу тома студенты учатся в университете цена этого цветка высокая сука апл а боец в озеро и я люблю русский язык вчера было очень холодно они работают каждый день здоровье это самое главное спасибо большое за помощи",
+  "wordAnalysis": [
+    {
+      "word": "сегодня",
+      "start": 0.84,
+      "end": 1.62,
+      "confidence": 1.0,
+      "lemma": "сегодня",
+      "pos": "ADVB",
+      "syllableStr": "се-го-дня",
+      "syllableCount": 3,
+      "detectedNuclei": 3,
+      "countMismatch": false,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 2,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "се",
+          "startSec": 0.01,
+          "endSec": 0.52,
+          "acoustics": {
+            "mfcc": [
+              -310.9269,
+              125.5294,
+              -18.3062,
+              24.992,
+              11.4017,
+              4.1127,
+              -18.6756,
+              -0.2917,
+              -10.3958,
+              4.7619,
+              -9.2343,
+              -7.374,
+              -14.4174
+            ],
+            "energyMean": 0.036543,
+            "zcrMean": 0.173767,
+            "formants": [
+              359.9,
+              1792.0
+            ],
+            "central": 323.9,
+            "duration": 0.51,
+            "core": {
+              "duration": 0.273,
+              "energyMean": 0.060932,
+              "formants": [
+                451.5,
+                1241.1
+              ],
+              "central": 263.4,
+              "startInSyl": 0.237,
+              "endInSyl": 0.51
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "го",
+          "startSec": 0.52,
+          "endSec": 0.68,
+          "acoustics": {
+            "mfcc": [
+              -289.093,
+              161.2739,
+              -16.5996,
+              43.918,
+              7.1278,
+              -16.4331,
+              -18.9221,
+              9.1476,
+              -12.9105,
+              3.3129,
+              -7.0518,
+              -14.2038,
+              -6.739
+            ],
+            "energyMean": 0.070812,
+            "zcrMean": 0.030273,
+            "formants": [
+              446.8,
+              2048.1
+            ],
+            "central": 550.7,
+            "duration": 0.16,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "дня",
+          "startSec": 0.68,
+          "endSec": 0.78,
+          "acoustics": {
+            "mfcc": [
+              -276.2393,
+              163.0803,
+              -37.2513,
+              20.2876,
+              8.2756,
+              2.6201,
+              -19.9506,
+              -6.9424,
+              4.7654,
+              22.8293,
+              -3.3216,
+              -22.4635,
+              -11.2759
+            ],
+            "energyMean": 0.057562,
+            "zcrMean": 0.046997,
+            "formants": [
+              696.8,
+              1471.4
+            ],
+            "central": 198.9,
+            "duration": 0.1,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "го",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "хорошая",
+      "start": 1.62,
+      "end": 2.16,
+      "confidence": 1.0,
+      "lemma": "хороший",
+      "pos": "ADJF",
+      "syllableStr": "хо-ро-шая",
+      "syllableCount": 3,
+      "detectedNuclei": 3,
+      "countMismatch": false,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 2,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "хо",
+          "startSec": 0.0,
+          "endSec": 0.15,
+          "acoustics": {
+            "mfcc": [
+              -254.1149,
+              162.2901,
+              -39.1694,
+              3.0358,
+              -5.7195,
+              24.2778,
+              -0.9192,
+              -3.8404,
+              -0.5034,
+              14.5371,
+              11.6592,
+              -2.2872,
+              -15.0827
+            ],
+            "energyMean": 0.032127,
+            "zcrMean": 0.076855,
+            "formants": [
+              692.3,
+              1303.9
+            ],
+            "central": 274.7,
+            "duration": 0.15,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ро",
+          "startSec": 0.15,
+          "endSec": 0.38,
+          "acoustics": {
+            "mfcc": [
+              -256.0049,
+              181.8898,
+              -41.9093,
+              12.6563,
+              -4.2361,
+              12.8076,
+              -18.2127,
+              -0.7993,
+              -8.3496,
+              2.445,
+              -7.3276,
+              -1.7715,
+              2.6698
+            ],
+            "energyMean": 0.049932,
+            "zcrMean": 0.061401,
+            "formants": [
+              456.5,
+              1074.9
+            ],
+            "central": 427.3,
+            "duration": 0.23,
+            "core": {
+              "duration": 0.225,
+              "energyMean": 0.049894,
+              "formants": [
+                457.4,
+                1072.2
+              ],
+              "central": 429.9,
+              "startInSyl": 0.0,
+              "endInSyl": 0.225
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "шая",
+          "startSec": 0.38,
+          "endSec": 0.54,
+          "acoustics": {
+            "mfcc": [
+              -277.7046,
+              144.5552,
+              -37.3379,
+              42.4784,
+              1.5914,
+              12.8927,
+              -25.1785,
+              -6.5755,
+              -5.9527,
+              15.5484,
+              -10.1456,
+              -10.7947,
+              -5.5987
+            ],
+            "energyMean": 0.048367,
+            "zcrMean": 0.068278,
+            "formants": [
+              523.5,
+              1524.3
+            ],
+            "central": 33.8,
+            "duration": 0.16,
+            "core": {
+              "duration": 0.11,
+              "energyMean": 0.058909,
+              "formants": [
+                613.6,
+                1503.0
+              ],
+              "central": 113.6,
+              "startInSyl": 0.05,
+              "endInSyl": 0.16
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "ро",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "погода",
+      "start": 2.16,
+      "end": 2.79,
+      "confidence": 1.0,
+      "lemma": "погода",
+      "pos": "NOUN",
+      "syllableStr": "по-го-да",
+      "syllableCount": 3,
+      "detectedNuclei": 3,
+      "countMismatch": false,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 0,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "по",
+          "startSec": 0.0,
+          "endSec": 0.22,
+          "acoustics": {
+            "mfcc": [
+              -314.5169,
+              194.4517,
+              -8.9815,
+              9.0408,
+              -25.8066,
+              -1.3666,
+              -0.9111,
+              0.9511,
+              -7.677,
+              1.5284,
+              3.0547,
+              0.4399,
+              -8.3239
+            ],
+            "energyMean": 0.052745,
+            "zcrMean": 0.036133,
+            "formants": [
+              642.3,
+              1103.7
+            ],
+            "central": 421.1,
+            "duration": 0.22,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "го",
+          "startSec": 0.22,
+          "endSec": 0.44,
+          "acoustics": {
+            "mfcc": [
+              -358.0827,
+              203.2848,
+              -0.8849,
+              28.2522,
+              -2.7883,
+              5.7181,
+              -2.9053,
+              5.1019,
+              -6.5854,
+              -6.6142,
+              -0.607,
+              -13.5989,
+              -11.1923
+            ],
+            "energyMean": 0.035052,
+            "zcrMean": 0.028599,
+            "formants": [
+              351.4,
+              979.6
+            ],
+            "central": 541.2,
+            "duration": 0.22,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "да",
+          "startSec": 0.44,
+          "endSec": 0.71,
+          "acoustics": {
+            "mfcc": [
+              -360.6743,
+              173.1187,
+              -30.7139,
+              22.6167,
+              18.7338,
+              13.4937,
+              -11.1718,
+              -1.9012,
+              3.012,
+              16.6419,
+              6.321,
+              -12.6525,
+              -8.2109
+            ],
+            "energyMean": 0.027888,
+            "zcrMean": 0.037218,
+            "formants": [
+              721.1,
+              1465.6
+            ],
+            "central": 223.8,
+            "duration": 0.27,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "го",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "молоко",
+      "start": 3.18,
+      "end": 3.81,
+      "confidence": 1.0,
+      "lemma": "молоко",
+      "pos": "NOUN",
+      "syllableStr": "мо-ло-ко",
+      "syllableCount": 3,
+      "detectedNuclei": 3,
+      "countMismatch": false,
+      "stressedIdx": 2,
+      "expectedStressedIdx": 2,
+      "actualStressedIdx": 2,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "мо",
+          "startSec": 0.0,
+          "endSec": 0.2,
+          "acoustics": {
+            "mfcc": [
+              -337.5975,
+              177.5,
+              -14.5013,
+              22.4461,
+              -3.8933,
+              6.1394,
+              12.6446,
+              -2.616,
+              -4.1217,
+              3.4022,
+              -3.6656,
+              -2.7015,
+              -6.9201
+            ],
+            "energyMean": 0.037647,
+            "zcrMean": 0.038225,
+            "formants": [
+              718.8,
+              1182.5
+            ],
+            "central": 385.6,
+            "duration": 0.2,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ло",
+          "startSec": 0.2,
+          "endSec": 0.35,
+          "acoustics": {
+            "mfcc": [
+              -311.7734,
+              186.2209,
+              -11.9899,
+              20.3264,
+              -4.7684,
+              6.488,
+              12.6429,
+              -2.6315,
+              -7.439,
+              5.7724,
+              2.7419,
+              -0.1025,
+              1.3157
+            ],
+            "energyMean": 0.0412,
+            "zcrMean": 0.026562,
+            "formants": [
+              356.3,
+              1045.6
+            ],
+            "central": 476.6,
+            "duration": 0.15,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ко",
+          "startSec": 0.35,
+          "endSec": 0.63,
+          "acoustics": {
+            "mfcc": [
+              -309.8601,
+              206.6852,
+              6.5875,
+              11.3546,
+              -33.1909,
+              -13.7042,
+              -18.5058,
+              -0.6508,
+              1.8571,
+              -1.1017,
+              -4.0022,
+              -24.9707,
+              -13.7353
+            ],
+            "energyMean": 0.088173,
+            "zcrMean": 0.047309,
+            "formants": [
+              363.0,
+              779.2
+            ],
+            "central": 733.7,
+            "duration": 0.28,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 2,
+        "stressedSyl": "ко",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "стоит",
+      "start": 3.81,
+      "end": 4.32,
+      "confidence": 0.95548,
+      "lemma": "стоить",
+      "pos": "VERB",
+      "syllableStr": "стоит",
+      "syllableCount": 1,
+      "detectedNuclei": 1,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "стоит",
+          "startSec": 0.0,
+          "endSec": 0.51,
+          "acoustics": {
+            "mfcc": [
+              -262.9288,
+              131.8119,
+              -17.8078,
+              26.9413,
+              5.268,
+              19.3,
+              -18.1525,
+              0.1055,
+              -8.7028,
+              -2.2472,
+              -1.6213,
+              -10.0118,
+              -10.0336
+            ],
+            "energyMean": 0.053591,
+            "zcrMean": 0.134583,
+            "formants": [
+              374.6,
+              1373.9
+            ],
+            "central": 177.8,
+            "duration": 0.51,
+            "core": {
+              "duration": 0.312,
+              "energyMean": 0.077703,
+              "formants": [
+                361.8,
+                1428.8
+              ],
+              "central": 155.5,
+              "startInSyl": 0.188,
+              "endInSyl": 0.5
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "стоит",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "на",
+      "start": 4.32,
+      "end": 4.5,
+      "confidence": 1.0,
+      "lemma": "на",
+      "pos": "PREP",
+      "syllableStr": "на",
+      "syllableCount": 1,
+      "detectedNuclei": 1,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "на",
+          "startSec": 0.0,
+          "endSec": 0.18,
+          "acoustics": {
+            "mfcc": [
+              -288.4319,
+              170.376,
+              -10.4329,
+              23.1354,
+              8.4724,
+              11.9066,
+              -21.411,
+              -9.3056,
+              -8.7083,
+              11.7211,
+              5.9458,
+              -13.3381,
+              -16.1944
+            ],
+            "energyMean": 0.079272,
+            "zcrMean": 0.027507,
+            "formants": [
+              629.9,
+              1369.1
+            ],
+            "central": 184.4,
+            "duration": 0.18,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "на",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "столе",
+      "start": 4.5,
+      "end": 5.07,
+      "confidence": 1.0,
+      "lemma": "стол",
+      "pos": "NOUN",
+      "syllableStr": "сто-ле",
+      "syllableCount": 2,
+      "detectedNuclei": 1,
+      "countMismatch": true,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 0,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "сто",
+          "startSec": 0.0,
+          "endSec": 0.24,
+          "acoustics": {
+            "mfcc": [
+              -285.8065,
+              94.7781,
+              2.0097,
+              17.9904,
+              -2.1931,
+              19.1006,
+              -10.3047,
+              4.8302,
+              -2.7643,
+              2.5221,
+              -4.3486,
+              -3.6089,
+              -12.6452
+            ],
+            "energyMean": 0.024053,
+            "zcrMean": 0.146973,
+            "formants": [
+              422.6,
+              1326.3
+            ],
+            "central": 190.2,
+            "duration": 0.24,
+            "core": {
+              "duration": 0.152,
+              "energyMean": 0.030488,
+              "formants": [
+                407.6,
+                1252.3
+              ],
+              "central": 264.4,
+              "startInSyl": 0.087,
+              "endInSyl": 0.24
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ле",
+          "startSec": 0.24,
+          "endSec": 0.65,
+          "acoustics": {
+            "mfcc": [
+              -326.9372,
+              178.9705,
+              -28.3046,
+              41.9564,
+              17.7064,
+              2.0606,
+              -6.2509,
+              -2.023,
+              -5.8815,
+              3.8097,
+              -2.1859,
+              -9.1196,
+              -6.3342
+            ],
+            "energyMean": 0.039813,
+            "zcrMean": 0.042969,
+            "formants": [
+              339.4,
+              1307.9
+            ],
+            "central": 250.4,
+            "duration": 0.41,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "ле",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "маша",
+      "start": 5.58,
+      "end": 6.15,
+      "confidence": 1.0,
+      "lemma": "маша",
+      "pos": "NOUN",
+      "syllableStr": "ма-ша",
+      "syllableCount": 2,
+      "detectedNuclei": 2,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 1,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "ма",
+          "startSec": 0.0,
+          "endSec": 0.26,
+          "acoustics": {
+            "mfcc": [
+              -313.5541,
+              199.2765,
+              -17.8535,
+              3.4696,
+              -7.2713,
+              8.9385,
+              11.0769,
+              5.446,
+              5.6342,
+              -0.3284,
+              -3.6326,
+              -8.8033,
+              -13.4149
+            ],
+            "energyMean": 0.057744,
+            "zcrMean": 0.037543,
+            "formants": [
+              766.0,
+              1192.6
+            ],
+            "central": 406.5,
+            "duration": 0.26,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ша",
+          "startSec": 0.26,
+          "endSec": 0.57,
+          "acoustics": {
+            "mfcc": [
+              -221.885,
+              142.7974,
+              -34.6201,
+              36.1474,
+              -17.0251,
+              19.0398,
+              -15.2934,
+              -9.4399,
+              3.8304,
+              22.5006,
+              -8.3368,
+              -3.896,
+              -9.6931
+            ],
+            "energyMean": 0.055511,
+            "zcrMean": 0.130664,
+            "formants": [
+              588.3,
+              1547.2
+            ],
+            "central": 100.1,
+            "duration": 0.31,
+            "core": {
+              "duration": 0.138,
+              "energyMean": 0.063425,
+              "formants": [
+                729.4,
+                1335.7
+              ],
+              "central": 282.2,
+              "startInSyl": 0.0,
+              "endInSyl": 0.138
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "ма",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "читает",
+      "start": 6.15,
+      "end": 6.66,
+      "confidence": 1.0,
+      "lemma": "читать",
+      "pos": "VERB",
+      "syllableStr": "чи-тает",
+      "syllableCount": 2,
+      "detectedNuclei": 1,
+      "countMismatch": true,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 1,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "чи",
+          "startSec": 0.0,
+          "endSec": 0.28,
+          "acoustics": {
+            "mfcc": [
+              -265.1618,
+              94.0283,
+              -16.4988,
+              33.5917,
+              -10.3038,
+              16.4616,
+              -13.9992,
+              0.8405,
+              5.3349,
+              9.2664,
+              5.4687,
+              -5.6152,
+              -3.0196
+            ],
+            "energyMean": 0.024681,
+            "zcrMean": 0.162218,
+            "formants": [
+              592.3,
+              1581.6
+            ],
+            "central": 123.2,
+            "duration": 0.28,
+            "core": {
+              "duration": 0.142,
+              "energyMean": 0.036764,
+              "formants": [
+                632.8,
+                1585.3
+              ],
+              "central": 157.8,
+              "startInSyl": 0.138,
+              "endInSyl": 0.28
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "тает",
+          "startSec": 0.28,
+          "endSec": 0.51,
+          "acoustics": {
+            "mfcc": [
+              -243.1764,
+              162.236,
+              -49.2514,
+              22.5607,
+              10.8121,
+              0.655,
+              -24.5762,
+              7.9958,
+              2.3533,
+              8.233,
+              3.2432,
+              -7.0495,
+              -5.8254
+            ],
+            "energyMean": 0.046876,
+            "zcrMean": 0.061096,
+            "formants": [
+              529.3,
+              1203.6
+            ],
+            "central": 297.8,
+            "duration": 0.23,
+            "core": {
+              "duration": 0.225,
+              "energyMean": 0.046844,
+              "formants": [
+                530.3,
+                1205.9
+              ],
+              "central": 295.7,
+              "startInSyl": 0.0,
+              "endInSyl": 0.225
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "тает",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "книгу",
+      "start": 6.66,
+      "end": 7.23,
+      "confidence": 1.0,
+      "lemma": "книга",
+      "pos": "NOUN",
+      "syllableStr": "кни-гу",
+      "syllableCount": 2,
+      "detectedNuclei": 4,
+      "countMismatch": true,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "кни",
+          "startSec": 0.0,
+          "endSec": 0.42,
+          "acoustics": {
+            "mfcc": [
+              -325.6604,
+              161.6397,
+              -16.3407,
+              54.83,
+              -2.3476,
+              4.6286,
+              -11.6939,
+              6.8445,
+              -0.3904,
+              -4.5868,
+              5.0156,
+              -14.0266,
+              -11.4324
+            ],
+            "energyMean": 0.043171,
+            "zcrMean": 0.048933,
+            "formants": [
+              260.0,
+              1108.2
+            ],
+            "central": 459.5,
+            "duration": 0.42,
+            "core": {
+              "duration": 0.333,
+              "energyMean": 0.051676,
+              "formants": [
+                262.5,
+                1025.4
+              ],
+              "central": 530.7,
+              "startInSyl": 0.087,
+              "endInSyl": 0.42
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "гу",
+          "startSec": 0.42,
+          "endSec": 0.57,
+          "acoustics": {
+            "mfcc": [
+              -394.8414,
+              191.9065,
+              -6.2656,
+              34.5502,
+              10.2403,
+              11.9293,
+              5.5734,
+              9.7597,
+              0.0885,
+              -2.1735,
+              -7.6037,
+              -15.312,
+              -9.2257
+            ],
+            "energyMean": 0.026471,
+            "zcrMean": 0.016602,
+            "formants": [
+              239.9,
+              938.3
+            ],
+            "central": 619.0,
+            "duration": 0.15,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "кни",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "тома",
+      "start": 7.23,
+      "end": 7.8,
+      "confidence": 1.0,
+      "lemma": "том",
+      "pos": "NOUN",
+      "syllableStr": "то-ма",
+      "syllableCount": 2,
+      "detectedNuclei": 3,
+      "countMismatch": true,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 1,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "то",
+          "startSec": 0.0,
+          "endSec": 0.38,
+          "acoustics": {
+            "mfcc": [
+              -352.5296,
+              193.994,
+              -16.1516,
+              33.4833,
+              -6.8773,
+              1.221,
+              6.3746,
+              3.0255,
+              -0.4183,
+              -4.2141,
+              -6.8217,
+              -13.2258,
+              -11.4753
+            ],
+            "energyMean": 0.035262,
+            "zcrMean": 0.04248,
+            "formants": [
+              385.1,
+              922.8
+            ],
+            "central": 588.5,
+            "duration": 0.38,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ма",
+          "startSec": 0.38,
+          "endSec": 0.65,
+          "acoustics": {
+            "mfcc": [
+              -377.6243,
+              183.2087,
+              -31.3904,
+              11.5774,
+              3.822,
+              14.6862,
+              4.3505,
+              2.6383,
+              2.2401,
+              9.3231,
+              6.6845,
+              -4.0728,
+              -17.5037
+            ],
+            "energyMean": 0.016352,
+            "zcrMean": 0.041504,
+            "formants": [
+              771.8,
+              1385.4
+            ],
+            "central": 295.0,
+            "duration": 0.27,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "то",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "студенты",
+      "start": 8.31,
+      "end": 9.03,
+      "confidence": 1.0,
+      "lemma": "студент",
+      "pos": "NOUN",
+      "syllableStr": "сту-де-нты",
+      "syllableCount": 3,
+      "detectedNuclei": 4,
+      "countMismatch": true,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 2,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "сту",
+          "startSec": 0.0,
+          "endSec": 0.3,
+          "acoustics": {
+            "mfcc": [
+              -319.9037,
+              117.7911,
+              -14.6602,
+              44.5637,
+              5.0806,
+              26.864,
+              -20.0264,
+              1.2771,
+              -2.4235,
+              5.2593,
+              -4.156,
+              -7.7139,
+              -11.0311
+            ],
+            "energyMean": 0.029004,
+            "zcrMean": 0.104199,
+            "formants": [
+              335.9,
+              1428.3
+            ],
+            "central": 179.1,
+            "duration": 0.3,
+            "core": {
+              "duration": 0.113,
+              "energyMean": 0.056592,
+              "formants": [
+                275.6,
+                1569.5
+              ],
+              "central": 234.9,
+              "startInSyl": 0.188,
+              "endInSyl": 0.3
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "де",
+          "startSec": 0.3,
+          "endSec": 0.56,
+          "acoustics": {
+            "mfcc": [
+              -277.8972,
+              156.4786,
+              -13.0488,
+              61.9783,
+              6.2111,
+              1.195,
+              -11.5299,
+              6.3727,
+              -10.3609,
+              0.1495,
+              -3.9847,
+              -9.6118,
+              -13.6914
+            ],
+            "energyMean": 0.072266,
+            "zcrMean": 0.029405,
+            "formants": [
+              338.4,
+              1914.1
+            ],
+            "central": 444.5,
+            "duration": 0.26,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "нты",
+          "startSec": 0.56,
+          "endSec": 0.72,
+          "acoustics": {
+            "mfcc": [
+              -270.8194,
+              168.6746,
+              -24.8836,
+              53.9925,
+              15.0315,
+              3.3368,
+              -25.7909,
+              2.8945,
+              -16.3099,
+              -9.4264,
+              -13.3088,
+              -19.4821,
+              -11.232
+            ],
+            "energyMean": 0.09579,
+            "zcrMean": 0.044271,
+            "formants": [
+              357.9,
+              1795.9
+            ],
+            "central": 328.3,
+            "duration": 0.16,
+            "core": {
+              "duration": 0.147,
+              "energyMean": 0.101967,
+              "formants": [
+                358.6,
+                1779.1
+              ],
+              "central": 312.9,
+              "startInSyl": 0.013,
+              "endInSyl": 0.16
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "де",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "учатся",
+      "start": 9.03,
+      "end": 9.9,
+      "confidence": 1.0,
+      "lemma": "учиться",
+      "pos": "VERB",
+      "syllableStr": "у-ча-тся",
+      "syllableCount": 3,
+      "detectedNuclei": 3,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 2,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "у",
+          "startSec": 0.0,
+          "endSec": 0.23,
+          "acoustics": {
+            "mfcc": [
+              -282.3064,
+              135.2505,
+              -22.2957,
+              55.3491,
+              -5.6163,
+              18.6367,
+              -8.321,
+              -9.7145,
+              -6.9441,
+              9.8471,
+              -7.4087,
+              -10.6045,
+              -16.6971
+            ],
+            "energyMean": 0.037281,
+            "zcrMean": 0.092041,
+            "formants": [
+              339.3,
+              1434.0
+            ],
+            "central": 173.7,
+            "duration": 0.23,
+            "core": {
+              "duration": 0.2,
+              "energyMean": 0.039988,
+              "formants": [
+                349.1,
+                1428.7
+              ],
+              "central": 166.9,
+              "startInSyl": 0.0,
+              "endInSyl": 0.2
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ча",
+          "startSec": 0.23,
+          "endSec": 0.5,
+          "acoustics": {
+            "mfcc": [
+              -241.5056,
+              151.2481,
+              -38.7979,
+              25.5391,
+              -5.1028,
+              13.9809,
+              -26.1737,
+              3.4574,
+              0.9331,
+              11.5623,
+              3.6639,
+              -9.8352,
+              -10.6423
+            ],
+            "energyMean": 0.05497,
+            "zcrMean": 0.087782,
+            "formants": [
+              657.1,
+              1456.2
+            ],
+            "central": 163.1,
+            "duration": 0.27,
+            "core": {
+              "duration": 0.207,
+              "energyMean": 0.063578,
+              "formants": [
+                645.4,
+                1432.3
+              ],
+              "central": 160.4,
+              "startInSyl": 0.062,
+              "endInSyl": 0.27
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "тся",
+          "startSec": 0.5,
+          "endSec": 0.885,
+          "acoustics": {
+            "mfcc": [
+              -282.3874,
+              139.8091,
+              -15.9634,
+              18.2136,
+              -4.4852,
+              16.3297,
+              -21.8176,
+              -9.0146,
+              -4.3149,
+              13.9162,
+              -0.0827,
+              -10.8761,
+              -14.8529
+            ],
+            "energyMean": 0.047875,
+            "zcrMean": 0.13285,
+            "formants": [
+              591.2,
+              1384.7
+            ],
+            "central": 147.0,
+            "duration": 0.385,
+            "core": {
+              "duration": 0.247,
+              "energyMean": 0.067073,
+              "formants": [
+                628.6,
+                1384.5
+              ],
+              "central": 172.9,
+              "startInSyl": 0.138,
+              "endInSyl": 0.385
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "у",
+        "reductionErrors": [
+          {
+            "syllable": "ча",
+            "position": 2,
+            "durRatio": 1.03,
+            "enerRatio": 1.59,
+            "centralRatio": 0.96,
+            "hint": "Безударный слог «ча»: длительность 103%, энергия 159% от ударного «у», централизация 96% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+          },
+          {
+            "syllable": "тся",
+            "position": 3,
+            "durRatio": 1.23,
+            "enerRatio": 1.68,
+            "centralRatio": 1.04,
+            "hint": "Безударный слог «тся»: длительность 123%, энергия 168% от ударного «у», централизация 104% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+          }
+        ],
+        "reductionScore": 0.0,
+        "hasReductionIssue": true
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "в",
+      "start": 9.93,
+      "end": 10.14,
+      "confidence": 1.0,
+      "lemma": "в",
+      "pos": "PREP",
+      "syllableStr": "в",
+      "syllableCount": 1,
+      "detectedNuclei": 1,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "в",
+          "startSec": 0.0,
+          "endSec": 0.225,
+          "acoustics": {
+            "mfcc": [
+              -336.4625,
+              173.8881,
+              3.812,
+              36.3552,
+              5.6153,
+              4.7245,
+              2.3713,
+              4.8113,
+              4.0777,
+              -2.1054,
+              -9.4052,
+              -16.245,
+              -15.6262
+            ],
+            "energyMean": 0.040988,
+            "zcrMean": 0.023071,
+            "formants": [
+              306.8,
+              762.0
+            ],
+            "central": 762.9,
+            "duration": 0.225,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "в",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "университете",
+      "start": 10.17,
+      "end": 11.25,
+      "confidence": 1.0,
+      "lemma": "университет",
+      "pos": "NOUN",
+      "syllableStr": "у-ни-ве-рси-те-те",
+      "syllableCount": 6,
+      "detectedNuclei": 6,
+      "countMismatch": false,
+      "stressedIdx": 4,
+      "expectedStressedIdx": 4,
+      "actualStressedIdx": 5,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "у",
+          "startSec": 0.0,
+          "endSec": 0.33,
+          "acoustics": {
+            "mfcc": [
+              -306.1338,
+              183.2876,
+              -24.7169,
+              54.2223,
+              11.2,
+              0.7254,
+              -6.2354,
+              1.0036,
+              1.9305,
+              -2.0251,
+              -3.7201,
+              -12.3061,
+              -13.6409
+            ],
+            "energyMean": 0.055557,
+            "zcrMean": 0.025923,
+            "formants": [
+              258.9,
+              1546.9
+            ],
+            "central": 245.6,
+            "duration": 0.33,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ни",
+          "startSec": 0.33,
+          "endSec": 0.47,
+          "acoustics": {
+            "mfcc": [
+              -248.9388,
+              132.0576,
+              -25.2038,
+              42.6797,
+              19.0441,
+              3.3996,
+              -33.6075,
+              -4.4961,
+              0.9899,
+              10.0995,
+              -8.42,
+              -10.1824,
+              -10.0258
+            ],
+            "energyMean": 0.050107,
+            "zcrMean": 0.070117,
+            "formants": [
+              417.6,
+              1606.0
+            ],
+            "central": 134.3,
+            "duration": 0.14,
+            "core": {
+              "duration": 0.138,
+              "energyMean": 0.050104,
+              "formants": [
+                418.3,
+                1605.9
+              ],
+              "central": 133.8,
+              "startInSyl": 0.0,
+              "endInSyl": 0.138
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ве",
+          "startSec": 0.47,
+          "endSec": 0.63,
+          "acoustics": {
+            "mfcc": [
+              -344.4319,
+              129.2575,
+              2.1215,
+              47.1747,
+              11.4613,
+              12.1275,
+              -16.9141,
+              7.2483,
+              -9.9532,
+              -5.5638,
+              -12.5727,
+              -14.3172,
+              -9.821
+            ],
+            "energyMean": 0.03897,
+            "zcrMean": 0.056396,
+            "formants": [
+              296.2,
+              1882.5
+            ],
+            "central": 433.4,
+            "duration": 0.16,
+            "core": {
+              "duration": 0.11,
+              "energyMean": 0.046039,
+              "formants": [
+                275.0,
+                1082.2
+              ],
+              "central": 474.5,
+              "startInSyl": 0.05,
+              "endInSyl": 0.16
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "рси",
+          "startSec": 0.63,
+          "endSec": 0.72,
+          "acoustics": {
+            "mfcc": [
+              -348.8135,
+              82.9712,
+              -25.5053,
+              39.0811,
+              -14.8731,
+              13.6703,
+              -8.9163,
+              8.4113,
+              -11.8645,
+              15.6517,
+              -7.4906,
+              -2.0057,
+              -8.2905
+            ],
+            "energyMean": 0.00664,
+            "zcrMean": 0.121908,
+            "formants": [
+              1088.6,
+              1579.8
+            ],
+            "central": 594.0,
+            "duration": 0.09,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "те",
+          "startSec": 0.72,
+          "endSec": 0.89,
+          "acoustics": {
+            "mfcc": [
+              -376.5576,
+              176.6565,
+              -16.0672,
+              54.1244,
+              20.9408,
+              -2.0044,
+              -12.9784,
+              10.8723,
+              -6.8157,
+              -0.2233,
+              -5.1542,
+              -10.09,
+              -0.0695
+            ],
+            "energyMean": 0.026783,
+            "zcrMean": 0.039551,
+            "formants": [
+              334.4,
+              1008.3
+            ],
+            "central": 518.8,
+            "duration": 0.17,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "те",
+          "startSec": 0.89,
+          "endSec": 1.16,
+          "acoustics": {
+            "mfcc": [
+              -380.0311,
+              127.7887,
+              -13.7871,
+              41.9545,
+              -0.1938,
+              11.283,
+              -12.8628,
+              8.8545,
+              -8.7222,
+              7.1177,
+              -9.6893,
+              -9.83,
+              -11.8688
+            ],
+            "energyMean": 0.011233,
+            "zcrMean": 0.102485,
+            "formants": [
+              324.5,
+              1873.8
+            ],
+            "central": 412.9,
+            "duration": 0.27,
+            "core": {
+              "duration": 0.182,
+              "energyMean": 0.013003,
+              "formants": [
+                1706.6,
+                2436.2
+              ],
+              "central": 1527.2,
+              "startInSyl": 0.087,
+              "endInSyl": 0.27
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 4,
+        "stressedSyl": "те",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "цена",
+      "start": 11.85,
+      "end": 12.51,
+      "confidence": 1.0,
+      "lemma": "цена",
+      "pos": "NOUN",
+      "syllableStr": "це-на",
+      "syllableCount": 2,
+      "detectedNuclei": 3,
+      "countMismatch": true,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 1,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "це",
+          "startSec": 0.0,
+          "endSec": 0.22,
+          "acoustics": {
+            "mfcc": [
+              -272.7334,
+              53.0684,
+              -3.6054,
+              15.3775,
+              8.9739,
+              21.7674,
+              -16.7921,
+              22.8267,
+              -5.6166,
+              10.1049,
+              -5.3702,
+              5.8836,
+              -5.5617
+            ],
+            "energyMean": 0.011879,
+            "zcrMean": 0.265555,
+            "formants": [
+              1078.8,
+              1822.9
+            ],
+            "central": 662.8,
+            "duration": 0.22,
+            "core": {
+              "duration": 0.087,
+              "energyMean": 0.003691,
+              "formants": [
+                749.4,
+                1433.8
+              ],
+              "central": 258.0,
+              "startInSyl": 0.0,
+              "endInSyl": 0.087
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "на",
+          "startSec": 0.22,
+          "endSec": 0.69,
+          "acoustics": {
+            "mfcc": [
+              -291.3155,
+              196.353,
+              -36.5836,
+              21.3511,
+              8.9052,
+              9.5842,
+              -18.9381,
+              3.2583,
+              2.884,
+              7.7934,
+              3.5077,
+              -17.2589,
+              -10.4929
+            ],
+            "energyMean": 0.05667,
+            "zcrMean": 0.042773,
+            "formants": [
+              729.3,
+              1383.9
+            ],
+            "central": 257.0,
+            "duration": 0.47,
+            "core": {
+              "duration": 0.445,
+              "energyMean": 0.059351,
+              "formants": [
+                728.1,
+                1381.8
+              ],
+              "central": 256.9,
+              "startInSyl": 0.025,
+              "endInSyl": 0.47
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "на",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "этого",
+      "start": 12.57,
+      "end": 13.2,
+      "confidence": 1.0,
+      "lemma": "это",
+      "pos": "NPRO",
+      "syllableStr": "э-то-го",
+      "syllableCount": 3,
+      "detectedNuclei": 3,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 2,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "э",
+          "startSec": 0.0,
+          "endSec": 0.25,
+          "acoustics": {
+            "mfcc": [
+              -329.0142,
+              171.8047,
+              -32.7145,
+              53.9405,
+              22.1703,
+              -15.359,
+              -19.9335,
+              21.2815,
+              -10.4542,
+              -3.9204,
+              8.963,
+              -16.9329,
+              -0.8268
+            ],
+            "energyMean": 0.044547,
+            "zcrMean": 0.032166,
+            "formants": [
+              439.0,
+              1929.3
+            ],
+            "central": 433.6,
+            "duration": 0.25,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "то",
+          "startSec": 0.25,
+          "endSec": 0.4,
+          "acoustics": {
+            "mfcc": [
+              -306.5835,
+              180.0187,
+              -16.4847,
+              28.6337,
+              8.8005,
+              21.4475,
+              -11.5833,
+              -11.6874,
+              -16.1754,
+              8.0624,
+              -0.8792,
+              -12.35,
+              -9.7429
+            ],
+            "energyMean": 0.043998,
+            "zcrMean": 0.025391,
+            "formants": [
+              359.7,
+              1149.4
+            ],
+            "central": 377.6,
+            "duration": 0.15,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "го",
+          "startSec": 0.4,
+          "endSec": 0.66,
+          "acoustics": {
+            "mfcc": [
+              -322.9875,
+              190.0504,
+              -26.9129,
+              7.6513,
+              -8.4756,
+              11.8122,
+              -10.3117,
+              -13.0754,
+              -3.4972,
+              9.1489,
+              9.0848,
+              -7.4764,
+              -11.6777
+            ],
+            "energyMean": 0.055075,
+            "zcrMean": 0.04579,
+            "formants": [
+              596.9,
+              782.4
+            ],
+            "central": 724.1,
+            "duration": 0.26,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "э",
+        "reductionErrors": [
+          {
+            "syllable": "го",
+            "position": 3,
+            "durRatio": 1.04,
+            "enerRatio": 1.24,
+            "centralRatio": 1.67,
+            "hint": "Безударный слог «го»: длительность 104%, энергия 124% от ударного «э», централизация 167% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+          }
+        ],
+        "reductionScore": 50.0,
+        "hasReductionIssue": true
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "цветка",
+      "start": 13.26,
+      "end": 13.95,
+      "confidence": 1.0,
+      "lemma": "цветок",
+      "pos": "NOUN",
+      "syllableStr": "цве-тка",
+      "syllableCount": 2,
+      "detectedNuclei": 3,
+      "countMismatch": true,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 1,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "цве",
+          "startSec": 0.0,
+          "endSec": 0.5,
+          "acoustics": {
+            "mfcc": [
+              -319.8499,
+              110.6209,
+              -24.4023,
+              48.5301,
+              9.574,
+              10.228,
+              -15.2014,
+              9.9343,
+              -1.9098,
+              2.5948,
+              -10.0633,
+              -6.8594,
+              -11.5536
+            ],
+            "energyMean": 0.024845,
+            "zcrMean": 0.117737,
+            "formants": [
+              294.7,
+              1823.1
+            ],
+            "central": 382.8,
+            "duration": 0.5,
+            "core": {
+              "duration": 0.237,
+              "energyMean": 0.042966,
+              "formants": [
+                314.1,
+                1838.0
+              ],
+              "central": 385.7,
+              "startInSyl": 0.225,
+              "endInSyl": 0.463
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "тка",
+          "startSec": 0.5,
+          "endSec": 0.69,
+          "acoustics": {
+            "mfcc": [
+              -265.5445,
+              186.6924,
+              -50.2151,
+              14.0791,
+              10.2491,
+              21.4164,
+              -27.8847,
+              2.669,
+              -4.6855,
+              8.9595,
+              20.9791,
+              -14.8807,
+              -15.5094
+            ],
+            "energyMean": 0.054889,
+            "zcrMean": 0.055664,
+            "formants": [
+              641.9,
+              1383.3
+            ],
+            "central": 183.7,
+            "duration": 0.19,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "тка",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "высокая",
+      "start": 13.95,
+      "end": 14.82,
+      "confidence": 1.0,
+      "lemma": "высокий",
+      "pos": "ADJF",
+      "syllableStr": "вы-со-кая",
+      "syllableCount": 3,
+      "detectedNuclei": 5,
+      "countMismatch": true,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 2,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "вы",
+          "startSec": 0.0,
+          "endSec": 0.25,
+          "acoustics": {
+            "mfcc": [
+              -307.8443,
+              121.1612,
+              -6.5912,
+              56.2139,
+              7.9928,
+              26.5132,
+              -11.5521,
+              7.4423,
+              0.4637,
+              -2.2473,
+              -2.8705,
+              -8.0958,
+              -17.9325
+            ],
+            "energyMean": 0.038221,
+            "zcrMean": 0.104858,
+            "formants": [
+              311.0,
+              1753.1
+            ],
+            "central": 315.9,
+            "duration": 0.25,
+            "core": {
+              "duration": 0.212,
+              "energyMean": 0.040727,
+              "formants": [
+                309.7,
+                1765.0
+              ],
+              "central": 326.3,
+              "startInSyl": 0.0,
+              "endInSyl": 0.212
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "со",
+          "startSec": 0.25,
+          "endSec": 0.57,
+          "acoustics": {
+            "mfcc": [
+              -322.4676,
+              153.0223,
+              -2.2998,
+              32.1931,
+              -22.1066,
+              12.4044,
+              2.4908,
+              0.6115,
+              2.6811,
+              -2.2825,
+              -9.84,
+              -7.2148,
+              -11.9758
+            ],
+            "energyMean": 0.039728,
+            "zcrMean": 0.113858,
+            "formants": [
+              367.5,
+              859.9
+            ],
+            "central": 653.7,
+            "duration": 0.32,
+            "core": {
+              "duration": 0.207,
+              "energyMean": 0.053494,
+              "formants": [
+                382.2,
+                873.2
+              ],
+              "central": 637.8,
+              "startInSyl": 0.113,
+              "endInSyl": 0.32
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "кая",
+          "startSec": 0.57,
+          "endSec": 0.95,
+          "acoustics": {
+            "mfcc": [
+              -358.1992,
+              176.4413,
+              -41.2924,
+              32.4039,
+              13.9101,
+              13.6848,
+              -20.8094,
+              4.1772,
+              4.3155,
+              5.8109,
+              8.7106,
+              -8.5099,
+              -11.3593
+            ],
+            "energyMean": 0.019094,
+            "zcrMean": 0.052979,
+            "formants": [
+              362.4,
+              1153.2
+            ],
+            "central": 373.1,
+            "duration": 0.38,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "со",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "сука",
+      "start": 15.36,
+      "end": 15.961124,
+      "confidence": 1.0,
+      "lemma": "сука",
+      "pos": "NOUN",
+      "syllableStr": "су-ка",
+      "syllableCount": 2,
+      "detectedNuclei": 2,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "су",
+          "startSec": 0.0,
+          "endSec": 0.43,
+          "acoustics": {
+            "mfcc": [
+              -300.9804,
+              120.2145,
+              -20.8741,
+              41.7505,
+              -11.5664,
+              21.4637,
+              -11.275,
+              6.6363,
+              -9.5313,
+              5.3532,
+              -9.7754,
+              -13.7669,
+              -12.4746
+            ],
+            "energyMean": 0.047092,
+            "zcrMean": 0.155204,
+            "formants": [
+              363.4,
+              1427.6
+            ],
+            "central": 154.6,
+            "duration": 0.43,
+            "core": {
+              "duration": 0.168,
+              "energyMean": 0.085221,
+              "formants": [
+                313.5,
+                834.4
+              ],
+              "central": 691.2,
+              "startInSyl": 0.263,
+              "endInSyl": 0.43
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ка",
+          "startSec": 0.43,
+          "endSec": 0.601,
+          "acoustics": {
+            "mfcc": [
+              -208.7142,
+              191.7578,
+              -58.7243,
+              -0.1782,
+              -6.613,
+              29.0154,
+              -13.6365,
+              -13.9041,
+              -5.648,
+              11.0257,
+              22.1134,
+              -4.7928,
+              -14.7463
+            ],
+            "energyMean": 0.074142,
+            "zcrMean": 0.073975,
+            "formants": [
+              661.3,
+              1385.4
+            ],
+            "central": 197.9,
+            "duration": 0.171,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "су",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "апл",
+      "start": 15.961124,
+      "end": 16.170478,
+      "confidence": 0.927698,
+      "lemma": "апл",
+      "pos": "UNKN",
+      "syllableStr": "апл",
+      "syllableCount": 1,
+      "detectedNuclei": 1,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "апл",
+          "startSec": 0.0,
+          "endSec": 0.209,
+          "acoustics": {
+            "mfcc": [
+              -264.0694,
+              191.6712,
+              -13.7751,
+              17.6726,
+              -4.0187,
+              14.1417,
+              3.4166,
+              -3.015,
+              -3.013,
+              1.581,
+              10.0107,
+              0.1199,
+              -4.3999
+            ],
+            "energyMean": 0.058929,
+            "zcrMean": 0.036761,
+            "formants": [
+              362.0,
+              1147.8
+            ],
+            "central": 378.3,
+            "duration": 0.209,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "апл",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "а",
+      "start": 16.170478,
+      "end": 16.259626,
+      "confidence": 0.878397,
+      "lemma": "а",
+      "pos": "CONJ",
+      "syllableStr": "а",
+      "syllableCount": 1,
+      "detectedNuclei": 1,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "а",
+          "startSec": 0.0,
+          "endSec": 0.089,
+          "acoustics": {
+            "mfcc": [
+              -280.8775,
+              182.36,
+              -7.0282,
+              9.6628,
+              -12.015,
+              16.3276,
+              12.0488,
+              -2.1113,
+              3.9777,
+              7.4085,
+              10.3155,
+              2.5096,
+              -5.4876
+            ],
+            "energyMean": 0.067601,
+            "zcrMean": 0.019857,
+            "formants": [
+              696.5,
+              1229.8
+            ],
+            "central": 334.1,
+            "duration": 0.089,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "а",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "боец",
+      "start": 16.259626,
+      "end": 17.04,
+      "confidence": 1.0,
+      "lemma": "боец",
+      "pos": "NOUN",
+      "syllableStr": "боец",
+      "syllableCount": 1,
+      "detectedNuclei": 2,
+      "countMismatch": true,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "боец",
+          "startSec": 0.0,
+          "endSec": 0.78,
+          "acoustics": {
+            "mfcc": [
+              -305.5338,
+              146.8054,
+              -30.1899,
+              33.4844,
+              3.2565,
+              13.1591,
+              -10.0997,
+              4.1751,
+              3.2541,
+              4.4189,
+              3.7567,
+              -4.9196,
+              -7.9451
+            ],
+            "energyMean": 0.038299,
+            "zcrMean": 0.083145,
+            "formants": [
+              583.0,
+              1129.2
+            ],
+            "central": 380.0,
+            "duration": 0.78,
+            "core": {
+              "duration": 0.662,
+              "energyMean": 0.043848,
+              "formants": [
+                662.0,
+                1102.7
+              ],
+              "central": 429.1,
+              "startInSyl": 0.0,
+              "endInSyl": 0.662
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "боец",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "в",
+      "start": 17.04,
+      "end": 17.19,
+      "confidence": 1.0,
+      "lemma": "в",
+      "pos": "PREP",
+      "syllableStr": "в",
+      "syllableCount": 1,
+      "detectedNuclei": 1,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "в",
+          "startSec": 0.0,
+          "endSec": 0.165,
+          "acoustics": {
+            "mfcc": [
+              -358.0635,
+              195.1663,
+              -2.1401,
+              42.6617,
+              0.6961,
+              0.175,
+              -1.6142,
+              4.1254,
+              2.6523,
+              0.0661,
+              -9.0714,
+              -12.949,
+              -15.4912
+            ],
+            "energyMean": 0.034694,
+            "zcrMean": 0.022705,
+            "formants": [
+              232.6,
+              715.0
+            ],
+            "central": 829.3,
+            "duration": 0.165,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "в",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "озеро",
+      "start": 17.22,
+      "end": 17.641729,
+      "confidence": 0.760057,
+      "lemma": "озеро",
+      "pos": "NOUN",
+      "syllableStr": "о-зе-ро",
+      "syllableCount": 3,
+      "detectedNuclei": 3,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 2,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "о",
+          "startSec": 0.0,
+          "endSec": 0.26,
+          "acoustics": {
+            "mfcc": [
+              -325.5031,
+              181.261,
+              9.5863,
+              26.9849,
+              -4.9811,
+              3.8566,
+              -9.3064,
+              -0.078,
+              -0.4733,
+              2.1345,
+              -0.5221,
+              -9.1797,
+              -17.6078
+            ],
+            "energyMean": 0.052922,
+            "zcrMean": 0.026801,
+            "formants": [
+              553.9,
+              1234.8
+            ],
+            "central": 270.6,
+            "duration": 0.26,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "зе",
+          "startSec": 0.26,
+          "endSec": 0.35,
+          "acoustics": {
+            "mfcc": [
+              -287.0434,
+              159.4908,
+              -33.0089,
+              47.6906,
+              14.2697,
+              6.6488,
+              -21.6675,
+              1.9241,
+              5.6106,
+              11.7081,
+              0.3623,
+              -6.1366,
+              -1.5121
+            ],
+            "energyMean": 0.054533,
+            "zcrMean": 0.035807,
+            "formants": [
+              334.7,
+              1563.7
+            ],
+            "central": 177.1,
+            "duration": 0.09,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ро",
+          "startSec": 0.35,
+          "endSec": 0.422,
+          "acoustics": {
+            "mfcc": [
+              -262.4496,
+              177.254,
+              -43.3055,
+              52.5454,
+              44.1806,
+              -15.8143,
+              -22.5409,
+              -2.5803,
+              0.9014,
+              -4.9701,
+              -0.0718,
+              -2.6366,
+              -5.9775
+            ],
+            "energyMean": 0.074189,
+            "zcrMean": 0.029948,
+            "formants": [
+              365.1,
+              1730.0
+            ],
+            "central": 266.6,
+            "duration": 0.072,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "о",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "и",
+      "start": 17.641729,
+      "end": 17.79,
+      "confidence": 0.726367,
+      "lemma": "и",
+      "pos": "CONJ",
+      "syllableStr": "и",
+      "syllableCount": 1,
+      "detectedNuclei": 1,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "и",
+          "startSec": 0.0,
+          "endSec": 0.228,
+          "acoustics": {
+            "mfcc": [
+              -350.1511,
+              164.1176,
+              -14.8507,
+              31.3374,
+              21.0288,
+              -1.0313,
+              -16.1078,
+              -4.7568,
+              2.1589,
+              2.4347,
+              -6.3243,
+              -10.2934,
+              -8.07
+            ],
+            "energyMean": 0.032874,
+            "zcrMean": 0.036072,
+            "formants": [
+              309.2,
+              1428.4
+            ],
+            "central": 203.8,
+            "duration": 0.228,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "и",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "я",
+      "start": 18.21,
+      "end": 18.72,
+      "confidence": 1.0,
+      "lemma": "я",
+      "pos": "NPRO",
+      "syllableStr": "я",
+      "syllableCount": 1,
+      "detectedNuclei": 1,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "я",
+          "startSec": 0.0,
+          "endSec": 0.525,
+          "acoustics": {
+            "mfcc": [
+              -305.9025,
+              173.7964,
+              -41.6914,
+              25.1983,
+              0.4994,
+              10.0319,
+              -13.1932,
+              2.4452,
+              9.371,
+              12.64,
+              0.0692,
+              -18.2774,
+              -12.5358
+            ],
+            "energyMean": 0.052783,
+            "zcrMean": 0.040527,
+            "formants": [
+              726.0,
+              1507.6
+            ],
+            "central": 226.1,
+            "duration": 0.525,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "я",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "люблю",
+      "start": 18.75,
+      "end": 19.29,
+      "confidence": 1.0,
+      "lemma": "любить",
+      "pos": "VERB",
+      "syllableStr": "лю-блю",
+      "syllableCount": 2,
+      "detectedNuclei": 2,
+      "countMismatch": false,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 1,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "лю",
+          "startSec": 0.0,
+          "endSec": 0.44,
+          "acoustics": {
+            "mfcc": [
+              -343.4504,
+              173.0636,
+              -24.4437,
+              44.3945,
+              35.6332,
+              6.7317,
+              -3.223,
+              0.8524,
+              -7.3274,
+              -4.7828,
+              0.2297,
+              -14.98,
+              -16.9682
+            ],
+            "energyMean": 0.049402,
+            "zcrMean": 0.033238,
+            "formants": [
+              275.2,
+              1468.3
+            ],
+            "central": 227.0,
+            "duration": 0.44,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "блю",
+          "startSec": 0.44,
+          "endSec": 0.555,
+          "acoustics": {
+            "mfcc": [
+              -323.8298,
+              179.4966,
+              21.3323,
+              13.103,
+              -5.5788,
+              12.7066,
+              1.9925,
+              -4.1778,
+              -14.8417,
+              -17.6313,
+              -6.5202,
+              -2.9829,
+              -3.8257
+            ],
+            "energyMean": 0.053839,
+            "zcrMean": 0.027344,
+            "formants": [
+              366.3,
+              1012.1
+            ],
+            "central": 505.9,
+            "duration": 0.115,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "блю",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "русский",
+      "start": 19.32,
+      "end": 19.8,
+      "confidence": 1.0,
+      "lemma": "русский",
+      "pos": "ADJF",
+      "syllableStr": "ру-сский",
+      "syllableCount": 2,
+      "detectedNuclei": 4,
+      "countMismatch": true,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 1,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "ру",
+          "startSec": 0.0,
+          "endSec": 0.09,
+          "acoustics": {
+            "mfcc": [
+              -373.366,
+              216.9391,
+              -6.3028,
+              10.9165,
+              -11.5335,
+              13.371,
+              5.0793,
+              11.9375,
+              -7.42,
+              1.0417,
+              0.5887,
+              -3.2718,
+              2.7113
+            ],
+            "energyMean": 0.038,
+            "zcrMean": 0.016276,
+            "formants": [
+              251.6,
+              957.8
+            ],
+            "central": 596.4,
+            "duration": 0.09,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "сский",
+          "startSec": 0.09,
+          "endSec": 0.48,
+          "acoustics": {
+            "mfcc": [
+              -327.5781,
+              128.2182,
+              -3.5266,
+              48.6193,
+              -7.0408,
+              32.6395,
+              -7.8947,
+              2.7904,
+              -4.1744,
+              -3.7527,
+              -5.0824,
+              -12.0354,
+              -9.4915
+            ],
+            "energyMean": 0.027852,
+            "zcrMean": 0.105056,
+            "formants": [
+              294.9,
+              1437.1
+            ],
+            "central": 214.5,
+            "duration": 0.39,
+            "core": {
+              "duration": 0.165,
+              "energyMean": 0.024766,
+              "formants": [
+                241.7,
+                1490.3
+              ],
+              "central": 258.5,
+              "startInSyl": 0.225,
+              "endInSyl": 0.39
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "ру",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "язык",
+      "start": 19.8,
+      "end": 20.34,
+      "confidence": 1.0,
+      "lemma": "язык",
+      "pos": "NOUN",
+      "syllableStr": "я-зык",
+      "syllableCount": 2,
+      "detectedNuclei": 4,
+      "countMismatch": true,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 0,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "я",
+          "startSec": 0.0,
+          "endSec": 0.4,
+          "acoustics": {
+            "mfcc": [
+              -344.3676,
+              136.2349,
+              5.9637,
+              67.9905,
+              9.4619,
+              14.533,
+              -2.9132,
+              13.1668,
+              -11.6331,
+              -6.9235,
+              -9.2307,
+              -11.9437,
+              -13.6681
+            ],
+            "energyMean": 0.041896,
+            "zcrMean": 0.030799,
+            "formants": [
+              288.0,
+              1916.5
+            ],
+            "central": 467.4,
+            "duration": 0.4,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "зык",
+          "startSec": 0.4,
+          "endSec": 0.62,
+          "acoustics": {
+            "mfcc": [
+              -372.5683,
+              138.8227,
+              -54.8419,
+              34.7773,
+              3.0209,
+              5.6755,
+              -22.5697,
+              9.205,
+              -1.2567,
+              -7.283,
+              -3.4524,
+              -1.984,
+              -5.6314
+            ],
+            "energyMean": 0.006828,
+            "zcrMean": 0.098284,
+            "formants": [
+              515.3,
+              1618.2
+            ],
+            "central": 119.2,
+            "duration": 0.22,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "зык",
+        "reductionErrors": [
+          {
+            "syllable": "я",
+            "position": 1,
+            "durRatio": 1.82,
+            "enerRatio": 6.14,
+            "centralRatio": 3.92,
+            "hint": "Безударный слог «я»: длительность 182%, энергия 614% от ударного «зык», централизация 392% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+          }
+        ],
+        "reductionScore": 0.0,
+        "hasReductionIssue": true
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "вчера",
+      "start": 20.91,
+      "end": 21.42,
+      "confidence": 1.0,
+      "lemma": "вчера",
+      "pos": "ADVB",
+      "syllableStr": "вче-ра",
+      "syllableCount": 2,
+      "detectedNuclei": 2,
+      "countMismatch": false,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 1,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "вче",
+          "startSec": 0.0,
+          "endSec": 0.21,
+          "acoustics": {
+            "mfcc": [
+              -268.5501,
+              122.9168,
+              -29.8773,
+              41.8063,
+              3.4255,
+              8.7648,
+              -22.2535,
+              3.7313,
+              2.3025,
+              2.9911,
+              3.7049,
+              -10.9543,
+              -7.4533
+            ],
+            "energyMean": 0.046873,
+            "zcrMean": 0.097238,
+            "formants": [
+              469.4,
+              1636.6
+            ],
+            "central": 140.0,
+            "duration": 0.21,
+            "core": {
+              "duration": 0.072,
+              "energyMean": 0.089667,
+              "formants": [
+                469.5,
+                1528.5
+              ],
+              "central": 41.7,
+              "startInSyl": 0.138,
+              "endInSyl": 0.21
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ра",
+          "startSec": 0.21,
+          "endSec": 0.51,
+          "acoustics": {
+            "mfcc": [
+              -197.5554,
+              212.2764,
+              -65.4261,
+              14.2136,
+              -7.4015,
+              5.0981,
+              -17.4317,
+              -10.9079,
+              1.2151,
+              15.8849,
+              15.7043,
+              -15.8306,
+              -16.6641
+            ],
+            "energyMean": 0.104943,
+            "zcrMean": 0.041797,
+            "formants": [
+              684.0,
+              1362.5
+            ],
+            "central": 229.7,
+            "duration": 0.3,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "ра",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "было",
+      "start": 21.42,
+      "end": 21.72,
+      "confidence": 0.938148,
+      "lemma": "быть",
+      "pos": "VERB",
+      "syllableStr": "бы-ло",
+      "syllableCount": 2,
+      "detectedNuclei": 1,
+      "countMismatch": true,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "бы",
+          "startSec": 0.0,
+          "endSec": 0.158,
+          "acoustics": {
+            "mfcc": [
+              -308.3049,
+              213.5565,
+              -16.3874,
+              9.3459,
+              13.8599,
+              18.6022,
+              -9.3189,
+              -8.6612,
+              -10.8398,
+              -11.7441,
+              -6.6389,
+              -5.6598,
+              -11.6758
+            ],
+            "energyMean": 0.070969,
+            "zcrMean": 0.032715,
+            "formants": [
+              357.6,
+              1142.7
+            ],
+            "central": 384.6,
+            "duration": 0.158,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ло",
+          "startSec": 0.158,
+          "endSec": 0.315,
+          "acoustics": {
+            "mfcc": [
+              -269.9578,
+              228.2282,
+              -28.9197,
+              19.5515,
+              -0.9029,
+              -4.1449,
+              1.1857,
+              -7.0609,
+              -15.3787,
+              12.9301,
+              4.2638,
+              -6.328,
+              -8.3021
+            ],
+            "energyMean": 0.072103,
+            "zcrMean": 0.027832,
+            "formants": [
+              476.7,
+              657.1
+            ],
+            "central": 843.2,
+            "duration": 0.158,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "бы",
+        "reductionErrors": [
+          {
+            "syllable": "ло",
+            "position": 2,
+            "durRatio": 1.0,
+            "enerRatio": 1.02,
+            "centralRatio": 2.19,
+            "hint": "Безударный слог «ло»: длительность 100%, энергия 102% от ударного «бы», централизация 219% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+          }
+        ],
+        "reductionScore": 0.0,
+        "hasReductionIssue": true
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "очень",
+      "start": 21.75,
+      "end": 22.17,
+      "confidence": 1.0,
+      "lemma": "очень",
+      "pos": "ADVB",
+      "syllableStr": "о-чень",
+      "syllableCount": 2,
+      "detectedNuclei": 2,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "о",
+          "startSec": 0.0,
+          "endSec": 0.24,
+          "acoustics": {
+            "mfcc": [
+              -311.385,
+              190.438,
+              -0.7652,
+              40.5755,
+              -15.0151,
+              0.6888,
+              -8.8713,
+              -5.019,
+              -10.5742,
+              7.2847,
+              -2.9348,
+              -10.6945,
+              -12.2567
+            ],
+            "energyMean": 0.061205,
+            "zcrMean": 0.052856,
+            "formants": [
+              443.2,
+              1319.6
+            ],
+            "central": 189.1,
+            "duration": 0.24,
+            "core": {
+              "duration": 0.237,
+              "energyMean": 0.061183,
+              "formants": [
+                440.9,
+                809.3
+              ],
+              "central": 693.2,
+              "startInSyl": 0.0,
+              "endInSyl": 0.237
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "чень",
+          "startSec": 0.24,
+          "endSec": 0.435,
+          "acoustics": {
+            "mfcc": [
+              -282.4574,
+              138.7689,
+              -16.4772,
+              50.1464,
+              -9.6877,
+              18.8315,
+              -7.8487,
+              8.6834,
+              -8.2875,
+              10.0605,
+              -1.9792,
+              -7.084,
+              -11.0424
+            ],
+            "energyMean": 0.047547,
+            "zcrMean": 0.087751,
+            "formants": [
+              262.6,
+              1393.7
+            ],
+            "central": 260.1,
+            "duration": 0.195,
+            "core": {
+              "duration": 0.133,
+              "energyMean": 0.057848,
+              "formants": [
+                533.9,
+                1295.9
+              ],
+              "central": 206.9,
+              "startInSyl": 0.062,
+              "endInSyl": 0.195
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "о",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "холодно",
+      "start": 22.2,
+      "end": 22.92,
+      "confidence": 1.0,
+      "lemma": "холодно",
+      "pos": "ADVB",
+      "syllableStr": "хо-ло-дно",
+      "syllableCount": 3,
+      "detectedNuclei": 4,
+      "countMismatch": true,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "хо",
+          "startSec": 0.0,
+          "endSec": 0.19,
+          "acoustics": {
+            "mfcc": [
+              -370.1216,
+              176.6063,
+              18.561,
+              21.7829,
+              -23.3705,
+              -9.5667,
+              -10.4679,
+              -5.499,
+              11.7073,
+              7.769,
+              -3.2253,
+              1.448,
+              -18.4276
+            ],
+            "energyMean": 0.027753,
+            "zcrMean": 0.05306,
+            "formants": [
+              374.3,
+              705.7
+            ],
+            "central": 804.2,
+            "duration": 0.19,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ло",
+          "startSec": 0.19,
+          "endSec": 0.39,
+          "acoustics": {
+            "mfcc": [
+              -310.4697,
+              187.4309,
+              1.1013,
+              30.4534,
+              -7.2001,
+              2.488,
+              -1.3061,
+              5.2965,
+              -10.0878,
+              5.1274,
+              3.4099,
+              -6.917,
+              -9.1689
+            ],
+            "energyMean": 0.046472,
+            "zcrMean": 0.027762,
+            "formants": [
+              373.7,
+              1076.4
+            ],
+            "central": 442.0,
+            "duration": 0.2,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "дно",
+          "startSec": 0.39,
+          "endSec": 0.8,
+          "acoustics": {
+            "mfcc": [
+              -377.188,
+              193.8299,
+              -13.9177,
+              19.5663,
+              10.2199,
+              13.233,
+              -13.1884,
+              1.6702,
+              -1.7024,
+              8.9602,
+              9.0631,
+              -12.1316,
+              -15.4532
+            ],
+            "energyMean": 0.023851,
+            "zcrMean": 0.044884,
+            "formants": [
+              611.4,
+              1342.8
+            ],
+            "central": 192.7,
+            "duration": 0.41,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "хо",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "они",
+      "start": 23.55,
+      "end": 24.0,
+      "confidence": 1.0,
+      "lemma": "они",
+      "pos": "NPRO",
+      "syllableStr": "о-ни",
+      "syllableCount": 2,
+      "detectedNuclei": 2,
+      "countMismatch": false,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 1,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "о",
+          "startSec": 0.0,
+          "endSec": 0.19,
+          "acoustics": {
+            "mfcc": [
+              -261.336,
+              185.7156,
+              -52.7068,
+              13.2095,
+              -7.8019,
+              21.1093,
+              -3.778,
+              -3.3724,
+              10.4748,
+              19.297,
+              7.8348,
+              -14.9644,
+              -10.6645
+            ],
+            "energyMean": 0.065355,
+            "zcrMean": 0.043213,
+            "formants": [
+              747.6,
+              1407.0
+            ],
+            "central": 264.5,
+            "duration": 0.19,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ни",
+          "startSec": 0.19,
+          "endSec": 0.465,
+          "acoustics": {
+            "mfcc": [
+              -291.6139,
+              175.2751,
+              2.045,
+              58.2191,
+              4.3585,
+              -15.2687,
+              -15.4545,
+              15.1104,
+              -16.2427,
+              -13.6184,
+              5.2315,
+              -14.4732,
+              -17.0589
+            ],
+            "energyMean": 0.087631,
+            "zcrMean": 0.029243,
+            "formants": [
+              340.9,
+              659.5
+            ],
+            "central": 855.4,
+            "duration": 0.275,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "ни",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "работают",
+      "start": 24.03,
+      "end": 25.109819,
+      "confidence": 1.0,
+      "lemma": "работать",
+      "pos": "VERB",
+      "syllableStr": "ра-бо-тают",
+      "syllableCount": 3,
+      "detectedNuclei": 4,
+      "countMismatch": true,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 2,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "ра",
+          "startSec": 0.0,
+          "endSec": 0.05,
+          "acoustics": {
+            "mfcc": [
+              -341.5446,
+              202.7784,
+              -52.7028,
+              5.2918,
+              14.396,
+              -0.9355,
+              -20.4627,
+              -5.0744,
+              8.4903,
+              13.0741,
+              10.0355,
+              1.1583,
+              -19.3618
+            ],
+            "energyMean": 0.050097,
+            "zcrMean": 0.025391,
+            "formants": [
+              630.4,
+              1356.6
+            ],
+            "central": 193.8,
+            "duration": 0.05,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "бо",
+          "startSec": 0.05,
+          "endSec": 0.45,
+          "acoustics": {
+            "mfcc": [
+              -321.4374,
+              203.3429,
+              -23.2276,
+              26.0429,
+              2.117,
+              6.3225,
+              -3.296,
+              -4.2439,
+              0.4036,
+              1.6198,
+              -0.4878,
+              -4.6944,
+              -9.5742
+            ],
+            "energyMean": 0.047055,
+            "zcrMean": 0.029072,
+            "formants": [
+              640.8,
+              1477.0
+            ],
+            "central": 142.7,
+            "duration": 0.4,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "тают",
+          "startSec": 0.45,
+          "endSec": 1.113,
+          "acoustics": {
+            "mfcc": [
+              -257.9379,
+              149.8999,
+              -31.0966,
+              20.3766,
+              -8.69,
+              20.3622,
+              -23.0686,
+              1.3036,
+              -6.6773,
+              6.8793,
+              7.113,
+              -13.5858,
+              -11.1592
+            ],
+            "energyMean": 0.054574,
+            "zcrMean": 0.130371,
+            "formants": [
+              589.1,
+              1418.1
+            ],
+            "central": 121.0,
+            "duration": 0.663,
+            "core": {
+              "duration": 0.512,
+              "energyMean": 0.06321,
+              "formants": [
+                669.7,
+                1395.9
+              ],
+              "central": 199.1,
+              "startInSyl": 0.0,
+              "endInSyl": 0.512
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "бо",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "каждый",
+      "start": 25.176037,
+      "end": 25.74,
+      "confidence": 1.0,
+      "lemma": "каждый",
+      "pos": "ADJF",
+      "syllableStr": "ка-ждый",
+      "syllableCount": 2,
+      "detectedNuclei": 3,
+      "countMismatch": true,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "ка",
+          "startSec": 0.0,
+          "endSec": 0.37,
+          "acoustics": {
+            "mfcc": [
+              -262.3235,
+              153.391,
+              -45.7305,
+              27.1075,
+              -11.4703,
+              26.2749,
+              -13.153,
+              -5.9882,
+              9.264,
+              16.3751,
+              1.6316,
+              -9.0097,
+              -12.9637
+            ],
+            "energyMean": 0.054997,
+            "zcrMean": 0.090983,
+            "formants": [
+              692.1,
+              1394.2
+            ],
+            "central": 219.3,
+            "duration": 0.37,
+            "core": {
+              "duration": 0.287,
+              "energyMean": 0.067749,
+              "formants": [
+                711.7,
+                1401.9
+              ],
+              "central": 233.3,
+              "startInSyl": 0.0,
+              "endInSyl": 0.287
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ждый",
+          "startSec": 0.37,
+          "endSec": 0.579,
+          "acoustics": {
+            "mfcc": [
+              -332.025,
+              143.0556,
+              -7.8018,
+              78.4917,
+              3.1322,
+              12.3059,
+              -13.2443,
+              6.1642,
+              -9.4866,
+              -11.9475,
+              -3.676,
+              -15.4071,
+              -13.9767
+            ],
+            "energyMean": 0.053072,
+            "zcrMean": 0.042062,
+            "formants": [
+              303.4,
+              2074.3
+            ],
+            "central": 607.0,
+            "duration": 0.209,
+            "core": {
+              "duration": 0.184,
+              "energyMean": 0.056713,
+              "formants": [
+                300.2,
+                2101.8
+              ],
+              "central": 634.1,
+              "startInSyl": 0.025,
+              "endInSyl": 0.209
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "ка",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "день",
+      "start": 25.77,
+      "end": 26.19,
+      "confidence": 1.0,
+      "lemma": "день",
+      "pos": "NOUN",
+      "syllableStr": "день",
+      "syllableCount": 1,
+      "detectedNuclei": 1,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "день",
+          "startSec": 0.0,
+          "endSec": 0.5,
+          "acoustics": {
+            "mfcc": [
+              -354.301,
+              129.6212,
+              -6.2044,
+              46.1765,
+              -4.5897,
+              17.3376,
+              -3.0624,
+              8.6375,
+              -1.3885,
+              -1.3672,
+              -2.9053,
+              -11.6385,
+              -9.3317
+            ],
+            "energyMean": 0.031643,
+            "zcrMean": 0.102356,
+            "formants": [
+              277.1,
+              2357.4
+            ],
+            "central": 885.9,
+            "duration": 0.5,
+            "core": {
+              "duration": 0.325,
+              "energyMean": 0.039168,
+              "formants": [
+                220.2,
+                1111.0
+              ],
+              "central": 479.2,
+              "startInSyl": 0.175,
+              "endInSyl": 0.5
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "день",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "здоровье",
+      "start": 26.64,
+      "end": 27.33,
+      "confidence": 1.0,
+      "lemma": "здоровье",
+      "pos": "NOUN",
+      "syllableStr": "здо-ро-вье",
+      "syllableCount": 3,
+      "detectedNuclei": 4,
+      "countMismatch": true,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 2,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "здо",
+          "startSec": 0.0,
+          "endSec": 0.25,
+          "acoustics": {
+            "mfcc": [
+              -301.8395,
+              177.4536,
+              -5.3607,
+              25.0404,
+              18.1712,
+              9.9022,
+              -16.4429,
+              -4.3892,
+              -10.831,
+              13.865,
+              0.1961,
+              -9.5227,
+              -15.3456
+            ],
+            "energyMean": 0.051996,
+            "zcrMean": 0.033447,
+            "formants": [
+              375.7,
+              1397.7
+            ],
+            "central": 161.0,
+            "duration": 0.25,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "ро",
+          "startSec": 0.25,
+          "endSec": 0.52,
+          "acoustics": {
+            "mfcc": [
+              -251.257,
+              216.7917,
+              -13.2142,
+              6.3802,
+              -10.7417,
+              2.1472,
+              -4.7128,
+              -1.2462,
+              -10.1255,
+              -6.6106,
+              -0.7515,
+              -8.2891,
+              -4.8078
+            ],
+            "energyMean": 0.082213,
+            "zcrMean": 0.032064,
+            "formants": [
+              426.5,
+              919.5
+            ],
+            "central": 585.1,
+            "duration": 0.27,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "вье",
+          "startSec": 0.52,
+          "endSec": 0.705,
+          "acoustics": {
+            "mfcc": [
+              -217.5757,
+              174.1483,
+              -33.9515,
+              63.5687,
+              1.2698,
+              -14.5225,
+              -28.907,
+              -7.405,
+              -7.2333,
+              -7.6317,
+              -1.005,
+              -11.2358,
+              -8.459
+            ],
+            "energyMean": 0.09187,
+            "zcrMean": 0.039225,
+            "formants": [
+              428.4,
+              1853.1
+            ],
+            "central": 360.3,
+            "duration": 0.185,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "ро",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "это",
+      "start": 27.36,
+      "end": 27.66,
+      "confidence": 1.0,
+      "lemma": "это",
+      "pos": "PRCL",
+      "syllableStr": "э-то",
+      "syllableCount": 2,
+      "detectedNuclei": 2,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 1,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "э",
+          "startSec": 0.0,
+          "endSec": 0.2,
+          "acoustics": {
+            "mfcc": [
+              -289.6291,
+              160.6185,
+              -32.1366,
+              58.7224,
+              16.4319,
+              -7.3597,
+              -23.8596,
+              16.4396,
+              -7.0529,
+              -5.4843,
+              1.9765,
+              -10.367,
+              0.4523
+            ],
+            "energyMean": 0.049914,
+            "zcrMean": 0.037807,
+            "formants": [
+              401.7,
+              1876.7
+            ],
+            "central": 389.3,
+            "duration": 0.2,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "то",
+          "startSec": 0.2,
+          "endSec": 0.3,
+          "acoustics": {
+            "mfcc": [
+              -239.8452,
+              155.8187,
+              -27.712,
+              38.4253,
+              9.2333,
+              15.1853,
+              -30.3054,
+              -2.5128,
+              -1.8519,
+              17.6592,
+              5.2195,
+              -12.2078,
+              -3.1887
+            ],
+            "energyMean": 0.063353,
+            "zcrMean": 0.026245,
+            "formants": [
+              432.8,
+              1200.7
+            ],
+            "central": 306.8,
+            "duration": 0.1,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "э",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "самое",
+      "start": 27.66,
+      "end": 28.26,
+      "confidence": 1.0,
+      "lemma": "самый",
+      "pos": "ADJF",
+      "syllableStr": "са-мое",
+      "syllableCount": 2,
+      "detectedNuclei": 2,
+      "countMismatch": false,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 0,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "са",
+          "startSec": 0.0,
+          "endSec": 0.36,
+          "acoustics": {
+            "mfcc": [
+              -236.663,
+              139.6073,
+              -25.3862,
+              -0.0832,
+              -6.6979,
+              23.4966,
+              -14.6997,
+              8.4332,
+              -6.5099,
+              15.5711,
+              4.6092,
+              -4.0985,
+              -13.7476
+            ],
+            "energyMean": 0.058465,
+            "zcrMean": 0.163778,
+            "formants": [
+              727.0,
+              1305.3
+            ],
+            "central": 299.1,
+            "duration": 0.36,
+            "core": {
+              "duration": 0.198,
+              "energyMean": 0.091361,
+              "formants": [
+                724.7,
+                1272.4
+              ],
+              "central": 319.8,
+              "startInSyl": 0.163,
+              "endInSyl": 0.36
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "мое",
+          "startSec": 0.36,
+          "endSec": 0.615,
+          "acoustics": {
+            "mfcc": [
+              -277.4922,
+              184.4445,
+              -22.0535,
+              47.7612,
+              5.6381,
+              1.1034,
+              -10.6054,
+              6.0331,
+              -5.9024,
+              -1.202,
+              -10.2961,
+              -18.663,
+              -3.4844
+            ],
+            "energyMean": 0.07371,
+            "zcrMean": 0.025024,
+            "formants": [
+              321.3,
+              987.7
+            ],
+            "central": 542.6,
+            "duration": 0.255,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "мое",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "главное",
+      "start": 28.29,
+      "end": 28.92,
+      "confidence": 1.0,
+      "lemma": "главное",
+      "pos": "NOUN",
+      "syllableStr": "гла-вное",
+      "syllableCount": 2,
+      "detectedNuclei": 3,
+      "countMismatch": true,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "гла",
+          "startSec": 0.0,
+          "endSec": 0.31,
+          "acoustics": {
+            "mfcc": [
+              -269.0601,
+              201.8494,
+              -40.6721,
+              5.5647,
+              -7.5976,
+              19.6226,
+              0.0343,
+              -6.5839,
+              -8.3631,
+              7.5614,
+              12.7082,
+              -7.6123,
+              -10.6751
+            ],
+            "energyMean": 0.061465,
+            "zcrMean": 0.04458,
+            "formants": [
+              705.4,
+              1291.1
+            ],
+            "central": 293.0,
+            "duration": 0.31,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "вное",
+          "startSec": 0.31,
+          "endSec": 0.71,
+          "acoustics": {
+            "mfcc": [
+              -375.8958,
+              190.741,
+              -5.7179,
+              34.0995,
+              9.5816,
+              8.0332,
+              -12.4231,
+              8.0757,
+              3.6255,
+              5.1803,
+              0.8388,
+              -8.0443,
+              -8.8769
+            ],
+            "energyMean": 0.027826,
+            "zcrMean": 0.025954,
+            "formants": [
+              642.0,
+              1741.8
+            ],
+            "central": 280.4,
+            "duration": 0.4,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "гла",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "спасибо",
+      "start": 29.28,
+      "end": 29.91,
+      "confidence": 1.0,
+      "lemma": "спасибо",
+      "pos": "INTJ",
+      "syllableStr": "спа-си-бо",
+      "syllableCount": 3,
+      "detectedNuclei": 4,
+      "countMismatch": true,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 0,
+      "stressMismatch": true,
+      "syllableAnalysis": [
+        {
+          "syllable": "спа",
+          "startSec": 0.0,
+          "endSec": 0.41,
+          "acoustics": {
+            "mfcc": [
+              -310.4121,
+              110.9901,
+              -2.7915,
+              23.1919,
+              -8.3447,
+              22.8921,
+              -18.2048,
+              9.9105,
+              -4.687,
+              3.6198,
+              -8.2602,
+              -2.9733,
+              -11.5638
+            ],
+            "energyMean": 0.030108,
+            "zcrMean": 0.146635,
+            "formants": [
+              439.3,
+              1174.6
+            ],
+            "central": 331.0,
+            "duration": 0.41,
+            "core": {
+              "duration": 0.188,
+              "energyMean": 0.052711,
+              "formants": [
+                432.9,
+                1183.9
+              ],
+              "central": 323.1,
+              "startInSyl": 0.15,
+              "endInSyl": 0.338
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "си",
+          "startSec": 0.41,
+          "endSec": 0.52,
+          "acoustics": {
+            "mfcc": [
+              -333.6634,
+              125.0728,
+              5.1189,
+              54.2673,
+              22.2161,
+              14.8723,
+              -20.0191,
+              7.8545,
+              -9.8519,
+              -3.9891,
+              -10.7178,
+              -10.9807,
+              -8.244
+            ],
+            "energyMean": 0.036561,
+            "zcrMean": 0.079468,
+            "formants": [
+              295.7,
+              1351.0
+            ],
+            "central": 252.9,
+            "duration": 0.11,
+            "core": {
+              "duration": 0.072,
+              "energyMean": 0.038612,
+              "formants": [
+                259.2,
+                1631.1
+              ],
+              "central": 274.2,
+              "startInSyl": 0.037,
+              "endInSyl": 0.11
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "бо",
+          "startSec": 0.52,
+          "endSec": 0.63,
+          "acoustics": {
+            "mfcc": [
+              -310.3844,
+              192.6561,
+              -0.121,
+              12.242,
+              5.5929,
+              8.7148,
+              4.5876,
+              -6.8933,
+              -12.7761,
+              1.4643,
+              5.7217,
+              -0.4428,
+              -6.2759
+            ],
+            "energyMean": 0.050464,
+            "zcrMean": 0.015381,
+            "formants": [
+              408.0,
+              1034.0
+            ],
+            "central": 475.0,
+            "duration": 0.11,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "си",
+        "reductionErrors": [
+          {
+            "syllable": "спа",
+            "position": 1,
+            "durRatio": 3.73,
+            "enerRatio": 0.82,
+            "centralRatio": 1.31,
+            "hint": "Безударный слог «спа»: длительность 373%, энергия 82% от ударного «си», централизация 131% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+          },
+          {
+            "syllable": "бо",
+            "position": 3,
+            "durRatio": 1.0,
+            "enerRatio": 1.38,
+            "centralRatio": 1.88,
+            "hint": "Безударный слог «бо»: длительность 100%, энергия 138% от ударного «си», централизация 188% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+          }
+        ],
+        "reductionScore": 0.0,
+        "hasReductionIssue": true
+      },
+      "hasIssue": true
+    },
+    {
+      "word": "большое",
+      "start": 29.91,
+      "end": 30.45,
+      "confidence": 1.0,
+      "lemma": "большой",
+      "pos": "ADJF",
+      "syllableStr": "бо-льшое",
+      "syllableCount": 2,
+      "detectedNuclei": 2,
+      "countMismatch": false,
+      "stressedIdx": 1,
+      "expectedStressedIdx": 1,
+      "actualStressedIdx": 1,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "бо",
+          "startSec": 0.0,
+          "endSec": 0.24,
+          "acoustics": {
+            "mfcc": [
+              -241.0986,
+              141.4015,
+              -44.7564,
+              59.1487,
+              14.9619,
+              9.1097,
+              -22.4883,
+              -2.5319,
+              -10.6728,
+              10.8068,
+              1.3363,
+              -8.7983,
+              -7.6142
+            ],
+            "energyMean": 0.055818,
+            "zcrMean": 0.081543,
+            "formants": [
+              355.2,
+              1586.8
+            ],
+            "central": 168.8,
+            "duration": 0.24,
+            "core": {
+              "duration": 0.212,
+              "energyMean": 0.060589,
+              "formants": [
+                355.2,
+                1565.5
+              ],
+              "central": 158.9,
+              "startInSyl": 0.0,
+              "endInSyl": 0.212
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "льшое",
+          "startSec": 0.24,
+          "endSec": 0.54,
+          "acoustics": {
+            "mfcc": [
+              -266.3258,
+              159.261,
+              -37.4734,
+              40.9204,
+              10.3992,
+              18.792,
+              -31.6762,
+              0.2287,
+              -15.3122,
+              1.9595,
+              1.2785,
+              -18.7079,
+              -5.4101
+            ],
+            "energyMean": 0.064796,
+            "zcrMean": 0.071924,
+            "formants": [
+              376.8,
+              1384.3
+            ],
+            "central": 169.0,
+            "duration": 0.3,
+            "core": {
+              "duration": 0.237,
+              "energyMean": 0.076128,
+              "formants": [
+                383.7,
+                1424.8
+              ],
+              "central": 138.5,
+              "startInSyl": 0.062,
+              "endInSyl": 0.3
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 1,
+        "stressedSyl": "льшое",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "за",
+      "start": 30.45,
+      "end": 30.66,
+      "confidence": 1.0,
+      "lemma": "за",
+      "pos": "PREP",
+      "syllableStr": "за",
+      "syllableCount": 1,
+      "detectedNuclei": 1,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "за",
+          "startSec": 0.0,
+          "endSec": 0.21,
+          "acoustics": {
+            "mfcc": [
+              -299.5664,
+              166.7848,
+              -0.3158,
+              18.7,
+              3.5398,
+              21.9214,
+              -17.4455,
+              -7.0726,
+              -13.7029,
+              11.6972,
+              -1.4901,
+              -4.9718,
+              -7.1174
+            ],
+            "energyMean": 0.048545,
+            "zcrMean": 0.027344,
+            "formants": [
+              517.1,
+              846.9
+            ],
+            "central": 653.3,
+            "duration": 0.21,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "за",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    },
+    {
+      "word": "помощи",
+      "start": 30.66,
+      "end": 31.35,
+      "confidence": 0.972037,
+      "lemma": "помощь",
+      "pos": "NOUN",
+      "syllableStr": "по-мо-щи",
+      "syllableCount": 3,
+      "detectedNuclei": 3,
+      "countMismatch": false,
+      "stressedIdx": 0,
+      "expectedStressedIdx": 0,
+      "actualStressedIdx": 0,
+      "stressMismatch": false,
+      "syllableAnalysis": [
+        {
+          "syllable": "по",
+          "startSec": 0.0,
+          "endSec": 0.29,
+          "acoustics": {
+            "mfcc": [
+              -367.277,
+              188.7913,
+              14.6701,
+              19.4134,
+              -7.2125,
+              -2.2703,
+              -4.5729,
+              7.606,
+              1.1173,
+              -2.952,
+              -2.9169,
+              -7.0463,
+              -9.3007
+            ],
+            "energyMean": 0.047695,
+            "zcrMean": 0.033594,
+            "formants": [
+              350.5,
+              718.9
+            ],
+            "central": 795.3,
+            "duration": 0.29,
+            "core": null
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "мо",
+          "startSec": 0.29,
+          "endSec": 0.51,
+          "acoustics": {
+            "mfcc": [
+              -274.4748,
+              93.6937,
+              -33.4254,
+              71.0155,
+              -2.1748,
+              23.6287,
+              -11.9269,
+              18.3526,
+              -6.7018,
+              13.4801,
+              -5.3936,
+              -5.5801,
+              -7.2583
+            ],
+            "energyMean": 0.034432,
+            "zcrMean": 0.134487,
+            "formants": [
+              1730.1,
+              2600.0
+            ],
+            "central": 1650.2,
+            "duration": 0.22,
+            "core": {
+              "duration": 0.138,
+              "energyMean": 0.038283,
+              "formants": [
+                203.7,
+                1467.0
+              ],
+              "central": 298.1,
+              "startInSyl": 0.0,
+              "endInSyl": 0.138
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        },
+        {
+          "syllable": "щи",
+          "startSec": 0.51,
+          "endSec": 0.77,
+          "acoustics": {
+            "mfcc": [
+              -369.2074,
+              150.1033,
+              -27.4064,
+              55.5522,
+              6.7873,
+              -3.3177,
+              -12.6226,
+              6.8733,
+              -0.3113,
+              1.8082,
+              -1.3882,
+              -4.5038,
+              -10.2745
+            ],
+            "energyMean": 0.01576,
+            "zcrMean": 0.062229,
+            "formants": [
+              408.7,
+              1814.7
+            ],
+            "central": 327.7,
+            "duration": 0.26,
+            "core": {
+              "duration": 0.223,
+              "energyMean": 0.01656,
+              "formants": [
+                410.9,
+                1837.6
+              ],
+              "central": 349.2,
+              "startInSyl": 0.037,
+              "endInSyl": 0.26
+            }
+          },
+          "isProblematic": false,
+          "remarks": []
+        }
+      ],
+      "reductionInfo": {
+        "stressedIdx": 0,
+        "stressedSyl": "по",
+        "reductionErrors": [],
+        "reductionScore": 100.0,
+        "hasReductionIssue": false
+      },
+      "hasIssue": false
+    }
+  ],
+  "syllableContrast": [
+    {
+      "syllable": "го",
+      "stressDur": 0.19,
+      "unstrDur": 0.26,
+      "stressEn": 0.05293,
+      "unstrEn": 0.05507
+    },
+    {
+      "syllable": "хо",
+      "stressDur": 0.19,
+      "unstrDur": 0.15,
+      "stressEn": 0.02775,
+      "unstrEn": 0.03213
+    },
+    {
+      "syllable": "ро",
+      "stressDur": 0.25,
+      "unstrDur": 0.072,
+      "stressEn": 0.06607,
+      "unstrEn": 0.07419
+    },
+    {
+      "syllable": "по",
+      "stressDur": 0.29,
+      "unstrDur": 0.22,
+      "stressEn": 0.0477,
+      "unstrEn": 0.05275
+    },
+    {
+      "syllable": "ма",
+      "stressDur": 0.26,
+      "unstrDur": 0.27,
+      "stressEn": 0.05774,
+      "unstrEn": 0.01635
+    },
+    {
+      "syllable": "то",
+      "stressDur": 0.38,
+      "unstrDur": 0.125,
+      "stressEn": 0.03526,
+      "unstrEn": 0.05368
+    },
+    {
+      "syllable": "у",
+      "stressDur": 0.23,
+      "unstrDur": 0.33,
+      "stressEn": 0.03728,
+      "unstrEn": 0.05556
+    },
+    {
+      "syllable": "ни",
+      "stressDur": 0.275,
+      "unstrDur": 0.14,
+      "stressEn": 0.08763,
+      "unstrEn": 0.05011
+    },
+    {
+      "syllable": "те",
+      "stressDur": 0.17,
+      "unstrDur": 0.27,
+      "stressEn": 0.02678,
+      "unstrEn": 0.01123
+    },
+    {
+      "syllable": "ка",
+      "stressDur": 0.37,
+      "unstrDur": 0.171,
+      "stressEn": 0.055,
+      "unstrEn": 0.07414
+    },
+    {
+      "syllable": "о",
+      "stressDur": 0.25,
+      "unstrDur": 0.19,
+      "stressEn": 0.05706,
+      "unstrEn": 0.06535
+    },
+    {
+      "syllable": "я",
+      "stressDur": 0.525,
+      "unstrDur": 0.4,
+      "stressEn": 0.05278,
+      "unstrEn": 0.0419
+    },
+    {
+      "syllable": "ра",
+      "stressDur": 0.3,
+      "unstrDur": 0.05,
+      "stressEn": 0.10494,
+      "unstrEn": 0.0501
+    },
+    {
+      "syllable": "бо",
+      "stressDur": 0.4,
+      "unstrDur": 0.175,
+      "stressEn": 0.04705,
+      "unstrEn": 0.05314
+    }
+  ],
+  "syllableErrors": [
+    {
+      "referenceWord": "дома",
+      "recognizedWord": "тома",
+      "refStr": "до-ма",
+      "recStr": "то-ма",
+      "errors": [
+        {
+          "position": 1,
+          "expected": "до",
+          "got": "то",
+          "type": "replace",
+          "hint": "Ожидался слог «до», произнесено «то»"
+        }
+      ]
+    },
+    {
+      "referenceWord": "щука",
+      "recognizedWord": "сука",
+      "refStr": "щу-ка",
+      "recStr": "су-ка",
+      "errors": [
+        {
+          "position": 1,
+          "expected": "щу",
+          "got": "су",
+          "type": "replace",
+          "hint": "Ожидался слог «щу», произнесено «су»"
+        }
+      ]
+    },
+    {
+      "referenceWord": "плавает",
+      "recognizedWord": "апл",
+      "refStr": "пла-вает",
+      "recStr": "апл",
+      "errors": [
+        {
+          "position": 1,
+          "expected": "пла",
+          "got": "апл",
+          "type": "replace",
+          "hint": "Ожидался слог «пла», произнесено «апл»"
+        },
+        {
+          "position": 2,
+          "expected": "вает",
+          "got": "—",
+          "type": "replace",
+          "hint": "Ожидался слог «вает», произнесено «—»"
+        }
+      ]
+    },
+    {
+      "referenceWord": "озере",
+      "recognizedWord": "озеро",
+      "refStr": "о-зе-ре",
+      "recStr": "о-зе-ро",
+      "errors": [
+        {
+          "position": 3,
+          "expected": "ре",
+          "got": "ро",
+          "type": "replace",
+          "hint": "Ожидался слог «ре», произнесено «ро»"
+        }
+      ]
+    },
+    {
+      "referenceWord": "помощь",
+      "recognizedWord": "помощи",
+      "refStr": "по-мощь",
+      "recStr": "по-мо-щи",
+      "errors": [
+        {
+          "position": 2,
+          "expected": "мощь",
+          "got": "мо",
+          "type": "replace",
+          "hint": "Ожидался слог «мощь», произнесено «мо»"
+        },
+        {
+          "position": 3,
+          "expected": "—",
+          "got": "щи",
+          "type": "replace",
+          "hint": "Ожидался слог «—», произнесено «щи»"
+        }
+      ]
+    }
+  ],
+  "pauses": [],
+  "wordComparison": {
+    "correct": [
+      "сегодня",
+      "хорошая",
+      "погода",
+      "молоко",
+      "стоит",
+      "на",
+      "столе",
+      "маша",
+      "читает",
+      "книгу",
+      "студенты",
+      "учатся",
+      "в",
+      "университете",
+      "цена",
+      "этого",
+      "цветка",
+      "высокая",
+      "в",
+      "я",
+      "люблю",
+      "русский",
+      "язык",
+      "вчера",
+      "было",
+      "очень",
+      "холодно",
+      "они",
+      "работают",
+      "каждый",
+      "день",
+      "здоровье",
+      "это",
+      "самое",
+      "главное",
+      "спасибо",
+      "большое",
+      "за"
+    ],
+    "substituted": [
+      {
+        "expected": "дома",
+        "got": "тома"
+      },
+      {
+        "expected": "щука",
+        "got": "сука"
+      },
+      {
+        "expected": "плавает",
+        "got": "апл"
+      },
+      {
+        "expected": "—",
+        "got": "а"
+      },
+      {
+        "expected": "—",
+        "got": "боец"
+      },
+      {
+        "expected": "озере",
+        "got": "озеро"
+      },
+      {
+        "expected": "—",
+        "got": "и"
+      },
+      {
+        "expected": "помощь",
+        "got": "помощи"
+      }
+    ],
+    "missed": [],
+    "inserted": []
+  }
+}

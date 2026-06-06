@@ -427,17 +427,16 @@ def centralization(formants: list[float]) -> float:
 
 def findVowelNucleus(signal: np.ndarray, sr: int) -> tuple[int, int]:
     """
-    Внутри уже выделенного слога ищет ВОКАЛИЧЕСКОЕ ЯДРО (вокалическое ядро) —
-    самую «гласноподобную» подпоследовательность кадров.
+    Внутри уже выделенного слога ищет ВОКАЛИЧЕСКОЕ ЯДРО — самую
+    «гласноподобную» подпоследовательность кадров. Это позволяет
+    отделить артикуляторно неустойчивый край слога (особенно
+    согласные на стыках) и считать признаки редукции (длительность,
+    форманты) только по этой узкой области.
 
-    Использует три признака (без pyin — тот нестабилен на коротких
-    сегментах <0.5 с, из которых состоит отдельный слог):
-      1. Низкочастотная энергия (≤1000 Гц) — у гласных энергия
-         сконцентрирована внизу, у согласных рассеивается вверх.
-      2. MEL-контраст F1 vs высокие — у гласного полоса 250–900 Гц
-         (первые две форманты) доминирует над шумом >2500 Гц.
-      3. ZCR (частота пересечения нуля) — у гласных низкая (<0.2),
-         у фрикативов/взрывных высокая.
+    Идея — компромисс между полным фонемным выравниванием (MFA) и
+    усреднением по слогу целиком: F1 у гласного устойчив, шумность
+    (ZCR) низкая, энергия высокая. Берём связную область кадров,
+    удовлетворяющих этим условиям.
 
     Возвращает (start_sample, end_sample) — границы ядра внутри
     переданного signal. Если ядро не выделяется — возвращает весь
@@ -447,83 +446,45 @@ def findVowelNucleus(signal: np.ndarray, sr: int) -> tuple[int, int]:
     if n < int(sr * 0.040):
         return 0, n
 
-    frameLen = max(int(sr * 0.025), 128)
+    frameLen = max(int(sr * 0.020), 128)
     hopLen   = max(frameLen // 2, 32)
-    nFft     = max(frameLen, 256)
 
-    # ── 1. Энергия и ZCR ────────────────────────────────────────
-    low = _lowpass(signal, sr, LOWPASS_HZ)
-    rmsLow  = librosa.feature.rms(y=low,    frame_length=frameLen, hop_length=hopLen)[0]
-    rmsFull = librosa.feature.rms(y=signal, frame_length=frameLen, hop_length=hopLen)[0]
+    # признаки кадров: энергия, ZCR (низкая у гласных)
+    rms = librosa.feature.rms(y=signal, frame_length=frameLen, hop_length=hopLen)[0]
     zcr = librosa.feature.zero_crossing_rate(signal, frame_length=frameLen,
                                               hop_length=hopLen)[0]
-
-    # ── 2. MEL-спектрограмма: контраст F1 vs высокие ────────────
-    melS = librosa.feature.melspectrogram(y=signal, sr=sr, n_fft=nFft,
-                                           hop_length=hopLen,
-                                           n_mels=40, fmax=sr/2)
-    melDb = librosa.power_to_db(melS + 1e-10, ref=np.max)
-
-    # Выравниваем длины
-    nFrames = min(len(rmsLow), len(zcr), melDb.shape[1])
-    rmsLow = rmsLow[:nFrames]
-    zcr    = zcr[:nFrames]
-    melDb  = melDb[:, :nFrames]
-
-    if nFrames < 3:
+    if len(rms) < 3 or rms.max() <= 0:
         return 0, n
 
-    # ── 3. Три компоненты score ─────────────────────────────────
-    # (a) Энергия низкочастотной полосы (дБ) — гласные громкие внизу
-    e_db = librosa.amplitude_to_db(rmsLow + 1e-8, ref=np.max)
-    e_score = np.clip((e_db + 35.0) / 35.0, 0.0, 1.0)
+    # нормализованный «гласный» скор: высокая энергия + низкая зашумлённость
+    e_db = librosa.amplitude_to_db(rms + 1e-8, ref=np.max)
+    e_score = np.clip((e_db + 30) / 30, 0, 1)              # энергия в дБ → [0..1]
+    z_score = 1.0 - np.clip(zcr / 0.20, 0, 1)              # ZCR<0.2 → к 1
+    score = 0.6 * e_score + 0.4 * z_score                  # ≈ «насколько кадр похож на гласный»
 
-    # (b) ZCR — у гласных низкая
-    z_score = 1.0 - np.clip(zcr / 0.22, 0.0, 1.0)
-
-    # (c) MEL-контраст: F1-область (250–900 Гц) минус шум (>2500 Гц).
-    # У гласного этот контраст большой (>10 дБ), у согласных малый/отрицательный.
-    # Это ключевой признак для отличия гласного от сонорного (р/м/н/л):
-    # у сонорного энергия в F1-полосе слабее, а в высокой полосе — сильнее.
-    melFreqs = librosa.mel_frequencies(n_mels=40, fmax=sr/2)
-    maskF1 = (melFreqs >= 250) & (melFreqs <= 900)
-    maskHi = (melFreqs > 2500)
-    eF1 = melDb[maskF1, :].mean(axis=0) if maskF1.any() else np.zeros(nFrames)
-    eHi = melDb[maskHi, :].mean(axis=0) if maskHi.any() else np.zeros(nFrames)
-    lowHiContrast = eF1 - eHi
-    m_score = np.clip((lowHiContrast + 10.0) / 30.0, 0.0, 1.0)
-
-    # Итоговый score: MEL-контраст и энергия — основные (по 0.35),
-    # ZCR — вспомогательный (0.30).
-    # MEL-контраст получил больший вес т.к. он лучше всего отделяет
-    # гласные от сонорных согласных.
-    score = 0.35 * m_score + 0.35 * e_score + 0.30 * z_score
-
-    # Порог: 55% от максимума, но не ниже 0.30
-    threshold = max(0.30, 0.55 * score.max())
+    # порог: 70% от максимума score
+    threshold = 0.7 * score.max()
     above = score >= threshold
     if not above.any():
         return 0, n
 
-    # Самая длинная связная область выше порога — это ядро
+    # самая длинная связная область выше порога — это ядро
     best_s, best_e = 0, 0
     cur_s = None
     for i, a in enumerate(above):
-        if a and cur_s is None:
-            cur_s = i
+        if a and cur_s is None: cur_s = i
         elif not a and cur_s is not None:
-            if i - cur_s > best_e - best_s:
-                best_s, best_e = cur_s, i
+            if i - cur_s > best_e - best_s: best_s, best_e = cur_s, i
             cur_s = None
     if cur_s is not None:
-        if len(above) - cur_s > best_e - best_s:
-            best_s, best_e = cur_s, len(above)
+        if len(above) - cur_s > best_e - best_s: best_s, best_e = cur_s, len(above)
 
+    # переводим из кадров в сэмплы
     s_sample = best_s * hopLen
     e_sample = min(n, best_e * hopLen + frameLen)
 
-    # минимум 30 мс ядра — снижено для коротких редуцированных гласных
-    if (e_sample - s_sample) < int(sr * 0.030):
+    # минимум 40 мс ядра — иначе считаем, что выделить не удалось
+    if (e_sample - s_sample) < int(sr * 0.040):
         return 0, n
     return s_sample, e_sample
 
@@ -665,29 +626,19 @@ def analyzeSyllablesInWord(wordSegment: np.ndarray, sr: int,
 def detectAcousticStress(syllableResults: list[dict],
                          f0_by_syllable: list[float] | None = None) -> tuple[int, list[float]]:
     """
-    Определяет, какой слог говорящий ФАКТИЧЕСКИ выделил голосом
-    (фактическое ударение / actual stress).
+    Определяет, какой слог говорящий ФАКТИЧЕСКИ выделил голосом.
+    Комбинирует пять акустических признаков, каждый нормализуется внутри слова:
+      • длительность   — ударный обычно длиннее
+      • энергия (RMS)  — ударный громче
+      • F1 (форманта)  — ударный гласный «открытее», F1 выше
+      • MFCC «открытость» — через первый MFCC-коэффициент
+      • F0 (ЧОТ/pitch) — у ударного слога частота основного тона обычно
+                         выше/заметно меняется; это сильнейший коррелят
+                         ударения в русском. Передаётся отдельно
+                         (f0_by_syllable), т.к. требует анализа сигнала.
 
-    УЛУЧШЕННАЯ ВЕРСИЯ: если для всех слогов доступно вокалическое
-    ядро (core), использует признаки ЯДРА вместо целого слога.
-    Длительность и энергия целого слога включают согласные, которые
-    не несут информации об ударении и «размывают» сигнал. Ядро
-    содержит только гласный — его длительность и F1 напрямую
-    отражают ударность.
-
-    Комбинирует пять признаков (нормируются внутри слова):
-      • F0 (ЧОТ / частота основного тона) — сильнейший коррелят
-        ударения в русском; у ударного гласного F0 выше или
-        заметно меняется.
-      • длительность — ударный гласный длиннее. При использовании
-        core: длительность ТОЛЬКО вокалического ядра, без согласных.
-      • энергия (RMS) — ударный громче
-      • F1 (первая форманта) — ударный гласный «открытее», F1 выше
-      • MFCC «открытость» — через MFCC[1] (чем меньше |MFCC[1]|,
-        тем «открытее» артикуляция)
-
-    Веса: F0 и длительность — основные, энергия и F1 — вспомогательные,
-    MFCC — корректирующий.
+    Веса: F0 и длительность — основные, энергия — вспомогательный,
+    F1 и MFCC — корректирующие.
     """
     n = len(syllableResults)
     if n == 0:
@@ -700,28 +651,14 @@ def detectAcousticStress(syllableResults: list[dict],
         rng = vals.max() - vals.min()
         return (vals - vals.min()) / rng if rng > 1e-9 else np.zeros_like(vals)
 
-    # Проверяем, у всех ли слогов есть вокалическое ядро
-    useCore = all(
-        (r.get("acoustics") or {}).get("core") is not None
-        for r in syllableResults
-    )
-
     durs, eners, f1s, mfcc1_abs = [], [], [], []
     for r in syllableResults:
         a = r.get("acoustics") or {}
-        if useCore:
-            c = a["core"]
-            durs.append(float(c.get("duration", 0.0)))
-            eners.append(float(c.get("energyMean", 0.0)))
-            core_formants = c.get("formants") or [0.0, 0.0]
-            f1s.append(float(core_formants[0]) if core_formants and core_formants[0] else 0.0)
-        else:
-            durs.append(float(a.get("duration", 0.0)))
-            eners.append(float(a.get("energyMean", 0.0)))
-            formants = a.get("formants") or [0.0, 0.0]
-            f1s.append(float(formants[0]) if formants and formants[0] else 0.0)
-        # MFCC берём всегда от целого слога — кепстральные коэффициенты
-        # на коротком ядре могут быть нестабильны
+        # ВАЖНО: реальные ключи — "duration", "energyMean", "formants" ([F1,F2]), "mfcc"
+        durs.append(float(a.get("duration", 0.0)))
+        eners.append(float(a.get("energyMean", 0.0)))
+        formants = a.get("formants") or [0.0, 0.0]
+        f1s.append(float(formants[0]) if formants and formants[0] else 0.0)
         mfcc = a.get("mfcc") or []
         mfcc1_abs.append(abs(float(mfcc[1])) if len(mfcc) > 1 else 0.0)
 
@@ -732,20 +669,12 @@ def detectAcousticStress(syllableResults: list[dict],
 
     if f0_by_syllable is not None and len(f0_by_syllable) == n:
         f0N = _norm01([(v if v and v > 0 else 0.0) for v in f0_by_syllable])
-        # F0 доступна — она главный сигнал ударения.
-        # При использовании core длительность ядра надёжнее → повышаем вес.
-        if useCore:
-            scores = (0.30 * f0N + 0.30 * durN + 0.18 * enerN
-                      + 0.15 * f1N + 0.07 * mfccN_inv).tolist()
-        else:
-            scores = (0.30 * f0N + 0.25 * durN + 0.20 * enerN
-                      + 0.15 * f1N + 0.10 * mfccN_inv).tolist()
+        # F0 доступна — она главный сигнал ударения
+        scores = (0.30 * f0N + 0.25 * durN + 0.20 * enerN
+                  + 0.15 * f1N + 0.10 * mfccN_inv).tolist()
     else:
-        # F0 нет — длительность и энергия основные
-        if useCore:
-            scores = (0.40 * durN + 0.25 * enerN + 0.20 * f1N + 0.15 * mfccN_inv).tolist()
-        else:
-            scores = (0.35 * durN + 0.30 * enerN + 0.20 * f1N + 0.15 * mfccN_inv).tolist()
+        # F0 нет — прежняя схема без неё
+        scores = (0.35 * durN + 0.30 * enerN + 0.20 * f1N + 0.15 * mfccN_inv).tolist()
 
     return int(np.argmax(scores)), scores
 
@@ -814,13 +743,6 @@ def analyzeVowelReduction(syllableResults: list[dict], syllables: list[str],
     заданию научного руководителя — «сопоставление слогов для редуцированных
     звуков»).
 
-    УЛУЧШЕННАЯ ВЕРСИЯ: если для всех слогов доступно вокалическое ядро
-    (core), использует признаки ЯДРА (длительность гласного, энергия
-    гласного, централизацию по формантам гласного) вместо целого слога.
-    Это принципиально: длительность слога включает согласные, которые
-    редукции не подвергаются и «размывают» сигнал. Например, слог «страх»
-    длинный за счёт консонантного кластера, хотя гласный [а] короткий.
-
     Признаки редукции безударного гласного по сравнению с ударным:
       • длительность ↓ (безударный короче)
       • энергия ↓      (безударный тише)
@@ -840,22 +762,10 @@ def analyzeVowelReduction(syllableResults: list[dict], syllables: list[str],
                 "reductionErrors": [], "reductionScore": 100.0,
                 "hasReductionIssue": False}
 
-    # Проверяем, у всех ли слогов есть вокалическое ядро
-    useCore = all(
-        (r.get("acoustics") or {}).get("core") is not None
-        for r in syllableResults
-    )
-
-    st = syllableResults[stressedIdx]["acoustics"]
-    if useCore and st.get("core"):
-        stCore = st["core"]
-        stDur    = stCore.get("duration", 0) or 1e-6
-        stEner   = stCore.get("energyMean", 0) or 1e-6
-        stCentral = stCore.get("central", -1)
-    else:
-        stDur    = st.get("duration", 0) or 1e-6
-        stEner   = st.get("energyMean", 0) or 1e-6
-        stCentral = st.get("central", -1)
+    st       = syllableResults[stressedIdx]["acoustics"]
+    stDur    = st.get("duration", 0) or 1e-6
+    stEner   = st.get("energyMean", 0) or 1e-6
+    stCentral = st.get("central", -1)
 
     errors, checked, correct = [], 0, 0
     for i, (sd, sylText) in enumerate(zip(syllableResults, syllables)):
@@ -863,25 +773,18 @@ def analyzeVowelReduction(syllableResults: list[dict], syllables: list[str],
             continue
         if not any(ch in REDUCIBLE_VOWELS for ch in sylText.lower()):
             continue
-        ac = sd["acoustics"]
-        if useCore and ac.get("core"):
-            c = ac["core"]
-            dur = c.get("duration", 0)
-            ener = c.get("energyMean", 0)
-            unCentral = c.get("central", -1)
-        else:
-            dur = ac.get("duration", 0)
-            ener = ac.get("energyMean", 0)
-            unCentral = ac.get("central", -1)
-        if dur < 0.025:    # снижено с 40 мс: ядро может быть короче слога
+        ac  = sd["acoustics"]
+        dur = ac.get("duration", 0)
+        if dur < 0.040:
             continue
         checked += 1
         durRatio  = dur / stDur
-        enerRatio = ener / stEner
+        enerRatio = ac.get("energyMean", 0) / stEner
 
         # централизация: отношение «насколько безударный ближе к шва, чем ударный».
         # Меньше central → ближе к центру → сильнее редукция.
         # centralRatio < 1 означает, что безударный централизован сильнее ударного (хорошо).
+        unCentral = ac.get("central", -1)
         if stCentral > 0 and unCentral >= 0:
             centralRatio = unCentral / stCentral      # <1 = безударный ближе к шва (есть редукция)
         else:
@@ -1305,9 +1208,7 @@ def saveJson(audioFile, audioDuration, sr, refText, recText, words,
             "substituted": [{"expected": r, "got": g} for r, g in cmp["substituted"]],
             "missed": cmp["missed"], "inserted": cmp["inserted"]},
     }
-    # Сохраняем в analysis/, а не рядом с WAV
-    basename = os.path.basename(audioFile).replace(".wav", "_syllable_analysis.json")
-    name = os.path.join(SCRIPT_DIR, "analysis", basename)
+    name = audioFile.replace(".wav", "_syllable_analysis.json")
     with open(name, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"\nОтчёт сохранён: {name}")

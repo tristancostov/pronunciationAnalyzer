@@ -1,5 +1,5 @@
 {
-  "audioFile": "d:\\Mycode\\audio\\3local.wav",
+  "audioFile": "D:\\Mycode\\audio\\3local.wav",
   "durationSec": 49.74,
   "sampleRate": 16000,
   "referenceText": "Сегодня проведём день вместе. Хочу поднять тему организации своего дня. Так что покажу, расскажу вам, как организовать свой день без внутреннего напряжения и вот этого вот культа продуктивности, который последнее время меня очень стал подбешивать. Быстро пробежимся по структуре видео. Ритуалы и привычки, которые помогут вам качественно планировать свой день и неделю. Лайфхаки по выполнению дел, которые могут вам не особо нравиться, но, тем не менее, требуют времени и выполнения. Советы по восстановлению сил. Ну и, конечно же, домашка. С вас палец вверх. С меня классное времяпрепровождение и чувство умиротворения и спокойствия. Кто это? Алло? Неважно, о чем мы. Приятного просмотра.",
@@ -48,7 +48,18 @@
               2506.2
             ],
             "central": 1006.3,
-            "duration": 0.17
+            "duration": 0.17,
+            "core": {
+              "duration": 0.045,
+              "energyMean": 0.071986,
+              "formants": [
+                476.2,
+                1413.9
+              ],
+              "central": 89.3,
+              "startInSyl": 0.125,
+              "endInSyl": 0.17
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -80,7 +91,8 @@
               1390.0
             ],
             "central": 164.3,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -112,7 +124,8 @@
               908.2
             ],
             "central": 592.9,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -170,7 +183,8 @@
               1476.8
             ],
             "central": 32.0,
-            "duration": 0.26
+            "duration": 0.26,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -202,7 +216,18 @@
               1578.8
             ],
             "central": 113.9,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": {
+              "duration": 0.117,
+              "energyMean": 0.170039,
+              "formants": [
+                601.1,
+                1546.0
+              ],
+              "central": 111.1,
+              "startInSyl": 0.013,
+              "endInSyl": 0.13
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -234,7 +259,18 @@
               1203.6
             ],
             "central": 298.8,
-            "duration": 0.33
+            "duration": 0.33,
+            "core": {
+              "duration": 0.325,
+              "energyMean": 0.05626,
+              "formants": [
+                464.2,
+                1203.8
+              ],
+              "central": 298.4,
+              "startInSyl": 0.0,
+              "endInSyl": 0.325
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -292,7 +328,18 @@
               1111.9
             ],
             "central": 389.0,
-            "duration": 0.3
+            "duration": 0.3,
+            "core": {
+              "duration": 0.188,
+              "energyMean": 0.150617,
+              "formants": [
+                466.4,
+                1071.3
+              ],
+              "central": 430.0,
+              "startInSyl": 0.113,
+              "endInSyl": 0.3
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -350,7 +397,18 @@
               2582.8
             ],
             "central": 1083.4,
-            "duration": 0.29
+            "duration": 0.29,
+            "core": {
+              "duration": 0.2,
+              "energyMean": 0.141672,
+              "formants": [
+                525.4,
+                1095.6
+              ],
+              "central": 405.2,
+              "startInSyl": 0.0,
+              "endInSyl": 0.2
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -382,7 +440,18 @@
               1714.2
             ],
             "central": 237.0,
-            "duration": 0.415
+            "duration": 0.415,
+            "core": {
+              "duration": 0.352,
+              "energyMean": 0.041126,
+              "formants": [
+                588.5,
+                1749.9
+              ],
+              "central": 265.1,
+              "startInSyl": 0.062,
+              "endInSyl": 0.415
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -440,7 +509,18 @@
               1926.3
             ],
             "central": 428.7,
-            "duration": 0.23
+            "duration": 0.23,
+            "core": {
+              "duration": 0.1,
+              "energyMean": 0.116973,
+              "formants": [
+                492.3,
+                1246.6
+              ],
+              "central": 253.5,
+              "startInSyl": 0.1,
+              "endInSyl": 0.2
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -472,7 +552,18 @@
               1646.5
             ],
             "central": 181.7,
-            "duration": 0.1
+            "duration": 0.1,
+            "core": {
+              "duration": 0.062,
+              "energyMean": 0.034158,
+              "formants": [
+                365.7,
+                1548.1
+              ],
+              "central": 142.7,
+              "startInSyl": 0.025,
+              "endInSyl": 0.087
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -485,10 +576,10 @@
           {
             "syllable": "хо",
             "position": 1,
-            "durRatio": 2.3,
-            "enerRatio": 2.17,
-            "centralRatio": 2.36,
-            "hint": "Безударный слог «хо»: длительность 230%, энергия 217% от ударного «чу», централизация 236% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+            "durRatio": 1.61,
+            "enerRatio": 3.42,
+            "centralRatio": 1.78,
+            "hint": "Безударный слог «хо»: длительность 161%, энергия 342% от ударного «чу», централизация 178% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
           }
         ],
         "reductionScore": 0.0,
@@ -539,7 +630,18 @@
               1579.8
             ],
             "central": 179.4,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": {
+              "duration": 0.083,
+              "energyMean": 0.151148,
+              "formants": [
+                620.5,
+                1753.8
+              ],
+              "central": 281.0,
+              "startInSyl": 0.037,
+              "endInSyl": 0.12
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -571,7 +673,8 @@
               2107.0
             ],
             "central": 630.0,
-            "duration": 0.27
+            "duration": 0.27,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -629,7 +732,18 @@
               1843.0
             ],
             "central": 367.0,
-            "duration": 0.19
+            "duration": 0.19,
+            "core": {
+              "duration": 0.128,
+              "energyMean": 0.134134,
+              "formants": [
+                671.8,
+                1692.5
+              ],
+              "central": 258.0,
+              "startInSyl": 0.062,
+              "endInSyl": 0.19
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -661,7 +775,8 @@
               1201.8
             ],
             "central": 330.1,
-            "duration": 0.05
+            "duration": 0.05,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -680,7 +795,7 @@
       "word": "организации",
       "start": 3.3,
       "end": 3.9,
-      "confidence": 0.938235,
+      "confidence": 0.938236,
       "lemma": "организация",
       "pos": "NOUN",
       "syllableStr": "о-рга-ни-за-ции",
@@ -719,7 +834,8 @@
               1599.6
             ],
             "central": 148.5,
-            "duration": 0.04
+            "duration": 0.04,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -751,7 +867,8 @@
               1189.5
             ],
             "central": 315.2,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -783,7 +900,8 @@
               880.6
             ],
             "central": 622.2,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -815,7 +933,18 @@
               1553.3
             ],
             "central": 218.1,
-            "duration": 0.19
+            "duration": 0.19,
+            "core": {
+              "duration": 0.15,
+              "energyMean": 0.143955,
+              "formants": [
+                709.1,
+                1575.6
+              ],
+              "central": 222.3,
+              "startInSyl": 0.025,
+              "endInSyl": 0.175
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -847,7 +976,18 @@
               2052.4
             ],
             "central": 553.5,
-            "duration": 0.11
+            "duration": 0.11,
+            "core": {
+              "duration": 0.075,
+              "energyMean": 0.024181,
+              "formants": [
+                450.6,
+                2046.5
+              ],
+              "central": 548.7,
+              "startInSyl": 0.025,
+              "endInSyl": 0.1
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -905,7 +1045,18 @@
               1312.7
             ],
             "central": 199.4,
-            "duration": 0.2
+            "duration": 0.2,
+            "core": {
+              "duration": 0.125,
+              "energyMean": 0.083225,
+              "formants": [
+                564.1,
+                1355.4
+              ],
+              "central": 158.2,
+              "startInSyl": 0.075,
+              "endInSyl": 0.2
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -937,7 +1088,8 @@
               1430.7
             ],
             "central": 105.0,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -995,7 +1147,8 @@
               1659.7
             ],
             "central": 270.5,
-            "duration": 0.375
+            "duration": 0.375,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -1053,7 +1206,18 @@
               908.4
             ],
             "central": 638.1,
-            "duration": 0.26
+            "duration": 0.26,
+            "core": {
+              "duration": 0.15,
+              "energyMean": 0.151672,
+              "formants": [
+                748.4,
+                810.9
+              ],
+              "central": 732.5,
+              "startInSyl": 0.087,
+              "endInSyl": 0.237
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1111,7 +1275,18 @@
               1498.0
             ],
             "central": 49.8,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": {
+              "duration": 0.08,
+              "energyMean": 0.060148,
+              "formants": [
+                500.5,
+                1387.6
+              ],
+              "central": 112.4,
+              "startInSyl": 0.1,
+              "endInSyl": 0.18
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1169,7 +1344,8 @@
               1085.9
             ],
             "central": 418.7,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -1201,7 +1377,8 @@
               1496.5
             ],
             "central": 192.3,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -1233,7 +1410,18 @@
               1000.6
             ],
             "central": 515.0,
-            "duration": 0.385
+            "duration": 0.385,
+            "core": {
+              "duration": 0.347,
+              "energyMean": 0.072186,
+              "formants": [
+                652.3,
+                1008.2
+              ],
+              "central": 514.8,
+              "startInSyl": 0.037,
+              "endInSyl": 0.385
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1291,7 +1479,18 @@
               1869.6
             ],
             "central": 387.0,
-            "duration": 0.26
+            "duration": 0.26,
+            "core": {
+              "duration": 0.188,
+              "energyMean": 0.076822,
+              "formants": [
+                614.4,
+                1835.4
+              ],
+              "central": 354.4,
+              "startInSyl": 0.0,
+              "endInSyl": 0.188
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1323,7 +1522,18 @@
               1731.7
             ],
             "central": 282.0,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": {
+              "duration": 0.142,
+              "energyMean": 0.14079,
+              "formants": [
+                640.3,
+                1758.1
+              ],
+              "central": 293.8,
+              "startInSyl": 0.037,
+              "endInSyl": 0.18
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1355,7 +1565,18 @@
               1101.3
             ],
             "central": 403.0,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": {
+              "duration": 0.115,
+              "energyMean": 0.117931,
+              "formants": [
+                568.8,
+                1097.0
+              ],
+              "central": 408.8,
+              "startInSyl": 0.025,
+              "endInSyl": 0.14
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1413,7 +1634,8 @@
               777.2
             ],
             "central": 734.0,
-            "duration": 0.21
+            "duration": 0.21,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -1471,7 +1693,8 @@
               1676.4
             ],
             "central": 302.6,
-            "duration": 0.27
+            "duration": 0.27,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -1529,7 +1752,8 @@
               1896.4
             ],
             "central": 396.9,
-            "duration": 0.077
+            "duration": 0.077,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -1561,7 +1785,8 @@
               741.9
             ],
             "central": 758.7,
-            "duration": 0.077
+            "duration": 0.077,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -1593,7 +1818,18 @@
               1018.2
             ],
             "central": 487.0,
-            "duration": 0.155
+            "duration": 0.155,
+            "core": {
+              "duration": 0.138,
+              "energyMean": 0.090552,
+              "formants": [
+                428.7,
+                1004.1
+              ],
+              "central": 501.0,
+              "startInSyl": 0.0,
+              "endInSyl": 0.138
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1625,7 +1861,18 @@
               1284.4
             ],
             "central": 252.2,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": {
+              "duration": 0.105,
+              "energyMean": 0.161612,
+              "formants": [
+                626.7,
+                1249.9
+              ],
+              "central": 280.4,
+              "startInSyl": 0.025,
+              "endInSyl": 0.13
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1657,7 +1904,18 @@
               1839.7
             ],
             "central": 371.2,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": {
+              "duration": 0.113,
+              "energyMean": 0.113624,
+              "formants": [
+                654.3,
+                1840.6
+              ],
+              "central": 373.9,
+              "startInSyl": 0.0,
+              "endInSyl": 0.113
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1724,7 +1982,18 @@
               1609.7
             ],
             "central": 110.2,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": {
+              "duration": 0.08,
+              "energyMean": 0.11051,
+              "formants": [
+                452.0,
+                1677.0
+              ],
+              "central": 183.4,
+              "startInSyl": 0.1,
+              "endInSyl": 0.18
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1782,7 +2051,8 @@
               995.0
             ],
             "central": 505.3,
-            "duration": 0.24
+            "duration": 0.24,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -1840,7 +2110,18 @@
               1437.0
             ],
             "central": 63.5,
-            "duration": 0.3
+            "duration": 0.3,
+            "core": {
+              "duration": 0.225,
+              "energyMean": 0.12869,
+              "formants": [
+                491.9,
+                1740.9
+              ],
+              "central": 241.0,
+              "startInSyl": 0.0,
+              "endInSyl": 0.225
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1898,7 +2179,8 @@
               1027.3
             ],
             "central": 476.9,
-            "duration": 0.125
+            "duration": 0.125,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -1930,7 +2212,18 @@
               1778.2
             ],
             "central": 278.2,
-            "duration": 0.125
+            "duration": 0.125,
+            "core": {
+              "duration": 0.1,
+              "energyMean": 0.044864,
+              "formants": [
+                464.7,
+                1638.1
+              ],
+              "central": 142.5,
+              "startInSyl": 0.0,
+              "endInSyl": 0.1
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1962,7 +2255,18 @@
               2533.7
             ],
             "central": 1033.8,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": {
+              "duration": 0.095,
+              "energyMean": 0.091551,
+              "formants": [
+                547.5,
+                1753.1
+              ],
+              "central": 257.5,
+              "startInSyl": 0.025,
+              "endInSyl": 0.12
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -1994,7 +2298,8 @@
               1305.7
             ],
             "central": 223.3,
-            "duration": 0.08
+            "duration": 0.08,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -2052,7 +2357,8 @@
               1771.2
             ],
             "central": 286.3,
-            "duration": 0.1
+            "duration": 0.1,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -2084,7 +2390,18 @@
               2274.5
             ],
             "central": 777.1,
-            "duration": 0.17
+            "duration": 0.17,
+            "core": {
+              "duration": 0.125,
+              "energyMean": 0.114789,
+              "formants": [
+                436.6,
+                2189.3
+              ],
+              "central": 692.2,
+              "startInSyl": 0.037,
+              "endInSyl": 0.163
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2116,7 +2433,18 @@
               2064.5
             ],
             "central": 572.7,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": {
+              "duration": 0.102,
+              "energyMean": 0.156481,
+              "formants": [
+                591.6,
+                2125.4
+              ],
+              "central": 632.1,
+              "startInSyl": 0.037,
+              "endInSyl": 0.14
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2148,7 +2476,8 @@
               857.9
             ],
             "central": 644.0,
-            "duration": 0.265
+            "duration": 0.265,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -2206,7 +2535,18 @@
               1343.4
             ],
             "central": 191.3,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": {
+              "duration": 0.113,
+              "energyMean": 0.065862,
+              "formants": [
+                418.9,
+                1525.8
+              ],
+              "central": 85.1,
+              "startInSyl": 0.037,
+              "endInSyl": 0.15
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2264,7 +2604,18 @@
               1386.8
             ],
             "central": 117.9,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": {
+              "duration": 0.125,
+              "energyMean": 0.051605,
+              "formants": [
+                440.1,
+                1435.4
+              ],
+              "central": 88.1,
+              "startInSyl": 0.0,
+              "endInSyl": 0.125
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2322,7 +2673,8 @@
               1286.9
             ],
             "central": 216.1,
-            "duration": 0.07
+            "duration": 0.07,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -2354,7 +2706,18 @@
               1798.3
             ],
             "central": 300.5,
-            "duration": 0.08
+            "duration": 0.08,
+            "core": {
+              "duration": 0.055,
+              "energyMean": 0.062808,
+              "formants": [
+                520.9,
+                1060.1
+              ],
+              "central": 440.4,
+              "startInSyl": 0.025,
+              "endInSyl": 0.08
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2386,7 +2749,8 @@
               868.5
             ],
             "central": 632.4,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -2461,7 +2825,18 @@
               1767.5
             ],
             "central": 271.6,
-            "duration": 0.41
+            "duration": 0.41,
+            "core": {
+              "duration": 0.212,
+              "energyMean": 0.033106,
+              "formants": [
+                503.2,
+                1609.7
+              ],
+              "central": 109.7,
+              "startInSyl": 0.0,
+              "endInSyl": 0.212
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2519,7 +2894,18 @@
               1286.1
             ],
             "central": 241.4,
-            "duration": 0.17
+            "duration": 0.17,
+            "core": {
+              "duration": 0.145,
+              "energyMean": 0.169922,
+              "formants": [
+                364.9,
+                1378.5
+              ],
+              "central": 181.7,
+              "startInSyl": 0.025,
+              "endInSyl": 0.17
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2551,7 +2937,8 @@
               1142.2
             ],
             "central": 382.9,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -2609,7 +2996,18 @@
               1656.1
             ],
             "central": 160.5,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": {
+              "duration": 0.107,
+              "energyMean": 0.139311,
+              "formants": [
+                536.0,
+                1667.3
+              ],
+              "central": 171.1,
+              "startInSyl": 0.013,
+              "endInSyl": 0.12
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2641,7 +3039,18 @@
               1529.9
             ],
             "central": 58.4,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": {
+              "duration": 0.125,
+              "energyMean": 0.079277,
+              "formants": [
+                461.6,
+                1642.4
+              ],
+              "central": 147.5,
+              "startInSyl": 0.0,
+              "endInSyl": 0.125
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2673,7 +3082,18 @@
               1308.6
             ],
             "central": 196.0,
-            "duration": 0.4
+            "duration": 0.4,
+            "core": {
+              "duration": 0.225,
+              "energyMean": 0.075079,
+              "formants": [
+                457.1,
+                1150.8
+              ],
+              "central": 351.8,
+              "startInSyl": 0.087,
+              "endInSyl": 0.312
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2705,7 +3125,18 @@
               2402.7
             ],
             "central": 902.8,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": {
+              "duration": 0.092,
+              "energyMean": 0.027531,
+              "formants": [
+                539.1,
+                1989.5
+              ],
+              "central": 491.1,
+              "startInSyl": 0.087,
+              "endInSyl": 0.18
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2737,7 +3168,8 @@
               1553.8
             ],
             "central": 218.5,
-            "duration": 0.11
+            "duration": 0.11,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -2755,8 +3187,8 @@
     {
       "word": "который",
       "start": 12.03,
-      "end": 12.387143,
-      "confidence": 0.457578,
+      "end": 12.387148,
+      "confidence": 0.457012,
       "lemma": "который",
       "pos": "ADJF",
       "syllableStr": "ко-то-рый",
@@ -2795,7 +3227,18 @@
               854.0
             ],
             "central": 650.5,
-            "duration": 0.16
+            "duration": 0.16,
+            "core": {
+              "duration": 0.085,
+              "energyMean": 0.135332,
+              "formants": [
+                565.4,
+                848.1
+              ],
+              "central": 655.2,
+              "startInSyl": 0.075,
+              "endInSyl": 0.16
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2827,7 +3270,18 @@
               1772.7
             ],
             "central": 281.8,
-            "duration": 0.089
+            "duration": 0.089,
+            "core": {
+              "duration": 0.064,
+              "energyMean": 0.155584,
+              "formants": [
+                561.7,
+                1759.0
+              ],
+              "central": 266.2,
+              "startInSyl": 0.025,
+              "endInSyl": 0.089
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2859,7 +3313,8 @@
               1106.3
             ],
             "central": 396.0,
-            "duration": 0.089
+            "duration": 0.089,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -2917,7 +3372,18 @@
               1538.0
             ],
             "central": 240.2,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": {
+              "duration": 0.125,
+              "energyMean": 0.111121,
+              "formants": [
+                741.7,
+                1540.0
+              ],
+              "central": 245.0,
+              "startInSyl": 0.0,
+              "endInSyl": 0.125
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2949,7 +3415,18 @@
               1618.0
             ],
             "central": 121.5,
-            "duration": 0.16
+            "duration": 0.16,
+            "core": {
+              "duration": 0.098,
+              "energyMean": 0.128815,
+              "formants": [
+                458.3,
+                1847.4
+              ],
+              "central": 349.9,
+              "startInSyl": 0.062,
+              "endInSyl": 0.16
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -2981,7 +3458,8 @@
               1951.4
             ],
             "central": 465.5,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -3048,7 +3526,18 @@
               2355.9
             ],
             "central": 856.1,
-            "duration": 0.105
+            "duration": 0.105,
+            "core": {
+              "duration": 0.068,
+              "energyMean": 0.136729,
+              "formants": [
+                536.5,
+                1602.3
+              ],
+              "central": 108.6,
+              "startInSyl": 0.037,
+              "endInSyl": 0.105
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3080,7 +3569,8 @@
               846.1
             ],
             "central": 672.9,
-            "duration": 0.105
+            "duration": 0.105,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -3138,7 +3628,8 @@
               2313.5
             ],
             "central": 815.1,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -3170,7 +3661,8 @@
               1606.5
             ],
             "central": 305.0,
-            "duration": 0.075
+            "duration": 0.075,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -3237,7 +3729,18 @@
               1293.9
             ],
             "central": 206.7,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": {
+              "duration": 0.15,
+              "energyMean": 0.169061,
+              "formants": [
+                514.4,
+                1262.7
+              ],
+              "central": 237.7,
+              "startInSyl": 0.0,
+              "endInSyl": 0.15
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3269,7 +3772,18 @@
               590.7
             ],
             "central": 909.3,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": {
+              "duration": 0.087,
+              "energyMean": 0.074861,
+              "formants": [
+                474.9,
+                499.8
+              ],
+              "central": 1000.5,
+              "startInSyl": 0.025,
+              "endInSyl": 0.113
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3327,7 +3841,18 @@
               1378.8
             ],
             "central": 252.0,
-            "duration": 0.44
+            "duration": 0.44,
+            "core": {
+              "duration": 0.328,
+              "energyMean": 0.10012,
+              "formants": [
+                620.6,
+                1136.3
+              ],
+              "central": 383.2,
+              "startInSyl": 0.113,
+              "endInSyl": 0.44
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3346,7 +3871,7 @@
       "word": "подмешивать",
       "start": 14.28,
       "end": 15.09,
-      "confidence": 0.771273,
+      "confidence": 0.762662,
       "lemma": "подмешивать",
       "pos": "INFN",
       "syllableStr": "по-дме-ши-вать",
@@ -3385,7 +3910,8 @@
               1575.4
             ],
             "central": 163.0,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -3417,7 +3943,18 @@
               2035.5
             ],
             "central": 536.0,
-            "duration": 0.24
+            "duration": 0.24,
+            "core": {
+              "duration": 0.15,
+              "energyMean": 0.088867,
+              "formants": [
+                455.0,
+                1596.2
+              ],
+              "central": 106.2,
+              "startInSyl": 0.0,
+              "endInSyl": 0.15
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3449,7 +3986,18 @@
               1638.9
             ],
             "central": 142.3,
-            "duration": 0.165
+            "duration": 0.165,
+            "core": {
+              "duration": 0.09,
+              "energyMean": 0.018547,
+              "formants": [
+                463.2,
+                1669.8
+              ],
+              "central": 173.7,
+              "startInSyl": 0.075,
+              "endInSyl": 0.165
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3481,7 +4029,18 @@
               2198.1
             ],
             "central": 773.8,
-            "duration": 0.165
+            "duration": 0.165,
+            "core": {
+              "duration": 0.075,
+              "energyMean": 0.009918,
+              "formants": [
+                972.6,
+                2060.9
+              ],
+              "central": 733.5,
+              "startInSyl": 0.0,
+              "endInSyl": 0.075
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3539,7 +4098,18 @@
               1261.7
             ],
             "central": 238.6,
-            "duration": 0.42
+            "duration": 0.42,
+            "core": {
+              "duration": 0.338,
+              "energyMean": 0.133337,
+              "formants": [
+                519.6,
+                1278.1
+              ],
+              "central": 222.8,
+              "startInSyl": 0.0,
+              "endInSyl": 0.338
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3571,7 +4141,18 @@
               1754.2
             ],
             "central": 264.3,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": {
+              "duration": 0.105,
+              "energyMean": 0.121727,
+              "formants": [
+                569.9,
+                1189.2
+              ],
+              "central": 318.6,
+              "startInSyl": 0.025,
+              "endInSyl": 0.13
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3629,7 +4210,8 @@
               1665.8
             ],
             "central": 170.4,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -3661,7 +4243,8 @@
               1554.9
             ],
             "central": 82.0,
-            "duration": 0.1
+            "duration": 0.1,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -3693,7 +4276,18 @@
               948.0
             ],
             "central": 556.9,
-            "duration": 0.19
+            "duration": 0.19,
+            "core": {
+              "duration": 0.138,
+              "energyMean": 0.129606,
+              "formants": [
+                414.5,
+                945.8
+              ],
+              "central": 560.8,
+              "startInSyl": 0.025,
+              "endInSyl": 0.163
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3725,7 +4319,18 @@
               1467.0
             ],
             "central": 86.7,
-            "duration": 0.115
+            "duration": 0.115,
+            "core": {
+              "duration": 0.09,
+              "energyMean": 0.098275,
+              "formants": [
+                566.5,
+                1437.9
+              ],
+              "central": 91.0,
+              "startInSyl": 0.025,
+              "endInSyl": 0.115
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3783,7 +4388,18 @@
               1039.6
             ],
             "central": 462.4,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": {
+              "duration": 0.117,
+              "energyMean": 0.160638,
+              "formants": [
+                551.4,
+                1151.6
+              ],
+              "central": 352.2,
+              "startInSyl": 0.062,
+              "endInSyl": 0.18
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3841,7 +4457,18 @@
               1620.1
             ],
             "central": 131.8,
-            "duration": 0.2
+            "duration": 0.2,
+            "core": {
+              "duration": 0.075,
+              "energyMean": 0.023502,
+              "formants": [
+                400.1,
+                1542.3
+              ],
+              "central": 108.5,
+              "startInSyl": 0.1,
+              "endInSyl": 0.175
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3873,7 +4500,18 @@
               1297.4
             ],
             "central": 205.2,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": {
+              "duration": 0.09,
+              "energyMean": 0.147607,
+              "formants": [
+                470.1,
+                1423.7
+              ],
+              "central": 81.9,
+              "startInSyl": 0.05,
+              "endInSyl": 0.14
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -3905,7 +4543,8 @@
               2591.5
             ],
             "central": 1092.1,
-            "duration": 0.11
+            "duration": 0.11,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -3963,7 +4602,8 @@
               972.0
             ],
             "central": 532.6,
-            "duration": 0.16
+            "duration": 0.16,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -3995,7 +4635,18 @@
               1163.9
             ],
             "central": 343.6,
-            "duration": 0.36
+            "duration": 0.36,
+            "core": {
+              "duration": 0.323,
+              "energyMean": 0.069571,
+              "formants": [
+                578.5,
+                1157.1
+              ],
+              "central": 351.8,
+              "startInSyl": 0.037,
+              "endInSyl": 0.36
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4053,7 +4704,8 @@
               1828.9
             ],
             "central": 329.4,
-            "duration": 0.21
+            "duration": 0.21,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -4085,7 +4737,18 @@
               985.1
             ],
             "central": 558.8,
-            "duration": 0.19
+            "duration": 0.19,
+            "core": {
+              "duration": 0.177,
+              "energyMean": 0.191231,
+              "formants": [
+                737.1,
+                987.7
+              ],
+              "central": 564.5,
+              "startInSyl": 0.013,
+              "endInSyl": 0.19
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4117,7 +4780,8 @@
               1362.4
             ],
             "central": 215.8,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -4175,7 +4839,8 @@
               1468.2
             ],
             "central": 45.0,
-            "duration": 0.06
+            "duration": 0.06,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -4233,7 +4898,18 @@
               1912.6
             ],
             "central": 414.9,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": {
+              "duration": 0.1,
+              "energyMean": 0.053847,
+              "formants": [
+                448.9,
+                1279.1
+              ],
+              "central": 226.7,
+              "startInSyl": 0.05,
+              "endInSyl": 0.15
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4265,7 +4941,18 @@
               1567.2
             ],
             "central": 103.6,
-            "duration": 0.2
+            "duration": 0.2,
+            "core": {
+              "duration": 0.125,
+              "energyMean": 0.066682,
+              "formants": [
+                450.9,
+                1516.5
+              ],
+              "central": 51.8,
+              "startInSyl": 0.0,
+              "endInSyl": 0.125
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4297,7 +4984,18 @@
               2465.5
             ],
             "central": 965.6,
-            "duration": 0.1
+            "duration": 0.1,
+            "core": {
+              "duration": 0.075,
+              "energyMean": 0.056452,
+              "formants": [
+                507.4,
+                2389.7
+              ],
+              "central": 889.7,
+              "startInSyl": 0.025,
+              "endInSyl": 0.1
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4355,7 +5053,18 @@
               1225.3
             ],
             "central": 302.6,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": {
+              "duration": 0.092,
+              "energyMean": 0.087382,
+              "formants": [
+                607.4,
+                1210.7
+              ],
+              "central": 308.6,
+              "startInSyl": 0.037,
+              "endInSyl": 0.13
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4387,7 +5096,18 @@
               1706.8
             ],
             "central": 213.8,
-            "duration": 0.1
+            "duration": 0.1,
+            "core": {
+              "duration": 0.087,
+              "energyMean": 0.106571,
+              "formants": [
+                548.5,
+                1708.8
+              ],
+              "central": 214.4,
+              "startInSyl": 0.013,
+              "endInSyl": 0.1
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4419,7 +5139,8 @@
               1181.1
             ],
             "central": 325.1,
-            "duration": 0.1
+            "duration": 0.1,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -4486,7 +5207,8 @@
               1244.6
             ],
             "central": 309.0,
-            "duration": 0.1
+            "duration": 0.1,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -4518,7 +5240,8 @@
               1116.9
             ],
             "central": 387.8,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -4550,7 +5273,18 @@
               1551.7
             ],
             "central": 62.8,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": {
+              "duration": 0.138,
+              "energyMean": 0.073317,
+              "formants": [
+                534.2,
+                1555.1
+              ],
+              "central": 64.9,
+              "startInSyl": 0.0,
+              "endInSyl": 0.138
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4608,7 +5342,18 @@
               1226.3
             ],
             "central": 278.6,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": {
+              "duration": 0.168,
+              "energyMean": 0.08012,
+              "formants": [
+                416.2,
+                1211.0
+              ],
+              "central": 300.9,
+              "startInSyl": 0.013,
+              "endInSyl": 0.18
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4627,7 +5372,7 @@
       "word": "кач",
       "start": 19.83,
       "end": 20.16,
-      "confidence": 0.370049,
+      "confidence": 0.372646,
       "lemma": "кач",
       "pos": "UNKN",
       "syllableStr": "кач",
@@ -4666,7 +5411,18 @@
               1756.1
             ],
             "central": 413.5,
-            "duration": 0.33
+            "duration": 0.33,
+            "core": {
+              "duration": 0.175,
+              "energyMean": 0.16288,
+              "formants": [
+                815.8,
+                1330.1
+              ],
+              "central": 358.6,
+              "startInSyl": 0.087,
+              "endInSyl": 0.263
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4684,8 +5440,8 @@
     {
       "word": "твенно",
       "start": 20.16,
-      "end": 20.369095,
-      "confidence": 0.896267,
+      "end": 20.369101,
+      "confidence": 0.896798,
       "lemma": "твенный",
       "pos": "ADJS",
       "syllableStr": "тве-нно",
@@ -4724,7 +5480,8 @@
               1919.3
             ],
             "central": 426.1,
-            "duration": 0.104
+            "duration": 0.104,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -4756,7 +5513,8 @@
               1189.6
             ],
             "central": 315.0,
-            "duration": 0.105
+            "duration": 0.105,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -4773,7 +5531,7 @@
     },
     {
       "word": "планировать",
-      "start": 20.369095,
+      "start": 20.369101,
       "end": 20.88,
       "confidence": 1.0,
       "lemma": "планировать",
@@ -4814,7 +5572,8 @@
               1247.7
             ],
             "central": 253.8,
-            "duration": 0.03
+            "duration": 0.03,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -4846,7 +5605,18 @@
               1579.9
             ],
             "central": 134.4,
-            "duration": 0.11
+            "duration": 0.11,
+            "core": {
+              "duration": 0.085,
+              "energyMean": 0.109554,
+              "formants": [
+                613.3,
+                1730.9
+              ],
+              "central": 257.2,
+              "startInSyl": 0.025,
+              "endInSyl": 0.11
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4878,7 +5648,8 @@
               1149.6
             ],
             "central": 355.4,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -4910,7 +5681,18 @@
               1557.1
             ],
             "central": 80.3,
-            "duration": 0.231
+            "duration": 0.231,
+            "core": {
+              "duration": 0.212,
+              "energyMean": 0.080743,
+              "formants": [
+                553.7,
+                1489.3
+              ],
+              "central": 54.8,
+              "startInSyl": 0.0,
+              "endInSyl": 0.212
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -4929,7 +5711,7 @@
             "hint": "Безударный слог «ро»: длительность 127%, энергия 93% от ударного «ни», централизация 264% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
           }
         ],
-        "reductionScore": 50.0,
+        "reductionScore": 66.7,
         "hasReductionIssue": true
       },
       "hasIssue": true
@@ -4977,7 +5759,18 @@
               1216.4
             ],
             "central": 288.0,
-            "duration": 0.21
+            "duration": 0.21,
+            "core": {
+              "duration": 0.147,
+              "energyMean": 0.160806,
+              "formants": [
+                439.7,
+                1299.2
+              ],
+              "central": 209.7,
+              "startInSyl": 0.062,
+              "endInSyl": 0.21
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5035,7 +5828,8 @@
               1092.3
             ],
             "central": 408.9,
-            "duration": 0.255
+            "duration": 0.255,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -5093,7 +5887,18 @@
               1288.5
             ],
             "central": 214.4,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": {
+              "duration": 0.058,
+              "energyMean": 0.080189,
+              "formants": [
+                417.6,
+                949.3
+              ],
+              "central": 556.8,
+              "startInSyl": 0.062,
+              "endInSyl": 0.12
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5151,7 +5956,8 @@
               942.8
             ],
             "central": 562.7,
-            "duration": 0.2
+            "duration": 0.2,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -5183,7 +5989,18 @@
               1609.3
             ],
             "central": 111.8,
-            "duration": 0.17
+            "duration": 0.17,
+            "core": {
+              "duration": 0.145,
+              "energyMean": 0.161651,
+              "formants": [
+                492.4,
+                1654.1
+              ],
+              "central": 154.3,
+              "startInSyl": 0.025,
+              "endInSyl": 0.17
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5215,7 +6032,8 @@
               1031.8
             ],
             "central": 472.9,
-            "duration": 0.275
+            "duration": 0.275,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -5273,7 +6091,18 @@
               1140.1
             ],
             "central": 367.9,
-            "duration": 0.23
+            "duration": 0.23,
+            "core": {
+              "duration": 0.18,
+              "energyMean": 0.193769,
+              "formants": [
+                618.9,
+                1381.8
+              ],
+              "central": 167.7,
+              "startInSyl": 0.05,
+              "endInSyl": 0.23
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5305,7 +6134,18 @@
               1557.3
             ],
             "central": 60.2,
-            "duration": 0.11
+            "duration": 0.11,
+            "core": {
+              "duration": 0.1,
+              "energyMean": 0.059374,
+              "formants": [
+                480.0,
+                1553.7
+              ],
+              "central": 57.3,
+              "startInSyl": 0.0,
+              "endInSyl": 0.1
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5337,7 +6177,18 @@
               1850.4
             ],
             "central": 443.8,
-            "duration": 0.34
+            "duration": 0.34,
+            "core": {
+              "duration": 0.175,
+              "energyMean": 0.090779,
+              "formants": [
+                733.1,
+                1878.2
+              ],
+              "central": 444.3,
+              "startInSyl": 0.062,
+              "endInSyl": 0.237
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5350,18 +6201,18 @@
           {
             "syllable": "ла",
             "position": 1,
-            "durRatio": 2.09,
-            "enerRatio": 2.85,
-            "centralRatio": 6.11,
-            "hint": "Безударный слог «ла»: длительность 209%, энергия 285% от ударного «йфха», централизация 611% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+            "durRatio": 1.8,
+            "enerRatio": 3.26,
+            "centralRatio": 2.93,
+            "hint": "Безударный слог «ла»: длительность 180%, энергия 326% от ударного «йфха», централизация 293% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
           },
           {
             "syllable": "ки",
             "position": 3,
-            "durRatio": 3.09,
-            "enerRatio": 1.37,
-            "centralRatio": 7.37,
-            "hint": "Безударный слог «ки»: длительность 309%, энергия 137% от ударного «йфха», централизация 737% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+            "durRatio": 1.75,
+            "enerRatio": 1.53,
+            "centralRatio": 7.75,
+            "hint": "Безударный слог «ки»: длительность 175%, энергия 153% от ударного «йфха», централизация 775% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
           }
         ],
         "reductionScore": 0.0,
@@ -5412,7 +6263,8 @@
               919.0
             ],
             "central": 582.3,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -5470,7 +6322,8 @@
               875.9
             ],
             "central": 624.6,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -5502,7 +6355,8 @@
               1130.6
             ],
             "central": 384.1,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -5534,7 +6388,8 @@
               1066.9
             ],
             "central": 435.9,
-            "duration": 0.02
+            "duration": 0.02,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -5566,7 +6421,8 @@
               752.1
             ],
             "central": 752.7,
-            "duration": 0.25
+            "duration": 0.25,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -5633,7 +6489,18 @@
               1251.6
             ],
             "central": 257.3,
-            "duration": 0.24
+            "duration": 0.24,
+            "core": {
+              "duration": 0.177,
+              "energyMean": 0.145273,
+              "formants": [
+                541.9,
+                995.6
+              ],
+              "central": 506.1,
+              "startInSyl": 0.062,
+              "endInSyl": 0.24
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5691,7 +6558,18 @@
               1001.2
             ],
             "central": 506.7,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": {
+              "duration": 0.095,
+              "energyMean": 0.087208,
+              "formants": [
+                607.6,
+                788.5
+              ],
+              "central": 719.6,
+              "startInSyl": 0.025,
+              "endInSyl": 0.12
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5723,7 +6601,18 @@
               1037.6
             ],
             "central": 462.5,
-            "duration": 0.16
+            "duration": 0.16,
+            "core": {
+              "duration": 0.122,
+              "energyMean": 0.140929,
+              "formants": [
+                509.9,
+                967.2
+              ],
+              "central": 532.9,
+              "startInSyl": 0.037,
+              "endInSyl": 0.16
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5755,7 +6644,18 @@
               1820.3
             ],
             "central": 338.1,
-            "duration": 0.53
+            "duration": 0.53,
+            "core": {
+              "duration": 0.525,
+              "energyMean": 0.104085,
+              "formants": [
+                608.1,
+                1821.3
+              ],
+              "central": 339.0,
+              "startInSyl": 0.0,
+              "endInSyl": 0.525
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5813,7 +6713,8 @@
               970.4
             ],
             "central": 533.5,
-            "duration": 0.19
+            "duration": 0.19,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -5845,7 +6746,18 @@
               1217.6
             ],
             "central": 282.8,
-            "duration": 0.17
+            "duration": 0.17,
+            "core": {
+              "duration": 0.163,
+              "energyMean": 0.063656,
+              "formants": [
+                514.7,
+                1255.3
+              ],
+              "central": 245.1,
+              "startInSyl": 0.0,
+              "endInSyl": 0.163
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5903,7 +6815,18 @@
               963.0
             ],
             "central": 562.6,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": {
+              "duration": 0.168,
+              "energyMean": 0.148605,
+              "formants": [
+                621.2,
+                968.5
+              ],
+              "central": 545.1,
+              "startInSyl": 0.013,
+              "endInSyl": 0.18
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -5961,7 +6884,8 @@
               1931.8
             ],
             "central": 467.2,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6019,7 +6943,18 @@
               1911.1
             ],
             "central": 473.6,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": {
+              "duration": 0.05,
+              "energyMean": 0.045483,
+              "formants": [
+                750.2,
+                1862.8
+              ],
+              "central": 440.7,
+              "startInSyl": 0.0,
+              "endInSyl": 0.05
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -6051,7 +6986,18 @@
               1077.6
             ],
             "central": 422.4,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": {
+              "duration": 0.095,
+              "energyMean": 0.095298,
+              "formants": [
+                475.3,
+                1114.1
+              ],
+              "central": 386.7,
+              "startInSyl": 0.025,
+              "endInSyl": 0.12
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -6083,7 +7029,8 @@
               1161.5
             ],
             "central": 358.2,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6102,7 +7049,7 @@
       "word": "нравится",
       "start": 25.74,
       "end": 26.25,
-      "confidence": 0.741171,
+      "confidence": 0.740175,
       "lemma": "нравиться",
       "pos": "VERB",
       "syllableStr": "нра-ви-тся",
@@ -6141,7 +7088,8 @@
               891.1
             ],
             "central": 612.8,
-            "duration": 0.06
+            "duration": 0.06,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6173,7 +7121,8 @@
               1791.1
             ],
             "central": 381.2,
-            "duration": 0.08
+            "duration": 0.08,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6205,7 +7154,18 @@
               2005.3
             ],
             "central": 517.7,
-            "duration": 0.37
+            "duration": 0.37,
+            "core": {
+              "duration": 0.212,
+              "energyMean": 0.106891,
+              "formants": [
+                678.3,
+                1914.7
+              ],
+              "central": 451.4,
+              "startInSyl": 0.0,
+              "endInSyl": 0.212
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -6263,7 +7223,8 @@
               847.6
             ],
             "central": 652.4,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6321,7 +7282,18 @@
               954.1
             ],
             "central": 551.5,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": {
+              "duration": 0.105,
+              "energyMean": 0.080534,
+              "formants": [
+                408.8,
+                985.9
+              ],
+              "central": 522.1,
+              "startInSyl": 0.075,
+              "endInSyl": 0.18
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -6379,7 +7351,8 @@
               950.9
             ],
             "central": 553.9,
-            "duration": 0.09
+            "duration": 0.09,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6437,7 +7410,8 @@
               702.9
             ],
             "central": 803.7,
-            "duration": 0.02
+            "duration": 0.02,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6469,7 +7443,8 @@
               643.1
             ],
             "central": 858.7,
-            "duration": 0.25
+            "duration": 0.25,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6536,7 +7511,18 @@
               1712.7
             ],
             "central": 212.7,
-            "duration": 0.27
+            "duration": 0.27,
+            "core": {
+              "duration": 0.158,
+              "energyMean": 0.132127,
+              "formants": [
+                588.4,
+                1723.3
+              ],
+              "central": 240.2,
+              "startInSyl": 0.113,
+              "endInSyl": 0.27
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -6568,7 +7554,18 @@
               1234.3
             ],
             "central": 281.2,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": {
+              "duration": 0.163,
+              "energyMean": 0.104709,
+              "formants": [
+                406.8,
+                1184.8
+              ],
+              "central": 328.7,
+              "startInSyl": 0.0,
+              "endInSyl": 0.163
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -6626,7 +7623,18 @@
               1071.4
             ],
             "central": 429.9,
-            "duration": 0.07
+            "duration": 0.07,
+            "core": {
+              "duration": 0.045,
+              "energyMean": 0.111465,
+              "formants": [
+                456.2,
+                1041.1
+              ],
+              "central": 461.0,
+              "startInSyl": 0.025,
+              "endInSyl": 0.07
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -6658,7 +7666,8 @@
               813.0
             ],
             "central": 687.3,
-            "duration": 0.28
+            "duration": 0.28,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6690,7 +7699,8 @@
               1813.4
             ],
             "central": 319.6,
-            "duration": 0.295
+            "duration": 0.295,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6757,7 +7767,8 @@
               1739.7
             ],
             "central": 241.0,
-            "duration": 0.1
+            "duration": 0.1,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6776,7 +7787,7 @@
       "word": "выполнения",
       "start": 28.2,
       "end": 29.01,
-      "confidence": 0.887046,
+      "confidence": 0.886787,
       "lemma": "выполнение",
       "pos": "NOUN",
       "syllableStr": "вы-по-лне-ния",
@@ -6815,7 +7826,8 @@
               1025.7
             ],
             "central": 495.2,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6847,7 +7859,18 @@
               1184.7
             ],
             "central": 353.3,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": {
+              "duration": 0.115,
+              "energyMean": 0.159859,
+              "formants": [
+                682.4,
+                1208.6
+              ],
+              "central": 343.8,
+              "startInSyl": 0.025,
+              "endInSyl": 0.14
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -6879,7 +7902,8 @@
               966.3
             ],
             "central": 533.7,
-            "duration": 0.19
+            "duration": 0.19,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6911,7 +7935,8 @@
               1851.8
             ],
             "central": 375.5,
-            "duration": 0.375
+            "duration": 0.375,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -6930,7 +7955,7 @@
       "word": "советы",
       "start": 29.04,
       "end": 29.58,
-      "confidence": 0.968488,
+      "confidence": 0.968678,
       "lemma": "совет",
       "pos": "NOUN",
       "syllableStr": "со-ве-ты",
@@ -6969,7 +7994,18 @@
               1424.5
             ],
             "central": 95.8,
-            "duration": 0.21
+            "duration": 0.21,
+            "core": {
+              "duration": 0.085,
+              "energyMean": 0.180014,
+              "formants": [
+                541.2,
+                1275.4
+              ],
+              "central": 228.3,
+              "startInSyl": 0.125,
+              "endInSyl": 0.21
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7001,7 +8037,8 @@
               1472.6
             ],
             "central": 96.8,
-            "duration": 0.16
+            "duration": 0.16,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -7033,7 +8070,18 @@
               1910.9
             ],
             "central": 410.9,
-            "duration": 0.1
+            "duration": 0.1,
+            "core": {
+              "duration": 0.087,
+              "energyMean": 0.063813,
+              "formants": [
+                493.6,
+                1867.7
+              ],
+              "central": 367.8,
+              "startInSyl": 0.013,
+              "endInSyl": 0.1
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7100,7 +8148,8 @@
               1112.6
             ],
             "central": 392.5,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -7158,7 +8207,18 @@
               1177.7
             ],
             "central": 332.4,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": {
+              "duration": 0.062,
+              "energyMean": 0.054507,
+              "formants": [
+                427.8,
+                1179.7
+              ],
+              "central": 328.3,
+              "startInSyl": 0.0,
+              "endInSyl": 0.062
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7190,7 +8250,18 @@
               1705.2
             ],
             "central": 250.9,
-            "duration": 0.19
+            "duration": 0.19,
+            "core": {
+              "duration": 0.152,
+              "energyMean": 0.141357,
+              "formants": [
+                673.3,
+                1684.1
+              ],
+              "central": 252.8,
+              "startInSyl": 0.037,
+              "endInSyl": 0.19
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7222,7 +8293,8 @@
               995.2
             ],
             "central": 504.9,
-            "duration": 0.4
+            "duration": 0.4,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -7254,7 +8326,8 @@
               1176.4
             ],
             "central": 326.6,
-            "duration": 0.16
+            "duration": 0.16,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -7286,7 +8359,8 @@
               1241.5
             ],
             "central": 266.3,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -7353,7 +8427,18 @@
               1052.8
             ],
             "central": 449.9,
-            "duration": 0.57
+            "duration": 0.57,
+            "core": {
+              "duration": 0.362,
+              "energyMean": 0.097444,
+              "formants": [
+                409.3,
+                942.3
+              ],
+              "central": 565.0,
+              "startInSyl": 0.175,
+              "endInSyl": 0.537
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7411,7 +8496,8 @@
               786.7
             ],
             "central": 716.1,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -7469,7 +8555,8 @@
               1943.5
             ],
             "central": 448.7,
-            "duration": 0.09
+            "duration": 0.09,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -7527,7 +8614,8 @@
               1851.5
             ],
             "central": 378.0,
-            "duration": 0.16
+            "duration": 0.16,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -7559,7 +8647,18 @@
               2128.1
             ],
             "central": 628.4,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": {
+              "duration": 0.1,
+              "energyMean": 0.066806,
+              "formants": [
+                542.4,
+                2156.0
+              ],
+              "central": 657.4,
+              "startInSyl": 0.0,
+              "endInSyl": 0.1
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7591,7 +8690,18 @@
               1889.9
             ],
             "central": 409.0,
-            "duration": 0.11
+            "duration": 0.11,
+            "core": {
+              "duration": 0.098,
+              "energyMean": 0.101696,
+              "formants": [
+                626.7,
+                1888.4
+              ],
+              "central": 408.5,
+              "startInSyl": 0.013,
+              "endInSyl": 0.11
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7649,7 +8759,18 @@
               1813.8
             ],
             "central": 359.8,
-            "duration": 0.37
+            "duration": 0.37,
+            "core": {
+              "duration": 0.35,
+              "energyMean": 0.092809,
+              "formants": [
+                676.5,
+                1814.5
+              ],
+              "central": 360.6,
+              "startInSyl": 0.0,
+              "endInSyl": 0.35
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7707,7 +8828,18 @@
               1200.8
             ],
             "central": 326.1,
-            "duration": 0.23
+            "duration": 0.23,
+            "core": {
+              "duration": 0.18,
+              "energyMean": 0.149081,
+              "formants": [
+                647.4,
+                1272.3
+              ],
+              "central": 271.2,
+              "startInSyl": 0.05,
+              "endInSyl": 0.23
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7739,7 +8871,18 @@
               1662.1
             ],
             "central": 323.5,
-            "duration": 0.24
+            "duration": 0.24,
+            "core": {
+              "duration": 0.15,
+              "energyMean": 0.053648,
+              "formants": [
+                747.9,
+                1540.8
+              ],
+              "central": 251.2,
+              "startInSyl": 0.0,
+              "endInSyl": 0.15
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7771,7 +8914,18 @@
               1505.9
             ],
             "central": 111.8,
-            "duration": 0.26
+            "duration": 0.26,
+            "core": {
+              "duration": 0.198,
+              "energyMean": 0.01696,
+              "formants": [
+                571.1,
+                1560.9
+              ],
+              "central": 93.6,
+              "startInSyl": 0.062,
+              "endInSyl": 0.26
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7784,10 +8938,10 @@
           {
             "syllable": "до",
             "position": 1,
-            "durRatio": 0.96,
-            "enerRatio": 2.65,
-            "centralRatio": 1.01,
-            "hint": "Безударный слог «до»: длительность 96%, энергия 265% от ударного «ма», централизация 101% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+            "durRatio": 1.2,
+            "enerRatio": 2.78,
+            "centralRatio": 1.08,
+            "hint": "Безударный слог «до»: длительность 120%, энергия 278% от ударного «ма», централизация 108% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
           }
         ],
         "reductionScore": 50.0,
@@ -7798,8 +8952,8 @@
     {
       "word": "с",
       "start": 33.69,
-      "end": 33.892939,
-      "confidence": 0.920469,
+      "end": 33.892848,
+      "confidence": 0.919419,
       "lemma": "с",
       "pos": "PREP",
       "syllableStr": "с",
@@ -7817,28 +8971,39 @@
           "endSec": 0.203,
           "acoustics": {
             "mfcc": [
-              -269.7614,
-              -9.4892,
-              52.173,
-              -20.6503,
-              13.4418,
-              -13.12,
-              6.8601,
-              9.675,
-              -9.9055,
-              5.667,
-              -5.2301,
-              12.0223,
-              -7.2819
+              -269.3489,
+              -9.9435,
+              51.2563,
+              -21.1581,
+              12.7837,
+              -13.1131,
+              7.3694,
+              9.4447,
+              -10.6165,
+              5.8696,
+              -4.9607,
+              10.9605,
+              -7.9978
             ],
-            "energyMean": 0.069634,
+            "energyMean": 0.06962,
             "zcrMean": 0.430385,
             "formants": [
-              873.3,
-              2155.6
+              873.5,
+              2155.5
             ],
             "central": 754.4,
-            "duration": 0.193
+            "duration": 0.193,
+            "core": {
+              "duration": 0.062,
+              "energyMean": 0.001206,
+              "formants": [
+                918.2,
+                1965.1
+              ],
+              "central": 625.5,
+              "startInSyl": 0.0,
+              "endInSyl": 0.062
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7855,7 +9020,7 @@
     },
     {
       "word": "вас",
-      "start": 33.892939,
+      "start": 33.892848,
       "end": 34.17,
       "confidence": 1.0,
       "lemma": "вы",
@@ -7875,28 +9040,39 @@
           "endSec": 0.277,
           "acoustics": {
             "mfcc": [
-              -178.2607,
-              48.1712,
-              -0.5158,
-              -34.4623,
-              -4.6937,
-              -15.4276,
-              -12.7776,
-              -4.0551,
-              -0.4317,
-              5.1029,
-              -15.0218,
-              -7.6973,
-              -7.2901
+              -177.6839,
+              48.0427,
+              -1.0119,
+              -35.0742,
+              -5.3581,
+              -15.4584,
+              -12.8329,
+              -4.1311,
+              -0.6318,
+              4.8371,
+              -14.8847,
+              -7.8021,
+              -7.2351
             ],
-            "energyMean": 0.122077,
+            "energyMean": 0.122139,
             "zcrMean": 0.188043,
             "formants": [
               773.4,
               1575.5
             ],
             "central": 283.6,
-            "duration": 0.277
+            "duration": 0.277,
+            "core": {
+              "duration": 0.212,
+              "energyMean": 0.148253,
+              "formants": [
+                767.4,
+                1568.9
+              ],
+              "central": 276.1,
+              "startInSyl": 0.0,
+              "endInSyl": 0.212
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7954,7 +9130,18 @@
               1548.9
             ],
             "central": 214.9,
-            "duration": 0.17
+            "duration": 0.17,
+            "core": {
+              "duration": 0.12,
+              "energyMean": 0.136621,
+              "formants": [
+                699.1,
+                1706.0
+              ],
+              "central": 286.5,
+              "startInSyl": 0.05,
+              "endInSyl": 0.17
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -7986,7 +9173,18 @@
               2225.7
             ],
             "central": 725.7,
-            "duration": 0.19
+            "duration": 0.19,
+            "core": {
+              "duration": 0.113,
+              "energyMean": 0.044972,
+              "formants": [
+                465.1,
+                1388.3
+              ],
+              "central": 117.0,
+              "startInSyl": 0.0,
+              "endInSyl": 0.113
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8044,7 +9242,18 @@
               1658.4
             ],
             "central": 183.7,
-            "duration": 0.38
+            "duration": 0.38,
+            "core": {
+              "duration": 0.2,
+              "energyMean": 0.111388,
+              "formants": [
+                604.8,
+                1751.2
+              ],
+              "central": 272.2,
+              "startInSyl": 0.025,
+              "endInSyl": 0.225
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8102,7 +9311,18 @@
               2035.0
             ],
             "central": 738.7,
-            "duration": 0.16
+            "duration": 0.16,
+            "core": {
+              "duration": 0.062,
+              "energyMean": 0.004113,
+              "formants": [
+                716.8,
+                1851.6
+              ],
+              "central": 413.1,
+              "startInSyl": 0.0,
+              "endInSyl": 0.062
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8160,7 +9380,18 @@
               1003.1
             ],
             "central": 497.2,
-            "duration": 0.1
+            "duration": 0.1,
+            "core": {
+              "duration": 0.087,
+              "energyMean": 0.156231,
+              "formants": [
+                485.5,
+                1015.0
+              ],
+              "central": 485.2,
+              "startInSyl": 0.013,
+              "endInSyl": 0.1
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8192,7 +9423,8 @@
               2041.2
             ],
             "central": 588.4,
-            "duration": 0.14
+            "duration": 0.14,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -8250,7 +9482,18 @@
               1278.2
             ],
             "central": 335.7,
-            "duration": 0.35
+            "duration": 0.35,
+            "core": {
+              "duration": 0.212,
+              "energyMean": 0.162129,
+              "formants": [
+                770.5,
+                1324.2
+              ],
+              "central": 322.6,
+              "startInSyl": 0.087,
+              "endInSyl": 0.3
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8282,7 +9525,18 @@
               1916.5
             ],
             "central": 440.9,
-            "duration": 0.16
+            "duration": 0.16,
+            "core": {
+              "duration": 0.122,
+              "energyMean": 0.046254,
+              "formants": [
+                659.7,
+                1154.7
+              ],
+              "central": 380.4,
+              "startInSyl": 0.037,
+              "endInSyl": 0.16
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8340,7 +9594,8 @@
               1119.7
             ],
             "central": 380.4,
-            "duration": 0.24
+            "duration": 0.24,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -8372,7 +9627,18 @@
               1745.9
             ],
             "central": 251.7,
-            "duration": 0.11
+            "duration": 0.11,
+            "core": {
+              "duration": 0.085,
+              "energyMean": 0.032135,
+              "formants": [
+                433.9,
+                1667.5
+              ],
+              "central": 180.1,
+              "startInSyl": 0.025,
+              "endInSyl": 0.11
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8404,7 +9670,18 @@
               1486.5
             ],
             "central": 142.2,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": {
+              "duration": 0.125,
+              "energyMean": 0.170553,
+              "formants": [
+                653.8,
+                1476.7
+              ],
+              "central": 155.6,
+              "startInSyl": 0.025,
+              "endInSyl": 0.15
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8436,7 +9713,18 @@
               1786.2
             ],
             "central": 292.8,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": {
+              "duration": 0.087,
+              "energyMean": 0.117083,
+              "formants": [
+                601.5,
+                1822.0
+              ],
+              "central": 337.6,
+              "startInSyl": 0.0,
+              "endInSyl": 0.087
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8468,7 +9756,18 @@
               967.7
             ],
             "central": 532.4,
-            "duration": 0.17
+            "duration": 0.17,
+            "core": {
+              "duration": 0.145,
+              "energyMean": 0.168734,
+              "formants": [
+                505.1,
+                945.0
+              ],
+              "central": 555.0,
+              "startInSyl": 0.025,
+              "endInSyl": 0.17
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8500,7 +9799,8 @@
               2412.6
             ],
             "central": 918.3,
-            "duration": 0.2
+            "duration": 0.2,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -8532,7 +9832,8 @@
               1771.0
             ],
             "central": 280.7,
-            "duration": 0.25
+            "duration": 0.25,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -8590,7 +9891,18 @@
               2803.9
             ],
             "central": 1307.5,
-            "duration": 0.11
+            "duration": 0.11,
+            "core": {
+              "duration": 0.098,
+              "energyMean": 0.147671,
+              "formants": [
+                391.6,
+                2808.8
+              ],
+              "central": 1313.3,
+              "startInSyl": 0.013,
+              "endInSyl": 0.11
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8609,7 +9921,7 @@
       "word": "чувство",
       "start": 37.71,
       "end": 38.28,
-      "confidence": 0.960418,
+      "confidence": 0.960258,
       "lemma": "чувство",
       "pos": "NOUN",
       "syllableStr": "чу-вство",
@@ -8648,7 +9960,18 @@
               1684.6
             ],
             "central": 185.8,
-            "duration": 0.25
+            "duration": 0.25,
+            "core": {
+              "duration": 0.087,
+              "energyMean": 0.06695,
+              "formants": [
+                470.9,
+                1704.7
+              ],
+              "central": 206.8,
+              "startInSyl": 0.1,
+              "endInSyl": 0.188
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8680,7 +10003,18 @@
               1345.9
             ],
             "central": 241.3,
-            "duration": 0.34
+            "duration": 0.34,
+            "core": {
+              "duration": 0.3,
+              "energyMean": 0.094658,
+              "formants": [
+                706.1,
+                1331.5
+              ],
+              "central": 266.2,
+              "startInSyl": 0.037,
+              "endInSyl": 0.338
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8693,10 +10027,10 @@
           {
             "syllable": "вство",
             "position": 2,
-            "durRatio": 1.36,
-            "enerRatio": 1.76,
-            "centralRatio": 1.3,
-            "hint": "Безударный слог «вство»: длительность 136%, энергия 176% от ударного «чу», централизация 130% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+            "durRatio": 3.45,
+            "enerRatio": 1.41,
+            "centralRatio": 1.29,
+            "hint": "Безударный слог «вство»: длительность 345%, энергия 141% от ударного «чу», централизация 129% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
           }
         ],
         "reductionScore": 0.0,
@@ -8747,7 +10081,8 @@
               930.1
             ],
             "central": 577.7,
-            "duration": 0.16
+            "duration": 0.16,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -8779,7 +10114,8 @@
               1889.9
             ],
             "central": 392.6,
-            "duration": 0.15
+            "duration": 0.15,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -8811,7 +10147,18 @@
               1704.4
             ],
             "central": 234.1,
-            "duration": 0.11
+            "duration": 0.11,
+            "core": {
+              "duration": 0.098,
+              "energyMean": 0.154913,
+              "formants": [
+                612.4,
+                1742.9
+              ],
+              "central": 267.6,
+              "startInSyl": 0.013,
+              "endInSyl": 0.11
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -8843,7 +10190,8 @@
               2184.2
             ],
             "central": 684.3,
-            "duration": 0.09
+            "duration": 0.09,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -8875,7 +10223,8 @@
               899.3
             ],
             "central": 621.2,
-            "duration": 0.08
+            "duration": 0.08,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -8907,7 +10256,8 @@
               2351.0
             ],
             "central": 852.0,
-            "duration": 0.1
+            "duration": 0.1,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -8974,7 +10324,18 @@
               1476.0
             ],
             "central": 128.4,
-            "duration": 0.21
+            "duration": 0.21,
+            "core": {
+              "duration": 0.135,
+              "energyMean": 0.088169,
+              "formants": [
+                613.2,
+                1462.0
+              ],
+              "central": 119.4,
+              "startInSyl": 0.075,
+              "endInSyl": 0.21
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9006,7 +10367,18 @@
               1630.0
             ],
             "central": 133.0,
-            "duration": 0.23
+            "duration": 0.23,
+            "core": {
+              "duration": 0.15,
+              "energyMean": 0.071565,
+              "formants": [
+                544.5,
+                1557.8
+              ],
+              "central": 72.9,
+              "startInSyl": 0.0,
+              "endInSyl": 0.15
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9038,7 +10410,18 @@
               1894.2
             ],
             "central": 405.3,
-            "duration": 0.36
+            "duration": 0.36,
+            "core": {
+              "duration": 0.297,
+              "energyMean": 0.049637,
+              "formants": [
+                628.0,
+                1849.7
+              ],
+              "central": 372.4,
+              "startInSyl": 0.062,
+              "endInSyl": 0.36
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9051,21 +10434,13 @@
           {
             "syllable": "спо",
             "position": 1,
-            "durRatio": 0.91,
-            "enerRatio": 1.29,
-            "centralRatio": 0.97,
-            "hint": "Безударный слог «спо»: длительность 91%, энергия 129% от ударного «ко», централизация 97% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
-          },
-          {
-            "syllable": "йствия",
-            "position": 3,
-            "durRatio": 1.57,
-            "enerRatio": 0.83,
-            "centralRatio": 3.05,
-            "hint": "Безударный слог «йствия»: длительность 157%, энергия 83% от ударного «ко», централизация 305% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
+            "durRatio": 0.9,
+            "enerRatio": 1.23,
+            "centralRatio": 1.64,
+            "hint": "Безударный слог «спо»: длительность 90%, энергия 123% от ударного «ко», централизация 164% (гласный не сместился к нейтральному). Похоже, гласный не редуцирован."
           }
         ],
-        "reductionScore": 0.0,
+        "reductionScore": 50.0,
         "hasReductionIssue": true
       },
       "hasIssue": true
@@ -9113,7 +10488,18 @@
               1577.5
             ],
             "central": 117.0,
-            "duration": 0.3
+            "duration": 0.3,
+            "core": {
+              "duration": 0.075,
+              "energyMean": 0.00317,
+              "formants": [
+                325.2,
+                1183.6
+              ],
+              "central": 361.5,
+              "startInSyl": 0.0,
+              "endInSyl": 0.075
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9132,7 +10518,7 @@
       "word": "что",
       "start": 40.32,
       "end": 40.44,
-      "confidence": 0.543426,
+      "confidence": 0.542259,
       "lemma": "что",
       "pos": "CONJ",
       "syllableStr": "что",
@@ -9171,7 +10557,8 @@
               915.9
             ],
             "central": 586.3,
-            "duration": 0.12
+            "duration": 0.12,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -9229,7 +10616,8 @@
               2004.4
             ],
             "central": 508.2,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -9261,7 +10649,18 @@
               1311.4
             ],
             "central": 352.8,
-            "duration": 0.39
+            "duration": 0.39,
+            "core": {
+              "duration": 0.312,
+              "energyMean": 0.04857,
+              "formants": [
+                806.6,
+                1321.0
+              ],
+              "central": 355.0,
+              "startInSyl": 0.037,
+              "endInSyl": 0.35
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9319,7 +10718,18 @@
               1549.9
             ],
             "central": 368.2,
-            "duration": 0.24
+            "duration": 0.24,
+            "core": {
+              "duration": 0.165,
+              "energyMean": 0.15691,
+              "formants": [
+                864.9,
+                1581.7
+              ],
+              "central": 373.9,
+              "startInSyl": 0.075,
+              "endInSyl": 0.24
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9351,7 +10761,8 @@
               1321.1
             ],
             "central": 279.3,
-            "duration": 0.3
+            "duration": 0.3,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -9409,7 +10820,18 @@
               774.2
             ],
             "central": 726.4,
-            "duration": 0.2
+            "duration": 0.2,
+            "core": {
+              "duration": 0.163,
+              "energyMean": 0.158087,
+              "formants": [
+                490.6,
+                753.7
+              ],
+              "central": 746.4,
+              "startInSyl": 0.037,
+              "endInSyl": 0.2
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9441,7 +10863,8 @@
               1330.0
             ],
             "central": 241.3,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -9473,7 +10896,8 @@
               1265.3
             ],
             "central": 264.1,
-            "duration": 0.16
+            "duration": 0.16,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -9500,8 +10924,8 @@
     {
       "word": "о",
       "start": 47.91,
-      "end": 47.997971,
-      "confidence": 0.889307,
+      "end": 47.997909,
+      "confidence": 0.885828,
       "lemma": "о",
       "pos": "PREP",
       "syllableStr": "о",
@@ -9519,28 +10943,29 @@
           "endSec": 0.088,
           "acoustics": {
             "mfcc": [
-              -327.8583,
-              93.9606,
-              29.3221,
-              29.6422,
-              -17.5766,
-              -29.3784,
-              -30.1212,
+              -327.9172,
+              93.953,
+              29.2465,
+              29.6527,
+              -17.5321,
+              -29.3749,
+              -30.1502,
               -2.4149,
-              5.0415,
-              -9.8232,
-              -2.3853,
-              -1.4389,
-              1.1688
+              5.0256,
+              -9.7846,
+              -2.3498,
+              -1.5132,
+              1.121
             ],
-            "energyMean": 0.022394,
+            "energyMean": 0.022385,
             "zcrMean": 0.065104,
             "formants": [
               540.1,
               2020.7
             ],
             "central": 522.2,
-            "duration": 0.088
+            "duration": 0.088,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -9557,9 +10982,9 @@
     },
     {
       "word": "чем",
-      "start": 47.997971,
+      "start": 47.997909,
       "end": 48.24,
-      "confidence": 0.872005,
+      "confidence": 0.872506,
       "lemma": "чем",
       "pos": "CONJ",
       "syllableStr": "чем",
@@ -9577,28 +11002,39 @@
           "endSec": 0.242,
           "acoustics": {
             "mfcc": [
-              -165.1371,
-              66.3151,
-              4.4351,
-              -28.6299,
-              -20.1893,
-              -14.9718,
-              -9.7738,
-              -13.5581,
-              -12.834,
-              -6.8942,
-              -18.4851,
-              -1.9679,
-              -9.833
+              -165.1555,
+              66.2625,
+              4.452,
+              -28.6199,
+              -20.1904,
+              -14.9731,
+              -9.7753,
+              -13.556,
+              -12.8289,
+              -6.8924,
+              -18.4874,
+              -1.9658,
+              -9.83
             ],
-            "energyMean": 0.090904,
-            "zcrMean": 0.20166,
+            "energyMean": 0.090903,
+            "zcrMean": 0.201599,
             "formants": [
-              637.6,
-              1095.4
+              637.7,
+              1095.6
             ],
-            "central": 427.4,
-            "duration": 0.242
+            "central": 427.2,
+            "duration": 0.242,
+            "core": {
+              "duration": 0.167,
+              "energyMean": 0.097293,
+              "formants": [
+                580.6,
+                1073.1
+              ],
+              "central": 434.4,
+              "startInSyl": 0.075,
+              "endInSyl": 0.242
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9656,7 +11092,8 @@
               1208.8
             ],
             "central": 293.9,
-            "duration": 0.32
+            "duration": 0.32,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -9714,7 +11151,18 @@
               2520.7
             ],
             "central": 1024.7,
-            "duration": 0.13
+            "duration": 0.13,
+            "core": {
+              "duration": 0.075,
+              "energyMean": 0.009198,
+              "formants": [
+                923.5,
+                2423.0
+              ],
+              "central": 1015.5,
+              "startInSyl": 0.0,
+              "endInSyl": 0.075
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9746,7 +11194,8 @@
               2104.0
             ],
             "central": 626.3,
-            "duration": 0.2
+            "duration": 0.2,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -9778,7 +11227,8 @@
               1653.8
             ],
             "central": 245.7,
-            "duration": 0.18
+            "duration": 0.18,
+            "core": null
           },
           "isProblematic": false,
           "remarks": []
@@ -9836,7 +11286,18 @@
               1946.5
             ],
             "central": 458.0,
-            "duration": 0.19
+            "duration": 0.19,
+            "core": {
+              "duration": 0.138,
+              "energyMean": 0.058739,
+              "formants": [
+                616.3,
+                1866.1
+              ],
+              "central": 384.1,
+              "startInSyl": 0.0,
+              "endInSyl": 0.138
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9868,7 +11329,18 @@
               822.4
             ],
             "central": 677.9,
-            "duration": 0.17
+            "duration": 0.17,
+            "core": {
+              "duration": 0.145,
+              "energyMean": 0.031954,
+              "formants": [
+                421.1,
+                652.1
+              ],
+              "central": 851.6,
+              "startInSyl": 0.025,
+              "endInSyl": 0.17
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9900,7 +11372,18 @@
               1761.4
             ],
             "central": 297.0,
-            "duration": 0.177
+            "duration": 0.177,
+            "core": {
+              "duration": 0.102,
+              "energyMean": 0.016587,
+              "formants": [
+                684.0,
+                1646.4
+              ],
+              "central": 235.1,
+              "startInSyl": 0.075,
+              "endInSyl": 0.177
+            }
           },
           "isProblematic": false,
           "remarks": []
@@ -9956,7 +11439,7 @@
       "syllable": "о",
       "stressDur": 0.134,
       "unstrDur": 0.079,
-      "stressEn": 0.08949,
+      "stressEn": 0.08948,
       "unstrEn": 0.07785
     },
     {

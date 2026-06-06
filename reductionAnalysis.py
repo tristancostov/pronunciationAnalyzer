@@ -13,6 +13,11 @@ reductionAnalysis.py — Кросс-записный анализ редукци
   статистической значимости (t-тест Уэлча) и доверительными
   интервалами 95%.
 
+Подход предложен мной 23.05.2026 как улучшение исходной идеи
+научного руководителя «сопоставление слогов для редуцированных
+звуков» (15.04.2026): не сравнивать соседние слоги внутри слова
+(где сегментация даёт большую погрешность), а собирать статистику
+по всей записи и сравнивать одинаковые гласные в разных позициях.
 
 Метрики (для каждого гласного V в записи R):
   Сравниваем безударные группы (предударные, заударные, прочие)
@@ -40,7 +45,7 @@ from collections import defaultdict
 from statistics import mean, stdev
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-JSON_DIR   = os.path.join(SCRIPT_DIR, "audio")
+JSON_DIR   = os.path.join(SCRIPT_DIR, "analysis")
 OUTPUT_MD  = os.path.join(SCRIPT_DIR, "reduction_comparison.md")
 
 # Какие записи. Пусто → авто-обнаружение всех записей.
@@ -48,6 +53,14 @@ RECORDINGS = []
 
 # Минимум 10 — академический минимум для t-теста.
 MIN_SAMPLES_PER_GROUP = 10
+
+# Использовать признаки ВОКАЛИЧЕСКОГО ЯДРА (если оно выделено в JSON
+# в поле acoustics.core), а не всего слога. Это позволяет отделить
+# гласный от соседних согласных и должно улучшить детектирование
+# редукции «а», «е», «и» (для «о» уже работает по слогу целиком).
+# Если в JSON ядра нет (старые файлы) — автоматически откатываемся
+# на полный слог.
+USE_CORE = True
 
 TARGET_VOWELS = set("аоеияёэюуы")
 
@@ -68,21 +81,36 @@ def position_label(i, st_idx):
 
 
 def collect_recording(json_path):
-    """{vowel: {position: [(dur, ener, central), ...]}}"""
+    """{vowel: {position: [(dur, ener, central), ...]}}
+
+    Когда USE_CORE=True и в JSON есть acoustics.core — берём признаки
+    из ядра гласного (без согласных хвостов). Иначе — из полного слога.
+    """
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     pool = defaultdict(lambda: defaultdict(list))
+    core_used = 0; full_used = 0
     for w in data["wordAnalysis"]:
         if w["syllableCount"] < 2: continue
         st_idx = w.get("expectedStressedIdx", w.get("stressedIdx", -1))
         if not (0 <= st_idx < w["syllableCount"]): continue
         for i, syl in enumerate(w["syllableAnalysis"]):
             ac = syl.get("acoustics", {})
-            dur = ac.get("duration", 0); ener = ac.get("energyMean", 0); central = ac.get("central", -1)
+            # Выбираем источник признаков: ядро или весь слог
+            src = ac.get("core") if (USE_CORE and ac.get("core")) else ac
+            if src is ac.get("core"): core_used += 1
+            else: full_used += 1
+            dur = src.get("duration", 0)
+            ener = src.get("energyMean", 0)
+            central = src.get("central", -1)
             if dur < 0.040 or central < 0: continue
             vowel = main_vowel(syl.get("syllable", ""))
             if vowel is None: continue
             pool[vowel][position_label(i, st_idx)].append((dur, ener, central))
+    # для диагностики — выведем, сколько слогов взяли из ядра
+    if core_used + full_used > 0:
+        print(f"   ({os.path.basename(json_path)}: ядро={core_used}, "
+              f"полный слог={full_used})")
     return {v: dict(p) for v, p in pool.items()}
 
 

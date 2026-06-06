@@ -149,7 +149,10 @@ class PronunciationGUI:
             # Запускаем скрипт
             pa.main()
 
-            json_path = self.audio_path.replace(".wav", "_syllable_analysis.json")
+            # Ищем JSON в analysis/ (куда сохраняет pronunciationAnalyzer)
+            import pronunciationAnalyzer as _pa
+            base = os.path.basename(self.audio_path).replace(".wav", "_syllable_analysis.json")
+            json_path = os.path.join(os.path.dirname(_pa.__file__), "analysis", base)
             if os.path.exists(json_path):
                 with open(json_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
