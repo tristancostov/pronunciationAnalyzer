@@ -2,68 +2,37 @@
 # -*- coding: utf-8 -*-
 """
 reductionAnalysis.py — Кросс-записный анализ редукции гласных
-                       (академически строгая версия)
+                       (с объединением неносителей и графиками)
 ==============================================================
-
-Что делает:
-  Для каждой записи отдельно собирает ВСЕ слоги по всей записи,
-  группирует их по «главному гласному» и по позиции относительно
-  ударного слога (ударный / предударный / заударный / прочий),
-  затем сравнивает средние характеристики групп с проверкой
-  статистической значимости (t-тест Уэлча) и доверительными
-  интервалами 95%.
-
-Подход предложен мной 23.05.2026 как улучшение исходной идеи
-научного руководителя «сопоставление слогов для редуцированных
-звуков» (15.04.2026): не сравнивать соседние слоги внутри слова
-(где сегментация даёт большую погрешность), а собирать статистику
-по всей записи и сравнивать одинаковые гласные в разных позициях.
-
-Метрики (для каждого гласного V в записи R):
-  Сравниваем безударные группы (предударные, заударные, прочие)
-  с ударной группой по:
-    duration   — длительность слога целиком
-    energyMean — средняя энергия
-    central    — расстояние формантной точки (F1,F2) до центра
-                 гласного пространства (схва). Меньше = ближе
-                 к [ə] = сильнее редуцирован.
-
-  Для каждой пары групп считаем:
-    ratio        = mean_unstressed / mean_stressed
-    ci_lo, ci_hi = 95%-доверительный интервал отношения
-    p_value      = двусторонний t-тест Уэлча (H0: средние равны)
-
-  Значимость:
-    p < 0.001  → ***   очень сильное доказательство
-    p < 0.01   → **
-    p < 0.05   → *
-    иначе     → n.s.  (не значимо)
+Новое:
+  - POOL_NONNATIVE: объединить всех *fori в одну группу «nonnative_pooled»
+  - PLOT_FILE: путь к сохраняемому графику (PNG)
+  - В таблицу добавлен Cohen's d для длительности и централизации
+  - Автоматическая генерация:
+       * Boxplot (длительность гласного ядра): носители vs неносители, ударный vs безударный
+       * Forest plot (длительность, отношение безударный/ударный с 95% ДИ)
 """
 
 import json, os, sys, glob, math
 from collections import defaultdict
 from statistics import mean, stdev
+import numpy as np
 
+# ========== НАСТРОЙКИ ==========
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 JSON_DIR   = os.path.join(SCRIPT_DIR, "analysis")
-OUTPUT_MD  = os.path.join(SCRIPT_DIR, "reduction_comparison.md")
+OUTPUT_MD  = os.path.join(SCRIPT_DIR, "reduction_comparison2.md")
+PLOT_FILE  = os.path.join(SCRIPT_DIR, "reduction_plots.png")   # новое
 
-# Какие записи. Пусто → авто-обнаружение всех записей.
-RECORDINGS = []
+RECORDINGS = []                     # пусто = автообнаружение
 
-# Минимум 10 — академический минимум для t-теста.
-MIN_SAMPLES_PER_GROUP = 10
-
-# Использовать признаки ВОКАЛИЧЕСКОГО ЯДРА (если оно выделено в JSON
-# в поле acoustics.core), а не всего слога. Это позволяет отделить
-# гласный от соседних согласных и должно улучшить детектирование
-# редукции «а», «е», «и» (для «о» уже работает по слогу целиком).
-# Если в JSON ядра нет (старые файлы) — автоматически откатываемся
-# на полный слог.
-USE_CORE = True
+MIN_SAMPLES_FOR_REPORT = 3
+MIN_SAMPLES_FOR_TEST   = 10
+COLLAPSE_UNSTRESSED    = False
+POOL_NONNATIVE         = True        # ← объединить всех *fori в одну группу
 
 TARGET_VOWELS = set("аоеияёэюуы")
-
+# ================================
 
 def main_vowel(syl):
     syl = syl.lower()
@@ -71,21 +40,14 @@ def main_vowel(syl):
         if ch in TARGET_VOWELS: return ch
     return None
 
-
 def position_label(i, st_idx):
-    """ударный / предударный / заударный_1 / другой безударный"""
     if i == st_idx: return "stressed"
     if i == st_idx - 1: return "pretonic"
     if i == st_idx + 1: return "posttonic"
     return "other_unstressed"
 
-
 def collect_recording(json_path):
-    """{vowel: {position: [(dur, ener, central), ...]}}
-
-    Когда USE_CORE=True и в JSON есть acoustics.core — берём признаки
-    из ядра гласного (без согласных хвостов). Иначе — из полного слога.
-    """
+    USE_CORE = True
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     pool = defaultdict(lambda: defaultdict(list))
@@ -96,25 +58,24 @@ def collect_recording(json_path):
         if not (0 <= st_idx < w["syllableCount"]): continue
         for i, syl in enumerate(w["syllableAnalysis"]):
             ac = syl.get("acoustics", {})
-            # Выбираем источник признаков: ядро или весь слог
             src = ac.get("core") if (USE_CORE and ac.get("core")) else ac
             if src is ac.get("core"): core_used += 1
             else: full_used += 1
             dur = src.get("duration", 0)
             ener = src.get("energyMean", 0)
             central = src.get("central", -1)
-            if dur < 0.040 or central < 0: continue
+            # При использовании core длительность ядра короче целого слога.
+            # 25 мс — минимум для вокалического ядра (редуцированный гласный).
+            min_dur = 0.025 if (USE_CORE and ac.get("core")) else 0.040
+            if dur < min_dur or central < 0: continue
             vowel = main_vowel(syl.get("syllable", ""))
             if vowel is None: continue
             pool[vowel][position_label(i, st_idx)].append((dur, ener, central))
-    # для диагностики — выведем, сколько слогов взяли из ядра
     if core_used + full_used > 0:
-        print(f"   ({os.path.basename(json_path)}: ядро={core_used}, "
-              f"полный слог={full_used})")
+        print(f"   ({os.path.basename(json_path)}: ядро={core_used}, полный слог={full_used})")
     return {v: dict(p) for v, p in pool.items()}
 
-
-# ── статистика без scipy ──
+# ─── Статистика без scipy ───
 def welch_t(a, b):
     n_a, n_b = len(a), len(b)
     if n_a < 2 or n_b < 2: return None
@@ -134,12 +95,10 @@ def welch_t(a, b):
     p = 2.0 * (1.0 - _stu_cdf(abs(t), df))
     return t, p
 
-
 def _stu_cdf(t, df):
     if df <= 0: return 0.5
     x = df / (df + t*t)
     return 1.0 - 0.5 * _ibeta(df/2.0, 0.5, x)
-
 
 def _ibeta(a, b, x):
     if x <= 0: return 0.0
@@ -149,7 +108,6 @@ def _ibeta(a, b, x):
     if x < (a+1)/(a+b+2):
         return math.exp(lbeta) * _betacf(a, b, x) / a
     return 1.0 - math.exp(lbeta) * _betacf(b, a, 1-x) / b
-
 
 def _betacf(a, b, x):
     qab = a+b; qap = a+1; qam = a-1
@@ -173,16 +131,15 @@ def _betacf(a, b, x):
         if abs(delta - 1) < 3e-7: return h
     return h
 
-
-def sig_marker(p):
+def sig_marker(p, can_test=True):
+    if not can_test or p is None:
+        return f"N<{MIN_SAMPLES_FOR_TEST}"
     if p < 0.001: return "***"
     if p < 0.01:  return "**"
     if p < 0.05:  return "*"
     return "n.s."
 
-
 def ratio_with_ci(num_samples, den_samples):
-    """отношение средних и 95%-CI (метод дельт)"""
     m_n, m_d = mean(num_samples), mean(den_samples)
     if m_d == 0: return float("nan"), float("nan"), float("nan")
     n_n, n_d = len(num_samples), len(den_samples)
@@ -193,41 +150,202 @@ def ratio_with_ci(num_samples, den_samples):
     se = math.sqrt(var_r)
     return r, r - 1.96*se, r + 1.96*se
 
-
-def compare_feature(stressed, unstressed, idx):
-    """idx: 0=dur, 1=ener, 2=central"""
-    if len(stressed) < MIN_SAMPLES_PER_GROUP or len(unstressed) < MIN_SAMPLES_PER_GROUP:
+def cohens_d(x, y):
+    """Cohen's d для двух независимых выборок (пуллированное стандартное отклонение)."""
+    nx, ny = len(x), len(y)
+    if nx < 2 or ny < 2:
         return None
+    mean_x, mean_y = mean(x), mean(y)
+    var_x = stdev(x)**2
+    var_y = stdev(y)**2
+    pooled_sd = math.sqrt(((nx - 1) * var_x + (ny - 1) * var_y) / (nx + ny - 2))
+    if pooled_sd == 0:
+        return 0.0 if mean_x == mean_y else float('inf')
+    return (mean_x - mean_y) / pooled_sd
+
+def compare_feature(stressed, unstressed, idx, min_for_report, min_for_test):
+    n_st = len(stressed)
+    n_un = len(unstressed)
+    if n_st < min_for_report or n_un < min_for_report:
+        return None
+
     st = [x[idx] for x in stressed]
     un = [x[idx] for x in unstressed]
+
     r, lo, hi = ratio_with_ci(un, st)
-    t_res = welch_t(un, st)
-    if t_res is None: return None
-    t, p = t_res
-    return {
-        "n_st": len(stressed), "n_un": len(unstressed),
+    d_val = cohens_d(un, st)   # сравнение: безударный - ударный
+
+    result = {
+        "n_st": n_st,
+        "n_un": n_un,
         "mean_st": round(mean(st), 4),
         "mean_un": round(mean(un), 4),
         "ratio": round(r, 2),
-        "ci_lo": round(lo, 2), "ci_hi": round(hi, 2),
-        "p": p, "sig": sig_marker(p),
+        "ci_lo": round(lo, 2),
+        "ci_hi": round(hi, 2),
+        "cohens_d": round(d_val, 2) if d_val is not None else None,
     }
 
+    can_test = (n_st >= min_for_test and n_un >= min_for_test)
+    if can_test:
+        t_res = welch_t(un, st)
+        if t_res is not None:
+            t, p = t_res
+            result["p"] = p
+            result["sig"] = sig_marker(p, can_test=True)
+        else:
+            result["sig"] = sig_marker(None, can_test=False)
+    else:
+        result["sig"] = sig_marker(None, can_test=False)
+        result["p"] = None
+    return result
 
-def interpret(by_feat):
-    """Вывод по комбинации признаков."""
+def interpret(by_feat, can_test):
     d = by_feat.get("duration"); c = by_feat.get("central")
+    if d is None and c is None:
+        return "недостаточно данных"
+    if not can_test:
+        return "описательная оценка (без теста)"
+
     strong = 0
-    if d and d["p"] < 0.05 and d["ratio"] < 0.80: strong += 1
-    if c and c["p"] < 0.05 and c["ratio"] < 0.85: strong += 1
+    if d and d.get("p") is not None and d["p"] < 0.05 and d["ratio"] < 0.80: strong += 1
+    if c and c.get("p") is not None and c["p"] < 0.05 and c["ratio"] < 0.85: strong += 1
     if strong >= 2: return "сильная редукция (значимо)"
-    if (d and d["p"] < 0.05 and d["ratio"] < 0.90) or \
-       (c and c["p"] < 0.05 and c["ratio"] < 0.92):
+    if (d and d.get("p") is not None and d["p"] < 0.05 and d["ratio"] < 0.90) or \
+       (c and c.get("p") is not None and c["p"] < 0.05 and c["ratio"] < 0.92):
         return "умеренная редукция (значимо)"
     return "редукция не доказана"
 
+# ─── Построение графиков ───
+def plot_results(all_results, all_pools, plot_path):
+    try:
+        import matplotlib.pyplot as plt
+    except ImportError:
+        print("⚠ matplotlib не установлен — графики пропущены.")
+        return
+
+    # Определяем, какие записи относятся к носителям/неносителям
+    native_names = [name for name in all_pools if "local" in name or "native" in name]
+    nonnative_names = [name for name in all_pools if "fori" in name or "nonnative" in name]
+
+    # 1. Boxplots: длительность ядра для основных гласных
+    vowels_to_plot = ["о", "е", "а"]
+    fig, axes = plt.subplots(1, 3, figsize=(18, 6), sharey=True)
+    fig.suptitle("Длительность вокалического ядра: ударный vs безударный", fontsize=16)
+
+    for ax, vowel in zip(axes, vowels_to_plot):
+        data = {"native_stressed": [], "native_unstressed": [],
+                "nonnative_stressed": [], "nonnative_unstressed": []}
+        for rec_type, name_list, key_prefix in [("native", native_names, "native"),
+                                                ("nonnative", nonnative_names, "nonnative")]:
+            stressed_durs = []
+            unstressed_durs = []
+            for name in name_list:
+                pool = all_pools.get(name, {})
+                pos = pool.get(vowel, {})
+                stressed_durs.extend([x[0] for x in pos.get("stressed", [])])
+                for p in ("pretonic", "posttonic", "other_unstressed"):
+                    unstressed_durs.extend([x[0] for x in pos.get(p, [])])
+            data[f"{key_prefix}_stressed"] = stressed_durs
+            data[f"{key_prefix}_unstressed"] = unstressed_durs
+
+        positions = [1, 2, 4, 5]
+        box_data = [data["native_stressed"], data["native_unstressed"],
+                    data["nonnative_stressed"], data["nonnative_unstressed"]]
+        bp = ax.boxplot(box_data, positions=positions, widths=0.6,
+                        patch_artist=True, showfliers=False,
+                        medianprops=dict(color="black"), showmeans=True,
+                        meanprops=dict(marker="D", markerfacecolor="red", markersize=5))
+        colors = ["#7fc97f", "#7fc97f", "#fdc086", "#fdc086"]
+        for patch, color in zip(bp['boxes'], colors):
+            patch.set_facecolor(color)
+        ax.set_title(f"Гласный «{vowel}»")
+        ax.set_ylabel("Длительность (с)")
+        ax.set_xticks([1.5, 4.5])
+        ax.set_xticklabels(["Носители", "Неносители"])
+        ax.legend([bp['boxes'][0], bp['boxes'][2]], ["Ударный", "Безударный"],
+                  loc="upper right")
+
+    plt.tight_layout(rect=[0, 0, 1, 0.95])
+
+    # 2. Forest plot: отношение длительностей (безударный / ударный) с 95% ДИ
+    # Показываем только строки с N≥10 (те, где t-тест применим), чтобы
+    # график был читаемым. N<10 — описательные оценки, их слишком много.
+    pos_names = {"pretonic": "предуд.", "posttonic": "зауд.",
+                 "other_unstressed": "проч.безуд."}
+    for side_name, side_names in [("Носители", native_names),
+                                    ("Неносители", nonnative_names)]:
+        # Собираем только тестируемые строки (N≥10 с обеих сторон)
+        rows = []
+        for name in side_names:
+            res = all_results.get(name, {})
+            for v in sorted(res.keys()):
+                for pos, info in res[v].items():
+                    d = info.get("by_feat", {}).get("duration", {})
+                    if not d:
+                        continue
+                    r = d.get("ratio")
+                    if r is None or math.isnan(r):
+                        continue
+                    sig = d.get("sig", "")
+                    # Показываем только если t-тест был выполнен
+                    if sig.startswith("N<"):
+                        continue
+                    rows.append((name, v, pos, r, d.get("ci_lo", r),
+                                 d.get("ci_hi", r), sig))
+
+        n_rows = len(rows)
+        if n_rows == 0:
+            continue
+
+        fig_h = max(4, n_rows * 0.35)
+        fig, ax = plt.subplots(figsize=(10, fig_h))
+        fig.suptitle(f"Отношение длительности безударный/ударный — {side_name}", fontsize=13)
+
+        # Сортируем по ratio
+        rows.sort(key=lambda x: x[3])
+
+        for i, (name, v, pos, r, lo, hi, sig) in enumerate(rows):
+            y = i + 1
+            col = "green" if sig in ("*", "**", "***") else ("orange" if r < 0.90 else "gray")
+            ax.errorbar(r, y, xerr=[[r - lo], [hi - r]], fmt='o', capsize=3,
+                       color=col, markersize=6)
+            lbl = f"{v} {pos_names.get(pos, pos)} [{name}]"
+            ax.text(0.02, y, lbl, va='center', fontsize=8,
+                   fontfamily='monospace')
+
+        ax.axvline(1.0, color='red', linestyle='--', alpha=0.6, linewidth=1.5)
+        # Серая полоса: зона неопределённости (0.85–1.0)
+        ax.axvspan(0.85, 1.0, alpha=0.08, color='gray')
+        ax.set_yticks([])
+        ax.set_ylim(0, n_rows + 1)
+        ax.set_xlabel("Отношение длительности (безударный / ударный)", fontsize=11)
+        ax.set_xlim(0, max(2.0, max(r[5] for r in rows) + 0.3))
+        # Легенда
+        from matplotlib.lines import Line2D
+        legend_elements = [
+            Line2D([0], [0], marker='o', color='w', markerfacecolor='green',
+                   markersize=8, label='Значимо (p<0.05)'),
+            Line2D([0], [0], marker='o', color='w', markerfacecolor='orange',
+                   markersize=8, label='Тренд (ratio<0.90, не знач.)'),
+            Line2D([0], [0], marker='o', color='w', markerfacecolor='gray',
+                   markersize=8, label='Не значимо'),
+        ]
+        ax.legend(handles=legend_elements, loc='lower right', fontsize=9)
+        plt.tight_layout(rect=[0.22, 0, 1, 0.95])
+        fname = plot_path.replace(".png", f"_{side_name}.png")
+        plt.savefig(fname, dpi=150)
+        plt.close()
+        print(f"📈 Forest plot ({side_name}): {fname}  ({n_rows} строк)")
 
 def main():
+    # Поддержка --jsondir через командную строку
+    global JSON_DIR
+    args = sys.argv[1:]
+    if "--jsondir" in args:
+        idx = args.index("--jsondir")
+        JSON_DIR = args[idx + 1] if idx + 1 < len(args) else JSON_DIR
+    # Автообнаружение файлов
     if RECORDINGS:
         names = RECORDINGS
     else:
@@ -236,38 +354,88 @@ def main():
     if not names:
         print("❌ Нет файлов *_syllable_analysis.json"); sys.exit(1)
 
-    all_results = {}
+    # Загружаем все пулы для объединения и графиков
+    all_pools = {}
     for name in names:
         path = os.path.join(JSON_DIR, f"{name}_syllable_analysis.json")
-        if not os.path.exists(path):
-            print(f"⚠ Пропускаю {name}: нет файла"); continue
-        pool = collect_recording(path)
+        if os.path.exists(path):
+            all_pools[name] = collect_recording(path)
+
+    # Объединение неносителей (если включено)
+    if POOL_NONNATIVE:
+        nonnative_names_in_data = [n for n in names if "fori" in n]
+        if nonnative_names_in_data:
+            # Сливаем пулы
+            merged = defaultdict(lambda: defaultdict(list))
+            for name in nonnative_names_in_data:
+                pool = all_pools.pop(name, {})
+                for v, pos in pool.items():
+                    for p, lst in pos.items():
+                        merged[v][p].extend(lst)
+            # Добавляем как отдельную запись
+            merged_name = "nonnative_pooled"
+            all_pools[merged_name] = {v: dict(p) for v, p in merged.items()}
+            names = [n for n in names if n not in nonnative_names_in_data] + [merged_name]
+            print(f"🗂 Объединены неносители ({', '.join(nonnative_names_in_data)}) → {merged_name}")
+
+    # Анализ каждой записи
+    all_results = {}
+    for name in names:
+        pool = all_pools.get(name, {})
+        if not pool:
+            continue
+        # Применяем сжатие безударных позиций, если нужно
+        if COLLAPSE_UNSTRESSED:
+            for vowel in pool:
+                pos = pool[vowel]
+                if "unstressed" not in pos:
+                    unstressed = []
+                    for k in ("pretonic", "posttonic", "other_unstressed"):
+                        unstressed.extend(pos.pop(k, []))
+                    pos["unstressed"] = unstressed
+
         rec = {}
         for vowel in sorted(pool.keys()):
             positions = pool[vowel]
             stressed = positions.get("stressed", [])
+            if COLLAPSE_UNSTRESSED:
+                unstressed_positions = ["unstressed"]
+            else:
+                unstressed_positions = ["pretonic", "posttonic", "other_unstressed"]
             v_res = {}
-            for pos in ("pretonic", "posttonic", "other_unstressed"):
+            for pos in unstressed_positions:
                 un = positions.get(pos, [])
-                if len(un) < MIN_SAMPLES_PER_GROUP or len(stressed) < MIN_SAMPLES_PER_GROUP:
+                if len(un) < MIN_SAMPLES_FOR_REPORT or len(stressed) < MIN_SAMPLES_FOR_REPORT:
                     continue
                 by_feat = {}
                 for feat, idx in (("duration", 0), ("energy", 1), ("central", 2)):
-                    r = compare_feature(stressed, un, idx)
+                    r = compare_feature(stressed, un, idx,
+                                        MIN_SAMPLES_FOR_REPORT, MIN_SAMPLES_FOR_TEST)
                     if r: by_feat[feat] = r
                 if by_feat:
-                    v_res[pos] = {"by_feat": by_feat, "verdict": interpret(by_feat)}
+                    can_test = all(
+                        (feat not in by_feat) or (by_feat[feat].get("p") is not None)
+                        for feat in ("duration", "central")
+                    )
+                    v_res[pos] = {"by_feat": by_feat, "verdict": interpret(by_feat, can_test)}
             if v_res: rec[vowel] = v_res
         all_results[name] = rec
 
-    # ── консольный отчёт ──
+    # ── Консольный и Markdown отчёт ──
     print("="*100)
-    print(f"  СТРОГИЙ АНАЛИЗ РЕДУКЦИИ (t-тест Уэлча, 95% ДИ, мин. {MIN_SAMPLES_PER_GROUP} образцов в группе)")
-    print(f"  Значимость: ***=p<0.001, **=p<0.01, *=p<0.05, n.s.=не значимо")
+    print(f"  СТРОГИЙ АНАЛИЗ РЕДУКЦИИ (t-тест Уэлча, 95% ДИ, Cohen's d)")
+    print(f"  Мин. образцов для отчёта: {MIN_SAMPLES_FOR_REPORT} | для t-теста: {MIN_SAMPLES_FOR_TEST}")
+    if COLLAPSE_UNSTRESSED:
+        print("  Режим: все безударные позиции объединены")
+    if POOL_NONNATIVE:
+        print("  Неносители объединены в группу 'nonnative_pooled'")
     print("="*100)
 
     for name, res in all_results.items():
-        kind = "НОСИТЕЛЬ" if "local" in name else "неноситель"
+        if name == "nonnative_pooled":
+            kind = "неносители (объединённые)"
+        else:
+            kind = "НОСИТЕЛЬ" if "local" in name else "неноситель"
         print(f"\n[{name}]   ({kind})")
         if not res:
             print("  (недостаточно данных)"); continue
@@ -276,43 +444,47 @@ def main():
             for pos, info in positions.items():
                 d = info["by_feat"].get("duration", {})
                 c = info["by_feat"].get("central", {})
+                dur_str = f"длит.={d.get('ratio','?')} [{d.get('ci_lo','?')}..{d.get('ci_hi','?')}] {d.get('sig','')} d={d.get('cohens_d','-')}"
+                cent_str = f"центр.={c.get('ratio','?')} {c.get('sig','')} d={c.get('cohens_d','-')}" if c else ""
                 print(f"    {pos:<17} N(уд)={d.get('n_st','?'):>3} N(б/у)={d.get('n_un','?'):>3}  "
-                      f"длит.={d.get('ratio','?')} [{d.get('ci_lo','?')}..{d.get('ci_hi','?')}] {d.get('sig',''):4} "
-                      f"центр.={c.get('ratio','?')} {c.get('sig',''):4} → {info['verdict']}")
+                      f"{dur_str}  {cent_str} → {info['verdict']}")
 
-    # ── Markdown ──
     with open(OUTPUT_MD, "w", encoding="utf-8") as f:
-        f.write("# Кросс-записной анализ редукции гласных (строгая версия)\n\n")
-        f.write("**Метод.** Для каждой записи собираем все слоги, группируем по "
-                "главному гласному и позиции относительно ударного (предударный, "
-                "заударный, прочие). Сравниваем средние характеристики безударных "
-                "групп с ударной двусторонним t-тестом Уэлча; для отношений "
-                "средних приводится 95% доверительный интервал (метод дельт).\n\n")
-        f.write(f"**Минимальный размер группы:** {MIN_SAMPLES_PER_GROUP} образцов.\n\n")
-        f.write("**Значимость:** `***` p<0.001, `**` p<0.01, `*` p<0.05, `n.s.` не значимо.\n\n")
-        f.write("**Признаки:**\n")
-        f.write("- `длит.отн.` — отношение средней длительности безударного слога к ударному. <1 = безударный короче.\n")
-        f.write("- `центр.отн.` — отношение расстояния (F1,F2) до нейтрального центра. <1 = ближе к [ə].\n\n")
-
+        f.write("# Кросс-записной анализ редукции гласных (с Cohen's d и объединением)\n\n")
+        f.write("**Метод.** ...\n")
+        f.write(f"**Пороги:** отчёт от {MIN_SAMPLES_FOR_REPORT} слогов, t‑тест от {MIN_SAMPLES_FOR_TEST}.\n")
+        if POOL_NONNATIVE:
+            f.write("**Неносители объединены** в одну группу.\n\n")
+        f.write("**Значимость:** `***` p<0.001, `**` p<0.01, `*` p<0.05, "
+                f"`N<{MIN_SAMPLES_FOR_TEST}` — образцов мало для теста.\n\n")
+        f.write("| Гласн | Позиция | N(уд) | N(б/у) | длит.отн. [95% ДИ] | Cohen's d | "
+                "центр.отн. | Cohen's d | Вывод |\n")
+        f.write("|---|---|---|---|---|---|---|---|---|\n")
         for name, res in all_results.items():
-            kind = "носитель русского" if "local" in name else "неноситель"
+            if name == "nonnative_pooled":
+                kind = "неносители (объединённые)"
+            else:
+                kind = "носитель" if "local" in name else "неноситель"
             f.write(f"## {name} ({kind})\n\n")
             if not res:
                 f.write("Недостаточно данных.\n\n"); continue
-            f.write("| Гласн | Позиция | N(уд) | N(б/у) | длит.отн. [95% ДИ] | центр.отн. | Вывод |\n")
-            f.write("|---|---|---|---|---|---|---|\n")
             for v, positions in res.items():
                 for pos, info in positions.items():
                     d = info["by_feat"].get("duration", {})
                     c = info["by_feat"].get("central", {})
                     f.write(f"| {v} | {pos} | {d.get('n_st','?')} | {d.get('n_un','?')} | "
                             f"{d.get('ratio','—')} [{d.get('ci_lo','?')}..{d.get('ci_hi','?')}] {d.get('sig','')} | "
+                            f"{d.get('cohens_d','—')} | "
                             f"{c.get('ratio','—')} {c.get('sig','')} | "
+                            f"{c.get('cohens_d','—')} | "
                             f"{info['verdict']} |\n")
             f.write("\n")
 
-    print(f"\n💾 Сохранено: {OUTPUT_MD}")
+    # ── Графики ──
+    plot_results(all_results, all_pools, PLOT_FILE)
 
+    print(f"\n💾 Отчёт: {OUTPUT_MD}")
+    print(f"📈 График: {PLOT_FILE}")
 
 if __name__ == "__main__":
     main()

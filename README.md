@@ -82,16 +82,15 @@ Mycode/
 ├── pronunciationAnalyzer.py        ОСНОВНОЙ скрипт: анализ одной записи
 ├── batch_analyze.py                пакетный запуск анализа для списка записей
 ├── evaluate_annotations.py         сверка ручной разметки и автовыхода
-├── reductionAnalysis.py            кросс-записной анализ редукции (базовый)
-├── reductionAnalysis2.py           анализ редукции с Cohen's d и графиками
+├── reductionAnalysis.py            кросс-записной анализ редукции + графики
 ├── check_stress.py                 проверка детектора ударения (словарь vs акустика)
 ├── extraSegAudio.py                нарезка слогов в отдельные .wav
-├── gui_app.py                      GUI на tkinter (в разработке)
+├── gui_app.py                      GUI на tkinter
 │
 ├── ground_truth_words.json         эталонные слова и число слогов для оценки
 ├── evaluation_results.csv / .md    свод метрик по размеченным записям
-├── reduction_comparison.md         таблица анализа редукции (базовая версия)
-├── reduction_comparison2.md        таблица с Cohen's d и объединением неносителей
+├── reduction_comparison.md         таблица анализа редукции (базовая)
+├── reduction_comparison2.md        таблица с Cohen's d, pooling и графиками
 └── README.md
 ```
 
@@ -153,18 +152,13 @@ textFile  = os.path.join(SCRIPT_DIR, "text",  "имя.txt")
 
 ### 4) Кросс-записной анализ редукции
 
-**Базовая версия** (`reductionAnalysis.py`):
 ```
 python reductionAnalysis.py
 ```
-Строит `reduction_comparison.md` — таблица t-тестов Уэлча с 95% ДИ.
-
-**Расширенная версия** (`reductionAnalysis2.py`):
-```
-python reductionAnalysis2.py
-```
-Строит `reduction_comparison2.md` — дополнительно: Cohen's d,
-объединение неносителей в одну группу, графики (boxplot + forest plot).
+Находит все `*_syllable_analysis.json`, группирует слоги по гласному и позиции,
+сравнивает безударные группы с ударной t-тестом Уэлча + Cohen's d,
+объединяет неносителей в одну группу. Строит `reduction_comparison2.md`
+и графики (forest plot + boxplot → `reduction_plots_*.png`).
 
 ### 5) Проверка детектора ударения
 

@@ -599,7 +599,14 @@ def findVowelNucleusFast(signal: np.ndarray, sr: int,
     eHi = mel_slice[maskHi, :].mean(axis=0) if maskHi.any() else np.zeros(nFrames)
     m_score = np.clip((eF1 - eHi + 10.0) / 30.0, 0.0, 1.0)
 
-    score = 0.35 * m_score + 0.35 * e_score + 0.30 * z_score
+    # F0-стабильность: у гласных F0 ровный, у сонорных (м/н/л/р) —
+    # скачки на границах. Глухие кадры (NaN) → стабильность 0.
+    if wc.get("f0Stab") is not None:
+        f0_stab = wc["f0Stab"][f0:f1]
+        score = (0.22 * m_score + 0.22 * e_score +
+                 0.18 * z_score + 0.38 * f0_stab)
+    else:
+        score = 0.35 * m_score + 0.35 * e_score + 0.30 * z_score
     threshold = max(0.30, 0.55 * score.max())
     above = score >= threshold
     if not above.any():
@@ -675,15 +682,17 @@ def trimSilenceBounds(signal: np.ndarray, sr: int,
 
 
 def analyzeSyllablesInWord(wordSegment: np.ndarray, sr: int,
-                           syllables: list[str]) -> tuple[list[dict], int]:
+                           syllables: list[str],
+                           fullF0=None, f0Times=None,
+                           wordStartSec: float = 0.0) -> tuple[list[dict], int]:
     """
     Находит ядра слогов, приводит их к известному числу слогов из текста,
-    режет по провалам энергии, считает признаки. Возвращает
-    (результаты_по_слогам, сырое_акустическое_число_ядер).
+    режет по провалам энергии, считает признаки.
 
-    Перед анализом отсекает ведущую и хвостовую тишину внутри слова —
-    это предотвращает ситуацию, когда последний слог получает в свой
-    сегмент молчание (а сам гласный остался слева от среза).
+    fullF0, f0Times — опционально: предвычисленный F0 всего аудио.
+    Если передан, вычисляется F0-стабильность каждого кадра и
+    добавляется в контуры слова — это улучшает локализацию
+    вокалического ядра (отделение гласных от сонорных согласных).
     """
     expected = len(syllables)
     trimStart, trimEnd = trimSilenceBounds(wordSegment, sr, floorDb=40.0)
@@ -693,6 +702,34 @@ def analyzeSyllablesInWord(wordSegment: np.ndarray, sr: int,
     wc = computeContours(core, sr)
     energyDb, voiced, vowelScore, hopLen = (
         wc["energyDb"], wc["voiced"], wc["vowelScore"], wc["hopLen"])
+
+    # ── F0-стабильность (если передан fullF0) ──
+    if fullF0 is not None and f0Times is not None:
+        abs_start = wordStartSec + trimStart / sr
+        abs_end   = wordStartSec + trimEnd / sr
+        mask = (f0Times >= abs_start) & (f0Times < abs_end)
+        word_f0 = fullF0[mask].copy()
+        # Приводим к кадрам контуров: берём медиану F0 в каждом кадре
+        nf = len(energyDb)
+        f0_frame = np.full(nf, np.nan)
+        for fi in range(nf):
+            t0 = fi * hopLen / sr
+            t1 = (fi * hopLen + wc["frameLen"]) / sr
+            fmask = (f0Times[mask] >= abs_start + t0) & (f0Times[mask] < abs_start + t1)
+            vals = word_f0[fmask]
+            vals = vals[~np.isnan(vals)]
+            f0_frame[fi] = float(np.median(vals)) if vals.size else np.nan
+        # F0-стабильность: 1.0 если F0 в норме и плавно меняется, 0 если NaN или скачет
+        f0_stab = np.zeros(nf)
+        for fi in range(1, nf - 1):
+            if np.isnan(f0_frame[fi]):
+                f0_stab[fi] = 0.0
+            else:
+                diff = abs(f0_frame[fi] - np.nanmean(f0_frame[max(0,fi-2):fi+3]))
+                f0_stab[fi] = np.clip(1.0 - diff / 40.0, 0.0, 1.0)
+        wc["f0Stab"] = f0_stab
+    else:
+        wc["f0Stab"] = None
 
     peaks, rawDetected = selectNuclei(energyDb, voiced, vowelScore, expected, hopLen, sr)
     bounds = nucleiToBoundaries(peaks, energyDb, hopLen, len(core), sr, expected, vowelScore)
@@ -1107,8 +1144,9 @@ def loadModels(verbose=True):
     return _cached_models
 
 
-def main(models=None):
-    """Основной конвейер. models=(voskModel, KaldiRecognizer, morphAnalyzer, accentizer)."""
+def main(models=None, outDir=None):
+    """Основной конвейер. models=(voskModel, KaldiRecognizer, morphAnalyzer, accentizer).
+    outDir — опционально: папка для сохранения JSON (по умолчанию analysis/)."""
     if not os.path.exists(audioFile):
         print(f"❌ Аудио не найдено: {audioFile}"); sys.exit(1)
 
@@ -1176,7 +1214,8 @@ def main(models=None):
             continue
 
         syllableResults, detectedNuclei = analyzeSyllablesInWord(
-            wordSegment, librosaSR, syllables)
+            wordSegment, librosaSR, syllables,
+            fullF0=fullF0, f0Times=f0Times, wordStartSec=startTime)
 
         # ── 1. ОЖИДАЕМОЕ ударение (по словарю ruaccent) ──
         expectedStressedIdx = -1
@@ -1316,7 +1355,8 @@ def main(models=None):
                 cmp, textAccuracy, syllableErrors, sortedSyl)
 
     saveJson(audioFile, audioDuration, librosaSR, referenceText, recognizedText,
-             fullWordAnalysis, contrastTable, syllableErrors, pauses, cmp)
+             fullWordAnalysis, contrastTable, syllableErrors, pauses, cmp,
+             outDir=outDir)
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -1421,7 +1461,7 @@ def printReport(audioFile, audioDuration, sr, words, contrastTable, speechDur,
 
 
 def saveJson(audioFile, audioDuration, sr, refText, recText, words,
-             contrastTable, sylErrors, pauses, cmp):
+             contrastTable, sylErrors, pauses, cmp, outDir=None):
     data = {
         "audioFile": audioFile, "durationSec": round(audioDuration, 2),
         "sampleRate": sr, "referenceText": refText, "recognizedText": recText,
@@ -1432,9 +1472,12 @@ def saveJson(audioFile, audioDuration, sr, refText, recText, words,
             "substituted": [{"expected": r, "got": g} for r, g in cmp["substituted"]],
             "missed": cmp["missed"], "inserted": cmp["inserted"]},
     }
-    # Сохраняем в analysis/, а не рядом с WAV
     basename = os.path.basename(audioFile).replace(".wav", "_syllable_analysis.json")
-    name = os.path.join(SCRIPT_DIR, "analysis", basename)
+    if outDir:
+        os.makedirs(outDir, exist_ok=True)
+        name = os.path.join(outDir, basename)
+    else:
+        name = os.path.join(SCRIPT_DIR, "analysis", basename)
     with open(name, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"\nОтчёт сохранён: {name}")

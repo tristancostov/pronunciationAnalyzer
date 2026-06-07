@@ -123,14 +123,23 @@ class PronunciationGUI:
         self.nb = ttk.Notebook(right_frame)
         self.nb.pack(fill=tk.BOTH, expand=True)
 
+        # Вкладка 0: Сводка — ключевые метрики
+        tab_summary = tk.Frame(self.nb)
+        self.nb.add(tab_summary, text="📋 Сводка")
+        self.txt_summary = tk.Text(tab_summary, font=("Arial", 12),
+                                   wrap=tk.WORD, state=tk.DISABLED,
+                                   padx=20, pady=20, bg="#fafafa")
+        self.txt_summary.pack(fill=tk.BOTH, expand=True)
+
         # Вкладка 1: Осциллограмма + границы слогов
         tab_wave = tk.Frame(self.nb)
-        self.nb.add(tab_wave, text="📈 Осциллограмма + слоги")
+        self.nb.add(tab_wave, text="📈 Сигнал + слоги")
 
         self.fig_wave = Figure(figsize=(7, 3.5), dpi=90)
         self.ax_wave = self.fig_wave.add_subplot(111)
         self.canvas_wave = FigureCanvasTkAgg(self.fig_wave, tab_wave)
         self.canvas_wave.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+        self._placeholder_wave()
         tb_wave = NavigationToolbar2Tk(self.canvas_wave, tab_wave)
         tb_wave.update()
 
@@ -140,6 +149,9 @@ class PronunciationGUI:
 
         self.fig_f12 = Figure(figsize=(6.5, 5.5), dpi=90)
         self.ax_f12 = self.fig_f12.add_subplot(111)
+        self.ax_f12.text(0.5, 0.5, "Запустите анализ, чтобы увидеть\nгласное пространство F1/F2",
+                         ha='center', va='center', fontsize=13, color='gray',
+                         transform=self.ax_f12.transAxes)
         self.canvas_f12 = FigureCanvasTkAgg(self.fig_f12, tab_vowel)
         self.canvas_f12.get_tk_widget().pack(fill=tk.BOTH, expand=True)
         tb_f12 = NavigationToolbar2Tk(self.canvas_f12, tab_vowel)
@@ -151,6 +163,9 @@ class PronunciationGUI:
 
         self.fig_redux = Figure(figsize=(6.5, 5.5), dpi=90)
         self.ax_redux = self.fig_redux.add_subplot(111)
+        self.ax_redux.text(0.5, 0.5, "Запустите анализ, чтобы увидеть\nсводку редукции по гласным",
+                           ha='center', va='center', fontsize=13, color='gray',
+                           transform=self.ax_redux.transAxes)
         self.canvas_redux = FigureCanvasTkAgg(self.fig_redux, tab_redux)
         self.canvas_redux.get_tk_widget().pack(fill=tk.BOTH, expand=True)
         tb_redux = NavigationToolbar2Tk(self.canvas_redux, tab_redux)
@@ -293,19 +308,85 @@ class PronunciationGUI:
             except Exception:
                 self.full_signal = None
 
+    def _placeholder_wave(self):
+        """Начальная заглушка для вкладки осциллограммы."""
+        self.ax_wave.text(0.5, 0.5,
+            "Выберите слово в таблице слева,\nчтобы увидеть осциллограмму\nс границами слогов",
+            ha='center', va='center', fontsize=13, color='gray',
+            transform=self.ax_wave.transAxes)
+        self.ax_wave.set_xticks([]); self.ax_wave.set_yticks([])
+        self.canvas_wave.draw()
+
     # ═══════════════════════════════════════════════════════════
     #  ОТОБРАЖЕНИЕ РЕЗУЛЬТАТОВ
     # ═══════════════════════════════════════════════════════════
     def display_results(self, data):
         self.analysis_data = data
         words = data.get("wordAnalysis", [])
+
+        # Считаем метрики
+        total_words = len(words)
+        good_words = sum(1 for w in words if not w.get("hasIssue", False))
+        multi_words = [w for w in words if w.get("syllableCount", 0) > 1]
+        stress_match = sum(1 for w in multi_words
+                          if w.get("expectedStressedIdx", -1) == w.get("actualStressedIdx", -2))
+        redux_issues = sum(1 for w in words
+                          if w.get("reductionInfo", {}).get("hasReductionIssue", False))
+
+        wcmp = data.get("wordComparison", {})
+        corr = len(wcmp.get("correct", []))
+        total_ref = corr + len(wcmp.get("missed", [])) + len(wcmp.get("substituted", []))
+
+        # --- Заполняем сводку ---
+        self.txt_summary.config(state=tk.NORMAL)
+        self.txt_summary.delete("1.0", tk.END)
+        lines = [
+            "═══════════════════════════════════",
+            "   СВОДКА АНАЛИЗА",
+            "═══════════════════════════════════",
+            "",
+            f"📁 Файл: {os.path.basename(self.audio_path)}",
+            f"⏱  Длительность: {data.get('durationSec', 0):.1f} с",
+            f"🔤 Слов распознано: {total_words}",
+            "",
+            "── Качество произношения ──",
+            f"✅ Без замечаний: {good_words}/{total_words} ({good_words/total_words*100:.0f}%)",
+            f"⚠ С замечаниями: {total_words - good_words}/{total_words}",
+            "",
+            "── Ударение (словарь vs акустика) ──",
+            f"🎯 Совпадений: {stress_match}/{len(multi_words)}",
+        ]
+        if len(multi_words) > 0:
+            lines.append(f"   ({stress_match/len(multi_words)*100:.0f}% — у носителей должно быть выше)")
+        else:
+            lines.append("   (нет многосложных слов)")
+
+        lines.append("")
+        lines.append("── Редукция гласных ──")
+        lines.append(f"🔄 Слов с подозрением на недостаточную редукцию: {redux_issues}/{total_words}")
+
+        if total_ref > 0:
+            lines.append("")
+            lines.append("── Сравнение с эталонным текстом ──")
+            acc = corr / total_ref * 100
+            lines.append(f"📝 Точность слов: {acc:.1f}% ({corr}/{total_ref})")
+            missed = len(wcmp.get("missed", []))
+            sub = len(wcmp.get("substituted", []))
+            if missed: lines.append(f"   Пропущено: {missed}")
+            if sub: lines.append(f"   Замен: {sub}")
+        else:
+            lines.append("")
+            lines.append("── Без эталонного текста ──")
+
+        self.txt_summary.insert("1.0", "\n".join(lines))
+        self.txt_summary.config(state=tk.DISABLED)
+
+        # --- Заполняем таблицу ---
         for w in words:
             word_text = w.get("word", "")
-
             exp_n = w.get("syllableCount", 0)
             act_n = w.get("detectedNuclei", 0)
             syl_str = f"{act_n} / {exp_n}"
-
             exp_s = w.get("expectedStressedIdx", -1)
             act_s = w.get("actualStressedIdx", -1)
             if w.get("countMismatch"):
@@ -314,35 +395,25 @@ class PronunciationGUI:
                 stress_str = "✓ Совпадает"
             else:
                 stress_str = f"✗ Слов.{exp_s+1}→Акуст.{act_s+1}"
-
             red = w.get("reductionInfo", {})
             red_str = "⚠" if red.get("hasReductionIssue") else "✓"
-
             has = w.get("hasIssue", False)
             issue_str = "⚠ Внимание" if has else "✓ Отлично"
             tag = "error" if has else "ok"
-
             self.tree.insert("", tk.END,
                 values=(word_text, syl_str, stress_str, red_str, issue_str),
                 tags=(tag,))
 
-        # метрики
-        wcmp = data.get("wordComparison", {})
-        corr = len(wcmp.get("correct", []))
-        total = corr + len(wcmp.get("missed", [])) + len(
-                     wcmp.get("substituted", []))
-        if total > 0:
-            acc = corr / total * 100
+        if total_ref > 0:
+            acc = corr / total_ref * 100
             self.lbl_status.config(
                 text=f"Анализ завершён! Точность текста: {acc:.1f}%",
                 fg="#4CAF50")
         else:
             self.lbl_status.config(text="Анализ завершён!", fg="#4CAF50")
 
-        # Рисуем гласное пространство
+        # Рисуем гласное пространство и сводку редукции
         self._draw_vowel_space()
-
-        # Рисуем сводку редукции
         self._draw_reduction_summary()
 
     # ═══════════════════════════════════════════════════════════

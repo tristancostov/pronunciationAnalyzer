@@ -45,29 +45,43 @@ def check_recording(name, show_detail=False):
     lines.append(f"\n## {name} ({kind})")
     lines.append(f"**Совпадений: {match}/{total} = {rate:.1f}%**\n")
 
+    # Статистика по длине слова
+    by_len = {}
+    for w in multi:
+        n = w["syllableCount"]
+        ok = w.get("expectedStressedIdx", -1) == w.get("actualStressedIdx", -2)
+        by_len.setdefault(n, {"ok": 0, "all": 0})
+        by_len[n]["all"] += 1
+        if ok: by_len[n]["ok"] += 1
+    lines.append("| Сложность | Совпало | Всего | % |")
+    lines.append("|---|---|---|---|")
+    for n in sorted(by_len):
+        d = by_len[n]
+        pct = f"{d['ok']/d['all']*100:.0f}" if d['all'] > 0 else "—"
+        lines.append(f"| {n}-сложные | {d['ok']} | {d['all']} | {pct} |")
+    lines.append("")
+
     mismatches = [w for w in multi
                   if w.get("expectedStressedIdx", -1) != w.get("actualStressedIdx", -2)]
 
     if show_detail:
-        # Показать ВСЕ слова
-        lines.append("| Слово | Слоги | Словарь (слог№) | Акустика (слог№) | Совпало? |")
+        lines.append("| Слово | Слоги | Словарь | Акустика | ✓/✗ |")
         lines.append("|---|---|---|---|---|")
         for w in multi:
             exp = w.get("expectedStressedIdx", -1)
             act = w.get("actualStressedIdx", -1)
             ok = "✓" if exp == act else "✗"
-            lines.append(f"| {w['word']} | {w['syllableStr']} | {exp+1} | {act+1} | {ok} |")
-    elif mismatches:
-        # Только расхождения
-        lines.append("| Слово | Слоги | Словарь (слог№) | Акустика (слог№) |")
+            lines.append(f"| {w['word']} | {w['syllableStr']} | слог {exp+1} | слог {act+1} | {ok} |")
+    else:
+        lines.append(f"**Расхождения ({len(mismatches)} из {total}):**\n")
+        lines.append("| Слово | Слоги | Словарь | Акустика |")
         lines.append("|---|---|---|---|")
         for w in mismatches:
             exp = w.get("expectedStressedIdx", -1)
             act = w.get("actualStressedIdx", -1)
-            lines.append(f"| {w['word']} | {w['syllableStr']} | {exp+1} | {act+1} |")
-        lines.append(f"\n*Расхождений: {len(mismatches)} из {total}*")
-    else:
-        lines.append("✓ Все многосложные слова — словарь и акустика совпали.")
+            lines.append(f"| {w['word']} | {w['syllableStr']} | слог {exp+1} | слог {act+1} |")
+        if not mismatches:
+            lines.append("| ✓ | Все совпали | — | — |")
 
     console = f"\n{'='*70}\n  {name} ({kind}) | {match}/{total} = {rate:.1f}%\n{'='*70}"
 
@@ -98,6 +112,12 @@ def check_recording(name, show_detail=False):
 
 
 def main():
+    global JSON_DIR
+    # Поддержка --jsondir
+    if "--jsondir" in sys.argv:
+        idx = sys.argv.index("--jsondir")
+        JSON_DIR = sys.argv[idx + 1] if idx + 1 < len(sys.argv) else JSON_DIR
+        sys.argv = [a for a in sys.argv if a != "--jsondir" and a != JSON_DIR]
     if len(sys.argv) > 1 and not sys.argv[1].startswith("--"):
         names = [sys.argv[1]]
     else:
@@ -120,7 +140,7 @@ def main():
         if res:
             total_match += res[0]
             total_all += res[1]
-            all_lines.extend(res[2])
+            all_lines.extend(res[3])
 
     if total_all > 0:
         summary = f"\n---\n## ИТОГО: {total_match}/{total_all} = {total_match/total_all*100:.1f}%"
