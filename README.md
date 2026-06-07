@@ -74,23 +74,27 @@
 Mycode/
 ├── audio/                          входные аудио (.wav, 16 кГц/моно/PCM)
 ├── text/                           эталонные тексты, парные к audio/
-├── analysis/                       выход системы и ручная разметка
+├── analysis/                       JSON-выход анализатора + ручная разметка
 │   ├── *_syllable_analysis.json    результат анализа одной записи
 │   └── *.TextGrid                  ручная разметка (Praat, UTF-16)
-├── vosk-model-ru-0.42/             модель VOSK (не в git, см. .gitignore)
+├── results/                        сводные отчёты и графики
+│   ├── reduction_comparison.md     таблица редукции (базовая)
+│   ├── reduction_comparison2.md    таблица с Cohen's d, pooling, графиками
+│   ├── reduction_plots_*.png       лесные диаграммы (forest plot)
+│   ├── stress_check_report.md      отчёт проверки ударения
+│   └── evaluation_results.*        метрики по ручной разметке
+├── vosk-model-ru-0.42/             модель VOSK (не в git)
 │
 ├── pronunciationAnalyzer.py        ОСНОВНОЙ скрипт: анализ одной записи
-├── batch_analyze.py                пакетный запуск анализа для списка записей
-├── evaluate_annotations.py         сверка ручной разметки и автовыхода
+├── batch_analyze.py                пакетный запуск анализа
 ├── reductionAnalysis.py            кросс-записной анализ редукции + графики
-├── check_stress.py                 проверка детектора ударения (словарь vs акустика)
+├── evaluate_annotations.py         сверка ручной разметки и автовыхода
+├── check_stress.py                 проверка детектора ударения
 ├── extraSegAudio.py                нарезка слогов в отдельные .wav
-├── gui_app.py                      GUI на tkinter
+├── gui_app.py                      GUI (tkinter + matplotlib)
 │
-├── ground_truth_words.json         эталонные слова и число слогов для оценки
-├── evaluation_results.csv / .md    свод метрик по размеченным записям
-├── reduction_comparison.md         таблица анализа редукции (базовая)
-├── reduction_comparison2.md        таблица с Cohen's d, pooling и графиками
+├── ground_truth_words.json         эталонные слова для оценки
+├── syllables_export/               нарезанные слоги (.wav) — опционально
 └── README.md
 ```
 
@@ -171,7 +175,9 @@ python check_stress.py
 ### 6) Нарезка слогов в отдельные .wav (опционально)
 
 ```
-python extraSegAudio.py
+python extraSegAudio.py              # все записи → syllables_export/имя/
+python extraSegAudio.py 3local       # одна запись
+python extraSegAudio.py --max 30     # максимум 30 слогов на запись
 ```
 
 ## Метрики оценки

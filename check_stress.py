@@ -18,7 +18,8 @@ import json, os, sys, glob
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 JSON_DIR   = os.path.join(SCRIPT_DIR, "analysis")
-OUTPUT_MD  = os.path.join(SCRIPT_DIR, "stress_check_report.md")
+OUTPUT_MD  = os.path.join(SCRIPT_DIR, "results", "stress_check_report.md")
+os.makedirs(os.path.dirname(OUTPUT_MD), exist_ok=True)
 
 
 def check_recording(name, show_detail=False):

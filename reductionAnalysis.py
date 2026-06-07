@@ -21,8 +21,9 @@ import numpy as np
 # ========== НАСТРОЙКИ ==========
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 JSON_DIR   = os.path.join(SCRIPT_DIR, "analysis")
-OUTPUT_MD  = os.path.join(SCRIPT_DIR, "reduction_comparison2.md")
-PLOT_FILE  = os.path.join(SCRIPT_DIR, "reduction_plots.png")   # новое
+OUTPUT_MD  = os.path.join(SCRIPT_DIR, "results", "reduction_comparison2.md")
+PLOT_FILE  = os.path.join(SCRIPT_DIR, "results", "reduction_plots.png")
+os.makedirs(os.path.dirname(OUTPUT_MD), exist_ok=True)   # новое
 
 RECORDINGS = []                     # пусто = автообнаружение
 

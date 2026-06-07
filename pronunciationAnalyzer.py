@@ -55,8 +55,8 @@ from scipy.signal import find_peaks, butter, sosfiltfilt
 # из какой папки его запускают (терминал, кнопка «Run», debug).
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-audioFile  = os.path.join(SCRIPT_DIR, "audio", "5fori.wav")
-textFile   = os.path.join(SCRIPT_DIR, "text",  "5fori.txt")
+audioFile  = os.path.join(SCRIPT_DIR, "audio", "3local.wav")
+textFile   = os.path.join(SCRIPT_DIR, "text",  "3local.txt")
 modelPath  = os.path.join(SCRIPT_DIR, "vosk-model-ru-0.42")
 
 SR                  = 16000
@@ -1349,19 +1349,82 @@ def main(models=None, outDir=None):
                 counter[syl] = counter.get(syl, 0) + 1
     sortedSyl = sorted(counter.items(), key=lambda x: -x[1])
 
-    printReport(audioFile, audioDuration, librosaSR, fullWordAnalysis,
+    scores = printReport(audioFile, audioDuration, librosaSR, fullWordAnalysis,
                 contrastTable, speechDur, speakingRate, wordCount, pauses,
                 normalSpeakingRate, referenceText, recognizedText, refWordList,
                 cmp, textAccuracy, syllableErrors, sortedSyl)
 
     saveJson(audioFile, audioDuration, librosaSR, referenceText, recognizedText,
              fullWordAnalysis, contrastTable, syllableErrors, pauses, cmp,
-             outDir=outDir)
+             scores=scores, outDir=outDir)
 
 
 # ══════════════════════════════════════════════════════════════════
 # 8. ОТЧЁТ И JSON
 # ══════════════════════════════════════════════════════════════════
+
+def computeScores(words, rate):
+    """Вычисляет 5 компонент итоговой оценки. Возвращает dict."""
+    from collections import defaultdict as _dd
+    allSyl = [s for w in words for s in w["syllableAnalysis"]]
+    multi  = [w for w in words if w["syllableCount"] > 1]
+
+    # 1. Слоговая акустика
+    if allSyl:
+        quiet_ratio = sum(1 for s in allSyl if not s["isProblematic"]) / len(allSyl)
+        core_ratio  = sum(1 for s in allSyl
+                          if s["acoustics"].get("core") is not None) / len(allSyl)
+        count_match = sum(1 for w in words if not w.get("countMismatch")) / max(len(words), 1)
+        sylScore = (0.20 * quiet_ratio + 0.40 * core_ratio + 0.40 * count_match) * 100
+    else:
+        sylScore = 100
+
+    # 2. Совпадение ударения
+    if multi:
+        sm = sum(1 for w in multi
+                if w.get("expectedStressedIdx", -1) == w.get("actualStressedIdx", -2))
+        stress = sm / len(multi) * 100
+    else:
+        stress = 100
+
+    # 3. Редукция — агрегация по гласному внутри записи
+    vpool = _dd(lambda: _dd(list))
+    for w in words:
+        if w.get("syllableCount", 0) < 2: continue
+        st_i = w.get("expectedStressedIdx", -1)
+        for i, syl in enumerate(w.get("syllableAnalysis", [])):
+            ac = syl.get("acoustics", {})
+            src = ac.get("core") if ac.get("core") else ac
+            dur = src.get("duration", 0)
+            if dur < 0.025: continue
+            v = None
+            for ch in syl.get("syllable", "").lower():
+                if ch in "аоеия": v = ch; break
+            if v is None: continue
+            if i == st_i: vpool[v]["stress"].append(dur)
+            else:         vpool[v]["unstr"].append(dur)
+    ratios = []
+    for v, pos in vpool.items():
+        if len(pos["stress"]) >= 3 and len(pos["unstr"]) >= 3:
+            r = np.mean(pos["unstr"]) / np.mean(pos["stress"])
+            ratios.append(min(r, 1.5))
+    if ratios:
+        avg_ratio = np.mean(ratios)
+        redux = max(20, 100 - (avg_ratio - 0.70) / 0.30 * 60)
+    else:
+        redux = 50
+
+    # 4. Темп речи
+    native_median = 3.0
+    if rate > 0:
+        deviation = abs(rate - native_median) / native_median
+        tempo = max(0, 100 * (1.0 - deviation * 0.5))
+    else:
+        tempo = 50
+
+    return {"syl": round(float(sylScore), 1), "stress": round(float(stress), 1),
+            "redux": round(float(redux), 1), "tempo": round(float(tempo), 1)}
+
 
 def printReport(audioFile, audioDuration, sr, words, contrastTable, speechDur,
                 rate, wordCount, pauses, normRate, refText, recText, refWords,
@@ -1434,22 +1497,16 @@ def printReport(audioFile, audioDuration, sr, words, contrastTable, speechDur,
         print(f"  {syl:<8} {'█' * min(cnt, 25)} {cnt}")
 
     # --- итоговый балл ---
-    allSyl = [s for w in words for s in w["syllableAnalysis"]]
-    sylScore = (sum(1 for s in allSyl if not s["isProblematic"]) / len(allSyl) * 100) if allSyl else 100
-    multi = [w for w in words if w["syllableCount"] > 1]
-    redScore = (sum(1 for w in multi if not w["reductionInfo"]["hasReductionIssue"]) / len(multi) * 100) if multi else 100
-    avgConf = (sum(w["confidence"] for w in words) / len(words)) if words else 0
-    rateScore = 100 if normRate[0] <= rate <= normRate[1] else max(
-        0, 100 - min(abs(rate - normRate[0]), abs(rate - normRate[1])) * 30)
-
+    scores = computeScores(words, rate)
     components = [
-        ("Слоговая акустика", sylScore, 0.30),
-        ("Редукция гласных",  redScore, 0.30),
-        ("Уверенность VOSK",  avgConf * 100, 0.20),
-        ("Темп речи",         rateScore, 0.10),
-        ("Точность слов",     textAcc, 0.10),
+        ("Слоговая акустика",  scores["syl"],    0.30),
+        ("Совпадение ударения", scores["stress"], 0.25),
+        ("Редукция гласных",   scores["redux"],   0.20),
+        ("Темп речи",          scores["tempo"],   0.10),
+        ("Точность слов",      textAcc,           0.15),
     ]
     final = sum(s * w for _, s, w in components) / sum(w for _, _, w in components)
+    scores["final"] = round(final, 1)
 
     print(f"\n{'═' * W}")
     print("  ИТОГОВАЯ ОЦЕНКА")
@@ -1458,10 +1515,11 @@ def printReport(audioFile, audioDuration, sr, words, contrastTable, speechDur,
         bar = "█" * int(score / 5) + "░" * (20 - int(score / 5))
         print(f"  {name:<20} [{bar}] {score:5.1f} (вес {weight:.0%})")
     print(f"\n  Итоговый балл: {final:5.1f} / 100")
+    return scores
 
 
 def saveJson(audioFile, audioDuration, sr, refText, recText, words,
-             contrastTable, sylErrors, pauses, cmp, outDir=None):
+             contrastTable, sylErrors, pauses, cmp, scores=None, outDir=None):
     data = {
         "audioFile": audioFile, "durationSec": round(audioDuration, 2),
         "sampleRate": sr, "referenceText": refText, "recognizedText": recText,
@@ -1472,6 +1530,15 @@ def saveJson(audioFile, audioDuration, sr, refText, recText, words,
             "substituted": [{"expected": r, "got": g} for r, g in cmp["substituted"]],
             "missed": cmp["missed"], "inserted": cmp["inserted"]},
     }
+    if scores:
+        data["evaluationScores"] = {
+            "syllableAcoustics": scores["syl"],
+            "stressMatch":       scores["stress"],
+            "vowelReduction":    scores["redux"],
+            "speechTempo":       scores["tempo"],
+            "wordAccuracy":      round(100 - ((1 - scores.get("final", 0)/100) * 100), 1),
+            "finalScore":        scores["final"],
+        }
     basename = os.path.basename(audioFile).replace(".wav", "_syllable_analysis.json")
     if outDir:
         os.makedirs(outDir, exist_ok=True)
