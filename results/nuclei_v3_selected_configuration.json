@@ -1,0 +1,53 @@
+{
+  "selected_at": "2026-07-25",
+  "status": "frozen_and_blind_evaluated_requires_new_holdout",
+  "metric": "event F1 at +/-50 ms",
+  "development_recordings": [
+    "3local: manually reviewed 0-17.35 s only",
+    "6fori",
+    "7fori",
+    "2fori_chunk: manually reviewed 0-17.43 s"
+  ],
+  "development_reference_events": 358,
+  "user_supplied_transcript": false,
+  "acoustic_stage": {
+    "sylber_norm_threshold": 2.8,
+    "sylber_merge_threshold": 0.8,
+    "classifier": "StandardScaler + SVC(C=1.5, class_weight=balanced)",
+    "score_threshold": -0.07284120052845652,
+    "v2_priority_fusion_distance_seconds": 0.065
+  },
+  "automatic_asr_pruner": {
+    "enabled": true,
+    "word_boundary_padding_seconds": 0.0,
+    "allowed_extra_nuclei_per_word": 0,
+    "quota_source": "Russian vowel count in the application's own ASR token",
+    "vowelless_token_quota": 0,
+    "preserve_events_outside_recognized_words": true
+  },
+  "nested_leave_one_recording_out_50ms": {
+    "tp": 314,
+    "fp": 25,
+    "fn": 44,
+    "precision": 0.9262536873156342,
+    "recall": 0.8770949720670391,
+    "f1": 0.9010043041606887
+  },
+  "strictly_text_independent_four_recording_f1": 0.8848821081830791,
+  "artifact": {
+    "path": "models/nuclei_v3_svm.joblib",
+    "sha256": "70fc22d9a92f63e49c19b38f46fdb4d90d3f280a7f4070ba50675875fb192717"
+  },
+  "blind_test": {
+    "recording": "8fori",
+    "used_for_selection": false,
+    "evaluated": true,
+    "prediction_file": "results/nuclei_v3_8fori_blind_predictions_frozen.json",
+    "prediction_sha256": "2dcad55f0e192cc7f4c81eac6bdbc74b468546b5be5d5aad956d2f12f5d3a5b0",
+    "reference_nuclei": 103,
+    "predicted_nuclei": 104,
+    "precision_50ms": 0.8076923076923077,
+    "recall_50ms": 0.8155339805825242,
+    "f1_50ms": 0.8115942028985508
+  }
+}

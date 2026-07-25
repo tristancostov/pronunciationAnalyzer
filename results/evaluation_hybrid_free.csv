@@ -1,0 +1,4 @@
+﻿recording,paired_words,text_syllable_accuracy_pct,acoustic_nuclei_accuracy_pct,boundary_mean_ms,boundary_median_ms,boundary_p90_ms,dict_acoustic_agreement_pct,manual_stress_accuracy_pct,manual_stress_total
+3local,40,92.5,57.5,30.7,24.6,68.4,47.8,0.0,1
+6fori,42,97.6,66.7,55.4,32.8,111.9,45.7,,0
+7fori,42,100.0,57.1,46.8,30.8,106.2,47.2,,0

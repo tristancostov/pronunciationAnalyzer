@@ -1,0 +1,866 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.000000000
+xmax = 101.330437500
+tiers? <exists>
+size = 1
+item []:
+    item [1]:
+        class = "TextTier"
+        name = "nucleus"
+        xmin = 0.000000000
+        xmax = 101.330437500
+        points: size = 284
+        points [1]:
+            number = 0.260000000
+            mark = "N"
+        points [2]:
+            number = 0.390000000
+            mark = "N"
+        points [3]:
+            number = 0.710000000
+            mark = "N"
+        points [4]:
+            number = 1.090000000
+            mark = "N"
+        points [5]:
+            number = 1.250000000
+            mark = "N"
+        points [6]:
+            number = 1.640000000
+            mark = "N"
+        points [7]:
+            number = 1.930000000
+            mark = "N"
+        points [8]:
+            number = 2.460000000
+            mark = "N"
+        points [9]:
+            number = 2.890000000
+            mark = "N"
+        points [10]:
+            number = 3.230000000
+            mark = "N"
+        points [11]:
+            number = 3.470000000
+            mark = "N"
+        points [12]:
+            number = 3.600000000
+            mark = "N"
+        points [13]:
+            number = 3.820000000
+            mark = "N"
+        points [14]:
+            number = 4.030000000
+            mark = "N"
+        points [15]:
+            number = 4.270000000
+            mark = "N"
+        points [16]:
+            number = 4.510000000
+            mark = "N"
+        points [17]:
+            number = 4.690000000
+            mark = "N"
+        points [18]:
+            number = 4.950000000
+            mark = "N"
+        points [19]:
+            number = 5.140000000
+            mark = "N"
+        points [20]:
+            number = 5.290000000
+            mark = "N"
+        points [21]:
+            number = 5.610000000
+            mark = "N"
+        points [22]:
+            number = 5.750000000
+            mark = "N"
+        points [23]:
+            number = 5.890000000
+            mark = "N"
+        points [24]:
+            number = 6.190000000
+            mark = "N"
+        points [25]:
+            number = 6.730000000
+            mark = "N"
+        points [26]:
+            number = 6.940000000
+            mark = "N"
+        points [27]:
+            number = 7.290000000
+            mark = "N"
+        points [28]:
+            number = 8.040000000
+            mark = "N"
+        points [29]:
+            number = 8.410000000
+            mark = "N"
+        points [30]:
+            number = 9.030000000
+            mark = "N"
+        points [31]:
+            number = 9.630000000
+            mark = "N"
+        points [32]:
+            number = 10.210000000
+            mark = "N"
+        points [33]:
+            number = 10.410000000
+            mark = "N"
+        points [34]:
+            number = 10.650000000
+            mark = "N"
+        points [35]:
+            number = 10.970000000
+            mark = "N"
+        points [36]:
+            number = 11.160000000
+            mark = "N"
+        points [37]:
+            number = 11.320000000
+            mark = "N"
+        points [38]:
+            number = 11.460000000
+            mark = "N"
+        points [39]:
+            number = 11.870000000
+            mark = "N"
+        points [40]:
+            number = 12.230000000
+            mark = "N"
+        points [41]:
+            number = 12.840000000
+            mark = "N"
+        points [42]:
+            number = 13.380000000
+            mark = "N"
+        points [43]:
+            number = 13.640000000
+            mark = "N"
+        points [44]:
+            number = 13.860000000
+            mark = "N"
+        points [45]:
+            number = 14.050000000
+            mark = "N"
+        points [46]:
+            number = 14.770000000
+            mark = "N"
+        points [47]:
+            number = 15.040000000
+            mark = "N"
+        points [48]:
+            number = 15.320000000
+            mark = "N"
+        points [49]:
+            number = 15.480000000
+            mark = "N"
+        points [50]:
+            number = 15.670000000
+            mark = "N"
+        points [51]:
+            number = 15.890000000
+            mark = "N"
+        points [52]:
+            number = 16.180000000
+            mark = "N"
+        points [53]:
+            number = 16.360000000
+            mark = "N"
+        points [54]:
+            number = 16.520000000
+            mark = "N"
+        points [55]:
+            number = 16.890000000
+            mark = "N"
+        points [56]:
+            number = 17.170000000
+            mark = "N"
+        points [57]:
+            number = 17.300000000
+            mark = "N"
+        points [58]:
+            number = 17.760000000
+            mark = "N"
+        points [59]:
+            number = 18.120000000
+            mark = "N"
+        points [60]:
+            number = 18.500000000
+            mark = "N"
+        points [61]:
+            number = 18.960000000
+            mark = "N"
+        points [62]:
+            number = 19.260000000
+            mark = "N"
+        points [63]:
+            number = 19.520000000
+            mark = "N"
+        points [64]:
+            number = 19.690000000
+            mark = "N"
+        points [65]:
+            number = 19.920000000
+            mark = "N"
+        points [66]:
+            number = 20.220000000
+            mark = "N"
+        points [67]:
+            number = 20.560000000
+            mark = "N"
+        points [68]:
+            number = 20.790000000
+            mark = "N"
+        points [69]:
+            number = 21.320000000
+            mark = "N"
+        points [70]:
+            number = 21.820000000
+            mark = "N"
+        points [71]:
+            number = 21.960000000
+            mark = "N"
+        points [72]:
+            number = 22.130000000
+            mark = "N"
+        points [73]:
+            number = 22.480000000
+            mark = "N"
+        points [74]:
+            number = 22.980000000
+            mark = "N"
+        points [75]:
+            number = 23.490000000
+            mark = "N"
+        points [76]:
+            number = 23.640000000
+            mark = "N"
+        points [77]:
+            number = 23.880000000
+            mark = "N"
+        points [78]:
+            number = 24.380000000
+            mark = "N"
+        points [79]:
+            number = 24.780000000
+            mark = "N"
+        points [80]:
+            number = 25.210000000
+            mark = "N"
+        points [81]:
+            number = 25.450000000
+            mark = "N"
+        points [82]:
+            number = 25.780000000
+            mark = "N"
+        points [83]:
+            number = 26.120000000
+            mark = "N"
+        points [84]:
+            number = 26.640000000
+            mark = "N"
+        points [85]:
+            number = 27.030000000
+            mark = "N"
+        points [86]:
+            number = 27.360000000
+            mark = "N"
+        points [87]:
+            number = 27.480000000
+            mark = "N"
+        points [88]:
+            number = 27.740000000
+            mark = "N"
+        points [89]:
+            number = 27.930000000
+            mark = "N"
+        points [90]:
+            number = 28.150000000
+            mark = "N"
+        points [91]:
+            number = 28.370000000
+            mark = "N"
+        points [92]:
+            number = 28.750000000
+            mark = "N"
+        points [93]:
+            number = 29.140000000
+            mark = "N"
+        points [94]:
+            number = 29.310000000
+            mark = "N"
+        points [95]:
+            number = 29.580000000
+            mark = "N"
+        points [96]:
+            number = 29.770000000
+            mark = "N"
+        points [97]:
+            number = 30.010000000
+            mark = "N"
+        points [98]:
+            number = 30.530000000
+            mark = "N"
+        points [99]:
+            number = 31.250000000
+            mark = "N"
+        points [100]:
+            number = 31.560000000
+            mark = "N"
+        points [101]:
+            number = 32.060000000
+            mark = "N"
+        points [102]:
+            number = 32.320000000
+            mark = "N"
+        points [103]:
+            number = 32.690000000
+            mark = "N"
+        points [104]:
+            number = 33.010000000
+            mark = "N"
+        points [105]:
+            number = 33.660000000
+            mark = "N"
+        points [106]:
+            number = 33.910000000
+            mark = "N"
+        points [107]:
+            number = 34.110000000
+            mark = "N"
+        points [108]:
+            number = 34.780000000
+            mark = "N"
+        points [109]:
+            number = 35.290000000
+            mark = "N"
+        points [110]:
+            number = 35.610000000
+            mark = "N"
+        points [111]:
+            number = 35.860000000
+            mark = "N"
+        points [112]:
+            number = 36.120000000
+            mark = "N"
+        points [113]:
+            number = 36.310000000
+            mark = "N"
+        points [114]:
+            number = 36.540000000
+            mark = "N"
+        points [115]:
+            number = 37.190000000
+            mark = "N"
+        points [116]:
+            number = 37.440000000
+            mark = "N"
+        points [117]:
+            number = 37.820000000
+            mark = "N"
+        points [118]:
+            number = 38.760000000
+            mark = "N"
+        points [119]:
+            number = 38.880000000
+            mark = "N"
+        points [120]:
+            number = 39.430000000
+            mark = "N"
+        points [121]:
+            number = 39.850000000
+            mark = "N"
+        points [122]:
+            number = 40.090000000
+            mark = "N"
+        points [123]:
+            number = 40.330000000
+            mark = "N"
+        points [124]:
+            number = 40.650000000
+            mark = "N"
+        points [125]:
+            number = 40.820000000
+            mark = "N"
+        points [126]:
+            number = 41.330000000
+            mark = "N"
+        points [127]:
+            number = 41.770000000
+            mark = "N"
+        points [128]:
+            number = 42.120000000
+            mark = "N"
+        points [129]:
+            number = 42.430000000
+            mark = "N"
+        points [130]:
+            number = 42.660000000
+            mark = "N"
+        points [131]:
+            number = 43.020000000
+            mark = "N"
+        points [132]:
+            number = 43.240000000
+            mark = "N"
+        points [133]:
+            number = 43.430000000
+            mark = "N"
+        points [134]:
+            number = 43.730000000
+            mark = "N"
+        points [135]:
+            number = 44.000000000
+            mark = "N"
+        points [136]:
+            number = 44.280000000
+            mark = "N"
+        points [137]:
+            number = 44.760000000
+            mark = "N"
+        points [138]:
+            number = 44.960000000
+            mark = "N"
+        points [139]:
+            number = 45.460000000
+            mark = "N"
+        points [140]:
+            number = 45.720000000
+            mark = "N"
+        points [141]:
+            number = 45.920000000
+            mark = "N"
+        points [142]:
+            number = 46.200000000
+            mark = "N"
+        points [143]:
+            number = 46.590000000
+            mark = "N"
+        points [144]:
+            number = 46.950000000
+            mark = "N"
+        points [145]:
+            number = 47.360000000
+            mark = "N"
+        points [146]:
+            number = 47.610000000
+            mark = "N"
+        points [147]:
+            number = 47.960000000
+            mark = "N"
+        points [148]:
+            number = 48.240000000
+            mark = "N"
+        points [149]:
+            number = 48.390000000
+            mark = "N"
+        points [150]:
+            number = 48.690000000
+            mark = "N"
+        points [151]:
+            number = 49.440000000
+            mark = "N"
+        points [152]:
+            number = 49.920000000
+            mark = "N"
+        points [153]:
+            number = 50.100000000
+            mark = "N"
+        points [154]:
+            number = 50.490000000
+            mark = "N"
+        points [155]:
+            number = 50.970000000
+            mark = "N"
+        points [156]:
+            number = 51.420000000
+            mark = "N"
+        points [157]:
+            number = 51.650000000
+            mark = "N"
+        points [158]:
+            number = 51.920000000
+            mark = "N"
+        points [159]:
+            number = 52.730000000
+            mark = "N"
+        points [160]:
+            number = 52.860000000
+            mark = "N"
+        points [161]:
+            number = 53.260000000
+            mark = "N"
+        points [162]:
+            number = 53.630000000
+            mark = "N"
+        points [163]:
+            number = 53.980000000
+            mark = "N"
+        points [164]:
+            number = 54.090000000
+            mark = "N"
+        points [165]:
+            number = 54.330000000
+            mark = "N"
+        points [166]:
+            number = 54.550000000
+            mark = "N"
+        points [167]:
+            number = 54.960000000
+            mark = "N"
+        points [168]:
+            number = 55.530000000
+            mark = "N"
+        points [169]:
+            number = 55.800000000
+            mark = "N"
+        points [170]:
+            number = 56.000000000
+            mark = "N"
+        points [171]:
+            number = 56.430000000
+            mark = "N"
+        points [172]:
+            number = 56.970000000
+            mark = "N"
+        points [173]:
+            number = 57.380000000
+            mark = "N"
+        points [174]:
+            number = 57.670000000
+            mark = "N"
+        points [175]:
+            number = 57.920000000
+            mark = "N"
+        points [176]:
+            number = 58.420000000
+            mark = "N"
+        points [177]:
+            number = 58.660000000
+            mark = "N"
+        points [178]:
+            number = 58.960000000
+            mark = "N"
+        points [179]:
+            number = 59.760000000
+            mark = "N"
+        points [180]:
+            number = 59.950000000
+            mark = "N"
+        points [181]:
+            number = 60.680000000
+            mark = "N"
+        points [182]:
+            number = 61.280000000
+            mark = "N"
+        points [183]:
+            number = 61.830000000
+            mark = "N"
+        points [184]:
+            number = 62.620000000
+            mark = "N"
+        points [185]:
+            number = 62.820000000
+            mark = "N"
+        points [186]:
+            number = 63.060000000
+            mark = "N"
+        points [187]:
+            number = 63.740000000
+            mark = "N"
+        points [188]:
+            number = 64.070000000
+            mark = "N"
+        points [189]:
+            number = 64.260000000
+            mark = "N"
+        points [190]:
+            number = 64.420000000
+            mark = "N"
+        points [191]:
+            number = 64.770000000
+            mark = "N"
+        points [192]:
+            number = 65.230000000
+            mark = "N"
+        points [193]:
+            number = 65.550000000
+            mark = "N"
+        points [194]:
+            number = 65.990000000
+            mark = "N"
+        points [195]:
+            number = 66.210000000
+            mark = "N"
+        points [196]:
+            number = 66.460000000
+            mark = "N"
+        points [197]:
+            number = 67.380000000
+            mark = "N"
+        points [198]:
+            number = 67.680000000
+            mark = "N"
+        points [199]:
+            number = 67.930000000
+            mark = "N"
+        points [200]:
+            number = 68.290000000
+            mark = "N"
+        points [201]:
+            number = 68.900000000
+            mark = "N"
+        points [202]:
+            number = 69.120000000
+            mark = "N"
+        points [203]:
+            number = 69.300000000
+            mark = "N"
+        points [204]:
+            number = 69.720000000
+            mark = "N"
+        points [205]:
+            number = 70.450000000
+            mark = "N"
+        points [206]:
+            number = 71.040000000
+            mark = "N"
+        points [207]:
+            number = 71.170000000
+            mark = "N"
+        points [208]:
+            number = 71.380000000
+            mark = "N"
+        points [209]:
+            number = 71.810000000
+            mark = "N"
+        points [210]:
+            number = 72.140000000
+            mark = "N"
+        points [211]:
+            number = 72.350000000
+            mark = "N"
+        points [212]:
+            number = 72.950000000
+            mark = "N"
+        points [213]:
+            number = 73.430000000
+            mark = "N"
+        points [214]:
+            number = 73.800000000
+            mark = "N"
+        points [215]:
+            number = 73.950000000
+            mark = "N"
+        points [216]:
+            number = 74.200000000
+            mark = "N"
+        points [217]:
+            number = 74.450000000
+            mark = "N"
+        points [218]:
+            number = 74.840000000
+            mark = "N"
+        points [219]:
+            number = 75.060000000
+            mark = "N"
+        points [220]:
+            number = 75.210000000
+            mark = "N"
+        points [221]:
+            number = 76.030000000
+            mark = "N"
+        points [222]:
+            number = 76.330000000
+            mark = "N"
+        points [223]:
+            number = 77.020000000
+            mark = "N"
+        points [224]:
+            number = 77.340000000
+            mark = "N"
+        points [225]:
+            number = 77.670000000
+            mark = "N"
+        points [226]:
+            number = 77.950000000
+            mark = "N"
+        points [227]:
+            number = 78.550000000
+            mark = "N"
+        points [228]:
+            number = 79.130000000
+            mark = "N"
+        points [229]:
+            number = 79.980000000
+            mark = "N"
+        points [230]:
+            number = 80.270000000
+            mark = "N"
+        points [231]:
+            number = 80.590000000
+            mark = "N"
+        points [232]:
+            number = 80.840000000
+            mark = "N"
+        points [233]:
+            number = 81.150000000
+            mark = "N"
+        points [234]:
+            number = 81.510000000
+            mark = "N"
+        points [235]:
+            number = 81.740000000
+            mark = "N"
+        points [236]:
+            number = 81.990000000
+            mark = "N"
+        points [237]:
+            number = 82.130000000
+            mark = "N"
+        points [238]:
+            number = 82.520000000
+            mark = "N"
+        points [239]:
+            number = 82.760000000
+            mark = "N"
+        points [240]:
+            number = 83.070000000
+            mark = "N"
+        points [241]:
+            number = 83.370000000
+            mark = "N"
+        points [242]:
+            number = 83.660000000
+            mark = "N"
+        points [243]:
+            number = 84.340000000
+            mark = "N"
+        points [244]:
+            number = 84.600000000
+            mark = "N"
+        points [245]:
+            number = 85.060000000
+            mark = "N"
+        points [246]:
+            number = 85.520000000
+            mark = "N"
+        points [247]:
+            number = 86.160000000
+            mark = "N"
+        points [248]:
+            number = 86.370000000
+            mark = "N"
+        points [249]:
+            number = 86.830000000
+            mark = "N"
+        points [250]:
+            number = 87.260000000
+            mark = "N"
+        points [251]:
+            number = 87.680000000
+            mark = "N"
+        points [252]:
+            number = 87.860000000
+            mark = "N"
+        points [253]:
+            number = 89.550000000
+            mark = "N"
+        points [254]:
+            number = 89.840000000
+            mark = "N"
+        points [255]:
+            number = 90.270000000
+            mark = "N"
+        points [256]:
+            number = 90.730000000
+            mark = "N"
+        points [257]:
+            number = 91.060000000
+            mark = "N"
+        points [258]:
+            number = 91.300000000
+            mark = "N"
+        points [259]:
+            number = 91.500000000
+            mark = "N"
+        points [260]:
+            number = 92.020000000
+            mark = "N"
+        points [261]:
+            number = 92.320000000
+            mark = "N"
+        points [262]:
+            number = 92.510000000
+            mark = "N"
+        points [263]:
+            number = 92.700000000
+            mark = "N"
+        points [264]:
+            number = 92.940000000
+            mark = "N"
+        points [265]:
+            number = 93.170000000
+            mark = "N"
+        points [266]:
+            number = 93.520000000
+            mark = "N"
+        points [267]:
+            number = 93.880000000
+            mark = "N"
+        points [268]:
+            number = 94.260000000
+            mark = "N"
+        points [269]:
+            number = 94.720000000
+            mark = "N"
+        points [270]:
+            number = 94.810000000
+            mark = "N"
+        points [271]:
+            number = 95.140000000
+            mark = "N"
+        points [272]:
+            number = 95.310000000
+            mark = "N"
+        points [273]:
+            number = 95.500000000
+            mark = "N"
+        points [274]:
+            number = 95.710000000
+            mark = "N"
+        points [275]:
+            number = 96.060000000
+            mark = "N"
+        points [276]:
+            number = 96.470000000
+            mark = "N"
+        points [277]:
+            number = 96.840000000
+            mark = "N"
+        points [278]:
+            number = 97.060000000
+            mark = "N"
+        points [279]:
+            number = 97.970000000
+            mark = "N"
+        points [280]:
+            number = 99.880000000
+            mark = "N"
+        points [281]:
+            number = 100.220000000
+            mark = "N"
+        points [282]:
+            number = 100.430000000
+            mark = "N"
+        points [283]:
+            number = 100.580000000
+            mark = "N"
+        points [284]:
+            number = 100.860000000
+            mark = "N"

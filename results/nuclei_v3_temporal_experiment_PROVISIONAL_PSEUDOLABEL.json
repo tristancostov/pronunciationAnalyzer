@@ -1,0 +1,91 @@
+{
+  "experiment": "mel_mfcc_temporal_frame_regression",
+  "text_independent": true,
+  "evaluation": "nested leave-one-recording-out; +/-50 ms",
+  "target_sigma_seconds": 0.025,
+  "feature_count": 76,
+  "result": {
+    "folds": [
+      {
+        "heldout": "3local",
+        "threshold": 0.325,
+        "prominence": 0.075,
+        "inner_validation": {
+          "tp": 185,
+          "fp": 45,
+          "fn": 19,
+          "precision": 0.8043478260869565,
+          "recall": 0.9068627450980392,
+          "f1": 0.8525345622119817
+        },
+        "reference_count": 94,
+        "predicted_count": 76,
+        "metrics_50ms": {
+          "tp": 67,
+          "fp": 9,
+          "fn": 27,
+          "precision": 0.881578947368421,
+          "recall": 0.7127659574468085,
+          "f1": 0.788235294117647,
+          "timing_median_ms": 13.049807416981807
+        }
+      },
+      {
+        "heldout": "6fori",
+        "threshold": 0.4,
+        "prominence": 0.14,
+        "inner_validation": {
+          "tp": 152,
+          "fp": 38,
+          "fn": 42,
+          "precision": 0.8,
+          "recall": 0.7835051546391752,
+          "f1": 0.7916666666666666
+        },
+        "reference_count": 104,
+        "predicted_count": 120,
+        "metrics_50ms": {
+          "tp": 88,
+          "fp": 32,
+          "fn": 16,
+          "precision": 0.7333333333333333,
+          "recall": 0.8461538461538461,
+          "f1": 0.7857142857142856,
+          "timing_median_ms": 10.00019073486369
+        }
+      },
+      {
+        "heldout": "7fori",
+        "threshold": 0.225,
+        "prominence": 0.14,
+        "inner_validation": {
+          "tp": 165,
+          "fp": 52,
+          "fn": 33,
+          "precision": 0.7603686635944701,
+          "recall": 0.8333333333333334,
+          "f1": 0.7951807228915664
+        },
+        "reference_count": 100,
+        "predicted_count": 109,
+        "metrics_50ms": {
+          "tp": 85,
+          "fp": 24,
+          "fn": 15,
+          "precision": 0.7798165137614679,
+          "recall": 0.85,
+          "f1": 0.8133971291866028,
+          "timing_median_ms": 10.000610351561079
+        }
+      }
+    ],
+    "aggregate_50ms": {
+      "tp": 240,
+      "fp": 65,
+      "fn": 58,
+      "precision": 0.7868852459016393,
+      "recall": 0.8053691275167785,
+      "f1": 0.7960199004975124
+    }
+  }
+}

@@ -1,0 +1,7 @@
+# Additional dependencies for reproducible V3 research experiments.
+# Install after requirements.txt in the bundled Python environment.
+scikit-learn==1.6.0
+joblib
+torch==2.7.1
+transformers
+huggingface-hub

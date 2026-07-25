@@ -1,0 +1,744 @@
+{
+  "recordings": [
+    "3local"
+  ],
+  "selection_rule": "max F1@50, then F1@30, with development precision@50 >= 0.80",
+  "warning": "Development-set result; validate on held-out speakers before adoption.",
+  "best": {
+    "name": "recall_4",
+    "overrides": {
+      "strong_prominence": 0.35,
+      "weak_prominence": 0.08,
+      "strong_min_confidence": 0.34,
+      "weak_min_confidence": 0.48
+    },
+    "config": {
+      "sample_rate": 16000,
+      "frame_seconds": 0.03,
+      "hop_seconds": 0.01,
+      "n_fft": 1024,
+      "fmin": 65.0,
+      "fmax": 450.0,
+      "speech_floor_db": 34.0,
+      "smoothing_seconds": 0.022,
+      "min_distance_seconds": 0.055,
+      "strong_prominence": 0.35,
+      "weak_prominence": 0.08,
+      "strong_min_confidence": 0.34,
+      "weak_min_confidence": 0.48,
+      "band_edges_hz": [
+        [
+          60.0,
+          370.0
+        ],
+        [
+          370.0,
+          800.0
+        ],
+        [
+          800.0,
+          1400.0
+        ],
+        [
+          1400.0,
+          2250.0
+        ],
+        [
+          2250.0,
+          3450.0
+        ],
+        [
+          3450.0,
+          5130.0
+        ],
+        [
+          5130.0,
+          7500.0
+        ]
+      ],
+      "band_weights": [
+        0.2,
+        0.95,
+        1.0,
+        0.62,
+        0.18,
+        -0.08,
+        -0.12
+      ]
+    },
+    "development_only": true,
+    "f1_30": 0.75,
+    "f1_50": 0.8214285714285715,
+    "precision_50": 0.9324324324324325,
+    "recall_50": 0.7340425531914894,
+    "tp_50": 69,
+    "fp_50": 5,
+    "fn_50": 25,
+    "per_recording": [
+      {
+        "recording": "3local",
+        "predicted_count": 74,
+        "reference_count": 94,
+        "f1_30": 0.75,
+        "f1_50": 0.8214285714285715,
+        "precision_50": 0.9324324324324325,
+        "recall_50": 0.7340425531914894
+      }
+    ]
+  },
+  "ranked": [
+    {
+      "name": "recall_4",
+      "overrides": {
+        "strong_prominence": 0.35,
+        "weak_prominence": 0.08,
+        "strong_min_confidence": 0.34,
+        "weak_min_confidence": 0.48
+      },
+      "config": {
+        "sample_rate": 16000,
+        "frame_seconds": 0.03,
+        "hop_seconds": 0.01,
+        "n_fft": 1024,
+        "fmin": 65.0,
+        "fmax": 450.0,
+        "speech_floor_db": 34.0,
+        "smoothing_seconds": 0.022,
+        "min_distance_seconds": 0.055,
+        "strong_prominence": 0.35,
+        "weak_prominence": 0.08,
+        "strong_min_confidence": 0.34,
+        "weak_min_confidence": 0.48,
+        "band_edges_hz": [
+          [
+            60.0,
+            370.0
+          ],
+          [
+            370.0,
+            800.0
+          ],
+          [
+            800.0,
+            1400.0
+          ],
+          [
+            1400.0,
+            2250.0
+          ],
+          [
+            2250.0,
+            3450.0
+          ],
+          [
+            3450.0,
+            5130.0
+          ],
+          [
+            5130.0,
+            7500.0
+          ]
+        ],
+        "band_weights": [
+          0.2,
+          0.95,
+          1.0,
+          0.62,
+          0.18,
+          -0.08,
+          -0.12
+        ]
+      },
+      "development_only": true,
+      "f1_30": 0.75,
+      "f1_50": 0.8214285714285715,
+      "precision_50": 0.9324324324324325,
+      "recall_50": 0.7340425531914894,
+      "tp_50": 69,
+      "fp_50": 5,
+      "fn_50": 25,
+      "per_recording": [
+        {
+          "recording": "3local",
+          "predicted_count": 74,
+          "reference_count": 94,
+          "f1_30": 0.75,
+          "f1_50": 0.8214285714285715,
+          "precision_50": 0.9324324324324325,
+          "recall_50": 0.7340425531914894
+        }
+      ]
+    },
+    {
+      "name": "close_nuclei_2",
+      "overrides": {
+        "strong_prominence": 0.35,
+        "weak_prominence": 0.08,
+        "strong_min_confidence": 0.34,
+        "weak_min_confidence": 0.48,
+        "min_distance_seconds": 0.045
+      },
+      "config": {
+        "sample_rate": 16000,
+        "frame_seconds": 0.03,
+        "hop_seconds": 0.01,
+        "n_fft": 1024,
+        "fmin": 65.0,
+        "fmax": 450.0,
+        "speech_floor_db": 34.0,
+        "smoothing_seconds": 0.022,
+        "min_distance_seconds": 0.045,
+        "strong_prominence": 0.35,
+        "weak_prominence": 0.08,
+        "strong_min_confidence": 0.34,
+        "weak_min_confidence": 0.48,
+        "band_edges_hz": [
+          [
+            60.0,
+            370.0
+          ],
+          [
+            370.0,
+            800.0
+          ],
+          [
+            800.0,
+            1400.0
+          ],
+          [
+            1400.0,
+            2250.0
+          ],
+          [
+            2250.0,
+            3450.0
+          ],
+          [
+            3450.0,
+            5130.0
+          ],
+          [
+            5130.0,
+            7500.0
+          ]
+        ],
+        "band_weights": [
+          0.2,
+          0.95,
+          1.0,
+          0.62,
+          0.18,
+          -0.08,
+          -0.12
+        ]
+      },
+      "development_only": true,
+      "f1_30": 0.75,
+      "f1_50": 0.8214285714285715,
+      "precision_50": 0.9324324324324325,
+      "recall_50": 0.7340425531914894,
+      "tp_50": 69,
+      "fp_50": 5,
+      "fn_50": 25,
+      "per_recording": [
+        {
+          "recording": "3local",
+          "predicted_count": 74,
+          "reference_count": 94,
+          "f1_30": 0.75,
+          "f1_50": 0.8214285714285715,
+          "precision_50": 0.9324324324324325,
+          "recall_50": 0.7340425531914894
+        }
+      ]
+    },
+    {
+      "name": "weak_vowels_1",
+      "overrides": {
+        "strong_prominence": 0.5,
+        "weak_prominence": 0.1,
+        "strong_min_confidence": 0.4,
+        "weak_min_confidence": 0.48
+      },
+      "config": {
+        "sample_rate": 16000,
+        "frame_seconds": 0.03,
+        "hop_seconds": 0.01,
+        "n_fft": 1024,
+        "fmin": 65.0,
+        "fmax": 450.0,
+        "speech_floor_db": 34.0,
+        "smoothing_seconds": 0.022,
+        "min_distance_seconds": 0.055,
+        "strong_prominence": 0.5,
+        "weak_prominence": 0.1,
+        "strong_min_confidence": 0.4,
+        "weak_min_confidence": 0.48,
+        "band_edges_hz": [
+          [
+            60.0,
+            370.0
+          ],
+          [
+            370.0,
+            800.0
+          ],
+          [
+            800.0,
+            1400.0
+          ],
+          [
+            1400.0,
+            2250.0
+          ],
+          [
+            2250.0,
+            3450.0
+          ],
+          [
+            3450.0,
+            5130.0
+          ],
+          [
+            5130.0,
+            7500.0
+          ]
+        ],
+        "band_weights": [
+          0.2,
+          0.95,
+          1.0,
+          0.62,
+          0.18,
+          -0.08,
+          -0.12
+        ]
+      },
+      "development_only": true,
+      "f1_30": 0.7469879518072289,
+      "f1_50": 0.8192771084337349,
+      "precision_50": 0.9444444444444444,
+      "recall_50": 0.723404255319149,
+      "tp_50": 68,
+      "fp_50": 4,
+      "fn_50": 26,
+      "per_recording": [
+        {
+          "recording": "3local",
+          "predicted_count": 72,
+          "reference_count": 94,
+          "f1_30": 0.7469879518072289,
+          "f1_50": 0.8192771084337349,
+          "precision_50": 0.9444444444444444,
+          "recall_50": 0.723404255319149
+        }
+      ]
+    },
+    {
+      "name": "recall_3",
+      "overrides": {
+        "strong_prominence": 0.4,
+        "weak_prominence": 0.1,
+        "strong_min_confidence": 0.36,
+        "weak_min_confidence": 0.5
+      },
+      "config": {
+        "sample_rate": 16000,
+        "frame_seconds": 0.03,
+        "hop_seconds": 0.01,
+        "n_fft": 1024,
+        "fmin": 65.0,
+        "fmax": 450.0,
+        "speech_floor_db": 34.0,
+        "smoothing_seconds": 0.022,
+        "min_distance_seconds": 0.055,
+        "strong_prominence": 0.4,
+        "weak_prominence": 0.1,
+        "strong_min_confidence": 0.36,
+        "weak_min_confidence": 0.5,
+        "band_edges_hz": [
+          [
+            60.0,
+            370.0
+          ],
+          [
+            370.0,
+            800.0
+          ],
+          [
+            800.0,
+            1400.0
+          ],
+          [
+            1400.0,
+            2250.0
+          ],
+          [
+            2250.0,
+            3450.0
+          ],
+          [
+            3450.0,
+            5130.0
+          ],
+          [
+            5130.0,
+            7500.0
+          ]
+        ],
+        "band_weights": [
+          0.2,
+          0.95,
+          1.0,
+          0.62,
+          0.18,
+          -0.08,
+          -0.12
+        ]
+      },
+      "development_only": true,
+      "f1_30": 0.7393939393939394,
+      "f1_50": 0.8121212121212121,
+      "precision_50": 0.9436619718309859,
+      "recall_50": 0.7127659574468085,
+      "tp_50": 67,
+      "fp_50": 4,
+      "fn_50": 27,
+      "per_recording": [
+        {
+          "recording": "3local",
+          "predicted_count": 71,
+          "reference_count": 94,
+          "f1_30": 0.7393939393939394,
+          "f1_50": 0.8121212121212121,
+          "precision_50": 0.9436619718309859,
+          "recall_50": 0.7127659574468085
+        }
+      ]
+    },
+    {
+      "name": "recall_2",
+      "overrides": {
+        "strong_prominence": 0.45,
+        "weak_prominence": 0.12,
+        "strong_min_confidence": 0.38,
+        "weak_min_confidence": 0.52
+      },
+      "config": {
+        "sample_rate": 16000,
+        "frame_seconds": 0.03,
+        "hop_seconds": 0.01,
+        "n_fft": 1024,
+        "fmin": 65.0,
+        "fmax": 450.0,
+        "speech_floor_db": 34.0,
+        "smoothing_seconds": 0.022,
+        "min_distance_seconds": 0.055,
+        "strong_prominence": 0.45,
+        "weak_prominence": 0.12,
+        "strong_min_confidence": 0.38,
+        "weak_min_confidence": 0.52,
+        "band_edges_hz": [
+          [
+            60.0,
+            370.0
+          ],
+          [
+            370.0,
+            800.0
+          ],
+          [
+            800.0,
+            1400.0
+          ],
+          [
+            1400.0,
+            2250.0
+          ],
+          [
+            2250.0,
+            3450.0
+          ],
+          [
+            3450.0,
+            5130.0
+          ],
+          [
+            5130.0,
+            7500.0
+          ]
+        ],
+        "band_weights": [
+          0.2,
+          0.95,
+          1.0,
+          0.62,
+          0.18,
+          -0.08,
+          -0.12
+        ]
+      },
+      "development_only": true,
+      "f1_30": 0.7317073170731707,
+      "f1_50": 0.8048780487804879,
+      "precision_50": 0.9428571428571428,
+      "recall_50": 0.7021276595744681,
+      "tp_50": 66,
+      "fp_50": 4,
+      "fn_50": 28,
+      "per_recording": [
+        {
+          "recording": "3local",
+          "predicted_count": 70,
+          "reference_count": 94,
+          "f1_30": 0.7317073170731707,
+          "f1_50": 0.8048780487804879,
+          "precision_50": 0.9428571428571428,
+          "recall_50": 0.7021276595744681
+        }
+      ]
+    },
+    {
+      "name": "close_nuclei_1",
+      "overrides": {
+        "strong_prominence": 0.45,
+        "weak_prominence": 0.12,
+        "strong_min_confidence": 0.38,
+        "weak_min_confidence": 0.52,
+        "min_distance_seconds": 0.045
+      },
+      "config": {
+        "sample_rate": 16000,
+        "frame_seconds": 0.03,
+        "hop_seconds": 0.01,
+        "n_fft": 1024,
+        "fmin": 65.0,
+        "fmax": 450.0,
+        "speech_floor_db": 34.0,
+        "smoothing_seconds": 0.022,
+        "min_distance_seconds": 0.045,
+        "strong_prominence": 0.45,
+        "weak_prominence": 0.12,
+        "strong_min_confidence": 0.38,
+        "weak_min_confidence": 0.52,
+        "band_edges_hz": [
+          [
+            60.0,
+            370.0
+          ],
+          [
+            370.0,
+            800.0
+          ],
+          [
+            800.0,
+            1400.0
+          ],
+          [
+            1400.0,
+            2250.0
+          ],
+          [
+            2250.0,
+            3450.0
+          ],
+          [
+            3450.0,
+            5130.0
+          ],
+          [
+            5130.0,
+            7500.0
+          ]
+        ],
+        "band_weights": [
+          0.2,
+          0.95,
+          1.0,
+          0.62,
+          0.18,
+          -0.08,
+          -0.12
+        ]
+      },
+      "development_only": true,
+      "f1_30": 0.7317073170731707,
+      "f1_50": 0.8048780487804879,
+      "precision_50": 0.9428571428571428,
+      "recall_50": 0.7021276595744681,
+      "tp_50": 66,
+      "fp_50": 4,
+      "fn_50": 28,
+      "per_recording": [
+        {
+          "recording": "3local",
+          "predicted_count": 70,
+          "reference_count": 94,
+          "f1_30": 0.7317073170731707,
+          "f1_50": 0.8048780487804879,
+          "precision_50": 0.9428571428571428,
+          "recall_50": 0.7021276595744681
+        }
+      ]
+    },
+    {
+      "name": "recall_1",
+      "overrides": {
+        "strong_prominence": 0.5,
+        "weak_prominence": 0.16,
+        "strong_min_confidence": 0.4,
+        "weak_min_confidence": 0.56
+      },
+      "config": {
+        "sample_rate": 16000,
+        "frame_seconds": 0.03,
+        "hop_seconds": 0.01,
+        "n_fft": 1024,
+        "fmin": 65.0,
+        "fmax": 450.0,
+        "speech_floor_db": 34.0,
+        "smoothing_seconds": 0.022,
+        "min_distance_seconds": 0.055,
+        "strong_prominence": 0.5,
+        "weak_prominence": 0.16,
+        "strong_min_confidence": 0.4,
+        "weak_min_confidence": 0.56,
+        "band_edges_hz": [
+          [
+            60.0,
+            370.0
+          ],
+          [
+            370.0,
+            800.0
+          ],
+          [
+            800.0,
+            1400.0
+          ],
+          [
+            1400.0,
+            2250.0
+          ],
+          [
+            2250.0,
+            3450.0
+          ],
+          [
+            3450.0,
+            5130.0
+          ],
+          [
+            5130.0,
+            7500.0
+          ]
+        ],
+        "band_weights": [
+          0.2,
+          0.95,
+          1.0,
+          0.62,
+          0.18,
+          -0.08,
+          -0.12
+        ]
+      },
+      "development_only": true,
+      "f1_30": 0.7044025157232704,
+      "f1_50": 0.7672955974842768,
+      "precision_50": 0.9384615384615385,
+      "recall_50": 0.648936170212766,
+      "tp_50": 61,
+      "fp_50": 4,
+      "fn_50": 33,
+      "per_recording": [
+        {
+          "recording": "3local",
+          "predicted_count": 65,
+          "reference_count": 94,
+          "f1_30": 0.7044025157232704,
+          "f1_50": 0.7672955974842768,
+          "precision_50": 0.9384615384615385,
+          "recall_50": 0.648936170212766
+        }
+      ]
+    },
+    {
+      "name": "baseline",
+      "overrides": {},
+      "config": {
+        "sample_rate": 16000,
+        "frame_seconds": 0.03,
+        "hop_seconds": 0.01,
+        "n_fft": 1024,
+        "fmin": 65.0,
+        "fmax": 450.0,
+        "speech_floor_db": 34.0,
+        "smoothing_seconds": 0.022,
+        "min_distance_seconds": 0.055,
+        "strong_prominence": 0.6,
+        "weak_prominence": 0.2,
+        "strong_min_confidence": 0.43,
+        "weak_min_confidence": 0.6,
+        "band_edges_hz": [
+          [
+            60.0,
+            370.0
+          ],
+          [
+            370.0,
+            800.0
+          ],
+          [
+            800.0,
+            1400.0
+          ],
+          [
+            1400.0,
+            2250.0
+          ],
+          [
+            2250.0,
+            3450.0
+          ],
+          [
+            3450.0,
+            5130.0
+          ],
+          [
+            5130.0,
+            7500.0
+          ]
+        ],
+        "band_weights": [
+          0.2,
+          0.95,
+          1.0,
+          0.62,
+          0.18,
+          -0.08,
+          -0.12
+        ]
+      },
+      "development_only": true,
+      "f1_30": 0.7006369426751593,
+      "f1_50": 0.7643312101910827,
+      "precision_50": 0.9523809523809523,
+      "recall_50": 0.6382978723404256,
+      "tp_50": 60,
+      "fp_50": 3,
+      "fn_50": 34,
+      "per_recording": [
+        {
+          "recording": "3local",
+          "predicted_count": 63,
+          "reference_count": 94,
+          "f1_30": 0.7006369426751593,
+          "f1_50": 0.7643312101910827,
+          "precision_50": 0.9523809523809523,
+          "recall_50": 0.6382978723404256
+        }
+      ]
+    }
+  ]
+}

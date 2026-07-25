@@ -1,0 +1,11 @@
+vosk
+pymorphy2
+pymorphy2-dicts-ru
+librosa
+scipy
+ruaccent
+numpy
+matplotlib
+soundfile
+sounddevice
+faster-whisper==1.2.1

@@ -1,0 +1,96 @@
+{
+  "experiment": "automatic_asr_assisted_nucleus_detection",
+  "user_supplied_transcript": false,
+  "text_independent": false,
+  "evaluation": "nested leave-one-recording-out; +/-50 ms",
+  "result": {
+    "folds": [
+      {
+        "heldout": "3local",
+        "threshold": 0.03010836186246669,
+        "word_padding_seconds": 0.0,
+        "quota_slack": 1,
+        "min_distance_seconds": 0.065,
+        "recognized_word_count": 40,
+        "predicted_count": 86,
+        "inner_validation": {
+          "tp": 186,
+          "fp": 29,
+          "fn": 18,
+          "precision": 0.8651162790697674,
+          "recall": 0.9117647058823529,
+          "f1": 0.8878281622911695
+        },
+        "metrics_50ms": {
+          "tp": 80,
+          "fp": 6,
+          "fn": 14,
+          "precision": 0.9302325581395349,
+          "recall": 0.851063829787234,
+          "f1": 0.888888888888889,
+          "timing_median_ms": 0.0
+        }
+      },
+      {
+        "heldout": "6fori",
+        "threshold": 0.03010836151091665,
+        "word_padding_seconds": 0.0,
+        "quota_slack": 0,
+        "min_distance_seconds": 0.055,
+        "recognized_word_count": 44,
+        "predicted_count": 99,
+        "inner_validation": {
+          "tp": 166,
+          "fp": 11,
+          "fn": 28,
+          "precision": 0.9378531073446328,
+          "recall": 0.8556701030927835,
+          "f1": 0.8948787061994609
+        },
+        "metrics_50ms": {
+          "tp": 90,
+          "fp": 9,
+          "fn": 14,
+          "precision": 0.9090909090909091,
+          "recall": 0.8653846153846154,
+          "f1": 0.8866995073891625,
+          "timing_median_ms": 9.999999999999787
+        }
+      },
+      {
+        "heldout": "7fori",
+        "threshold": 0.022765469780753056,
+        "word_padding_seconds": 0.0,
+        "quota_slack": 0,
+        "min_distance_seconds": 0.045,
+        "recognized_word_count": 45,
+        "predicted_count": 94,
+        "inner_validation": {
+          "tp": 172,
+          "fp": 13,
+          "fn": 26,
+          "precision": 0.9297297297297298,
+          "recall": 0.8686868686868687,
+          "f1": 0.8981723237597911
+        },
+        "metrics_50ms": {
+          "tp": 85,
+          "fp": 9,
+          "fn": 15,
+          "precision": 0.9042553191489362,
+          "recall": 0.85,
+          "f1": 0.8762886597938143,
+          "timing_median_ms": 9.999999999999787
+        }
+      }
+    ],
+    "aggregate_50ms": {
+      "tp": 255,
+      "fp": 24,
+      "fn": 43,
+      "precision": 0.9139784946236559,
+      "recall": 0.8557046979865772,
+      "f1": 0.8838821490467937
+    }
+  }
+}

@@ -1,0 +1,1152 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 34.836 
+tiers? <exists> 
+size = 2
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "syllable" 
+        xmin = 0 
+        xmax = 34.836 
+        intervals: size = 205 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.312333675266927 
+            text = "" 
+        intervals [2]:
+            xmin = 1.312333675266927 
+            xmax = 1.5896183385685696 
+            text = "се" 
+        intervals [3]:
+            xmin = 1.5896183385685696 
+            xmax = 1.591854505208099 
+            text = "" 
+        intervals [4]:
+            xmin = 1.591854505208099 
+            xmax = 1.7729840030099784 
+            text = "во" 
+        intervals [5]:
+            xmin = 1.7729840030099784 
+            xmax = 1.7796925029285666 
+            text = "" 
+        intervals [6]:
+            xmin = 1.7796925029285666 
+            xmax = 1.9563496674513872 
+            text = "дня" 
+        intervals [7]:
+            xmin = 1.9563496674513872 
+            xmax = 2.05474099959068 
+            text = "" 
+        intervals [8]:
+            xmin = 2.05474099959068 
+            xmax = 2.1240621654160905 
+            text = "хо" 
+        intervals [9]:
+            xmin = 2.1240621654160905 
+            xmax = 2.128534498695149 
+            text = "" 
+        intervals [10]:
+            xmin = 2.128534498695149 
+            xmax = 2.224689664194912 
+            text = "ро" 
+        intervals [11]:
+            xmin = 2.224689664194912 
+            xmax = 2.229161997473971 
+            text = "" 
+        intervals [12]:
+            xmin = 2.229161997473971 
+            xmax = 2.4259446617525557 
+            text = "ша" 
+        intervals [13]:
+            xmin = 2.4259446617525557 
+            xmax = 2.4304169950316146 
+            text = "" 
+        intervals [14]:
+            xmin = 2.4304169950316146 
+            xmax = 2.5891848264382005 
+            text = "я" 
+        intervals [15]:
+            xmin = 2.5891848264382005 
+            xmax = 2.5981294929963177 
+            text = "" 
+        intervals [16]:
+            xmin = 2.5981294929963177 
+            xmax = 2.7859674907167853 
+            text = "по" 
+        intervals [17]:
+            xmin = 2.7859674907167853 
+            xmax = 2.790439823995844 
+            text = "" 
+        intervals [18]:
+            xmin = 2.790439823995844 
+            xmax = 3.0185288212278403 
+            text = "го" 
+        intervals [19]:
+            xmin = 3.0185288212278403 
+            xmax = 3.023001154506899 
+            text = "" 
+        intervals [20]:
+            xmin = 3.023001154506899 
+            xmax = 3.188477485832073 
+            text = "да" 
+        intervals [21]:
+            xmin = 3.188477485832073 
+            xmax = 3.7311350177593803 
+            text = "" 
+        intervals [22]:
+            xmin = 3.7311350177593803 
+            xmax = 3.8855873452513023 
+            text = "мо" 
+        intervals [23]:
+            xmin = 3.8855873452513023 
+            xmax = 3.887674538866058 
+            text = "" 
+        intervals [24]:
+            xmin = 3.887674538866058 
+            xmax = 4.113091449259675 
+            text = "ло" 
+        intervals [25]:
+            xmin = 4.113091449259675 
+            xmax = 4.300938874587688 
+            text = "ко" 
+        intervals [26]:
+            xmin = 4.300938874587688 
+            xmax = 4.305113261817199 
+            text = "" 
+        intervals [27]:
+            xmin = 4.305113261817199 
+            xmax = 4.6161051104158 
+            text = "сто" 
+        intervals [28]:
+            xmin = 4.6161051104158 
+            xmax = 4.620279497645312 
+            text = "" 
+        intervals [29]:
+            xmin = 4.620279497645312 
+            xmax = 4.887440280334042 
+            text = "ит" 
+        intervals [30]:
+            xmin = 4.887440280334042 
+            xmax = 4.8916146675635535 
+            text = "" 
+        intervals [31]:
+            xmin = 4.8916146675635535 
+            xmax = 5.091985254580101 
+            text = "на" 
+        intervals [32]:
+            xmin = 5.091985254580101 
+            xmax = 5.10242122265388 
+            text = "" 
+        intervals [33]:
+            xmin = 5.10242122265388 
+            xmax = 5.484377654154175 
+            text = "сто" 
+        intervals [34]:
+            xmin = 5.484377654154175 
+            xmax = 5.488552041383686 
+            text = "" 
+        intervals [35]:
+            xmin = 5.488552041383686 
+            xmax = 5.64717875610512 
+            text = "ле" 
+        intervals [36]:
+            xmin = 5.64717875610512 
+            xmax = 6.498755271183702 
+            text = "" 
+        intervals [37]:
+            xmin = 6.498755271183702 
+            xmax = 6.717248491287069 
+            text = "ма" 
+        intervals [38]:
+            xmin = 6.717248491287069 
+            xmax = 6.721947270214024 
+            text = "" 
+        intervals [39]:
+            xmin = 6.721947270214024 
+            xmax = 6.966283774415638 
+            text = "ша" 
+        intervals [40]:
+            xmin = 6.966283774415638 
+            xmax = 6.975681332269546 
+            text = "" 
+        intervals [41]:
+            xmin = 6.975681332269546 
+            xmax = 7.1283916473955555 
+            text = "чи" 
+        intervals [42]:
+            xmin = 7.1283916473955555 
+            xmax = 7.133090426322509 
+            text = "" 
+        intervals [43]:
+            xmin = 7.133090426322509 
+            xmax = 7.250559899496363 
+            text = "та" 
+        intervals [44]:
+            xmin = 7.250559899496363 
+            xmax = 7.257608067886793 
+            text = "" 
+        intervals [45]:
+            xmin = 7.257608067886793 
+            xmax = 7.438511056574527 
+            text = "ет" 
+        intervals [46]:
+            xmin = 7.438511056574527 
+            xmax = 7.494896403697977 
+            text = "" 
+        intervals [47]:
+            xmin = 7.494896403697977 
+            xmax = 7.826160318048243 
+            text = "кни" 
+        intervals [48]:
+            xmin = 7.826160318048243 
+            xmax = 7.835557875902151 
+            text = "" 
+        intervals [49]:
+            xmin = 7.835557875902151 
+            xmax = 8.054051096005518 
+            text = "гу" 
+        intervals [50]:
+            xmin = 8.054051096005518 
+            xmax = 8.065798043322904 
+            text = "" 
+        intervals [51]:
+            xmin = 8.065798043322904 
+            xmax = 8.234954084693252 
+            text = "до" 
+        intervals [52]:
+            xmin = 8.234954084693252 
+            xmax = 8.246701032010638 
+            text = "" 
+        intervals [53]:
+            xmin = 8.246701032010638 
+            xmax = 8.451097915333142 
+            text = "ма" 
+        intervals [54]:
+            xmin = 8.451097915333142 
+            xmax = 8.982793775229627 
+            text = "" 
+        intervals [55]:
+            xmin = 8.982793775229627 
+            xmax = 9.300903935979848 
+            text = "сту" 
+        intervals [56]:
+            xmin = 9.300903935979848 
+            xmax = 9.31569975741009 
+            text = "" 
+        intervals [57]:
+            xmin = 9.31569975741009 
+            xmax = 9.641207828875432 
+            text = "ден" 
+        intervals [58]:
+            xmin = 9.641207828875432 
+            xmax = 9.648605739590554 
+            text = "" 
+        intervals [59]:
+            xmin = 9.648605739590554 
+            xmax = 9.914930525334924 
+            text = "ты" 
+        intervals [60]:
+            xmin = 9.914930525334924 
+            xmax = 10.188653221794416 
+            text = "" 
+        intervals [61]:
+            xmin = 10.188653221794416 
+            xmax = 10.336611436096844 
+            text = "у" 
+        intervals [62]:
+            xmin = 10.336611436096844 
+            xmax = 10.643624730774382 
+            text = "ча" 
+        intervals [63]:
+            xmin = 10.643624730774382 
+            xmax = 10.995025489742648 
+            text = "ца" 
+        intervals [64]:
+            xmin = 10.995025489742648 
+            xmax = 11.069004596893862 
+            text = "" 
+        intervals [65]:
+            xmin = 11.069004596893862 
+            xmax = 11.197956455784178 
+            text = "в" 
+        intervals [66]:
+            xmin = 11.197956455784178 
+            xmax = 11.201776494170328 
+            text = "" 
+        intervals [67]:
+            xmin = 11.201776494170328 
+            xmax = 11.285817338665645 
+            text = "у" 
+        intervals [68]:
+            xmin = 11.285817338665645 
+            xmax = 11.293457415437947 
+            text = "" 
+        intervals [69]:
+            xmin = 11.293457415437947 
+            xmax = 11.450078989270127 
+            text = "ни" 
+        intervals [70]:
+            xmin = 11.450078989270127 
+            xmax = 11.464792820152857 
+            text = "" 
+        intervals [71]:
+            xmin = 11.464792820152857 
+            xmax = 11.472190730867979 
+            text = "" 
+        intervals [72]:
+            xmin = 11.472190730867979 
+            xmax = 11.664536409461135 
+            text = "вер" 
+        intervals [73]:
+            xmin = 11.664536409461135 
+            xmax = 11.668235364818695 
+            text = "" 
+        intervals [74]:
+            xmin = 11.668235364818695 
+            xmax = 11.856882088054292 
+            text = "си" 
+        intervals [75]:
+            xmin = 11.856882088054292 
+            xmax = 11.871677909484534 
+            text = "" 
+        intervals [76]:
+            xmin = 11.871677909484534 
+            xmax = 12.134303739871344 
+            text = "те" 
+        intervals [77]:
+            xmin = 12.134303739871344 
+            xmax = 12.145400605944026 
+            text = "" 
+        intervals [78]:
+            xmin = 12.145400605944026 
+            xmax = 12.348843150609865 
+            text = "те" 
+        intervals [79]:
+            xmin = 12.348843150609865 
+            xmax = 12.936590317324132 
+            text = "" 
+        intervals [80]:
+            xmin = 12.936590317324132 
+            xmax = 13.22822046882707 
+            text = "це" 
+        intervals [81]:
+            xmin = 13.22822046882707 
+            xmax = 13.233995323312277 
+            text = "" 
+        intervals [82]:
+            xmin = 13.233995323312277 
+            xmax = 13.404353530625873 
+            text = "на" 
+        intervals [83]:
+            xmin = 13.404353530625873 
+            xmax = 13.41012838511108 
+            text = "" 
+        intervals [84]:
+            xmin = 13.41012838511108 
+            xmax = 13.60936086485071 
+            text = "э" 
+        intervals [85]:
+            xmin = 13.60936086485071 
+            xmax = 13.620910573821124 
+            text = "" 
+        intervals [86]:
+            xmin = 13.620910573821124 
+            xmax = 13.779719072164308 
+            text = "то" 
+        intervals [87]:
+            xmin = 13.779719072164308 
+            xmax = 13.785493926649515 
+            text = "" 
+        intervals [88]:
+            xmin = 13.785493926649515 
+            xmax = 13.958739561205714 
+            text = "во" 
+        intervals [89]:
+            xmin = 13.958739561205714 
+            xmax = 13.967401842933524 
+            text = "" 
+        intervals [90]:
+            xmin = 13.967401842933524 
+            xmax = 14.452489619690887 
+            text = "цвет" 
+        intervals [91]:
+            xmin = 14.452489619690887 
+            xmax = 14.45537704693349 
+            text = "" 
+        intervals [92]:
+            xmin = 14.45537704693349 
+            xmax = 14.723907780495601 
+            text = "ка" 
+        intervals [93]:
+            xmin = 14.723907780495601 
+            xmax = 14.732570062223411 
+            text = "" 
+        intervals [94]:
+            xmin = 14.732570062223411 
+            xmax = 14.839404870199735 
+            text = "вы" 
+        intervals [95]:
+            xmin = 14.839404870199735 
+            xmax = 15.14547215791569 
+            text = "со" 
+        intervals [96]:
+            xmin = 15.14547215791569 
+            xmax = 15.315830365229287 
+            text = "ка" 
+        intervals [97]:
+            xmin = 15.315830365229287 
+            xmax = 15.538162262909744 
+            text = "я" 
+        intervals [98]:
+            xmin = 15.538162262909744 
+            xmax = 16.575020711045944 
+            text = "" 
+        intervals [99]:
+            xmin = 16.575020711045944 
+            xmax = 16.91383087357771 
+            text = "щу" 
+        intervals [100]:
+            xmin = 16.91383087357771 
+            xmax = 16.92661616272985 
+            text = "" 
+        intervals [101]:
+            xmin = 16.92661616272985 
+            xmax = 17.268622647549645 
+            text = "ка" 
+        intervals [102]:
+            xmin = 17.268622647549645 
+            xmax = 17.86633491541228 
+            text = "" 
+        intervals [103]:
+            xmin = 17.86633491541228 
+            xmax = 18.21473404480815 
+            text = "пла" 
+        intervals [104]:
+            xmin = 18.21473404480815 
+            xmax = 18.390531770650103 
+            text = "ва" 
+        intervals [105]:
+            xmin = 18.390531770650103 
+            xmax = 18.396924415226174 
+            text = "" 
+        intervals [106]:
+            xmin = 18.396924415226174 
+            xmax = 18.876372758431494 
+            text = "ет" 
+        intervals [107]:
+            xmin = 18.876372758431494 
+            xmax = 18.88915804758364 
+            text = "" 
+        intervals [108]:
+            xmin = 18.88915804758364 
+            xmax = 19.122489574610228 
+            text = "в" 
+        intervals [109]:
+            xmin = 19.122489574610228 
+            xmax = 19.279109366723965 
+            text = "о" 
+        intervals [110]:
+            xmin = 19.279109366723965 
+            xmax = 19.282539513682277 
+            text = "" 
+        intervals [111]:
+            xmin = 19.282539513682277 
+            xmax = 19.420044071853184 
+            text = "зе" 
+        intervals [112]:
+            xmin = 19.420044071853184 
+            xmax = 19.420881222712335 
+            text = "" 
+        intervals [113]:
+            xmin = 19.420881222712335 
+            xmax = 19.620459751496053 
+            text = "ре" 
+        intervals [114]:
+            xmin = 19.620459751496053 
+            xmax = 20.092671588231624 
+            text = "" 
+        intervals [115]:
+            xmin = 20.092671588231624 
+            xmax = 20.229236012275866 
+            text = "я" 
+        intervals [116]:
+            xmin = 20.229236012275866 
+            xmax = 20.234293953907134 
+            text = "" 
+        intervals [117]:
+            xmin = 20.234293953907134 
+            xmax = 20.510794763083133 
+            text = "люб" 
+        intervals [118]:
+            xmin = 20.510794763083133 
+            xmax = 20.5158527047144 
+            text = "" 
+        intervals [119]:
+            xmin = 20.5158527047144 
+            xmax = 20.655789089846156 
+            text = "лю" 
+        intervals [120]:
+            xmin = 20.655789089846156 
+            xmax = 20.662533012021182 
+            text = "" 
+        intervals [121]:
+            xmin = 20.662533012021182 
+            xmax = 20.910372151953325 
+            text = "рус" 
+        intervals [122]:
+            xmin = 20.910372151953325 
+            xmax = 20.918802054672106 
+            text = "" 
+        intervals [123]:
+            xmin = 20.918802054672106 
+            xmax = 21.195302863848102 
+            text = "ский" 
+        intervals [124]:
+            xmin = 21.195302863848102 
+            xmax = 21.20036080547937 
+            text = "" 
+        intervals [125]:
+            xmin = 21.20036080547937 
+            xmax = 21.24419629961703 
+            text = "я" 
+        intervals [126]:
+            xmin = 21.24419629961703 
+            xmax = 21.250940221792053 
+            text = "" 
+        intervals [127]:
+            xmin = 21.250940221792053 
+            xmax = 21.569590544561954 
+            text = "зык" 
+        intervals [128]:
+            xmin = 21.569590544561954 
+            xmax = 21.71666012707222 
+            text = "" 
+        intervals [129]:
+            xmin = 21.71666012707222 
+            xmax = 21.991012010761157 
+            text = "ве" 
+        intervals [130]:
+            xmin = 21.991012010761157 
+            xmax = 21.996045990278386 
+            text = "" 
+        intervals [131]:
+            xmin = 21.996045990278386 
+            xmax = 22.162167314346917 
+            text = "че" 
+        intervals [132]:
+            xmin = 22.162167314346917 
+            xmax = 22.169718283622757 
+            text = "" 
+        intervals [133]:
+            xmin = 22.169718283622757 
+            xmax = 22.353458536001586 
+            text = "ра" 
+        intervals [134]:
+            xmin = 22.353458536001586 
+            xmax = 22.439036187794468 
+            text = "" 
+        intervals [135]:
+            xmin = 22.439036187794468 
+            xmax = 22.602640522104384 
+            text = "бы" 
+        intervals [136]:
+            xmin = 22.602640522104384 
+            xmax = 22.60767450162161 
+            text = "" 
+        intervals [137]:
+            xmin = 22.60767450162161 
+            xmax = 22.77379582569014 
+            text = "ло" 
+        intervals [138]:
+            xmin = 22.77379582569014 
+            xmax = 22.79141475400044 
+            text = "" 
+        intervals [139]:
+            xmin = 22.79141475400044 
+            xmax = 22.975155006379268 
+            text = "о" 
+        intervals [140]:
+            xmin = 22.975155006379268 
+            xmax = 23.259574849102663 
+            text = "чень" 
+        intervals [141]:
+            xmin = 23.259574849102663 
+            xmax = 23.375356377998912 
+            text = "" 
+        intervals [142]:
+            xmin = 23.375356377998912 
+            xmax = 23.554062650860512 
+            text = "хо" 
+        intervals [143]:
+            xmin = 23.554062650860512 
+            xmax = 23.556579640619127 
+            text = "" 
+        intervals [144]:
+            xmin = 23.556579640619127 
+            xmax = 23.81582958575638 
+            text = "лод" 
+        intervals [145]:
+            xmin = 23.81582958575638 
+            xmax = 23.82841453454945 
+            text = "" 
+        intervals [146]:
+            xmin = 23.82841453454945 
+            xmax = 24.027256725479962 
+            text = "но" 
+        intervals [147]:
+            xmin = 24.027256725479962 
+            xmax = 24.425895759723172 
+            text = "" 
+        intervals [148]:
+            xmin = 24.425895759723172 
+            xmax = 24.639551915312968 
+            text = "о" 
+        intervals [149]:
+            xmin = 24.639551915312968 
+            xmax = 24.645030278276806 
+            text = "" 
+        intervals [150]:
+            xmin = 24.645030278276806 
+            xmax = 24.757336719035546 
+            text = "ни" 
+        intervals [151]:
+            xmin = 24.757336719035546 
+            xmax = 24.765554263481306 
+            text = "" 
+        intervals [152]:
+            xmin = 24.765554263481306 
+            xmax = 24.98194960055302 
+            text = "ра" 
+        intervals [153]:
+            xmin = 24.98194960055302 
+            xmax = 24.990167144998782 
+            text = "" 
+        intervals [154]:
+            xmin = 24.990167144998782 
+            xmax = 25.151778852432084 
+            text = "бо" 
+        intervals [155]:
+            xmin = 25.151778852432084 
+            xmax = 25.16273557835977 
+            text = "" 
+        intervals [156]:
+            xmin = 25.16273557835977 
+            xmax = 25.30791219690155 
+            text = "та" 
+        intervals [157]:
+            xmin = 25.30791219690155 
+            xmax = 25.318868922829232 
+            text = "" 
+        intervals [158]:
+            xmin = 25.318868922829232 
+            xmax = 25.538003441382866 
+            text = "ют" 
+        intervals [159]:
+            xmin = 25.538003441382866 
+            xmax = 25.606482978430876 
+            text = "" 
+        intervals [160]:
+            xmin = 25.606482978430876 
+            xmax = 25.937923937743246 
+            text = "каж" 
+        intervals [161]:
+            xmin = 25.937923937743246 
+            xmax = 25.94340230070709 
+            text = "" 
+        intervals [162]:
+            xmin = 25.94340230070709 
+            xmax = 26.113231552586154 
+            text = "дый" 
+        intervals [163]:
+            xmin = 26.113231552586154 
+            xmax = 26.124188278513834 
+            text = "" 
+        intervals [164]:
+            xmin = 26.124188278513834 
+            xmax = 26.49671696005501 
+            text = "день" 
+        intervals [165]:
+            xmin = 26.49671696005501 
+            xmax = 27.44321839099919 
+            text = "" 
+        intervals [166]:
+            xmin = 27.44321839099919 
+            xmax = 27.72068183944766 
+            text = "здо" 
+        intervals [167]:
+            xmin = 27.72068183944766 
+            xmax = 27.730832941220164 
+            text = "" 
+        intervals [168]:
+            xmin = 27.730832941220164 
+            xmax = 27.95077347962444 
+            text = "ро" 
+        intervals [169]:
+            xmin = 27.95077347962444 
+            xmax = 27.95754088080611 
+            text = "" 
+        intervals [170]:
+            xmin = 27.95754088080611 
+            xmax = 28.25869023339043 
+            text = "вье" 
+        intervals [171]:
+            xmin = 28.25869023339043 
+            xmax = 28.5361536818389 
+            text = "" 
+        intervals [172]:
+            xmin = 28.5361536818389 
+            xmax = 28.762861621424847 
+            text = "э" 
+        intervals [173]:
+            xmin = 28.762861621424847 
+            xmax = 28.773012723197354 
+            text = "" 
+        intervals [174]:
+            xmin = 28.773012723197354 
+            xmax = 28.95234885451161 
+            text = "то" 
+        intervals [175]:
+            xmin = 28.95234885451161 
+            xmax = 28.969267357465785 
+            text = "" 
+        intervals [176]:
+            xmin = 28.969267357465785 
+            xmax = 29.233196003550916 
+            text = "са" 
+        intervals [177]:
+            xmin = 29.233196003550916 
+            xmax = 29.23657970414175 
+            text = "" 
+        intervals [178]:
+            xmin = 29.23657970414175 
+            xmax = 29.368544027184317 
+            text = "ма" 
+        intervals [179]:
+            xmin = 29.368544027184317 
+            xmax = 29.375311428365986 
+            text = "" 
+        intervals [180]:
+            xmin = 29.375311428365986 
+            xmax = 29.54449645790774 
+            text = "е" 
+        intervals [181]:
+            xmin = 29.54449645790774 
+            xmax = 29.55126385908941 
+            text = "" 
+        intervals [182]:
+            xmin = 29.55126385908941 
+            xmax = 29.913319822308758 
+            text = "глав" 
+        intervals [183]:
+            xmin = 29.913319822308758 
+            xmax = 29.92347092408126 
+            text = "" 
+        intervals [184]:
+            xmin = 29.92347092408126 
+            xmax = 30.106190755986354 
+            text = "на" 
+        intervals [185]:
+            xmin = 30.106190755986354 
+            xmax = 30.112958157168023 
+            text = "" 
+        intervals [186]:
+            xmin = 30.112958157168023 
+            xmax = 30.315980192618124 
+            text = "е" 
+        intervals [187]:
+            xmin = 30.315980192618124 
+            xmax = 30.756301690622067 
+            text = "" 
+        intervals [188]:
+            xmin = 30.756301690622067 
+            xmax = 31.030031177398754 
+            text = "спа" 
+        intervals [189]:
+            xmin = 31.030031177398754 
+            xmax = 31.04613291191503 
+            text = "" 
+        intervals [190]:
+            xmin = 31.04613291191503 
+            xmax = 31.27477754204615 
+            text = "си" 
+        intervals [191]:
+            xmin = 31.27477754204615 
+            xmax = 31.284438582755914 
+            text = "" 
+        intervals [192]:
+            xmin = 31.284438582755914 
+            xmax = 31.477659396951225 
+            text = "бо" 
+        intervals [193]:
+            xmin = 31.477659396951225 
+            xmax = 31.490540784564246 
+            text = "" 
+        intervals [194]:
+            xmin = 31.490540784564246 
+            xmax = 31.625795354500966 
+            text = "боль" 
+        intervals [195]:
+            xmin = 31.625795354500966 
+            xmax = 31.63545639521073 
+            text = "" 
+        intervals [196]:
+            xmin = 31.63545639521073 
+            xmax = 31.909185881987423 
+            text = "шо" 
+        intervals [197]:
+            xmin = 31.909185881987423 
+            xmax = 31.915626575793933 
+            text = "" 
+        intervals [198]:
+            xmin = 31.915626575793933 
+            xmax = 32.10240669618273 
+            text = "е" 
+        intervals [199]:
+            xmin = 32.10240669618273 
+            xmax = 32.27308508205525 
+            text = "" 
+        intervals [200]:
+            xmin = 32.27308508205525 
+            xmax = 32.64664532283286 
+            text = "за" 
+        intervals [201]:
+            xmin = 32.64664532283286 
+            xmax = 32.807662667995615 
+            text = "" 
+        intervals [202]:
+            xmin = 32.807662667995615 
+            xmax = 32.99122244148116 
+            text = "по" 
+        intervals [203]:
+            xmin = 32.99122244148116 
+            xmax = 32.99444278838442 
+            text = "" 
+        intervals [204]:
+            xmin = 32.99444278838442 
+            xmax = 33.451732048646655 
+            text = "мощь" 
+        intervals [205]:
+            xmin = 33.451732048646655 
+            xmax = 34.836 
+            text = ""
+    item [2]:
+        class = "TextTier"
+        name = "nucleus"
+        xmin = 0.000000000
+        xmax = 34.836000000
+        points: size = 104
+        points [1]:
+            number = 1.480000000
+            mark = "N"
+        points [2]:
+            number = 1.710000000
+            mark = "N"
+        points [3]:
+            number = 1.890000000
+            mark = "N"
+        points [4]:
+            number = 2.100000000
+            mark = "N"
+        points [5]:
+            number = 2.180000000
+            mark = "N"
+        points [6]:
+            number = 2.420000000
+            mark = "N"
+        points [7]:
+            number = 2.510000000
+            mark = "N"
+        points [8]:
+            number = 2.670000000
+            mark = "N"
+        points [9]:
+            number = 2.910000000
+            mark = "N"
+        points [10]:
+            number = 3.070000000
+            mark = "N"
+        points [11]:
+            number = 3.850000000
+            mark = "N"
+        points [12]:
+            number = 3.920000000
+            mark = "N"
+        points [13]:
+            number = 4.250000000
+            mark = "N"
+        points [14]:
+            number = 4.540000000
+            mark = "N"
+        points [15]:
+            number = 4.630000000
+            mark = "N"
+        points [16]:
+            number = 5.040000000
+            mark = "N"
+        points [17]:
+            number = 5.440000000
+            mark = "N"
+        points [18]:
+            number = 5.570000000
+            mark = "N"
+        points [19]:
+            number = 6.650000000
+            mark = "N"
+        points [20]:
+            number = 6.900000000
+            mark = "N"
+        points [21]:
+            number = 7.120000000
+            mark = "N"
+        points [22]:
+            number = 7.180000000
+            mark = "N"
+        points [23]:
+            number = 7.260000000
+            mark = "N"
+        points [24]:
+            number = 7.740000000
+            mark = "N"
+        points [25]:
+            number = 7.910000000
+            mark = "N"
+        points [26]:
+            number = 8.220000000
+            mark = "N"
+        points [27]:
+            number = 8.250000000
+            mark = "N"
+        points [28]:
+            number = 9.220000000
+            mark = "N"
+        points [29]:
+            number = 9.460000000
+            mark = "N"
+        points [30]:
+            number = 9.730000000
+            mark = "N"
+        points [31]:
+            number = 10.260000000
+            mark = "N"
+        points [32]:
+            number = 10.550000000
+            mark = "N"
+        points [33]:
+            number = 10.860000000
+            mark = "N"
+        points [34]:
+            number = 11.270000000
+            mark = "N"
+        points [35]:
+            number = 11.380000000
+            mark = "N"
+        points [36]:
+            number = 11.520000000
+            mark = "N"
+        points [37]:
+            number = 11.800000000
+            mark = "N"
+        points [38]:
+            number = 12.010000000
+            mark = "N"
+        points [39]:
+            number = 12.200000000
+            mark = "N"
+        points [40]:
+            number = 13.180000000
+            mark = "N"
+        points [41]:
+            number = 13.320000000
+            mark = "N"
+        points [42]:
+            number = 13.500000000
+            mark = "N"
+        points [43]:
+            number = 13.710000000
+            mark = "N"
+        points [44]:
+            number = 13.870000000
+            mark = "N"
+        points [45]:
+            number = 14.200000000
+            mark = "N"
+        points [46]:
+            number = 14.560000000
+            mark = "N"
+        points [47]:
+            number = 14.790000000
+            mark = "N"
+        points [48]:
+            number = 15.040000000
+            mark = "N"
+        points [49]:
+            number = 15.270000000
+            mark = "N"
+        points [50]:
+            number = 15.340000000
+            mark = "N"
+        points [51]:
+            number = 16.810000000
+            mark = "N"
+        points [52]:
+            number = 17.090000000
+            mark = "N"
+        points [53]:
+            number = 18.040000000
+            mark = "N"
+        points [54]:
+            number = 18.290000000
+            mark = "N"
+        points [55]:
+            number = 18.400000000
+            mark = "N"
+        points [56]:
+            number = 19.240000000
+            mark = "N"
+        points [57]:
+            number = 19.390000000
+            mark = "N"
+        points [58]:
+            number = 19.500000000
+            mark = "N"
+        points [59]:
+            number = 20.180000000
+            mark = "N"
+        points [60]:
+            number = 20.300000000
+            mark = "N"
+        points [61]:
+            number = 20.550000000
+            mark = "N"
+        points [62]:
+            number = 20.720000000
+            mark = "N"
+        points [63]:
+            number = 21.020000000
+            mark = "N"
+        points [64]:
+            number = 21.210000000
+            mark = "N"
+        points [65]:
+            number = 21.360000000
+            mark = "N"
+        points [66]:
+            number = 21.890000000
+            mark = "N"
+        points [67]:
+            number = 22.140000000
+            mark = "N"
+        points [68]:
+            number = 22.230000000
+            mark = "N"
+        points [69]:
+            number = 22.530000000
+            mark = "N"
+        points [70]:
+            number = 22.660000000
+            mark = "N"
+        points [71]:
+            number = 22.910000000
+            mark = "N"
+        points [72]:
+            number = 23.170000000
+            mark = "N"
+        points [73]:
+            number = 23.500000000
+            mark = "N"
+        points [74]:
+            number = 23.810000000
+            mark = "N"
+        points [75]:
+            number = 23.870000000
+            mark = "N"
+        points [76]:
+            number = 24.560000000
+            mark = "N"
+        points [77]:
+            number = 24.710000000
+            mark = "N"
+        points [78]:
+            number = 24.810000000
+            mark = "N"
+        points [79]:
+            number = 25.090000000
+            mark = "N"
+        points [80]:
+            number = 25.240000000
+            mark = "N"
+        points [81]:
+            number = 25.360000000
+            mark = "N"
+        points [82]:
+            number = 25.740000000
+            mark = "N"
+        points [83]:
+            number = 26.020000000
+            mark = "N"
+        points [84]:
+            number = 26.260000000
+            mark = "N"
+        points [85]:
+            number = 27.650000000
+            mark = "N"
+        points [86]:
+            number = 27.890000000
+            mark = "N"
+        points [87]:
+            number = 28.080000000
+            mark = "N"
+        points [88]:
+            number = 28.670000000
+            mark = "N"
+        points [89]:
+            number = 28.880000000
+            mark = "N"
+        points [90]:
+            number = 29.140000000
+            mark = "N"
+        points [91]:
+            number = 29.300000000
+            mark = "N"
+        points [92]:
+            number = 29.440000000
+            mark = "N"
+        points [93]:
+            number = 29.760000000
+            mark = "N"
+        points [94]:
+            number = 30.060000000
+            mark = "N"
+        points [95]:
+            number = 30.120000000
+            mark = "N"
+        points [96]:
+            number = 30.980000000
+            mark = "N"
+        points [97]:
+            number = 31.200000000
+            mark = "N"
+        points [98]:
+            number = 31.350000000
+            mark = "N"
+        points [99]:
+            number = 31.550000000
+            mark = "N"
+        points [100]:
+            number = 31.900000000
+            mark = "N"
+        points [101]:
+            number = 31.920000000
+            mark = "N"
+        points [102]:
+            number = 32.450000000
+            mark = "N"
+        points [103]:
+            number = 32.940000000
+            mark = "N"
+        points [104]:
+            number = 33.030000000
+            mark = "N"

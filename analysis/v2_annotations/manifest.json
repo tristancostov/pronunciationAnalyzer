@@ -1,0 +1,94 @@
+{
+  "recordings": [
+    {
+      "recording": "1local",
+      "independent_prediction_count": 217,
+      "review_point_count": 217,
+      "seeded_from_manual_syllable_intervals": false,
+      "interval_diagnostics": {},
+      "config_name": "recall_4_noise_gate",
+      "textgrid": "D:\\Mycode\\analysis\\v2_annotations\\1local_v2_to_review.TextGrid",
+      "candidates": "D:\\Mycode\\analysis\\v2_annotations\\1local_v2_candidates.json"
+    },
+    {
+      "recording": "2local",
+      "independent_prediction_count": 317,
+      "review_point_count": 317,
+      "seeded_from_manual_syllable_intervals": false,
+      "interval_diagnostics": {},
+      "config_name": "recall_4_noise_gate",
+      "textgrid": "D:\\Mycode\\analysis\\v2_annotations\\2local_v2_to_review.TextGrid",
+      "candidates": "D:\\Mycode\\analysis\\v2_annotations\\2local_v2_candidates.json"
+    },
+    {
+      "recording": "4local",
+      "independent_prediction_count": 260,
+      "review_point_count": 260,
+      "seeded_from_manual_syllable_intervals": false,
+      "interval_diagnostics": {},
+      "config_name": "recall_4_noise_gate",
+      "textgrid": "D:\\Mycode\\analysis\\v2_annotations\\4local_v2_to_review.TextGrid",
+      "candidates": "D:\\Mycode\\analysis\\v2_annotations\\4local_v2_candidates.json"
+    },
+    {
+      "recording": "5local",
+      "independent_prediction_count": 390,
+      "review_point_count": 390,
+      "seeded_from_manual_syllable_intervals": false,
+      "interval_diagnostics": {},
+      "config_name": "recall_4_noise_gate",
+      "textgrid": "D:\\Mycode\\analysis\\v2_annotations\\5local_v2_to_review.TextGrid",
+      "candidates": "D:\\Mycode\\analysis\\v2_annotations\\5local_v2_candidates.json"
+    },
+    {
+      "recording": "6local",
+      "independent_prediction_count": 303,
+      "review_point_count": 303,
+      "seeded_from_manual_syllable_intervals": false,
+      "interval_diagnostics": {},
+      "config_name": "recall_4_noise_gate",
+      "textgrid": "D:\\Mycode\\analysis\\v2_annotations\\6local_v2_to_review.TextGrid",
+      "candidates": "D:\\Mycode\\analysis\\v2_annotations\\6local_v2_candidates.json"
+    },
+    {
+      "recording": "1fori",
+      "independent_prediction_count": 265,
+      "review_point_count": 265,
+      "seeded_from_manual_syllable_intervals": false,
+      "interval_diagnostics": {},
+      "config_name": "recall_4_noise_gate",
+      "textgrid": "D:\\Mycode\\analysis\\v2_annotations\\1fori_v2_to_review.TextGrid",
+      "candidates": "D:\\Mycode\\analysis\\v2_annotations\\1fori_v2_candidates.json"
+    },
+    {
+      "recording": "2fori",
+      "independent_prediction_count": 284,
+      "review_point_count": 284,
+      "seeded_from_manual_syllable_intervals": false,
+      "interval_diagnostics": {},
+      "config_name": "recall_4_noise_gate",
+      "textgrid": "D:\\Mycode\\analysis\\v2_annotations\\2fori_v2_to_review.TextGrid",
+      "candidates": "D:\\Mycode\\analysis\\v2_annotations\\2fori_v2_candidates.json"
+    },
+    {
+      "recording": "4fori",
+      "independent_prediction_count": 256,
+      "review_point_count": 256,
+      "seeded_from_manual_syllable_intervals": false,
+      "interval_diagnostics": {},
+      "config_name": "recall_4_noise_gate",
+      "textgrid": "D:\\Mycode\\analysis\\v2_annotations\\4fori_v2_to_review.TextGrid",
+      "candidates": "D:\\Mycode\\analysis\\v2_annotations\\4fori_v2_candidates.json"
+    },
+    {
+      "recording": "5fori",
+      "independent_prediction_count": 194,
+      "review_point_count": 194,
+      "seeded_from_manual_syllable_intervals": false,
+      "interval_diagnostics": {},
+      "config_name": "recall_4_noise_gate",
+      "textgrid": "D:\\Mycode\\analysis\\v2_annotations\\5fori_v2_to_review.TextGrid",
+      "candidates": "D:\\Mycode\\analysis\\v2_annotations\\5fori_v2_candidates.json"
+    }
+  ]
+}

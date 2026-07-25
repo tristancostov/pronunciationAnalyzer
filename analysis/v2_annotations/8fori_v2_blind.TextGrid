@@ -1,0 +1,14 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.000000000
+xmax = 32.446687500
+tiers? <exists>
+size = 1
+item []:
+    item [1]:
+        class = "TextTier"
+        name = "nucleus"
+        xmin = 0.000000000
+        xmax = 32.446687500
+        points: size = 0

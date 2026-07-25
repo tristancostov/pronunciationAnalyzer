@@ -1,0 +1,14 @@
+{
+  "recordings": [
+    {
+      "recording": "3local",
+      "independent_prediction_count": 180,
+      "review_point_count": 180,
+      "seeded_from_manual_syllable_intervals": false,
+      "interval_diagnostics": {},
+      "config_name": "recall_4",
+      "textgrid": "D:\\Mycode\\results\\v2_dev_candidates\\3local_v2_to_review.TextGrid",
+      "candidates": "D:\\Mycode\\results\\v2_dev_candidates\\3local_v2_candidates.json"
+    }
+  ]
+}

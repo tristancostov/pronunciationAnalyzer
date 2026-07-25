@@ -1,0 +1,304 @@
+{
+  "experiment": "pretrained_sylber_zero_shot_russian",
+  "text_independent": true,
+  "device": "cpu",
+  "evaluation": "leave-one-recording-out threshold selection; ±50 ms",
+  "results": {
+    "midpoint": {
+      "folds": [
+        {
+          "heldout": "3local",
+          "selected_on_other_speakers": "norm=3.00,merge=0.85",
+          "development_metrics": {
+            "tp": 184,
+            "fp": 36,
+            "fn": 20,
+            "precision": 0.8363636363636363,
+            "recall": 0.9019607843137255,
+            "f1": 0.8679245283018867
+          },
+          "predicted_count": 94,
+          "metrics_50ms": {
+            "tp": 82,
+            "fp": 12,
+            "fn": 12,
+            "precision": 0.8723404255319149,
+            "recall": 0.8723404255319149,
+            "f1": 0.8723404255319149,
+            "timing_median_ms": 13.512081880490411
+          },
+          "v2_priority_union": {
+            "tp": 83,
+            "fp": 10,
+            "fn": 11,
+            "precision": 0.8924731182795699,
+            "recall": 0.8829787234042553,
+            "f1": 0.8877005347593583,
+            "timing_median_ms": 9.999999999999787
+          },
+          "sylber_priority_union": {
+            "tp": 82,
+            "fp": 12,
+            "fn": 12,
+            "precision": 0.8723404255319149,
+            "recall": 0.8723404255319149,
+            "f1": 0.8723404255319149,
+            "timing_median_ms": 13.512081880490411
+          }
+        },
+        {
+          "heldout": "6fori",
+          "selected_on_other_speakers": "norm=2.90,merge=0.80",
+          "development_metrics": {
+            "tp": 171,
+            "fp": 27,
+            "fn": 23,
+            "precision": 0.8636363636363636,
+            "recall": 0.8814432989690721,
+            "f1": 0.8724489795918366
+          },
+          "predicted_count": 109,
+          "metrics_50ms": {
+            "tp": 93,
+            "fp": 16,
+            "fn": 11,
+            "precision": 0.8532110091743119,
+            "recall": 0.8942307692307693,
+            "f1": 0.8732394366197184,
+            "timing_median_ms": 19.8196438828262
+          },
+          "v2_priority_union": {
+            "tp": 98,
+            "fp": 20,
+            "fn": 6,
+            "precision": 0.8305084745762712,
+            "recall": 0.9423076923076923,
+            "f1": 0.8828828828828829,
+            "timing_median_ms": 9.999999999999787
+          },
+          "sylber_priority_union": {
+            "tp": 99,
+            "fp": 19,
+            "fn": 5,
+            "precision": 0.8389830508474576,
+            "recall": 0.9519230769230769,
+            "f1": 0.8918918918918919,
+            "timing_median_ms": 18.294083859849763
+          }
+        },
+        {
+          "heldout": "7fori",
+          "selected_on_other_speakers": "norm=2.90,merge=0.80",
+          "development_metrics": {
+            "tp": 175,
+            "fp": 25,
+            "fn": 23,
+            "precision": 0.875,
+            "recall": 0.8838383838383839,
+            "f1": 0.8793969849246231
+          },
+          "predicted_count": 107,
+          "metrics_50ms": {
+            "tp": 89,
+            "fp": 18,
+            "fn": 11,
+            "precision": 0.8317757009345794,
+            "recall": 0.89,
+            "f1": 0.8599033816425121,
+            "timing_median_ms": 16.313920454550157
+          },
+          "v2_priority_union": {
+            "tp": 93,
+            "fp": 20,
+            "fn": 7,
+            "precision": 0.8230088495575221,
+            "recall": 0.93,
+            "f1": 0.8732394366197184,
+            "timing_median_ms": 9.999999999999787
+          },
+          "sylber_priority_union": {
+            "tp": 92,
+            "fp": 21,
+            "fn": 8,
+            "precision": 0.8141592920353983,
+            "recall": 0.92,
+            "f1": 0.863849765258216,
+            "timing_median_ms": 16.264146261116608
+          }
+        }
+      ],
+      "aggregate_50ms": {
+        "tp": 264,
+        "fp": 46,
+        "fn": 34,
+        "precision": 0.8516129032258064,
+        "recall": 0.8859060402684564,
+        "f1": 0.8684210526315789
+      },
+      "v2_priority_union_aggregate_50ms": {
+        "tp": 274,
+        "fp": 50,
+        "fn": 24,
+        "precision": 0.845679012345679,
+        "recall": 0.9194630872483222,
+        "f1": 0.8810289389067525
+      },
+      "sylber_priority_union_aggregate_50ms": {
+        "tp": 273,
+        "fp": 52,
+        "fn": 25,
+        "precision": 0.84,
+        "recall": 0.9161073825503355,
+        "f1": 0.8764044943820224
+      }
+    },
+    "v2_peak_inside_segment": {
+      "folds": [
+        {
+          "heldout": "3local",
+          "selected_on_other_speakers": "norm=2.30,merge=0.80",
+          "development_metrics": {
+            "tp": 187,
+            "fp": 28,
+            "fn": 17,
+            "precision": 0.8697674418604651,
+            "recall": 0.9166666666666666,
+            "f1": 0.8926014319809069
+          },
+          "predicted_count": 93,
+          "metrics_50ms": {
+            "tp": 77,
+            "fp": 16,
+            "fn": 17,
+            "precision": 0.8279569892473119,
+            "recall": 0.8191489361702128,
+            "f1": 0.823529411764706,
+            "timing_median_ms": 0.0
+          },
+          "v2_priority_union": {
+            "tp": 76,
+            "fp": 13,
+            "fn": 18,
+            "precision": 0.8539325842696629,
+            "recall": 0.8085106382978723,
+            "f1": 0.8306010928961749,
+            "timing_median_ms": 9.999999999999787
+          },
+          "sylber_priority_union": {
+            "tp": 79,
+            "fp": 16,
+            "fn": 15,
+            "precision": 0.8315789473684211,
+            "recall": 0.8404255319148937,
+            "f1": 0.835978835978836,
+            "timing_median_ms": 0.0
+          }
+        },
+        {
+          "heldout": "6fori",
+          "selected_on_other_speakers": "norm=2.60,merge=0.80",
+          "development_metrics": {
+            "tp": 167,
+            "fp": 31,
+            "fn": 27,
+            "precision": 0.8434343434343434,
+            "recall": 0.8608247422680413,
+            "f1": 0.8520408163265306
+          },
+          "predicted_count": 109,
+          "metrics_50ms": {
+            "tp": 97,
+            "fp": 12,
+            "fn": 7,
+            "precision": 0.8899082568807339,
+            "recall": 0.9326923076923077,
+            "f1": 0.9107981220657276,
+            "timing_median_ms": 0.0
+          },
+          "v2_priority_union": {
+            "tp": 95,
+            "fp": 16,
+            "fn": 9,
+            "precision": 0.8558558558558559,
+            "recall": 0.9134615384615384,
+            "f1": 0.8837209302325582,
+            "timing_median_ms": 9.999999999999787
+          },
+          "sylber_priority_union": {
+            "tp": 98,
+            "fp": 15,
+            "fn": 6,
+            "precision": 0.8672566371681416,
+            "recall": 0.9423076923076923,
+            "f1": 0.9032258064516129,
+            "timing_median_ms": 0.0
+          }
+        },
+        {
+          "heldout": "7fori",
+          "selected_on_other_speakers": "norm=2.90,merge=0.75",
+          "development_metrics": {
+            "tp": 173,
+            "fp": 24,
+            "fn": 25,
+            "precision": 0.8781725888324873,
+            "recall": 0.8737373737373737,
+            "f1": 0.8759493670886076
+          },
+          "predicted_count": 106,
+          "metrics_50ms": {
+            "tp": 89,
+            "fp": 17,
+            "fn": 11,
+            "precision": 0.839622641509434,
+            "recall": 0.89,
+            "f1": 0.8640776699029127,
+            "timing_median_ms": 0.0
+          },
+          "v2_priority_union": {
+            "tp": 90,
+            "fp": 14,
+            "fn": 10,
+            "precision": 0.8653846153846154,
+            "recall": 0.9,
+            "f1": 0.8823529411764707,
+            "timing_median_ms": 9.999999999999787
+          },
+          "sylber_priority_union": {
+            "tp": 90,
+            "fp": 19,
+            "fn": 10,
+            "precision": 0.8256880733944955,
+            "recall": 0.9,
+            "f1": 0.861244019138756,
+            "timing_median_ms": 0.0
+          }
+        }
+      ],
+      "aggregate_50ms": {
+        "tp": 263,
+        "fp": 45,
+        "fn": 35,
+        "precision": 0.8538961038961039,
+        "recall": 0.8825503355704698,
+        "f1": 0.867986798679868
+      },
+      "v2_priority_union_aggregate_50ms": {
+        "tp": 261,
+        "fp": 43,
+        "fn": 37,
+        "precision": 0.8585526315789473,
+        "recall": 0.8758389261744967,
+        "f1": 0.867109634551495
+      },
+      "sylber_priority_union_aggregate_50ms": {
+        "tp": 267,
+        "fp": 50,
+        "fn": 31,
+        "precision": 0.8422712933753943,
+        "recall": 0.8959731543624161,
+        "f1": 0.8682926829268294
+      }
+    }
+  }
+}

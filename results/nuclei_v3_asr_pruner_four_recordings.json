@@ -1,0 +1,202 @@
+{
+  "experiment": "automatic_asr_conservative_overcount_pruner",
+  "user_supplied_transcript": false,
+  "text_independent": false,
+  "evaluation": "nested leave-one-recording-out; +/-50 ms",
+  "recordings": [
+    "3local",
+    "6fori",
+    "7fori",
+    "2fori_chunk"
+  ],
+  "folds": [
+    {
+      "heldout": "3local",
+      "threshold": -0.08375096785099397,
+      "fusion_distance_seconds": 0.065,
+      "word_padding_seconds": 0.0,
+      "quota_slack": 1,
+      "events_before_pruning": 82,
+      "events_after_pruning": 82,
+      "acoustic_inner_validation": {
+        "tp": 239,
+        "fp": 40,
+        "fn": 25,
+        "precision": 0.8566308243727598,
+        "recall": 0.9053030303030303,
+        "f1": 0.8802946593001841
+      },
+      "pruner_inner_validation": {
+        "tp": 239,
+        "fp": 35,
+        "fn": 25,
+        "precision": 0.8722627737226277,
+        "recall": 0.9053030303030303,
+        "f1": 0.8884758364312267
+      },
+      "acoustic_metrics_50ms": {
+        "tp": 78,
+        "fp": 4,
+        "fn": 16,
+        "precision": 0.9512195121951219,
+        "recall": 0.8297872340425532,
+        "f1": 0.8863636363636364,
+        "timing_median_ms": 0.0
+      },
+      "metrics_50ms": {
+        "tp": 78,
+        "fp": 4,
+        "fn": 16,
+        "precision": 0.9512195121951219,
+        "recall": 0.8297872340425532,
+        "f1": 0.8863636363636364,
+        "timing_median_ms": 0.0
+      }
+    },
+    {
+      "heldout": "6fori",
+      "threshold": -0.40198287610131944,
+      "fusion_distance_seconds": 0.065,
+      "word_padding_seconds": 0.0,
+      "quota_slack": 1,
+      "events_before_pruning": 112,
+      "events_after_pruning": 111,
+      "acoustic_inner_validation": {
+        "tp": 224,
+        "fp": 37,
+        "fn": 30,
+        "precision": 0.8582375478927203,
+        "recall": 0.8818897637795275,
+        "f1": 0.8699029126213593
+      },
+      "pruner_inner_validation": {
+        "tp": 223,
+        "fp": 31,
+        "fn": 31,
+        "precision": 0.8779527559055118,
+        "recall": 0.8779527559055118,
+        "f1": 0.8779527559055118
+      },
+      "acoustic_metrics_50ms": {
+        "tp": 97,
+        "fp": 15,
+        "fn": 7,
+        "precision": 0.8660714285714286,
+        "recall": 0.9326923076923077,
+        "f1": 0.8981481481481481,
+        "timing_median_ms": 9.999999999999787
+      },
+      "metrics_50ms": {
+        "tp": 97,
+        "fp": 14,
+        "fn": 7,
+        "precision": 0.8738738738738738,
+        "recall": 0.9326923076923077,
+        "f1": 0.9023255813953489,
+        "timing_median_ms": 9.999999999999787
+      }
+    },
+    {
+      "heldout": "7fori",
+      "threshold": -0.08574027491274844,
+      "fusion_distance_seconds": 0.065,
+      "word_padding_seconds": 0.0,
+      "quota_slack": 1,
+      "events_before_pruning": 106,
+      "events_after_pruning": 104,
+      "acoustic_inner_validation": {
+        "tp": 226,
+        "fp": 38,
+        "fn": 32,
+        "precision": 0.8560606060606061,
+        "recall": 0.875968992248062,
+        "f1": 0.8659003831417623
+      },
+      "pruner_inner_validation": {
+        "tp": 226,
+        "fp": 33,
+        "fn": 32,
+        "precision": 0.8725868725868726,
+        "recall": 0.875968992248062,
+        "f1": 0.874274661508704
+      },
+      "acoustic_metrics_50ms": {
+        "tp": 93,
+        "fp": 13,
+        "fn": 7,
+        "precision": 0.8773584905660378,
+        "recall": 0.93,
+        "f1": 0.9029126213592233,
+        "timing_median_ms": 9.999999999999787
+      },
+      "metrics_50ms": {
+        "tp": 93,
+        "fp": 11,
+        "fn": 7,
+        "precision": 0.8942307692307693,
+        "recall": 0.93,
+        "f1": 0.911764705882353,
+        "timing_median_ms": 9.999999999999787
+      }
+    },
+    {
+      "heldout": "2fori_chunk",
+      "threshold": -0.0010208312738676957,
+      "fusion_distance_seconds": 0.065,
+      "word_padding_seconds": 0.0,
+      "quota_slack": 1,
+      "events_before_pruning": 63,
+      "events_after_pruning": 62,
+      "acoustic_inner_validation": {
+        "tp": 271,
+        "fp": 35,
+        "fn": 27,
+        "precision": 0.8856209150326797,
+        "recall": 0.9093959731543624,
+        "f1": 0.8973509933774834
+      },
+      "pruner_inner_validation": {
+        "tp": 271,
+        "fp": 32,
+        "fn": 27,
+        "precision": 0.8943894389438944,
+        "recall": 0.9093959731543624,
+        "f1": 0.9018302828618968
+      },
+      "acoustic_metrics_50ms": {
+        "tp": 51,
+        "fp": 12,
+        "fn": 9,
+        "precision": 0.8095238095238095,
+        "recall": 0.85,
+        "f1": 0.8292682926829269,
+        "timing_median_ms": 0.0
+      },
+      "metrics_50ms": {
+        "tp": 51,
+        "fp": 11,
+        "fn": 9,
+        "precision": 0.8225806451612904,
+        "recall": 0.85,
+        "f1": 0.8360655737704918,
+        "timing_median_ms": 0.0
+      }
+    }
+  ],
+  "acoustic_aggregate_50ms": {
+    "tp": 319,
+    "fp": 44,
+    "fn": 39,
+    "precision": 0.8787878787878788,
+    "recall": 0.8910614525139665,
+    "f1": 0.8848821081830791
+  },
+  "aggregate_50ms": {
+    "tp": 319,
+    "fp": 40,
+    "fn": 39,
+    "precision": 0.8885793871866295,
+    "recall": 0.8910614525139665,
+    "f1": 0.8898186889818689
+  }
+}

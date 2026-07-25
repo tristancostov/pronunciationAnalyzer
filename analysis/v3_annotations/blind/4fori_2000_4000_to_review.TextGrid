@@ -1,0 +1,708 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0.000000000
+xmax = 20.000000000
+tiers? <exists>
+size = 3
+item []:
+    item [1]:
+        class = "TextTier"
+        name = "nucleus"
+        xmin = 0.000000000
+        xmax = 20.000000000
+        points: size = 58
+        points [1]:
+            number = 0.110000000
+            mark = "?"
+        points [2]:
+            number = 0.510000000
+            mark = "?"
+        points [3]:
+            number = 0.640000000
+            mark = "?"
+        points [4]:
+            number = 0.870000000
+            mark = "?"
+        points [5]:
+            number = 1.160000000
+            mark = "?"
+        points [6]:
+            number = 1.600000000
+            mark = "?"
+        points [7]:
+            number = 1.820000000
+            mark = "?"
+        points [8]:
+            number = 2.180000000
+            mark = "?"
+        points [9]:
+            number = 2.450000000
+            mark = "?"
+        points [10]:
+            number = 2.850000000
+            mark = "?"
+        points [11]:
+            number = 2.960000000
+            mark = "?"
+        points [12]:
+            number = 3.310000000
+            mark = "?"
+        points [13]:
+            number = 3.540000000
+            mark = "?"
+        points [14]:
+            number = 3.740000000
+            mark = "?"
+        points [15]:
+            number = 3.970000000
+            mark = "?"
+        points [16]:
+            number = 4.400000000
+            mark = "?"
+        points [17]:
+            number = 4.540000000
+            mark = "?"
+        points [18]:
+            number = 4.870000000
+            mark = "?"
+        points [19]:
+            number = 5.250000000
+            mark = "?"
+        points [20]:
+            number = 5.670000000
+            mark = "?"
+        points [21]:
+            number = 5.920000000
+            mark = "?"
+        points [22]:
+            number = 6.490000000
+            mark = "?"
+        points [23]:
+            number = 7.300000000
+            mark = "?"
+        points [24]:
+            number = 7.680000000
+            mark = "?"
+        points [25]:
+            number = 8.430000000
+            mark = "?"
+        points [26]:
+            number = 8.720000000
+            mark = "?"
+        points [27]:
+            number = 9.100000000
+            mark = "?"
+        points [28]:
+            number = 9.350000000
+            mark = "?"
+        points [29]:
+            number = 9.870000000
+            mark = "?"
+        points [30]:
+            number = 10.170000000
+            mark = "?"
+        points [31]:
+            number = 10.610000000
+            mark = "?"
+        points [32]:
+            number = 10.760000000
+            mark = "?"
+        points [33]:
+            number = 11.030000000
+            mark = "?"
+        points [34]:
+            number = 11.490000000
+            mark = "?"
+        points [35]:
+            number = 11.700000000
+            mark = "?"
+        points [36]:
+            number = 11.940000000
+            mark = "?"
+        points [37]:
+            number = 12.490000000
+            mark = "?"
+        points [38]:
+            number = 12.780000000
+            mark = "?"
+        points [39]:
+            number = 13.110000000
+            mark = "?"
+        points [40]:
+            number = 13.340000000
+            mark = "?"
+        points [41]:
+            number = 13.530000000
+            mark = "?"
+        points [42]:
+            number = 13.860000000
+            mark = "?"
+        points [43]:
+            number = 14.680000000
+            mark = "?"
+        points [44]:
+            number = 15.020000000
+            mark = "?"
+        points [45]:
+            number = 15.570000000
+            mark = "?"
+        points [46]:
+            number = 15.870000000
+            mark = "?"
+        points [47]:
+            number = 16.200000000
+            mark = "?"
+        points [48]:
+            number = 16.500000000
+            mark = "?"
+        points [49]:
+            number = 16.980000000
+            mark = "?"
+        points [50]:
+            number = 17.530000000
+            mark = "?"
+        points [51]:
+            number = 17.660000000
+            mark = "?"
+        points [52]:
+            number = 17.840000000
+            mark = "?"
+        points [53]:
+            number = 18.150000000
+            mark = "?"
+        points [54]:
+            number = 18.810000000
+            mark = "?"
+        points [55]:
+            number = 19.070000000
+            mark = "?"
+        points [56]:
+            number = 19.220000000
+            mark = "?"
+        points [57]:
+            number = 19.420000000
+            mark = "?"
+        points [58]:
+            number = 19.750000000
+            mark = "?"
+    item [2]:
+        class = "IntervalTier"
+        name = "word_hint"
+        xmin = 0.000000000
+        xmax = 20.000000000
+        intervals: size = 51
+        intervals [1]:
+            xmin = 0.000000000
+            xmax = 0.160000000
+            text = "цитаты"
+        intervals [2]:
+            xmin = 0.160000000
+            xmax = 0.250000000
+            text = "а"
+        intervals [3]:
+            xmin = 0.250000000
+            xmax = 0.550000000
+            text = "те"
+        intervals [4]:
+            xmin = 0.550000000
+            xmax = 1.540000000
+            text = "включают"
+        intervals [5]:
+            xmin = 1.540000000
+            xmax = 2.020000000
+            text = ""
+        intervals [6]:
+            xmin = 2.020000000
+            xmax = 3.040000000
+            text = "заглушку"
+        intervals [7]:
+            xmin = 3.040000000
+            xmax = 3.070000000
+            text = ""
+        intervals [8]:
+            xmin = 3.070000000
+            xmax = 3.430000000
+            text = "и"
+        intervals [9]:
+            xmin = 3.430000000
+            xmax = 3.460000000
+            text = ""
+        intervals [10]:
+            xmin = 3.460000000
+            xmax = 4.510000000
+            text = "обработку"
+        intervals [11]:
+            xmin = 4.510000000
+            xmax = 4.750000000
+            text = ""
+        intervals [12]:
+            xmin = 4.750000000
+            xmax = 6.280000000
+            text = "аудиосигналов"
+        intervals [13]:
+            xmin = 6.280000000
+            xmax = 6.910000000
+            text = ""
+        intervals [14]:
+            xmin = 6.910000000
+            xmax = 7.270000000
+            text = "пли"
+        intervals [15]:
+            xmin = 7.270000000
+            xmax = 8.050000000
+            text = "облав"
+        intervals [16]:
+            xmin = 8.050000000
+            xmax = 8.260000000
+            text = ""
+        intervals [17]:
+            xmin = 8.260000000
+            xmax = 9.190000000
+            text = "теофания"
+        intervals [18]:
+            xmin = 9.190000000
+            xmax = 9.220000000
+            text = ""
+        intervals [19]:
+            xmin = 9.220000000
+            xmax = 9.550000000
+            text = "лет"
+        intervals [20]:
+            xmin = 9.550000000
+            xmax = 10.000000000
+            text = "си"
+        intervals [21]:
+            xmin = 10.000000000
+            xmax = 10.330000000
+            text = ""
+        intervals [22]:
+            xmin = 10.330000000
+            xmax = 10.720000000
+            text = "фу"
+        intervals [23]:
+            xmin = 10.720000000
+            xmax = 10.870000000
+            text = ""
+        intervals [24]:
+            xmin = 10.870000000
+            xmax = 11.560000000
+            text = "после"
+        intervals [25]:
+            xmin = 11.560000000
+            xmax = 11.770000000
+            text = "да"
+        intervals [26]:
+            xmin = 11.770000000
+            xmax = 12.130000000
+            text = "фат"
+        intervals [27]:
+            xmin = 12.130000000
+            xmax = 12.190000000
+            text = ""
+        intervals [28]:
+            xmin = 12.190000000
+            xmax = 12.700000000
+            text = "теле"
+        intervals [29]:
+            xmin = 12.700000000
+            xmax = 13.124362000
+            text = "настей"
+        intervals [30]:
+            xmin = 13.124362000
+            xmax = 13.210000000
+            text = "и"
+        intervals [31]:
+            xmin = 13.210000000
+            xmax = 13.810000000
+            text = "фонем"
+        intervals [32]:
+            xmin = 13.810000000
+            xmax = 14.410000000
+            text = ""
+        intervals [33]:
+            xmin = 14.410000000
+            xmax = 15.460000000
+            text = "святослав"
+        intervals [34]:
+            xmin = 15.460000000
+            xmax = 15.491077000
+            text = ""
+        intervals [35]:
+            xmin = 15.491077000
+            xmax = 16.000000000
+            text = "не"
+        intervals [36]:
+            xmin = 16.000000000
+            xmax = 16.539897000
+            text = "не"
+        intervals [37]:
+            xmin = 16.539897000
+            xmax = 16.630000000
+            text = ""
+        intervals [38]:
+            xmin = 16.630000000
+            xmax = 17.080000000
+            text = "сына"
+        intervals [39]:
+            xmin = 17.080000000
+            xmax = 17.410000000
+            text = ""
+        intervals [40]:
+            xmin = 17.410000000
+            xmax = 17.589623000
+            text = "а"
+        intervals [41]:
+            xmin = 17.589623000
+            xmax = 17.710000000
+            text = "да"
+        intervals [42]:
+            xmin = 17.710000000
+            xmax = 18.040000000
+            text = "ну"
+        intervals [43]:
+            xmin = 18.040000000
+            xmax = 18.310000000
+            text = "да"
+        intervals [44]:
+            xmin = 18.310000000
+            xmax = 18.580000000
+            text = "и"
+        intervals [45]:
+            xmin = 18.580000000
+            xmax = 18.670000000
+            text = ""
+        intervals [46]:
+            xmin = 18.670000000
+            xmax = 18.940000000
+            text = "так"
+        intervals [47]:
+            xmin = 18.940000000
+            xmax = 19.060000000
+            text = "ли"
+        intervals [48]:
+            xmin = 19.060000000
+            xmax = 19.270000000
+            text = "это"
+        intervals [49]:
+            xmin = 19.270000000
+            xmax = 19.390000000
+            text = "в"
+        intervals [50]:
+            xmin = 19.390000000
+            xmax = 19.930000000
+            text = "отеле"
+        intervals [51]:
+            xmin = 19.930000000
+            xmax = 20.000000000
+            text = "на"
+    item [3]:
+        class = "IntervalTier"
+        name = "syllable"
+        xmin = 0.000000000
+        xmax = 20.000000000
+        intervals: size = 76
+        intervals [1]:
+            xmin = 0.000000000
+            xmax = 0.160000000
+            text = "ты"
+        intervals [2]:
+            xmin = 0.160000000
+            xmax = 0.250000000
+            text = "а"
+        intervals [3]:
+            xmin = 0.250000000
+            xmax = 0.550000000
+            text = "те"
+        intervals [4]:
+            xmin = 0.550000000
+            xmax = 1.000000000
+            text = "вклю"
+        intervals [5]:
+            xmin = 1.000000000
+            xmax = 1.540000000
+            text = "чают"
+        intervals [6]:
+            xmin = 1.540000000
+            xmax = 2.020000000
+            text = ""
+        intervals [7]:
+            xmin = 2.020000000
+            xmax = 2.230000000
+            text = "за"
+        intervals [8]:
+            xmin = 2.230000000
+            xmax = 2.580000000
+            text = "глу"
+        intervals [9]:
+            xmin = 2.580000000
+            xmax = 3.040000000
+            text = "шку"
+        intervals [10]:
+            xmin = 3.040000000
+            xmax = 3.070000000
+            text = ""
+        intervals [11]:
+            xmin = 3.070000000
+            xmax = 3.430000000
+            text = "и"
+        intervals [12]:
+            xmin = 3.430000000
+            xmax = 3.460000000
+            text = ""
+        intervals [13]:
+            xmin = 3.460000000
+            xmax = 3.620000000
+            text = "о"
+        intervals [14]:
+            xmin = 3.620000000
+            xmax = 3.880000000
+            text = "бра"
+        intervals [15]:
+            xmin = 3.880000000
+            xmax = 4.260000000
+            text = "бо"
+        intervals [16]:
+            xmin = 4.260000000
+            xmax = 4.510000000
+            text = "тку"
+        intervals [17]:
+            xmin = 4.510000000
+            xmax = 4.750000000
+            text = ""
+        intervals [18]:
+            xmin = 4.750000000
+            xmax = 5.070000000
+            text = "ау"
+        intervals [19]:
+            xmin = 5.070000000
+            xmax = 5.380000000
+            text = "дио"
+        intervals [20]:
+            xmin = 5.380000000
+            xmax = 5.580000000
+            text = "си"
+        intervals [21]:
+            xmin = 5.580000000
+            xmax = 5.820000000
+            text = "гна"
+        intervals [22]:
+            xmin = 5.820000000
+            xmax = 6.280000000
+            text = "лов"
+        intervals [23]:
+            xmin = 6.280000000
+            xmax = 6.910000000
+            text = ""
+        intervals [24]:
+            xmin = 6.910000000
+            xmax = 7.270000000
+            text = "пли"
+        intervals [25]:
+            xmin = 7.270000000
+            xmax = 7.510000000
+            text = "о"
+        intervals [26]:
+            xmin = 7.510000000
+            xmax = 8.050000000
+            text = "блав"
+        intervals [27]:
+            xmin = 8.050000000
+            xmax = 8.260000000
+            text = ""
+        intervals [28]:
+            xmin = 8.260000000
+            xmax = 8.440000000
+            text = "тео"
+        intervals [29]:
+            xmin = 8.440000000
+            xmax = 8.570000000
+            text = "фа"
+        intervals [30]:
+            xmin = 8.570000000
+            xmax = 9.190000000
+            text = "ния"
+        intervals [31]:
+            xmin = 9.190000000
+            xmax = 9.220000000
+            text = ""
+        intervals [32]:
+            xmin = 9.220000000
+            xmax = 9.550000000
+            text = "лет"
+        intervals [33]:
+            xmin = 9.550000000
+            xmax = 10.000000000
+            text = "си"
+        intervals [34]:
+            xmin = 10.000000000
+            xmax = 10.330000000
+            text = ""
+        intervals [35]:
+            xmin = 10.330000000
+            xmax = 10.720000000
+            text = "фу"
+        intervals [36]:
+            xmin = 10.720000000
+            xmax = 10.870000000
+            text = ""
+        intervals [37]:
+            xmin = 10.870000000
+            xmax = 11.210000000
+            text = "по"
+        intervals [38]:
+            xmin = 11.210000000
+            xmax = 11.560000000
+            text = "сле"
+        intervals [39]:
+            xmin = 11.560000000
+            xmax = 11.770000000
+            text = "да"
+        intervals [40]:
+            xmin = 11.770000000
+            xmax = 12.130000000
+            text = "фат"
+        intervals [41]:
+            xmin = 12.130000000
+            xmax = 12.190000000
+            text = ""
+        intervals [42]:
+            xmin = 12.190000000
+            xmax = 12.660000000
+            text = "те"
+        intervals [43]:
+            xmin = 12.660000000
+            xmax = 12.700000000
+            text = "ле"
+        intervals [44]:
+            xmin = 12.700000000
+            xmax = 12.960000000
+            text = "на"
+        intervals [45]:
+            xmin = 12.960000000
+            xmax = 13.124000000
+            text = "стей"
+        intervals [46]:
+            xmin = 13.124000000
+            xmax = 13.124362000
+            text = ""
+        intervals [47]:
+            xmin = 13.124362000
+            xmax = 13.210000000
+            text = "и"
+        intervals [48]:
+            xmin = 13.210000000
+            xmax = 13.780000000
+            text = "фо"
+        intervals [49]:
+            xmin = 13.780000000
+            xmax = 13.810000000
+            text = "нем"
+        intervals [50]:
+            xmin = 13.810000000
+            xmax = 14.410000000
+            text = ""
+        intervals [51]:
+            xmin = 14.410000000
+            xmax = 14.840000000
+            text = "свя"
+        intervals [52]:
+            xmin = 14.840000000
+            xmax = 15.180000000
+            text = "то"
+        intervals [53]:
+            xmin = 15.180000000
+            xmax = 15.460000000
+            text = "слав"
+        intervals [54]:
+            xmin = 15.460000000
+            xmax = 15.491077000
+            text = ""
+        intervals [55]:
+            xmin = 15.491077000
+            xmax = 16.000000000
+            text = "не"
+        intervals [56]:
+            xmin = 16.000000000
+            xmax = 16.539897000
+            text = "не"
+        intervals [57]:
+            xmin = 16.539897000
+            xmax = 16.630000000
+            text = ""
+        intervals [58]:
+            xmin = 16.630000000
+            xmax = 16.950000000
+            text = "сы"
+        intervals [59]:
+            xmin = 16.950000000
+            xmax = 17.080000000
+            text = "на"
+        intervals [60]:
+            xmin = 17.080000000
+            xmax = 17.410000000
+            text = ""
+        intervals [61]:
+            xmin = 17.410000000
+            xmax = 17.589623000
+            text = "а"
+        intervals [62]:
+            xmin = 17.589623000
+            xmax = 17.709623000
+            text = "да"
+        intervals [63]:
+            xmin = 17.709623000
+            xmax = 17.710000000
+            text = ""
+        intervals [64]:
+            xmin = 17.710000000
+            xmax = 18.040000000
+            text = "ну"
+        intervals [65]:
+            xmin = 18.040000000
+            xmax = 18.310000000
+            text = "да"
+        intervals [66]:
+            xmin = 18.310000000
+            xmax = 18.580000000
+            text = "и"
+        intervals [67]:
+            xmin = 18.580000000
+            xmax = 18.670000000
+            text = ""
+        intervals [68]:
+            xmin = 18.670000000
+            xmax = 18.940000000
+            text = "так"
+        intervals [69]:
+            xmin = 18.940000000
+            xmax = 19.060000000
+            text = "ли"
+        intervals [70]:
+            xmin = 19.060000000
+            xmax = 19.150000000
+            text = "э"
+        intervals [71]:
+            xmin = 19.150000000
+            xmax = 19.270000000
+            text = "то"
+        intervals [72]:
+            xmin = 19.270000000
+            xmax = 19.390000000
+            text = ""
+        intervals [73]:
+            xmin = 19.390000000
+            xmax = 19.540000000
+            text = "о"
+        intervals [74]:
+            xmin = 19.540000000
+            xmax = 19.800000000
+            text = "те"
+        intervals [75]:
+            xmin = 19.800000000
+            xmax = 19.930000000
+            text = "ле"
+        intervals [76]:
+            xmin = 19.930000000
+            xmax = 20.000000000
+            text = "на"

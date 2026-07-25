@@ -32,19 +32,31 @@ from __future__ import annotations
      контраста одного и того же слога в ударной и безударной позиции.
 
 Установка:
-  pip install vosk pymorphy2 pymorphy2-dicts-ru librosa scipy ruaccent
+  pip install -r requirements.txt
 """
 
 import wave
 import json
-import sys
 import re
 import os
 import difflib
+from dataclasses import asdict
 
 import numpy as np
 import librosa
 from scipy.signal import find_peaks, butter, sosfiltfilt
+
+from audio_input import prepare_audio
+from acoustic_nuclei_v2 import (
+    PRODUCTION_V2_CONFIG_NAME,
+    detect_nuclei_v2,
+    production_v2_config,
+)
+from asr_backends import (
+    merge_whisper_text_with_vosk_times,
+    recognize_vosk,
+    recognize_whisper,
+)
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -64,14 +76,81 @@ N_MFCC              = 13
 pauseThreshold      = 2.0
 normalSpeakingRate  = (2.0, 3.5)
 
+
+def assignV2NucleiToWords(wordDetails, candidates, maxGapSec=0.080):
+    """Assign every V2 candidate to at most one recognized word.
+
+    ASR timestamps occasionally trim a vowel by a few tens of milliseconds,
+    so candidates just outside a word interval are assigned to the nearest
+    interval. Candidates farther than ``maxGapSec`` stay unassigned.  Text and
+    expected syllable counts are deliberately not used in this operation.
+    """
+    assignments = [[] for _ in wordDetails]
+    unassigned = []
+
+    def payload(candidate):
+        if isinstance(candidate, dict):
+            raw = dict(candidate)
+            time_sec = raw.get("time_seconds", raw.get("timeSec", 0.0))
+        else:
+            raw = asdict(candidate)
+            time_sec = raw.get("time_seconds", 0.0)
+        return {
+            "timeSec": round(float(time_sec), 6),
+            "confidence": round(float(raw.get("confidence", 0.0)), 6),
+            "prominence": round(float(raw.get("prominence", 0.0)), 6),
+            "strength": round(float(raw.get("strength", 0.0)), 6),
+            "periodicity": round(float(raw.get("periodicity", 0.0)), 6),
+            "vowelLikeness": round(float(
+                raw.get("vowel_likeness", raw.get("vowelLikeness", 0.0))), 6),
+            "sonorantPenalty": round(float(
+                raw.get("sonorant_penalty", raw.get("sonorantPenalty", 0.0))), 6),
+            "weakRecovery": bool(
+                raw.get("weak_recovery", raw.get("weakRecovery", False))),
+        }
+
+    intervals = []
+    for idx, word in enumerate(wordDetails):
+        start = float(word.get("start", 0.0))
+        end = max(start, float(word.get("end", start)))
+        intervals.append((idx, start, end, (start + end) / 2.0))
+
+    for candidate in candidates:
+        item = payload(candidate)
+        time_sec = item["timeSec"]
+        ranked = []
+        for idx, start, end, midpoint in intervals:
+            if start <= time_sec <= end:
+                interval_distance = 0.0
+            else:
+                interval_distance = min(
+                    abs(time_sec - start), abs(time_sec - end))
+            ranked.append((interval_distance, abs(time_sec - midpoint), idx))
+        if not ranked:
+            unassigned.append(item)
+            continue
+        distance, _centre_distance, idx = min(ranked)
+        if distance > maxGapSec:
+            unassigned.append(item)
+            continue
+        word_start = intervals[idx][1]
+        item["timeInWordSec"] = round(time_sec - word_start, 6)
+        assignments[idx].append(item)
+
+    return assignments, unassigned
+
 # --- параметры поиска ядер слогов ---
 LOWPASS_HZ          = 1000.0   # энергию берём из полосы гласных (≤ ~F1+)
 NUCLEUS_FRAME_S     = 0.030    # окно энергии 30 мс
 NUCLEUS_HOP_S       = 0.010    # шаг 10 мс
-DIP_DB              = 3.0      # минимальный провал между ядрами, дБ
-PEAK_FLOOR_DB       = 30.0     # пики ниже (max - 30 дБ) игнорируем (тишина)
-MIN_NUCLEUS_DIST_S  = 0.080    # минимум 80 мс между ядрами
-VOWEL_PEAK_GAIN_DB  = 4.0      # на сколько дБ «гласность» (MFCC/MEL) двигает контур при поиске пиков
+# Параметры откалиброваны на 125 вручную размеченных словах из
+# 3local/6fori/7fori. Сетка и leave-one-recording-out: calibrate_nuclei.py.
+DIP_DB              = 2.0      # слабые редуцированные ядра: провал ≥2 дБ
+PEAK_FLOOR_DB       = 20.0     # строгий отсев слабых шумовых пиков
+MIN_NUCLEUS_DIST_S  = 0.060    # допускаем быстрые соседние слоги (≥60 мс)
+# MEL/MFCC остаются в ранжировании кандидатов. Прямой бонус к контуру
+# ухудшал переносимость raw-count, поэтому после калибровки он отключён.
+VOWEL_PEAK_GAIN_DB  = 0.0
 
 # --- голосовой фильтр (voicing gate) ---
 VOICE_LOWBAND_RATIO = 0.45     # доля низкочастотной энергии для «озвончённого»
@@ -114,36 +193,58 @@ def splitIntoSyllables(word: str) -> list[str]:
     """
     Разбивает слово на слоги по принципу восходящей звучности.
     ВАЖНО: подавать сюда РЕАЛЬНУЮ форму слова, а не лемму.
-    Каждый слог гарантированно содержит гласную.
+    Каждый слог содержит ровно одну гласную. Граница в интервокальном
+    кластере ставится перед максимальным суффиксом с возрастающей
+    звучностью. Это исправляет два систематических дефекта старой версии:
+      • соседние гласные больше не сливаются (видео -> ви-де-о);
+      • согласный после гласного не переносится автоматически в коду
+        (эфир -> э-фир, а не эф-ир).
     """
-    wordLower   = word.lower()
-    sonoritySeq = [SONORITY_MAP.get(ch, -1) for ch in wordLower]
-    splitPoints = []
+    if not word:
+        return [word]
 
-    for i in range(len(wordLower) - 1):
-        cur = sonoritySeq[i]
-        nxt = sonoritySeq[i + 1]
-        if cur <= 0 or nxt <= 0:
+    lower = word.lower()
+    vowel_pos = [i for i, ch in enumerate(lower) if ch in VOWELS]
+    if len(vowel_pos) <= 1:
+        return [word]
+
+    split_points: list[int] = []
+    for left_vowel, right_vowel in zip(vowel_pos, vowel_pos[1:]):
+        cluster_start = left_vowel + 1
+        cluster_end = right_vowel
+
+        # Стык двух гласных: каждая образует отдельный слог.
+        if cluster_start == cluster_end:
+            split_points.append(right_vowel)
             continue
-        if cur == 4 and nxt < 4:
-            if wordLower[i + 1] not in ("ь", "ъ"):
-                splitPoints.append(i + 1)
 
-    rawFragments, prevIdx = [], 0
-    for point in splitPoints:
-        rawFragments.append(word[prevIdx:point])
-        prevIdx = point
-    rawFragments.append(word[prevIdx:])
-    rawFragments = [s for s in rawFragments if s]
+        # Согласная вместе с последующим ь/ъ считается одной единицей:
+        # семья -> се-мья. Звучность задаёт произносимая согласная.
+        units: list[tuple[int, int, int]] = []  # start, end, sonority
+        i = cluster_start
+        while i < cluster_end:
+            start = i
+            sonority = SONORITY_MAP.get(lower[i], 0)
+            i += 1
+            while i < cluster_end and lower[i] in "ьъ":
+                i += 1
+            units.append((start, i, sonority))
 
-    mergedSyllables: list[str] = []
-    for fragment in rawFragments:
-        if mergedSyllables and not hasVowel(fragment):
-            mergedSyllables[-1] += fragment
-        else:
-            mergedSyllables.append(fragment)
+        # Максимальный правый суффикс со строго возрастающей звучностью
+        # становится началом следующего слога. Для spr это pr, для st — t.
+        onset_unit = len(units) - 1
+        while (onset_unit > 0 and
+               units[onset_unit - 1][2] < units[onset_unit][2]):
+            onset_unit -= 1
+        split_points.append(units[onset_unit][0])
 
-    return mergedSyllables if mergedSyllables else [word]
+    result, start = [], 0
+    for point in split_points:
+        if point > start:
+            result.append(word[start:point])
+        start = point
+    result.append(word[start:])
+    return [s for s in result if s] or [word]
 
 
 def syllableCharSpans(syllables: list[str]) -> list[tuple[int, int]]:
@@ -293,12 +394,10 @@ def selectNuclei(energyDb: np.ndarray, voiced: np.ndarray,
     if len(energyDb) == 0:
         return np.array([], dtype=int), 0
 
-    # ── C: контур для поиска пиков теперь «взвешен по гласности» ──
-    # К энергии прибавляем бонус за высокий vowelScore (MFCC/MEL говорят
-    # «это гласный») и штраф за низкий. Это в самом детектировании пиков
-    # подавляет ложные пики на звонких согласных (р/м/н/л) и помогает
-    # проявиться редуцированным гласным, у которых энергия низкая, но
-    # спектр гласный. Усиление умеренное (±VOWEL_PEAK_GAIN_DB дБ).
+    # Опциональный MEL/MFCC-бонус к контуру. Калибровка на размеченных
+    # записях выбрала 0 дБ для raw-count: спектральная «гласность» полезна
+    # при ранжировании кандидатов ниже, но прямое смещение контура давало
+    # нестабильное число локальных максимумов между записями.
     contour = energyDb.astype(float).copy()
     if len(vowelScore) == len(contour):
         contour = contour + (vowelScore - 0.5) * 2.0 * VOWEL_PEAK_GAIN_DB
@@ -955,12 +1054,35 @@ def findStressedSyllableByDict(word: str, syllables: list[str], accentizer) -> i
     except Exception:
         return -1
 
-    mark = "+" if "+" in accented else ("\u0301" if "\u0301" in accented else None)
-    if mark is None:
-        return -1
-    markPos = accented.index(mark)
-    cleanBefore = accented[:markPos].replace("+", "").replace("\u0301", "")
-    stressedCharIdx = len(cleanBefore) - 1
+    # RUAccent ставит '+' перед ударной гласной, а некоторые версии/словари
+    # возвращают combining acute после неё. Поддерживаем оба формата. Если
+    # знак отсутствует, буква ё сама однозначно указывает ударение.
+    clean_chars: list[str] = []
+    stressedCharIdx = -1
+    plus_positions: list[int] = []
+    for ch in accented.lower():
+        if ch == "+":
+            plus_positions.append(len(clean_chars))
+        elif ch == "\u0301":
+            if clean_chars:
+                stressedCharIdx = len(clean_chars) - 1
+        else:
+            clean_chars.append(ch)
+
+    if stressedCharIdx < 0:
+        for pos in plus_positions:
+            # Основной формат: знак перед гласной. Запасной: знак после неё.
+            if pos < len(clean_chars) and clean_chars[pos] in VOWELS:
+                stressedCharIdx = pos
+                break
+            if pos > 0 and clean_chars[pos - 1] in VOWELS:
+                stressedCharIdx = pos - 1
+                break
+    if stressedCharIdx < 0:
+        try:
+            stressedCharIdx = clean_chars.index("ё")
+        except ValueError:
+            return -1
 
     count = 0
     for sylIdx, syl in enumerate(syllables):
@@ -1117,6 +1239,28 @@ def cleanTextToWords(text: str) -> list[str]:
 
 # Кеш моделей (загружаются один раз при первом вызове)
 _cached_models = None
+_cached_linguistic_models = None
+
+
+def loadLinguisticModels(verbose=True):
+    """Load morphology and stress models without forcing an ASR backend."""
+    global _cached_linguistic_models
+    if _cached_linguistic_models is not None:
+        return _cached_linguistic_models
+    import pymorphy2
+    morphAnalyzer = pymorphy2.MorphAnalyzer()
+    accentizer = None
+    try:
+        from ruaccent import RUAccent
+        accentizer = RUAccent()
+        accentizer.load(omograph_model_size="turbo", use_dictionary=True)
+        if verbose:
+            print("ruaccent готов.")
+    except Exception as e:
+        if verbose:
+            print(f"ruaccent недоступен ({e}); ударение — по энергии (резерв).")
+    _cached_linguistic_models = (morphAnalyzer, accentizer)
+    return _cached_linguistic_models
 
 
 def loadModels(verbose=True):
@@ -1125,62 +1269,111 @@ def loadModels(verbose=True):
     if _cached_models is not None:
         return _cached_models
     if not os.path.exists(modelPath):
-        print(f"❌ Модель VOSK не найдена: {modelPath}")
-        sys.exit(1)
+        raise FileNotFoundError(f"Модель VOSK не найдена: {modelPath}")
     from vosk import Model, KaldiRecognizer
-    import pymorphy2
-    morphAnalyzer = pymorphy2.MorphAnalyzer()
-    accentizer = None
-    try:
-        from ruaccent import RUAccent
-        accentizer = RUAccent()
-        accentizer.load(omograph_model_size="turbo", use_dictionary=True)
-        if verbose: print("ruaccent готов.")
-    except Exception as e:
-        if verbose: print(f"ruaccent недоступен ({e}); ударение — по энергии (резерв).")
+    morphAnalyzer, accentizer = loadLinguisticModels(verbose=verbose)
     voskModel = Model(modelPath)
     if verbose: print("VOSK модель загружена.")
     _cached_models = (voskModel, KaldiRecognizer, morphAnalyzer, accentizer)
     return _cached_models
 
 
-def main(models=None, outDir=None):
-    """Основной конвейер. models=(voskModel, KaldiRecognizer, morphAnalyzer, accentizer).
-    outDir — опционально: папка для сохранения JSON (по умолчанию analysis/)."""
-    if not os.path.exists(audioFile):
-        print(f"❌ Аудио не найдено: {audioFile}"); sys.exit(1)
+def main(models=None, outDir=None, inputAudio=None, referenceText=None,
+         asrEngine="vosk"):
+    """Run recognition and acoustic analysis for one recording.
+
+    ``inputAudio`` accepts common audio/video formats. It is normalized to
+    16 kHz mono PCM automatically. ``referenceText`` has three states:
+
+    * ``None`` — legacy CLI mode: read the global ``textFile`` when it exists;
+    * non-empty string — guided phrase mode;
+    * empty string — free-speech mode, with no reference comparison.
+
+    Returns paths needed by a GUI instead of forcing it to guess output names.
+    """
+    sourceAudio = os.path.abspath(inputAudio or audioFile)
+    preparedAudio = prepare_audio(sourceAudio)
+    analysisAudio = preparedAudio.analysis_path
+    engine = (asrEngine or "vosk").strip().lower()
+
+    if referenceText is None:
+        referenceText = ""
+        if os.path.exists(textFile):
+            with open(textFile, "r", encoding="utf-8") as f:
+                referenceText = f.read().strip()
+    else:
+        referenceText = referenceText.strip()
 
     if models is not None:
         voskModel, KaldiRecognizer, morphAnalyzer, accentizer = models
+        if voskModel is None or KaldiRecognizer is None:
+            voskModel, KaldiRecognizer, morphAnalyzer, accentizer = loadModels()
+    elif engine in {"whisper", "whisper-large-v3-turbo", "accurate"}:
+        # Whisper supplies the words; VOSK remains useful as a lightweight
+        # acoustic timing anchor for the downstream syllable detector.
+        voskModel, KaldiRecognizer, morphAnalyzer, accentizer = loadModels()
     else:
         voskModel, KaldiRecognizer, morphAnalyzer, accentizer = loadModels()
 
-    wf            = wave.open(audioFile, "rb")
-    fileSr        = wf.getframerate()
-    audioDuration = wf.getnframes() / fileSr
-    rec = KaldiRecognizer(voskModel, fileSr)
-    rec.SetWords(True)
+    with wave.open(analysisAudio, "rb") as wf:
+        audioDuration = wf.getnframes() / wf.getframerate()
 
-    wordDetails, textParts = [], []
-    while True:
-        chunk = wf.readframes(4000)
-        if not chunk:
-            break
-        if rec.AcceptWaveform(chunk):
-            res = json.loads(rec.Result())
-            wordDetails.extend(res.get("result", []))
-            if res.get("text"):
-                textParts.append(res["text"])
-    finalRes = json.loads(rec.FinalResult())
-    wordDetails.extend(finalRes.get("result", []))
-    if finalRes.get("text"):
-        textParts.append(finalRes["text"])
-    recognizedText = " ".join(textParts)
-    wf.close()
-    print(f"VOSK: получено меток для {len(wordDetails)} слов.")
+    if engine in {"whisper", "whisper-large-v3-turbo", "accurate"}:
+        whisperRecognition = recognize_whisper(
+            analysisAudio, reference_text=referenceText, verbose=True)
+        voskTiming = recognize_vosk(analysisAudio, voskModel, KaldiRecognizer)
+        recognition = merge_whisper_text_with_vosk_times(
+            whisperRecognition, voskTiming)
+    elif engine == "vosk":
+        recognition = recognize_vosk(
+            analysisAudio, voskModel, KaldiRecognizer)
+    else:
+        raise ValueError(f"Неизвестный ASR backend: {asrEngine}")
+    wordDetails = recognition.words
+    recognizedText = recognition.text
+    print(f"{recognition.engine}: получено меток для {len(wordDetails)} слов.")
 
     # --- аудио в librosa (16 кГц моно) ---
-    fullSignal, librosaSR = librosa.load(audioFile, sr=SR, mono=True, res_type="kaiser_fast")
+    fullSignal, librosaSR = librosa.load(analysisAudio, sr=SR, mono=True, res_type="kaiser_fast")
+
+    # --- V2: независимый от текста поиск ядер по всей записи ---
+    # Детектор запускается до анализа слов и не получает ни расшифровку, ни
+    # ожидаемое число слогов. Временные метки ASR используются только потом,
+    # чтобы показать найденные ядра рядом с соответствующим словом в GUI.
+    v2Config = production_v2_config()
+    print(f"Поиск акустических ядер V2 ({PRODUCTION_V2_CONFIG_NAME})…")
+    v2Detection = detect_nuclei_v2(fullSignal, librosaSR, v2Config)
+    v2Assignments, v2Unassigned = assignV2NucleiToWords(
+        wordDetails, v2Detection.nuclei)
+    v2GlobalNuclei = sorted([
+        {key: value for key, value in point.items()
+         if key != "timeInWordSec"}
+        for group in v2Assignments for point in group
+    ] + [dict(point) for point in v2Unassigned],
+        key=lambda point: point["timeSec"])
+    v2Confidences = [point["confidence"] for point in v2GlobalNuclei]
+    v2Diagnostics = {
+        "algorithm": "acoustic_nuclei_v2",
+        "configName": PRODUCTION_V2_CONFIG_NAME,
+        "textIndependent": True,
+        "count": len(v2GlobalNuclei),
+        "assignedToRecognizedWords": sum(map(len, v2Assignments)),
+        "unassignedCount": len(v2Unassigned),
+        "meanCandidateConfidence": (
+            round(float(np.mean(v2Confidences)), 3)
+            if v2Confidences else None),
+        "config": asdict(v2Config),
+        "nuclei": v2GlobalNuclei,
+        "note": (
+            "V2 detects nuclei from audio alone. ASR word timestamps are used "
+            "only to group candidates for display; text does not create or "
+            "remove candidates, and candidate confidence is not accuracy."
+        ),
+    }
+    print(
+        f"V2: найдено ядер {len(v2GlobalNuclei)}, "
+        f"привязано к словам {sum(map(len, v2Assignments))}."
+    )
 
     # --- ОПТИМИЗАЦИЯ: F0 один раз для всего аудио ---
     print("Вычисление F0 (pyin) для всего аудио…")
@@ -1198,6 +1391,9 @@ def main(models=None, outDir=None):
         surface   = cleanWord(wordText)
         morphInfo = analyzeWordMorph(wordText, morphAnalyzer)
         syllables = splitIntoSyllables(surface) if surface else [wordText]
+        # Unlike the legacy segmentation fallback, a standalone consonant
+        # preposition such as «в» or «с» has no written vowel nucleus.
+        textNucleusCount = sum(ch in VOWELS for ch in surface)
 
         # VOSK часто обрезает хвост слова (особенно с редуцированным
         # последним гласным). Добавим до 80 мс в конец, но не больше
@@ -1242,6 +1438,12 @@ def main(models=None, outDir=None):
                          expectedStressedIdx != actualStressedIdx)
 
         countMismatch = (detectedNuclei != len(syllables))
+        v2Nuclei = v2Assignments[idx] if idx < len(v2Assignments) else []
+        detectedNucleiV2 = len(v2Nuclei)
+        v2CountMismatch = (detectedNucleiV2 != textNucleusCount)
+        v2MeanConfidence = (
+            round(float(np.mean([point["confidence"] for point in v2Nuclei])), 3)
+            if v2Nuclei else None)
         hasIssue = (any(r["isProblematic"] for r in syllableResults)
                     or reductionInfo["hasReductionIssue"] or countMismatch
                     or stressMismatch)
@@ -1250,7 +1452,19 @@ def main(models=None, outDir=None):
             "word": wordText, "start": startTime, "end": endTime,
             "confidence": confScore, "lemma": morphInfo["lemma"], "pos": morphInfo["pos"],
             "syllableStr": "-".join(syllables), "syllableCount": len(syllables),
+            "textNucleusCount": textNucleusCount,
+            # V1 remains the segmentation source for stress/reduction and the
+            # legacy fields stay intact for existing scripts.
             "detectedNuclei": detectedNuclei, "countMismatch": countMismatch,
+            "detectedNucleiV1": detectedNuclei,
+            # V2 is a separate, audio-only observation. Its comparison with
+            # the ASR-derived text count is diagnostic and does not set
+            # ``hasIssue`` by itself.
+            "detectedNucleiV2": detectedNucleiV2,
+            "v2Nuclei": v2Nuclei,
+            "v2CountMismatch": v2CountMismatch,
+            "v2MeanConfidence": v2MeanConfidence,
+            "v1V2CountAgreement": detectedNuclei == detectedNucleiV2,
             # Обратная совместимость: stressedIdx = ожидаемое (как было раньше)
             "stressedIdx": reductionInfo["stressedIdx"],
             # Новые поля:
@@ -1293,10 +1507,6 @@ def main(models=None, outDir=None):
             })
 
     # --- сравнение с эталонным текстом ---
-    referenceText = ""
-    if os.path.exists(textFile):
-        with open(textFile, "r", encoding="utf-8") as f:
-            referenceText = f.read().strip()
     refWordList = cleanTextToWords(referenceText) if referenceText else []
     recWordList = cleanTextToWords(recognizedText)
 
@@ -1314,7 +1524,7 @@ def main(models=None, outDir=None):
             cmp["missed"].extend(refWordList[i1:i2])
         elif op == "insert":
             cmp["inserted"].extend(recWordList[j1:j2])
-    textAccuracy = (len(cmp["correct"]) / len(refWordList) * 100) if refWordList else 0
+    textAccuracy = (len(cmp["correct"]) / len(refWordList) * 100) if refWordList else None
 
     syllableErrors = []
     for refW, recW in cmp["substituted"]:
@@ -1349,14 +1559,27 @@ def main(models=None, outDir=None):
                 counter[syl] = counter.get(syl, 0) + 1
     sortedSyl = sorted(counter.items(), key=lambda x: -x[1])
 
-    scores = printReport(audioFile, audioDuration, librosaSR, fullWordAnalysis,
+    scores = printReport(sourceAudio, audioDuration, librosaSR, fullWordAnalysis,
                 contrastTable, speechDur, speakingRate, wordCount, pauses,
                 normalSpeakingRate, referenceText, recognizedText, refWordList,
                 cmp, textAccuracy, syllableErrors, sortedSyl)
 
-    saveJson(audioFile, audioDuration, librosaSR, referenceText, recognizedText,
-             fullWordAnalysis, contrastTable, syllableErrors, pauses, cmp,
-             scores=scores, outDir=outDir)
+    jsonPath = saveJson(sourceAudio, audioDuration, librosaSR, referenceText,
+             recognizedText, fullWordAnalysis, contrastTable, syllableErrors,
+             pauses, cmp, scores=scores, outDir=outDir,
+             audioConverted=preparedAudio.converted,
+             recognitionEngine=recognition.engine,
+             recognitionDevice=recognition.device,
+             acousticNucleiV2=v2Diagnostics)
+    return {
+        "jsonPath": jsonPath,
+        "analysisAudio": analysisAudio,
+        "audioConverted": preparedAudio.converted,
+        "recognizedText": recognizedText,
+        "analysisMode": "guided" if referenceText else "free",
+        "recognitionEngine": recognition.engine,
+        "recognitionDevice": recognition.device,
+    }
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -1364,7 +1587,12 @@ def main(models=None, outDir=None):
 # ══════════════════════════════════════════════════════════════════
 
 def computeScores(words, rate):
-    """Вычисляет 5 компонент итоговой оценки. Возвращает dict."""
+    """Вычисляет диагностические компоненты без общего балла.
+
+    Компоненты измеряют разные явления и пока не нормированы по типу речи,
+    поэтому складывать их с произвольными весами в «качество произношения»
+    методологически неверно.
+    """
     from collections import defaultdict as _dd
     allSyl = [s for w in words for s in w["syllableAnalysis"]]
     multi  = [w for w in words if w["syllableCount"] > 1]
@@ -1377,7 +1605,7 @@ def computeScores(words, rate):
         count_match = sum(1 for w in words if not w.get("countMismatch")) / max(len(words), 1)
         sylScore = (0.20 * quiet_ratio + 0.40 * core_ratio + 0.40 * count_match) * 100
     else:
-        sylScore = 100
+        sylScore = None
 
     # 2. Совпадение ударения
     if multi:
@@ -1385,7 +1613,7 @@ def computeScores(words, rate):
                 if w.get("expectedStressedIdx", -1) == w.get("actualStressedIdx", -2))
         stress = sm / len(multi) * 100
     else:
-        stress = 100
+        stress = None
 
     # 3. Редукция — агрегация по гласному внутри записи
     vpool = _dd(lambda: _dd(list))
@@ -1410,9 +1638,9 @@ def computeScores(words, rate):
             ratios.append(min(r, 1.5))
     if ratios:
         avg_ratio = np.mean(ratios)
-        redux = max(20, 100 - (avg_ratio - 0.70) / 0.30 * 60)
+        redux = min(100, max(20, 100 - (avg_ratio - 0.70) / 0.30 * 60))
     else:
-        redux = 50
+        redux = None
 
     # 4. Темп речи
     native_median = 3.0
@@ -1420,10 +1648,11 @@ def computeScores(words, rate):
         deviation = abs(rate - native_median) / native_median
         tempo = max(0, 100 * (1.0 - deviation * 0.5))
     else:
-        tempo = 50
+        tempo = None
 
-    return {"syl": round(float(sylScore), 1), "stress": round(float(stress), 1),
-            "redux": round(float(redux), 1), "tempo": round(float(tempo), 1)}
+    rounded = lambda value: round(float(value), 1) if value is not None else None
+    return {"syl": rounded(sylScore), "stress": rounded(stress),
+            "redux": rounded(redux), "tempo": rounded(tempo)}
 
 
 def printReport(audioFile, audioDuration, sr, words, contrastTable, speechDur,
@@ -1439,13 +1668,16 @@ def printReport(audioFile, audioDuration, sr, words, contrastTable, speechDur,
     print(f"  Слов: {len(words)} | без замечаний: {len(good)} | "
           f"с замечаниями: {len(words) - len(good)}\n")
     print("─" * W)
-    print("  РАЗДЕЛ 1: Слоги в аудиосигнале (ядра по провалам энергии)")
+    print("  РАЗДЕЛ 1: Слоги и независимый акустический детектор V2")
     print("─" * W)
     for w in words:
         st = "⚠" if w["hasIssue"] else "✓"
-        mm = f"  [ядер:{w['detectedNuclei']}≠слогов:{w['syllableCount']}]" if w["countMismatch"] else ""
+        v1_count = w.get("detectedNucleiV1", w.get("detectedNuclei", 0))
+        v2_count = w.get("detectedNucleiV2")
+        text_count = w.get("textNucleusCount", w["syllableCount"])
+        counts = f"  [V2:{v2_count} / V1:{v1_count} / текст:{text_count}]"
         print(f"  {st} «{w['word']}» ({w['start']:.1f}–{w['end']:.1f}с) "
-              f"{w['syllableStr']} conf:{w['confidence']:.2f}{mm}")
+              f"{w['syllableStr']} conf:{w['confidence']:.2f}{counts}")
         for j, s in enumerate(w["syllableAnalysis"]):
             ac = s["acoustics"]
             stress = " ´" if j == w["stressedIdx"] else ""
@@ -1496,33 +1728,56 @@ def printReport(audioFile, audioDuration, sr, words, contrastTable, speechDur,
     for syl, cnt in sortedSyl[:10]:
         print(f"  {syl:<8} {'█' * min(cnt, 25)} {cnt}")
 
-    # --- итоговый балл ---
+    # Компоненты показываем раздельно. Единый балл намеренно не считаем:
+    # сегментируемость записи, темп, STT и произношение — разные задачи.
     scores = computeScores(words, rate)
     components = [
-        ("Слоговая акустика",  scores["syl"],    0.30),
-        ("Совпадение ударения", scores["stress"], 0.25),
-        ("Редукция гласных",   scores["redux"],   0.20),
-        ("Темп речи",          scores["tempo"],   0.10),
-        ("Точность слов",      textAcc,           0.15),
+        ("Надёжность сегментации", scores["syl"]),
+        ("Акустика↔словарь",       scores["stress"]),
+        ("Редукция гласных",       scores["redux"]),
+        ("Темп речи",              scores["tempo"]),
     ]
-    final = sum(s * w for _, s, w in components) / sum(w for _, _, w in components)
-    scores["final"] = round(final, 1)
+    if refText:
+        components.append(("Точность STT", textAcc))
+        scores["word"] = round(float(textAcc), 1)
+    else:
+        scores["word"] = None
 
     print(f"\n{'═' * W}")
-    print("  ИТОГОВАЯ ОЦЕНКА")
+    print("  ДИАГНОСТИЧЕСКИЙ ПРОФИЛЬ")
     print("═" * W)
-    for name, score, weight in components:
+    for name, score in components:
+        if score is None:
+            print(f"  {name:<24} [нет данных]")
+            continue
         bar = "█" * int(score / 5) + "░" * (20 - int(score / 5))
-        print(f"  {name:<20} [{bar}] {score:5.1f} (вес {weight:.0%})")
-    print(f"\n  Итоговый балл: {final:5.1f} / 100")
+        print(f"  {name:<24} [{bar}] {score:5.1f}")
+    print("\n  Общий балл не вычисляется: показатели имеют разный смысл и "
+          "сравнимы только после нормирования по типу речи.")
     return scores
 
 
 def saveJson(audioFile, audioDuration, sr, refText, recText, words,
-             contrastTable, sylErrors, pauses, cmp, scores=None, outDir=None):
+             contrastTable, sylErrors, pauses, cmp, scores=None, outDir=None,
+             audioConverted=False, recognitionEngine="vosk",
+             recognitionDevice="cpu", acousticNucleiV2=None):
+    confidences = [float(w.get("confidence", 0)) for w in words]
     data = {
         "audioFile": audioFile, "durationSec": round(audioDuration, 2),
         "sampleRate": sr, "referenceText": refText, "recognizedText": recText,
+        "analysisMode": "guided" if refText else "free",
+        "referenceTextProvided": bool(refText),
+        "audioConvertedAutomatically": bool(audioConverted),
+        "recognitionEngine": recognitionEngine,
+        "recognitionDevice": recognitionDevice,
+        "recognitionDiagnostics": {
+            "recognizedWordCount": len(words),
+            "meanWordConfidence": (round(float(np.mean(confidences)), 3)
+                                   if confidences else None),
+            "lowConfidenceWordCount": sum(c < 0.70 for c in confidences),
+            "note": ("Recognizer confidence/probability is a reliability "
+                     "signal, not measured recognition accuracy."),
+        },
         "wordAnalysis": words, "syllableContrast": contrastTable,
         "syllableErrors": sylErrors, "pauses": pauses,
         "wordComparison": {
@@ -1530,24 +1785,32 @@ def saveJson(audioFile, audioDuration, sr, refText, recText, words,
             "substituted": [{"expected": r, "got": g} for r, g in cmp["substituted"]],
             "missed": cmp["missed"], "inserted": cmp["inserted"]},
     }
+    if acousticNucleiV2 is not None:
+        data["acousticNucleiV2"] = acousticNucleiV2
     if scores:
         data["evaluationScores"] = {
             "syllableAcoustics": scores["syl"],
             "stressMatch":       scores["stress"],
             "vowelReduction":    scores["redux"],
             "speechTempo":       scores["tempo"],
-            "wordAccuracy":      round(100 - ((1 - scores.get("final", 0)/100) * 100), 1),
-            "finalScore":        scores["final"],
+            "wordAccuracy":      scores["word"],
+            "compositeScore":    None,
+            "note": ("Диагностические показатели не объединяются: "
+                     "нужна нормализация по типу речи."),
         }
-    basename = os.path.basename(audioFile).replace(".wav", "_syllable_analysis.json")
+    stem = os.path.splitext(os.path.basename(audioFile))[0]
+    basename = f"{stem}_syllable_analysis.json"
     if outDir:
         os.makedirs(outDir, exist_ok=True)
         name = os.path.join(outDir, basename)
     else:
-        name = os.path.join(SCRIPT_DIR, "analysis", basename)
+        defaultDir = os.path.join(SCRIPT_DIR, "analysis")
+        os.makedirs(defaultDir, exist_ok=True)
+        name = os.path.join(defaultDir, basename)
     with open(name, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"\nОтчёт сохранён: {name}")
+    return name
 
 
 if __name__ == "__main__":

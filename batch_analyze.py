@@ -4,15 +4,16 @@
 Пакетный запуск pronunciationAnalyzer.py для всех записей.
 
 Использование:
-    python batch_analyze.py                          # все записи → analysis/
+    python batch_analyze.py                          # все записи, hybrid ASR
     python batch_analyze.py 1local 2local            # указанные записи
-    python batch_analyze.py --outdir analysis_f0stab  # в отдельную папку
-    python batch_analyze.py 3local --outdir test_out
+    python batch_analyze.py --asr vosk               # только VOSK
+    python batch_analyze.py 3local --free-speech     # без reference/prompt
+    python batch_analyze.py --outdir analysis_test   # в отдельную папку
 """
 
 import os
-import sys
 import glob
+import argparse
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 AUDIO_DIR  = os.path.join(SCRIPT_DIR, "audio")
@@ -34,14 +35,16 @@ def find_pairs(names=None):
 
 
 def main():
-    args = sys.argv[1:]
-    out_dir = None
-    if "--outdir" in args:
-        idx = args.index("--outdir")
-        out_dir = args[idx + 1] if idx + 1 < len(args) else None
-        args = args[:idx] + args[idx + 2:]
-    out_dir = out_dir or os.path.join(SCRIPT_DIR, "analysis")
-    names = args if args else None
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("names", nargs="*", help="Имена записей без расширения")
+    parser.add_argument("--outdir", default=os.path.join(SCRIPT_DIR, "analysis"))
+    parser.add_argument("--asr", choices=("vosk", "whisper"), default="whisper")
+    parser.add_argument(
+        "--free-speech", action="store_true",
+        help="Не передавать эталон распознавателю и не считать wordAccuracy")
+    args = parser.parse_args()
+    out_dir = args.outdir
+    names = args.names or None
 
     pairs = find_pairs(names)
     if not pairs:
@@ -49,7 +52,7 @@ def main():
         return
 
     print(f"📁 Выходная папка: {out_dir}")
-    print("Загрузка моделей (VOSK + pymorphy2 + ruaccent)…")
+    print(f"Загрузка моделей (ASR={args.asr} + pymorphy2 + ruaccent)…")
     models = pa.loadModels()
     print(f"🔍 Найдено {len(pairs)} записей для анализа.\n")
 
@@ -58,9 +61,15 @@ def main():
         print(f"  [{idx}/{len(pairs)}] {name}")
         print(f"{'='*60}")
 
-        pa.audioFile = wav
-        pa.textFile  = txt
-        pa.main(models=models, outDir=out_dir)
+        if args.free_speech:
+            reference = ""
+        elif os.path.exists(txt):
+            with open(txt, "r", encoding="utf-8") as handle:
+                reference = handle.read().strip()
+        else:
+            reference = ""
+        pa.main(models=models, outDir=out_dir, inputAudio=wav,
+                referenceText=reference, asrEngine=args.asr)
 
     print(f"\n✅ Готово. Обработано {len(pairs)} записей → {out_dir}")
 
